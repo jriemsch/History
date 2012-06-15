@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="initial-scale = 1.0, minimum-scale=0.25, maximum-scale=2, user-scalable=yes" />
+  <meta charset="utf-8">
+
+  <script type="text/javascript" charset="utf-8" src="libs/phonegap/phonegap-1.3.0.js"></script>
+
+  <link rel="stylesheet" href="css/main.css" />
+
+  <script src="libs/jquery/jquery-1.7.1.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/History.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/utils/DeviceUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/utils/TouchUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/utils/TypeUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/utils/ArgumentUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/storage/Storage.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/model/Player.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/PlayerController.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelection.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/inject/Injector.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/main.js"></script>
+</head>
+<body>
+  <div id="startupButtons">
+    <input type="button" id="startButton" value="Start">
+    <input type="button" id="resetButton" value="Reset">
+  </div>
+
+  <div id="avatarSelection">
+    <div id="avatars"></div>
+    <div id="questionMarksTop" class="questionMarks"></div>
+    <div id="questionMarksBottom" class="questionMarks"></div>
+    <div class="bigTitle">Wähle Deinen Avatar</div>
+    <div id="nameInput">
+      <div><input type="text"></div>
+    </div>
+    <div class="buttonBar">
+      <div class="okButton"></div>
+    </div>
+  </div>
+</body>
+</html>

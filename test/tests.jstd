@@ -1,0 +1,19 @@
+server: http://localhost:9876
+
+load:
+  - ../main/libs/jquery/jquery-1.7.1.js
+  - ../main/js/history/History.js
+  - ../../../jslib/main/js/utils/TypeUtils.js
+  - ../../../jslib/main/js/utils/ArgumentUtils.js
+  - ../../../jslib/main/js/utils/DeviceUtils.js
+  - ../../../jslib/main/js/utils/TouchUtils.js
+  - ../../../jslib/main/js/storage/Storage.js
+  - ../main/js/history/model/Player.js
+  - ../main/js/history/controller/PlayerController.js
+  - ../main/js/history/views/components/ImageSelection.js
+serve:
+  - images/test.png
+test:
+  - js/history/model/PlayerTest.js
+  - js/history/controller/PlayerControllerTest.js
+  - js/history/views/components/ImageSelectionTest.js
