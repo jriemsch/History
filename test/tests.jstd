@@ -3,17 +3,45 @@ server: http://localhost:9876
 load:
   - ../main/libs/jquery/jquery-1.7.1.js
   - ../main/js/history/History.js
+  - ../../../jslib/main/js/utils/ArrayUtils.js
+  - ../../../jslib/test/mocks/ClockMock.js
+  - ../../../jslib/test/mocks/RandomMock.js
+  - ../../../jslib/test/testutils/JQueryTestUtils.js
   - ../../../jslib/main/js/utils/TypeUtils.js
   - ../../../jslib/main/js/utils/ArgumentUtils.js
   - ../../../jslib/main/js/utils/DeviceUtils.js
   - ../../../jslib/main/js/utils/TouchUtils.js
   - ../../../jslib/main/js/storage/Storage.js
+  - ../../../jslib/main/js/gestures/Scroll.js
+  - ../../../jslib/main/js/gestures/Tap.js
   - ../main/js/history/model/Player.js
+  - ../main/js/history/model/LevelOrderChance.js
+  - ../main/js/history/model/Opponent.js
+  - ../main/js/history/model/Topic.js
+  - ../main/js/history/model/Answer.js
+  - ../main/js/history/model/MultipleChoices.js
+  - ../main/js/history/model/Question.js
+  - ../main/js/history/data/OpponentList.js
+  - ../main/js/history/data/TopicList.js
+  - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/views/components/ImageSelection.js
+  - ../main/js/history/views/components/AnimatedBackground.js
+  - ../main/js/history/views/AvatarSelection.js
+  - ../main/js/history/views/Menu.js
 serve:
   - images/test.png
 test:
   - js/history/model/PlayerTest.js
+  - js/history/model/LevelOrderChanceTest.js
+  - js/history/model/OpponentTest.js
+  - js/history/model/TopicTest.js
+  - js/history/model/AnswerTest.js
+  - js/history/model/MultipleChoiceTest.js
+  - js/history/model/QuestionTest.js
   - js/history/controller/PlayerControllerTest.js
+  - js/history/controller/OpponentControllerTest.js
   - js/history/views/components/ImageSelectionTest.js
+  - js/history/views/components/AnimatedBackgroundTest.js
+  - js/history/views/AvatarSelectionTest.js
+  - js/history/views/MenuTest.js

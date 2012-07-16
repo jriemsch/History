@@ -3,6 +3,7 @@ var Player = net.riemschneider.history.model.Player;
 TestCase('PlayerTest', {
   testCreate: function () {
     var player = Player.create('name', 5);
+    assertNotNull(player);
     assertEquals('name', player.getName());
     assertEquals(5, player.getAvatarImageIdx());
   },

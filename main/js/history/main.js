@@ -10,7 +10,7 @@
   $(document).ready(function () {
     function init(injector) {
       $('#startupButtons').remove();
-      injector.avatarSelection.show();
+      injector.menu.show();
     }
 
     $('#startButton').click(function () {

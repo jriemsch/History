@@ -9,8 +9,17 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
   net.riemschneider.history.controller.PlayerController = {
     resetState: storage.remove,
 
-    create: function () {
+    create: function create() {
       var player = loadPlayer();
+
+      function loadPlayer() {
+        var player = Player.create('Name', 0);
+        var state = storage.get();
+        if (state) {
+          player.setState(state);
+        }
+        return player;
+      }
 
       return {
         getPlayer: function getPlayer() {
@@ -21,15 +30,6 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
           storage.set(player.getState());
         }
       };
-
-      function loadPlayer() {
-        var player = Player.create('Name', 0);
-        var state = storage.get();
-        if (state) {
-          player.setState(state);
-        }
-        return player;
-      }
     }
-  }
+  };
 }());

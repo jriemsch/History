@@ -13,17 +13,23 @@
 
   <script type="text/javascript" charset="utf-8" src="js/history/History.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="js/utils/Clock.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/utils/DeviceUtils.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/utils/TouchUtils.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/utils/TypeUtils.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/utils/ArgumentUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/storage/Storage.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/gestures/Scroll.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/gestures/Tap.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/model/Player.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/PlayerController.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/inject/Injector.js"></script>
 
@@ -35,17 +41,20 @@
     <input type="button" id="resetButton" value="Reset">
   </div>
 
-  <div id="avatarSelection">
+  <div id="menu" class="viewBackground">
+    <div id="menuBackground" class="questionMarks"></div>
+    <div class="bigTitle">Geschichte im Quiz</div>
+    <div id="menuOptions"></div>
+    <div class="footer">&copy; 2012 by Jens Riemschneider</div>
+  </div>
+
+  <div id="avatarSelection" class="viewBackground">
     <div id="avatars"></div>
     <div id="questionMarksTop" class="questionMarks"></div>
     <div id="questionMarksBottom" class="questionMarks"></div>
     <div class="bigTitle">Wähle Deinen Avatar</div>
-    <div id="nameInput">
-      <div><input type="text"></div>
-    </div>
-    <div class="buttonBar">
-      <div class="okButton"></div>
-    </div>
+    <div id="nameInput"><div><input type="text"></div></div>
+    <div class="footer"><div class="okButton"></div></div>
   </div>
 </body>
 </html>

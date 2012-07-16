@@ -8,6 +8,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
 
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();
       injector.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(injector.playerController);
+      injector.menu = net.riemschneider.history.views.Menu.create(injector.avatarSelection, null, null, null);
 
       return injector;
     }
