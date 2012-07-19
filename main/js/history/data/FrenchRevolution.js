@@ -70,28 +70,80 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Der Dritte Stand',
                 'Der Adel',
                 'Der Nationalkonvent'
-              ], 0)),
+              ], [0])),
           Question.create(id(2, 1), Difficulty.HARD, 'Wieso erklären sich die Vertreter des Dritten Standes am 17. Juni 1789 zur Nationalversammlung?',
               MultipleChoice.create(0, [
                 'Weil sie mehr als 96% der Nation vertraten',
                 'Weil sie den König abschaffen wollten',
                 'Weil sie ihre Unabhängigkeit durchsetzen wollten'
-              ], 0))
+              ], [0]))
       ]);
       
       addFact(3, [
           Question.create(id(3, 0), Difficulty.MEDIUM, 'Was schwören die Abgeordneten des Dritten Standes beim sogenannten „Ballhausschwur“?',
               MultipleChoice.create(0, [
-                'dass sie Frankreich eine Verfassung geben',
-                'dass sie den König stürzen',
-                'dass sie den Adel enteignen werden'
-              ], 0)),
+                'Dass sie Frankreich eine Verfassung geben',
+                'Dass sie den König stürzen',
+                'Dass sie den Adel enteignen werden'
+              ], [0])),
           Question.create(id(3, 1), Difficulty.EASY, 'Was findet am 20. Juni 1789 in einem provisorischen Sitzungssaal statt?',
               MultipleChoice.create(0, [
                 'Der Ballhausschwur',
                 'Die Erklärung der Menschen- und Bürgerrechte',
                 'Die Ausrufung der ersten Republik'
-              ], 0))
+              ], [0]))
+      ]);
+
+      addFact(4, [
+          Question.create(id(4, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge',
+              OrderChoice.create(0, [
+                'Der Ballhausschwur',
+                'Der Beitritt von Adel und Klerus zur Nationalversammlung',
+                'Die Nationalversammlung wird zur Verfassungsgebenden Versammlung',
+                'Die Erklärung der Menschen- und Bürgerrechte'
+              ], [0, 1, 2, 3]))
+      ]);
+    
+      addFact(5, [
+          Question.create(id(5, 0), Difficulty.MEDIUM, 'Was wird als Konstituante bezeichnet?',
+              MultipleChoice.create(0, [
+                'Die verfassungsgebende Nationalversammlung',
+                'Die Erklärung der Menschen- und Bürgerrechte',
+                'Die französische Verfassung von 1791'
+              ], [0]))
+      ]);
+      
+      addFact(6, [
+          Question.create(id(6, 0), Difficulty.MEDIUM, 'Wer war Finanzminister zu Beginn der Französischen Revolution?',
+              MultipleChoice.create(0, [
+                'Jacques Necker',
+                'Louis Auguste Le Tonnelier de Breteuil',
+                'Étienne Clavière'
+              ], [0])),
+          Question.create(id(6, 1), Difficulty.MEDIUM, 'Warum wurde Jacques Necker am 11. Juli 1789 als Finanzminister abgesetzt?',
+              MultipleChoice.create(0, [
+                'Weil er vom König als Auslöser der Revolution betrachtet wurde',
+                'Weil er die Staatsfinanzen nicht in den Griff bekommen hatte',
+                'Weil er bei Marie Antoinette in Ungnade gefallen war'
+              ], [0]))
+      ]);
+      
+      addFact(7, [
+          Question.create(id(7, 0), Difficulty.EASY, 'Welches Datum gilt als Jahrestag des Sturms auf die Bastille?',
+              MultipleChoice.create(0, [
+                '17. Mai'
+                '4. Juli',
+                '14. Juli',
+              ], [2])),
+          Question.create(id(7, 1), Difficulty.MEDIUM, 'Was wollten die Demonstranten durch den Sturm auf die Bastille erreichen?',
+              MultipleChoice.create(0, [
+                'Sie wollten sich Munition beschaffen',
+                'Sie wollten Gefangene befreien',
+                'Sie wollten den Marquis de Sade befreien'
+              ], [0])),
+          Question.create(id(7, 2), Difficulty.MEDIUM, '',
+              MultipleChoice.create(0, [
+              ], [0]))
       ]);
 
       function addFact(factNo, questions) {
