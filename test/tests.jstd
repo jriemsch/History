@@ -16,13 +16,14 @@ load:
   - ../../../jslib/main/js/gestures/Tap.js
   - ../main/js/history/model/Player.js
   - ../main/js/history/model/LevelOrderChance.js
+  - ../main/js/history/model/Difficulty.js
   - ../main/js/history/model/Opponent.js
   - ../main/js/history/model/Topic.js
   - ../main/js/history/model/Answer.js
-  - ../main/js/history/model/MultipleChoices.js
+  - ../main/js/history/model/MultipleChoice.js
   - ../main/js/history/model/Question.js
-  - ../main/js/history/data/OpponentList.js
-  - ../main/js/history/data/TopicList.js
+  - ../main/js/history/data/BaseOpponents.js
+  - ../main/js/history/data/FrenchRevolution.js
   - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/views/components/ImageSelection.js
@@ -32,6 +33,7 @@ load:
 serve:
   - images/test.png
 test:
+  - js/history/model/DifficultyTest.js
   - js/history/model/PlayerTest.js
   - js/history/model/LevelOrderChanceTest.js
   - js/history/model/OpponentTest.js
@@ -39,6 +41,8 @@ test:
   - js/history/model/AnswerTest.js
   - js/history/model/MultipleChoiceTest.js
   - js/history/model/QuestionTest.js
+  - js/history/data/BaseOpponentsTest.js
+  - js/history/data/FrenchRevolutionTest.js
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
   - js/history/views/components/ImageSelectionTest.js
