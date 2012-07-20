@@ -4,12 +4,13 @@
     <content url="file://$MODULE_DIR$/../../../jslib">
       <sourceFolder url="file://$MODULE_DIR$/../../../jslib/test" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$" />
     <content url="file://$MODULE_DIR$/../test">
       <sourceFolder url="file://$MODULE_DIR$/../test" isTestSource="true" />
     </content>
-    <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="JsTestDriver Assertion Framework" level="application" />
   </component>
 </module>
 

@@ -19,8 +19,11 @@ load:
   - ../main/js/history/model/Difficulty.js
   - ../main/js/history/model/Opponent.js
   - ../main/js/history/model/Topic.js
+  - ../main/js/history/model/DateSelector.js
   - ../main/js/history/model/Answer.js
   - ../main/js/history/model/MultipleChoice.js
+  - ../main/js/history/model/OrderChoice.js
+  - ../main/js/history/model/TimeChoice.js
   - ../main/js/history/model/Question.js
   - ../main/js/history/data/BaseOpponents.js
   - ../main/js/history/data/FrenchRevolution.js
@@ -38,8 +41,11 @@ test:
   - js/history/model/LevelOrderChanceTest.js
   - js/history/model/OpponentTest.js
   - js/history/model/TopicTest.js
+  - js/history/model/DateSelectorTest.js
   - js/history/model/AnswerTest.js
   - js/history/model/MultipleChoiceTest.js
+  - js/history/model/OrderChoiceTest.js
+  - js/history/model/TimeChoiceTest.js
   - js/history/model/QuestionTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js

@@ -6,6 +6,6 @@ TestCase('FrenchRevolutionTest', {
     var questionsByTopicAndFact = {};
     FrenchRevolution.init(topics, questionsByTopicAndFact);
     assertEquals(1, topics.length);
-    assertEquals(4, questionsByTopicAndFact.FRENCH_REVOLUTION.FACT0.length);
+    assertEquals(2, questionsByTopicAndFact.FRENCH_REVOLUTION.FACT0.length);
   }
 });

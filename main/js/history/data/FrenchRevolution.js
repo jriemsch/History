@@ -5,6 +5,8 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var Question = net.riemschneider.history.model.Question;
   var MultipleChoice = net.riemschneider.history.model.MultipleChoice;
+  var TimeChoice = net.riemschneider.history.model.TimeChoice;
+  var DateSelector = net.riemschneider.history.model.DateSelector;
 
   net.riemschneider.history.data.FrenchRevolution = {
     init: function init(topics, questionsByTopicAndFact) {
@@ -15,9 +17,9 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
     
       addFact(0, [
           Question.create(id(0, 0), Difficulty.EASY, 'Wann begann die Französische Revolution?',
-              TimeChoice.createYearChoice(0, 1780, 1810, 1789)),
+              TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1789))),
           Question.create(id(0, 1), Difficulty.MEDIUM, 'Wann begann die Französische Revolution?',
-              TimeChoice.createDayChoice(0, new Date(1780, 0, 1), new Date(1810, 11, 31), new Date(1789, 5, 17)))
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(17, 6, 1789)))
       ]);
 
       addFact(1, [
@@ -131,18 +133,15 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       addFact(7, [
           Question.create(id(7, 0), Difficulty.EASY, 'Welches Datum gilt als Jahrestag des Sturms auf die Bastille?',
               MultipleChoice.create(0, [
-                '17. Mai'
+                '17. Mai',
                 '4. Juli',
-                '14. Juli',
+                '14. Juli'
               ], [2])),
           Question.create(id(7, 1), Difficulty.MEDIUM, 'Was wollten die Demonstranten durch den Sturm auf die Bastille erreichen?',
               MultipleChoice.create(0, [
                 'Sie wollten sich Munition beschaffen',
                 'Sie wollten Gefangene befreien',
                 'Sie wollten den Marquis de Sade befreien'
-              ], [0])),
-          Question.create(id(7, 2), Difficulty.MEDIUM, '',
-              MultipleChoice.create(0, [
               ], [0]))
       ]);
 
