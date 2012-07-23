@@ -11,6 +11,7 @@ load:
   - ../../../jslib/main/js/utils/ArgumentUtils.js
   - ../../../jslib/main/js/utils/DeviceUtils.js
   - ../../../jslib/main/js/utils/TouchUtils.js
+  - ../../../jslib/main/js/graphics/Position.js
   - ../../../jslib/main/js/storage/Storage.js
   - ../../../jslib/main/js/gestures/Scroll.js
   - ../../../jslib/main/js/gestures/Tap.js
@@ -25,6 +26,7 @@ load:
   - ../main/js/history/model/OrderChoice.js
   - ../main/js/history/model/TimeChoice.js
   - ../main/js/history/model/Question.js
+  - ../main/js/history/model/Region.js
   - ../main/js/history/data/BaseOpponents.js
   - ../main/js/history/data/FrenchRevolution.js
   - ../main/js/history/controller/OpponentController.js
@@ -47,6 +49,7 @@ test:
   - js/history/model/OrderChoiceTest.js
   - js/history/model/TimeChoiceTest.js
   - js/history/model/QuestionTest.js
+  - js/history/model/RegionTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js
   - js/history/controller/PlayerControllerTest.js
