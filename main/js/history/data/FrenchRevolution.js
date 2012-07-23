@@ -145,6 +145,72 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
               ], [0]))
       ]);
 
+      addFact(8, [
+          Question.create(id(8, 0), Difficulty.MEDIUM, 'Welche direkten Konsequenzen hatte der Sturm auf die Bastille?',
+              MultipleChoice.create(0, [
+                'Den Abriss der Bastille',
+                'Die Wiedereinsetzung von Jacques Necker als Finanzminister',
+                'Die Hinrichtung der Aufständischen',
+                'Die Gründung der Nationalversammlung',
+                'Die Einberufung der Generalstände'
+              ], [0, 1])),
+          Question.create(id(8, 1), Difficulty.MEDIUM, 'Wann wurde Jacques Necker - nach seiner Absetzung am 11. Juli 1789 - wieder in sein Amt als Finanzminister eingesetzt?',
+              MultipleChoice.create(0, [
+                'Am 16. Juli 1789',
+                'Am 6. September 1790',
+                'Nie'
+              ], [0]))
+      ]);
+      
+      addFact(9, [
+          Question.create(id(9, 0), Difficulty.MEDIUM, 'Was versteht man unter der „Grande Peur“?',
+              MultipleChoice.create(0, [
+                'Die gewaltsamen Bauernaufstände aus Angst vor dem Adel und Räuberbanden',
+                'Die Finanzkrise zu Beginn der Französichen Revolution',
+                'Die Verstaatlichung der kirchlichen Besitztümer'
+              ], [0])),
+          Question.create(id(9, 1), Difficulty.MEDIUM, 'Was waren die Auslöser für die „Grande Peur“?',
+              MultipleChoice.create(0, [
+                'Die Angst vor dem Adel',
+                'Die Angst vor Räuberbanden',
+                'Die Unzufriedenheit mit dem König',
+                'Die Privilegien des 1. und 2. Standes'
+              ], [0, 1])),
+          Question.create(id(9, 2), Difficulty.MEDIUM, 'Wie reagierte die Nationalversammlung auf die Aufstände während der „Grande Peur“?',
+              MultipleChoice.create(0, [
+                'Sie schaffte einige Privilegien des 1. und 2. Standes ab',
+                'Sie verstaatlichte die kirchlichen Besitztümer',
+                'Sie liess die Aufstände niederschlagen',
+                'Sie veranlasste die Inhaftierung des Königs'
+              ], [0])),
+          Question.create(id(9, 3), Difficulty.MEDIUM, 'Wann begann die „Grande Peur“?',
+              TimeChoice.create(0, DateSelector.month(1, 1780), DateSelector.month(12, 1810), DateSelector.month(7, 1789))),
+          Question.create(id(9, 4), Difficulty.MEDIUM, 'Wann endete die „Grande Peur“?',
+              TimeChoice.create(0, DateSelector.month(1, 1780), DateSelector.month(12, 1810), DateSelector.month(8, 1789)))
+      ]);
+      
+      addFact(10, [
+          Question.create(id(10, 0), Difficulty.MEDIUM, 'In welchem Jahr kam es zu den sogenannten Augustbeschlüssen?',
+              TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1789))),
+          Question.create(id(10, 1), Difficulty.MEDIUM, 'Was wurde bei den sogenannten Augustbeschlüssen vereinbart?',
+              MultipleChoice.create(0, [
+                'Die Abschaffung der Leibeigenschaft',
+                'Die Abschaffung der Feudalherrschaft',
+                'Die Rechtsgleichheit',
+                'Die Abschaffung der Steuerprivilegien von Adel und Klerus',
+                'Kostenloser Zugang zur Justiz',
+                'Die Absetzung des Königs',
+                'Die Verstaatlichung der kirchlichen Besitztümer',
+                'Die Erklärung der Menschen- und Bürgerrechte'
+              ], [0, 1, 2, 3, 4])),
+      ]);
+      
+      addFact(11, [
+          Question.create(id(11, 0), Difficulty.MEDIUM, '?',
+              MultipleChoice.create(0, [
+              ], [0])),
+      ]);
+
       function addFact(factNo, questions) {
         questionsByTopicAndFact[topicId]['FACT' + factNo] = questions;
       }
