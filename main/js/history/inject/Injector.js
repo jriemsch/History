@@ -6,12 +6,14 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
     create: function () {
       var injector = {};
 
+      injector.addOns = net.riemschneider.history.model.AddOns.create();
+
       injector.opponents = [];
       net.riemschneider.history.data.BaseOpponents.init(injector.opponents);
 
       injector.topics = [];
       injector.questionsByTopicAndFact = {};
-      net.riemschneider.history.data.FrenchRevolution.init(injector.topics, injector.questionsByTopicAndFact);
+      net.riemschneider.history.data.FrenchRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
 
       injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();

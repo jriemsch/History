@@ -1,17 +1,25 @@
 net.riemschneider.history.data = net.riemschneider.history.data || {};
 
 (function () {
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var Topic = net.riemschneider.history.model.Topic;
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var Question = net.riemschneider.history.model.Question;
   var MultipleChoice = net.riemschneider.history.model.MultipleChoice;
   var TimeChoice = net.riemschneider.history.model.TimeChoice;
   var DateSelector = net.riemschneider.history.model.DateSelector;
+  var AddOns = net.riemschneider.history.model.AddOns;
 
   net.riemschneider.history.data.FrenchRevolution = {
-    init: function init(topics, questionsByTopicAndFact) {
+    init: function init(topics, questionsByTopicAndFact, addOns) {
+      ArgumentUtils.assertArray(topics);
+      ArgumentUtils.assertMap(questionsByTopicAndFact);
+      ArgumentUtils.assertType(addOns, AddOns);
+
       var topicId = 'FRENCH_REVOLUTION';
       topics.push(Topic.create(topicId, 'Französische Revolution', 'images/frenchRevolution.png'));
+
+      addOns.unlock(topicId);
 
       questionsByTopicAndFact[topicId] = {};
     
@@ -202,15 +210,9 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Die Absetzung des Königs',
                 'Die Verstaatlichung der kirchlichen Besitztümer',
                 'Die Erklärung der Menschen- und Bürgerrechte'
-              ], [0, 1, 2, 3, 4])),
+              ], [0, 1, 2, 3, 4]))
       ]);
       
-      addFact(11, [
-          Question.create(id(11, 0), Difficulty.MEDIUM, '?',
-              MultipleChoice.create(0, [
-              ], [0])),
-      ]);
-
       function addFact(factNo, questions) {
         questionsByTopicAndFact[topicId]['FACT' + factNo] = questions;
       }

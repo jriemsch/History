@@ -27,6 +27,7 @@ load:
   - ../main/js/history/model/TimeChoice.js
   - ../main/js/history/model/Question.js
   - ../main/js/history/model/Region.js
+  - ../main/js/history/model/AddOns.js
   - ../main/js/history/data/BaseOpponents.js
   - ../main/js/history/data/FrenchRevolution.js
   - ../main/js/history/controller/OpponentController.js
@@ -50,6 +51,7 @@ test:
   - js/history/model/TimeChoiceTest.js
   - js/history/model/QuestionTest.js
   - js/history/model/RegionTest.js
+  - js/history/model/AddOnsTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js
   - js/history/controller/PlayerControllerTest.js
