@@ -213,6 +213,41 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
               ], [0, 1, 2, 3, 4]))
       ]);
       
+      addFact(11, [
+          Question.create(id(11, 0), Difficulty.MEDIUM, 'An welchem Datum erfolgte die Erklärung der Menschen- und Bürgerrechte?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(26, 8, 1789))),
+          Question.create(id(11, 1), Difficulty.MEDIUM, 'Was ist NICHT Bestandteil der am 26. August 1789 verkündeten Menschen- und Bürgerrechte?',
+              MultipleChoice.create(0, [
+                'Die Gleichstellung von Frauen',
+                'Die Absetzung des Königs',
+                'Die Abschaffung der Stände'
+                'Die Wehrpflicht',
+                'Das Recht auf Bildung',
+                'Die Gewaltenteilung',
+                'Die Gleichheit aller Menschen vor dem Gesetz',
+                'Das Recht auf Eigentum',
+                'Das Recht auf Freiheit',
+                'Das Recht auf Sicherheit',
+                'Das Recht auf Widerstand gegen Unterdrückung',
+                'Das Recht auf Religionsfreiheit',
+                'Das Recht auf Meinungsfreiheit',
+                'Die Souveränität liegt beim Volk',
+                'Die Steuerpflicht',
+                'Die Unschuldsvermutung'
+              ], [0, 1, 2, 3, 4]))
+      ]);
+      
+      addFact(12, [
+          Question.create(id(11, 0), Difficulty.MEDIUM, 'Wann fand der Zug der Marktfrauen nach Versailles statt?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(5, 10, 1789))),
+          Question.create(id(11, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge',
+              OrderChoice.create(0, [
+                'Die Augustbeschlüsse',
+                'Zug der Marktfrauen nach Versailles',
+                'Der König bestätigt die Gesetzgebungsgewalt der Nationalversammlung'
+              ], [0, 1, 2]))
+      ]);
+      
       function addFact(factNo, questions) {
         questionsByTopicAndFact[topicId]['FACT' + factNo] = questions;
       }
