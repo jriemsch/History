@@ -220,7 +220,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
               MultipleChoice.create(0, [
                 'Die Gleichstellung von Frauen',
                 'Die Absetzung des Königs',
-                'Die Abschaffung der Stände'
+                'Die Abschaffung der Stände',
                 'Die Wehrpflicht',
                 'Das Recht auf Bildung',
                 'Die Gewaltenteilung',

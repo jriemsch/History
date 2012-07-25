@@ -30,6 +30,10 @@ load:
   - ../main/js/history/model/AddOns.js
   - ../main/js/history/data/BaseOpponents.js
   - ../main/js/history/data/FrenchRevolution.js
+  - ../main/js/history/data/AmericanRevolution.js
+  - ../main/js/history/data/FirstWorldWar.js
+  - ../main/js/history/data/SecondWorldWar.js
+  - ../main/js/history/data/WorldHistory.js
   - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/views/components/ImageSelection.js
@@ -54,6 +58,10 @@ test:
   - js/history/model/AddOnsTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js
+  - js/history/data/AmericanRevolutionTest.js
+  - js/history/data/FirstWorldWarTest.js
+  - js/history/data/SecondWorldWarTest.js
+  - js/history/data/WorldHistoryTest.js
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
   - js/history/views/components/ImageSelectionTest.js

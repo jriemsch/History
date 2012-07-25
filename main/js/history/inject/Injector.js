@@ -14,6 +14,10 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       injector.topics = [];
       injector.questionsByTopicAndFact = {};
       net.riemschneider.history.data.FrenchRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
+      net.riemschneider.history.data.AmericanRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
+      net.riemschneider.history.data.FirstWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
+      net.riemschneider.history.data.SecondWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
+      net.riemschneider.history.data.WorldHistory.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
 
       injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();
