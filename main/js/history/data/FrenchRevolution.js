@@ -71,7 +71,15 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Die Jakobiner',
                 'Die Sansculotten',
                 'Der König'
-              ], [0, 1, 2]))
+              ], [0, 1, 2])),
+          Question.create(id(1, 6), Difficulty.EASY, 'Wer berief im Mai 1789 die Generalstände zusammen?',
+              MultipleChoice.create(0, [
+                'König Ludwig XVI.',
+                'König Ludwig XIV.',
+                'Kaiser Leopold II.',
+                'König Friedrich Wilhelm II.',
+                'Papst Pius VI.'
+              ], [0]))
       ]);
       
       addFact(2, [
@@ -238,14 +246,41 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       ]);
       
       addFact(12, [
-          Question.create(id(11, 0), Difficulty.MEDIUM, 'Wann fand der Zug der Marktfrauen nach Versailles statt?',
+          Question.create(id(12, 0), Difficulty.MEDIUM, 'Wann fand der Zug der Marktfrauen nach Versailles statt?',
               TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(5, 10, 1789))),
-          Question.create(id(11, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge',
+          Question.create(id(12, 1), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge',
               OrderChoice.create(0, [
                 'Die Augustbeschlüsse',
                 'Zug der Marktfrauen nach Versailles',
                 'Der König bestätigt die Gesetzgebungsgewalt der Nationalversammlung'
               ], [0, 1, 2]))
+      ]);
+      
+      addFact(13, [
+          Question.create(id(13, 0), Difficulty.MEDIUM, 'Was versteht man unter der Säkularisation',
+              MultipleChoice.create(0, [
+                'Die Verstaatlichung des Kirchenbesitzes',
+                'Die Trennung in Stände',
+                'Die Finanzkrise zu Beginn der Französischen Revolution'
+              ], [0])),
+          Question.create(id(13, 1), Difficulty.MEDIUM, 'Warum wurde am 2. November 1789 der Kirchenbesitz verstaatlicht?',
+              MultipleChoice.create(1, [
+                'Um einen drohenden Staatsbankrott aufzuhalten',
+                'Weil sich der Klerus nicht der Nationalversammlung anschliessen wollte',
+                'Um die Vertreter des Klerus in der Nationalversammlung zu schwächen'
+              ], [0])),
+          Question.create(id(14, 1), Difficulty.MEDIUM, 'Am 2. November 1789 beschloss{nationalversammlung} den Besitz {kirche} zu verstaatlichen, um einen Staatsbankrott zu verhinden'
+              GapChoice.create(1, [
+               'Nationalversammlung',
+               'Kirche',
+               'Adel',
+               'dritter Stand',
+               'Generalstände',
+               'König'
+              ], {
+                nationalversammlung: { display: [ ' die Nationalversammlung', ' die Kirche', ' der Adel', ' der Dritte Stand', 'en die Generalstände', ' der König' ], correct: 0 },
+                kirche: { display: [ 'der Nationalversammlung', 'der Kirche', 'des Adels', 'des Dritten Standes', 'der Generalstände', 'des Königs' ], correct: 1 }
+              })),
       ]);
       
       function addFact(factNo, questions) {
