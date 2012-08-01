@@ -285,6 +285,27 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
               }))
       ]);
       
+      addFact(14, [
+          Question.create(id(14, 0), Difficulty.EASY, 'In welchem Jahr wurden die Assignaten eingeführt?',
+              TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1789))),
+          Question.create(id(14, 1), Difficulty.MEDIUM, 'Wann wurden die Assignaten eingeführt?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(17, 6, 1789)))
+          Question.create(id(14, 2), Difficulty.MEDIUM, 'Was waren die sogenannten „Assignaten“?',
+              MultipleChoice.create(0, [
+                'Papiergeld',
+                'Eine politische Vereinigung',
+                'Eine Petition zur Absetzung des Königs'
+              ], [0])),
+          Question.create(id(14, 3), Difficulty.MEDIUM, 'Wodurch wurden die „Assignaten“ ursprünglich gedeckt?',
+              MultipleChoice.create(0, [
+                'Durch die verstaatlichten Kirchengüter',
+                'Durch die Goldreserven Frankreichs',
+                'Durch die Ländereien von Adligen'
+              ], [0])),
+          Question.create(id(14, 4), Difficulty.MEDIUM, 'Welchen Wertverlust (in Prozent) hatten die „Assignaten“ bis 1793?',
+              ValueChoice.create(0, 0, 100, 50))
+      ]);
+      
       function addFact(factNo, questions) {
         questionsByTopicAndFact[topicId]['FACT' + factNo] = questions;
       }
