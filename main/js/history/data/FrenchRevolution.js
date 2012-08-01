@@ -7,6 +7,8 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Question = net.riemschneider.history.model.Question;
   var MultipleChoice = net.riemschneider.history.model.MultipleChoice;
   var TimeChoice = net.riemschneider.history.model.TimeChoice;
+  var GapChoice = net.riemschneider.history.model.GapChoice;
+  var Gap = net.riemschneider.history.model.Gap;
   var DateSelector = net.riemschneider.history.model.DateSelector;
   var AddOns = net.riemschneider.history.model.AddOns;
 
@@ -269,8 +271,8 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Weil sich der Klerus nicht der Nationalversammlung anschliessen wollte',
                 'Um die Vertreter des Klerus in der Nationalversammlung zu schwächen'
               ], [0])),
-          Question.create(id(14, 1), Difficulty.MEDIUM, 'Am 2. November 1789 beschloss{nationalversammlung} den Besitz {kirche} zu verstaatlichen, um einen Staatsbankrott zu verhinden'
-              GapChoice.create(1, [
+          Question.create(id(13, 2), Difficulty.MEDIUM, 'Am 2. November 1789 beschloss{nationalversammlung} den Besitz {kirche} zu verstaatlichen, um einen Staatsbankrott zu verhinden',
+              GapChoice.create(0, [
                'Nationalversammlung',
                'Kirche',
                'Adel',
@@ -278,9 +280,9 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                'Generalstände',
                'König'
               ], {
-                nationalversammlung: { display: [ ' die Nationalversammlung', ' die Kirche', ' der Adel', ' der Dritte Stand', 'en die Generalstände', ' der König' ], correct: 0 },
-                kirche: { display: [ 'der Nationalversammlung', 'der Kirche', 'des Adels', 'des Dritten Standes', 'der Generalstände', 'des Königs' ], correct: 1 }
-              })),
+                nationalversammlung: Gap.create([ ' die Nationalversammlung', ' die Kirche', ' der Adel', ' der Dritte Stand', 'en die Generalstände', ' der König' ], 0),
+                kirche: Gap.create([ 'der Nationalversammlung', 'der Kirche', 'des Adels', 'des Dritten Standes', 'der Generalstände', 'des Königs' ], 1)
+              }))
       ]);
       
       function addFact(factNo, questions) {
