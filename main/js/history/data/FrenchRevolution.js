@@ -9,6 +9,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var TimeChoice = net.riemschneider.history.model.TimeChoice;
   var GapChoice = net.riemschneider.history.model.GapChoice;
   var Gap = net.riemschneider.history.model.Gap;
+  var ValueChoice = net.riemschneider.history.model.ValueChoice;
   var DateSelector = net.riemschneider.history.model.DateSelector;
   var AddOns = net.riemschneider.history.model.AddOns;
 
@@ -289,7 +290,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
           Question.create(id(14, 0), Difficulty.EASY, 'In welchem Jahr wurden die Assignaten eingeführt?',
               TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1789))),
           Question.create(id(14, 1), Difficulty.MEDIUM, 'Wann wurden die Assignaten eingeführt?',
-              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(17, 6, 1789)))
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(17, 6, 1789))),
           Question.create(id(14, 2), Difficulty.MEDIUM, 'Was waren die sogenannten „Assignaten“?',
               MultipleChoice.create(0, [
                 'Papiergeld',

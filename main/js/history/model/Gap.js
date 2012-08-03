@@ -4,7 +4,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
-  net.riemschneider.history.model.Gap = TypeUtils.enhance('net.riemschneider.history.model.Gap', {
+  net.riemschneider.history.model.Gap = {
     create: function create(fillers, correctChoice) {
       ArgumentUtils.assertArray(fillers, function (elem) { ArgumentUtils.assertString(elem); });
       ArgumentUtils.assertRange(correctChoice, 0, fillers.length - 1);
@@ -14,5 +14,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getCorrectChoice: function getCorrectChoice() { return correctChoice; }
       };
     }
-  });
+  };
+
+  TypeUtils.enhance('net.riemschneider.history.model.Gap', net.riemschneider.history.model.Gap);
 }());

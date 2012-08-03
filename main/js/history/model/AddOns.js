@@ -4,7 +4,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
-  net.riemschneider.history.model.AddOns = TypeUtils.enhance('net.riemschneider.history.model.AddOns', {
+  net.riemschneider.history.model.AddOns = {
     create: function create() {
       var unlocked = {};
 
@@ -30,5 +30,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         }
       };
     }
-  });
+  };
+
+  TypeUtils.enhance('net.riemschneider.history.model.AddOns', net.riemschneider.history.model.AddOns);
 }());

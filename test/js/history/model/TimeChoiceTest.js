@@ -3,7 +3,7 @@ var TimeChoice = net.riemschneider.history.model.TimeChoice;
 var DateSelector = net.riemschneider.history.model.DateSelector;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
 
-TestCase('TimeChoicesTest', {
+TestCase('TimeChoiceTest', {
   testCreateAndGetters: function () {
     var from = DateSelector.year(1);
     var to = DateSelector.year(3);

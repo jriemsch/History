@@ -4,7 +4,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
-  net.riemschneider.history.model.Answer = TypeUtils.enhance('net.riemschneider.history.model.Answer', {
+  net.riemschneider.history.model.Answer = {
     create: function create(time) {
       ArgumentUtils.assertRange(time, 0);
 
@@ -12,5 +12,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getTime: function getTime() { return time; }
       };
     }
-  });
+  };
+
+  TypeUtils.enhance('net.riemschneider.history.model.Answer', net.riemschneider.history.model.Answer);
 }());

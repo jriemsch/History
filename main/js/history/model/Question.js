@@ -4,6 +4,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var Answer = net.riemschneider.history.model.Answer;
+  var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   net.riemschneider.history.model.Question = {
     create: function create(id, difficulty, text, answer) {
@@ -20,4 +21,6 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       };
     }
   };
+
+  TypeUtils.enhance('net.riemschneider.history.model.Question', net.riemschneider.history.model.Question);
 }());

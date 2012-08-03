@@ -3,6 +3,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 (function () {
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var Difficulty = net.riemschneider.history.model.Difficulty;
+  var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   net.riemschneider.history.model.Opponent = {
     create: function create(id, name, avatarImageIdx, difficulty, knowledgeChancesByLevel, levelOrderChances) {
@@ -24,4 +25,6 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       };
     }
   };
+
+  TypeUtils.enhance('net.riemschneider.history.model.Opponent', net.riemschneider.history.model.Opponent);
 }());

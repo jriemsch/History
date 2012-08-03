@@ -5,7 +5,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
-  net.riemschneider.history.model.MultipleChoice = TypeUtils.enhance('net.riemschneider.history.model.MultipleChoice', {
+  net.riemschneider.history.model.MultipleChoice = {
     create: function create(time, choices, correctChoices) {
       ArgumentUtils.assertArray(choices, function (elem) { ArgumentUtils.assertString(elem); });
       ArgumentUtils.assertTrue(choices.length > 0);
@@ -16,5 +16,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       answer.getCorrectChoices = function getCorrectChoices() { return correctChoices; };
       return answer;
     }
-  });
+  };
+
+  TypeUtils.enhance('net.riemschneider.history.model.MultipleChoice', net.riemschneider.history.model.MultipleChoice);
 }());

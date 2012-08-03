@@ -28,7 +28,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
     }
   }
 
-  net.riemschneider.history.model.DateSelector = TypeUtils.enhanceByMethods('net.riemschneider.history.model.DateSelector', ['day', 'month', 'year'], {
+  net.riemschneider.history.model.DateSelector = {
     SelectorType: TypeUtils.enhanceEnum('net.riemschneider.history.model.DateSelector.SelectorType', {
       YEAR: { key: 'YEAR' },
       MONTH: { key: 'MONTH' },
@@ -52,5 +52,9 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       ArgumentUtils.assertNotNull(year);
       return create(year);
     }
-  });
+  };
+
+  TypeUtils.enhanceByMethods('net.riemschneider.history.model.DateSelector',
+      ['day', 'month', 'year'],
+      net.riemschneider.history.model.DateSelector);
 }());

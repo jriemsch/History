@@ -2,6 +2,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 
 (function () {
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
+  var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   net.riemschneider.history.model.Region = {
     create: function create(id, imgSrc, imgPos) {
@@ -16,4 +17,6 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       };
     }
   };
+
+  TypeUtils.enhance('net.riemschneider.history.model.Region', net.riemschneider.history.model.Region);
 }());

@@ -2,6 +2,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 
 (function () {
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
+  var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   net.riemschneider.history.model.LevelOrderChance = {
     create: function (levelOrder, chance) {
@@ -17,4 +18,6 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       };
     }
   };
+
+  TypeUtils.enhance('net.riemschneider.history.model.LevelOrderChance', net.riemschneider.history.model.LevelOrderChance);
 }());

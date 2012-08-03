@@ -30,6 +30,7 @@ load:
   - ../main/js/history/model/AddOns.js
   - ../main/js/history/model/Gap.js
   - ../main/js/history/model/GapChoice.js
+  - ../main/js/history/model/ValueChoice.js
   - ../main/js/history/data/BaseOpponents.js
   - ../main/js/history/data/FrenchRevolution.js
   - ../main/js/history/data/AmericanRevolution.js
@@ -60,6 +61,7 @@ test:
   - js/history/model/AddOnsTest.js
   - js/history/model/GapTest.js
   - js/history/model/GapChoiceTest.js
+  - js/history/model/ValueChoiceTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js
   - js/history/data/AmericanRevolutionTest.js

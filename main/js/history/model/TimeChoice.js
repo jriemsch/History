@@ -6,7 +6,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var DateSelector = net.riemschneider.history.model.DateSelector;
 
-  net.riemschneider.history.model.TimeChoice = TypeUtils.enhance('net.riemschneider.history.model.TimeChoice', {
+  net.riemschneider.history.model.TimeChoice = {
     create: function create(time, from, to, correct) {
       ArgumentUtils.assertType(from, DateSelector);
       ArgumentUtils.assertType(to, DateSelector);
@@ -22,5 +22,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       answer.getCorrect = function getCorrect() { return correct; };
       return answer;
     }
-  });
+  };
+
+  TypeUtils.enhance('net.riemschneider.history.model.TimeChoice', net.riemschneider.history.model.TimeChoice);
 }());
