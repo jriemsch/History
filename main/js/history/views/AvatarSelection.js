@@ -10,8 +10,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
     create: function (playerController) {
       var player = playerController.getPlayer();
 
-      var questionMarksDivTop = $('#questionMarksTop');
-      var questionMarksDivBottom = $('#questionMarksBottom');
+      var questionMarksDivTop = $('#avatarQuestionMarksTop');
+      var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
       var imageSelection = createImageSelection();
       var nameDiv = $('#nameInput');

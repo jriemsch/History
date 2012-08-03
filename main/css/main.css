@@ -105,6 +105,10 @@ body {
     display: none;
 }
 
+#topicSelection {
+    display: none;
+}
+
 .bigTitle {
     position: absolute;
     top: 4%;
@@ -306,3 +310,22 @@ body {
         border-width: 4px;
     }
 }
+
+#topics {
+    position: absolute;
+    height: 244px;
+    width: 100%;
+    overflow-x: hidden;
+    top: 50%;
+    margin-top: -122px;
+    background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #C9C9C9 58%);
+    -webkit-box-shadow: 0 3px 8px 0 black;
+}
+
+@media only screen and (max-width: 640px) {
+    #topics {
+        height: 122px;
+        margin-top: -61px;
+    }
+}
+

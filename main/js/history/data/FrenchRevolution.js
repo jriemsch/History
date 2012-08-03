@@ -6,6 +6,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var Question = net.riemschneider.history.model.Question;
   var MultipleChoice = net.riemschneider.history.model.MultipleChoice;
+  var OrderChoice = net.riemschneider.history.model.OrderChoice;
   var TimeChoice = net.riemschneider.history.model.TimeChoice;
   var GapChoice = net.riemschneider.history.model.GapChoice;
   var Gap = net.riemschneider.history.model.Gap;

@@ -27,10 +27,13 @@
   <script type="text/javascript" charset="utf-8" src="js/history/model/DateSelector.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Difficulty.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/LevelOrderChance.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/Gap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Answer.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/MultipleChoice.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/OrderChoice.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/TimeChoice.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/GapChoice.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/ValueChoice.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Question.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Opponent.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Region.js"></script>
@@ -40,12 +43,16 @@
   <script type="text/javascript" charset="utf-8" src="js/history/data/FrenchRevolution.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/data/AmericanRevolution.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/data/WorldHistory.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/data/FirstWorldWar.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/data/SecondWorldWar.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/PlayerController.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/OpponentController.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/inject/Injector.js"></script>
@@ -67,10 +74,18 @@
 
   <div id="avatarSelection" class="viewBackground">
     <div id="avatars"></div>
-    <div id="questionMarksTop" class="questionMarks"></div>
-    <div id="questionMarksBottom" class="questionMarks"></div>
+    <div id="avatarQuestionMarksTop" class="questionMarks"></div>
+    <div id="avatarQuestionMarksBottom" class="questionMarks"></div>
     <div class="bigTitle">Wähle Deinen Avatar</div>
     <div id="nameInput"><div><input type="text"></div></div>
+    <div class="footer"><div class="okButton"></div></div>
+  </div>
+
+  <div id="topicSelection" class="viewBackground">
+    <div id="topics"></div>
+    <div id="topicQuestionMarksTop" class="questionMarks"></div>
+    <div id="topicQuestionMarksBottom" class="questionMarks"></div>
+    <div class="bigTitle">Wähle Das Thema</div>
     <div class="footer"><div class="okButton"></div></div>
   </div>
 </body>
