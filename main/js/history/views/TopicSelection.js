@@ -6,7 +6,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.TopicSelection = {
-    create: function (topics) {
+    create: function (topics, addOns) {
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
       var topicsDiv = $('#topics');
@@ -55,8 +55,12 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         var options = [];
         for (var idx in topics) {
           var topic = topics[idx];
+          var isUnlocked = addOns.isUnlocked(topic.getId());
           options[idx] = {
-            imgSrc: topic.getImage()
+            imgSrc: topic.getImage(),
+            name: topic.getName(),
+            overlay: isUnlocked ? null : 'images/lock.png',
+            imgOpacity: isUnlocked ? null : 0.4
           };
         }
         return options;

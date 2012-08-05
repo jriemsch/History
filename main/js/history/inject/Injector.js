@@ -22,7 +22,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();
       injector.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(injector.playerController);
-      injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topics);
+      injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topics, injector.addOns);
       injector.menu = net.riemschneider.history.views.Menu.create(injector.avatarSelection, injector.topicSelection, null, null);
 
       return injector;

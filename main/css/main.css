@@ -301,6 +301,53 @@ body {
     }
 }
 
+.imageSelectionOptionOverlay {
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    width: 32px;
+    height: 32px;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionOptionOverlay {
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        right: 20px;
+    }
+}
+
+.imageSelectionOptionText {
+    position: absolute;
+    width: 135px;
+    height: 35px;
+    left: 34px;
+    bottom: 15px;
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+    color: white;
+    display: table;
+    text-shadow: #000000 -2px 0 2px, #000000 0 -2px 2px, #000000 2px 0 2px, #000000 0 2px 2px;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionOptionText {
+        width: 67.5px;
+        height: 17.5px;
+        left: 18px;
+        bottom: 10px;
+        font-size: 7pt;
+        text-shadow: #000000 -1px 0 1px, #000000 0 -1px 1px, #000000 1px 0 1px, #000000 0 1px 1px;
+    }
+}
+
+.imageSelectionOptionText p {
+    vertical-align: middle;
+    display: table-cell;
+}
+
 .imageSelectionSelector {
     border: 8px solid #adff2f;
 }

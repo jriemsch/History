@@ -17,6 +17,8 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       Scroll.create(containerDiv, onScrolledBy);
       addOptionsToDiv();
 
+      setScrollPosition(0, 0);
+
       function selectImage(idx, scrollTo) {
         if (selectedImg) {
           selectedImg.removeClass('imageSelectionSelector');
@@ -52,17 +54,17 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
       function onScrolledBy(offset, easeTime) {
         var newPos = lastScrollPos + offset.x;
-        var max = (window.innerWidth - spacing) / 2;
-        var min = max - spacing * (options.length - 1);
-        setScrollPosition(Math.min(max, Math.max(min, newPos)), easeTime);
+        setScrollPosition(newPos, easeTime);
       }
 
-      function setScrollPosition(marginLeft, easeTime) {
+      function setScrollPosition(newPos, easeTime) {
+        var min = window.innerWidth - spacing * options.length;
+        var pos = Math.min(0, Math.max(min, newPos));
         containerDiv.css({
           webkitTransition: easeTime > 0 ? 'margin-left ' + easeTime + 'ms ease-out' : '',
-          marginLeft: marginLeft
+          marginLeft: pos
         });
-        lastScrollPos = marginLeft;
+        lastScrollPos = pos;
       }
 
       function addOptionsToDiv() {
@@ -79,9 +81,20 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         });
         containerDiv.append(optionDiv);
 
-        var img = $('<img src=' + option.imgSrc + ' class="imageSelectionOptionImage"></img>');
+        var img = $('<img class="imageSelectionOptionImage" src=' + option.imgSrc + '></img>');
         optionDiv.hide();
         optionDiv.append(img);
+        if (option.name) {
+          optionDiv.append($('<div class="imageSelectionOptionText"><p>' + option.name + '</p></div>'));
+        }
+
+        if (option.overlay) {
+          optionDiv.append($('<img class="imageSelectionOptionOverlay" src=' + option.overlay + '></img>'));
+        }
+
+        if (option.imgOpacity) {
+          img.css('opacity', option.imgOpacity);
+        }
 
         img.load(function () {
            optionDiv.show();

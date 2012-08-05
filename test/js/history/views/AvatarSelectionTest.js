@@ -8,8 +8,8 @@ TestCase('AvatarSelectionTest', {
 
     this.avatarSelectionDiv = $('<div id="avatarSelection"></div>');
     this.avatarsDiv = $('<div id="avatars"></div>');
-    this.questionMarksTop = $('<div id="questionMarksTop"></div>');
-    this.questionMarksBottom = '<div id="questionMarksBottom"></div>';
+    this.questionMarksTop = $('<div id="avatarQuestionMarksTop"></div>');
+    this.questionMarksBottom = '<div id="avatarQuestionMarksBottom"></div>';
     this.nameInputDiv = $('<div id="nameInput"></div>');
     this.nameInputDivDiv = $('<div></div>');
     this.nameInput = $('<input type="text">');

@@ -9,11 +9,15 @@ TestCase('ImageSelectionTest', {
         '.imageSelectionOptionContainer { position: absolute; }' +
         '</style>');
     $('head').append(css);
-    this.width = Math.floor((window.innerWidth - 150) / 2);
+    this.cssRecorder = JQueryTestUtils.startRecording('css');
+    JQueryTestUtils.clearRecording(this.cssRecorder);
+    this.imageCountForScrolling = Math.floor(window.innerWidth / 150) + 2;
+    this.scrollingOversize = this.imageCountForScrolling * 150 - window.innerWidth;
   },
 
   tearDown: function () {
     $('body').empty();
+    JQueryTestUtils.stopRecording(this.cssRecorder);
   },
 
   testCreateImagePlacement: function () {
@@ -22,8 +26,8 @@ TestCase('ImageSelectionTest', {
     assertEquals(1, container.length);
     var optionDivs = container.find('.imageSelectionOption');
     assertEquals(2, optionDivs.length);
-    assertEquals('0px', $(optionDivs[0]).css('left'));
-    assertEquals('150px', $(optionDivs[1]).css('left'));
+    assertEquals('0px', this.getLastRecording($(optionDivs[0])).arguments[0].left);
+    assertEquals('150px', this.getLastRecording($(optionDivs[1])).arguments[0].left);
   },
 
   testDefaultSelection: function () {
@@ -53,26 +57,38 @@ TestCase('ImageSelectionTest', {
   },
 
   testScrolling: function () {
-    ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    ImageSelection.create($('body'), this.createImagesForScrolling());
     var container = $('body').find('.imageSelectionOptionContainer');
     container.trigger(jQuery.Event('mousedown', { pageX: 120, pageY: 0 }));
     container.trigger(jQuery.Event('mousemove', { pageX: 100, pageY: 0 }));
-    assertEquals((this.width - 20) + 'px', container.css('margin-left'));
+    assertEquals(-20, this.getLastRecording(container).arguments[0].marginLeft);
   },
 
   testMaxScroll: function () {
-    ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    ImageSelection.create($('body'), this.createImagesForScrolling());
     var container = $('body').find('.imageSelectionOptionContainer');
     container.trigger(jQuery.Event('mousedown', { pageX: 120, pageY: 0 }));
     container.trigger(jQuery.Event('mousemove', { pageX: 121, pageY: 0 }));
-    assertEquals(this.width + 'px', container.css('margin-left'));
+    assertEquals(0, this.getLastRecording(container).arguments[0].marginLeft);
   },
 
   testMinScroll: function () {
-    ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    ImageSelection.create($('body'), this.createImagesForScrolling());
     var container = $('body').find('.imageSelectionOptionContainer');
     container.trigger(jQuery.Event('mousedown', { pageX: 200, pageY: 0 }));
     container.trigger(jQuery.Event('mousemove', { pageX: 0, pageY: 0 }));
-    assertEquals((this.width - 150) + 'px', container.css('margin-left'));
+    assertEquals(-this.scrollingOversize, this.getLastRecording(container).arguments[0].marginLeft);
+  },
+
+  getLastRecording: function getLastRecording(obj) {
+    return JQueryTestUtils.getLastRecording(this.cssRecorder, JQueryTestUtils.matchRecordingByObj(obj));
+  },
+
+  createImagesForScrolling:function () {
+    var images = [];
+    for (var idx = 0; idx < this.imageCountForScrolling; ++idx) {
+      images[idx] = { imgSrc:'/test/images/test.png' };
+    }
+    return images;
   }
 });

@@ -42,6 +42,7 @@ load:
   - ../main/js/history/views/components/ImageSelection.js
   - ../main/js/history/views/components/AnimatedBackground.js
   - ../main/js/history/views/AvatarSelection.js
+  - ../main/js/history/views/TopicSelection.js
   - ../main/js/history/views/Menu.js
 serve:
   - images/test.png
@@ -73,4 +74,5 @@ test:
   - js/history/views/components/ImageSelectionTest.js
   - js/history/views/components/AnimatedBackgroundTest.js
   - js/history/views/AvatarSelectionTest.js
+  - js/history/views/TopicSelectionTest.js
   - js/history/views/MenuTest.js
