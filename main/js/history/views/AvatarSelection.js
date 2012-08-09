@@ -8,8 +8,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   net.riemschneider.history.views.AvatarSelection = {
     create: function (playerController) {
-      var player = playerController.getPlayer();
-
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
@@ -20,16 +18,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       prepareNameInput();
       prepareButtonBar();
 
-      var onHide = null;
-
-      function show(onHideCallback) {
-        $('#avatarSelection').show();
-        AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
-        AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
-        imageSelection.setSelection(player.getAvatarImageIdx());
-        prepareOnResize();
-        onHide = onHideCallback;
-      }
+      var onOkCallback = null;
 
       function createImageSelection() {
         var options = createAvatarOptions();
@@ -38,17 +27,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function prepareButtonBar() {
         var okButton = $('#avatarSelection .footer .okButton');
-        Tap.create(okButton, function () {
-          player.setAvatarImageIdx(imageSelection.getSelection());
-          player.setName(nameInput.val() || 'Mr. X');
-          playerController.savePlayer();
-          questionMarksDivTop.empty();
-          questionMarksDivBottom.empty();
-          $('#avatarSelection').hide();
-          if (onHide) {
-            onHide();
-          }
-        }, false, 'okPressed');
+        Tap.create(okButton, function () { onOkCallback(); }, false, 'okPressed');
       }
 
       function prepareOnResize() {
@@ -73,8 +52,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         TouchUtils.onTouchStart($(document), function () {
           nameInput.blur();
         });
-
-        nameInput.val(player.getName());
       }
 
       function createAvatarOptions() {
@@ -88,7 +65,25 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       return {
-        show: show
+        show: function show() {
+          $('#avatarSelection').show();
+          AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
+          AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
+
+          var player = playerController.getPlayer();
+          imageSelection.setSelection(player.getAvatarImageIdx());
+          nameInput.val(player.getName());
+
+          prepareOnResize();
+        },
+        hide: function hide() {
+          questionMarksDivTop.empty();
+          questionMarksDivBottom.empty();
+          $('#avatarSelection').hide();
+        },
+        onOk: function onOk(callback) { onOkCallback = callback; },
+        getAvatarImageIdx: function getAvatarImageIdx() { return imageSelection.getSelection(); },
+        getName: function getName() { return nameInput.val(); }
       };
     }
   };

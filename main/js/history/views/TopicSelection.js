@@ -4,6 +4,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
+  var ClosureUtils = net.riemschneider.utils.ClosureUtils;
 
   net.riemschneider.history.views.TopicSelection = {
     create: function (topics, addOns) {
@@ -14,15 +15,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       prepareButtonBar();
 
-      var onHide = null;
-
-      function show(onHideCallback) {
-        $('#topicSelection').show();
-        AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
-        AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
-        prepareOnResize();
-        onHide = onHideCallback;
-      }
+      var onOkCallback = null;
+      var onBackCallback = null;
 
       function createImageSelection() {
         var options = createTopicOptions();
@@ -31,14 +25,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function prepareButtonBar() {
         var okButton = $('#topicSelection .footer .okButton');
-        Tap.create(okButton, function () {
-          questionMarksDivTop.empty();
-          questionMarksDivBottom.empty();
-          $('#topicSelection').hide();
-          if (onHide) {
-            onHide();
-          }
-        }, false, 'okPressed');
+        Tap.create(okButton, function() { onOkCallback(); }, false, 'okPressed');
+
+        var backButton = $('#topicSelection .footer .backButton');
+        Tap.create(backButton, function() { onBackCallback(); }, false, 'backPressed');
       }
 
       function prepareOnResize() {
@@ -67,7 +57,19 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       return {
-        show: show
+        show: function show() {
+          $('#topicSelection').show();
+          AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
+          AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
+          prepareOnResize();
+        },
+        hide: function hide() {
+          questionMarksDivTop.empty();
+          questionMarksDivBottom.empty();
+          $('#topicSelection').hide();
+        },
+        onOk: function onOk(callback) { onOkCallback = callback; },
+        onBack: function onBack(callback) { onBackCallback = callback; }
       };
     }
   };

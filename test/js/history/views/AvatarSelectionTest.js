@@ -35,11 +35,13 @@ TestCase('AvatarSelectionTest', {
     $('body').empty();
   },
 
-  testShow: function () {
+  testShowAndHide: function () {
     var sel = AvatarSelection.create(this.playerController);
     assertEquals('none', this.avatarSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.avatarSelectionDiv.css('display'));
+    sel.hide();
+    assertEquals('none', this.avatarSelectionDiv.css('display'));
   },
 
   testPreviousNameIsShown: function () {
@@ -50,13 +52,10 @@ TestCase('AvatarSelectionTest', {
   },
 
   testSelectName: function () {
-    AvatarSelection.create(this.playerController).show();
+    var sel = AvatarSelection.create(this.playerController);
+    sel.show();
     this.nameInput.val('changed');
-    var player = this.playerController.getPlayer();
-    assertEquals('Name', player.getName());
-    this.okButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    this.okButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals('changed', player.getName());
+    assertEquals('changed', sel.getName());
   },
 
   testAllImagesShown: function () {
@@ -75,26 +74,22 @@ TestCase('AvatarSelectionTest', {
   },
 
   testSelectImage: function () {
-    AvatarSelection.create(this.playerController).show();
+    var sel = AvatarSelection.create(this.playerController);
+    sel.show();
     var allImages = $('.imageSelectionOptionImage');
     $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    var player = this.playerController.getPlayer();
-    assertEquals(0, player.getAvatarImageIdx());
-    this.okButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    this.okButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals(1, player.getAvatarImageIdx());
+    assertEquals(1, sel.getAvatarImageIdx());
   },
 
-  testOkHidesView: function () {
-    var done = false;
-    AvatarSelection.create(this.playerController).show(function () {
-      done = true;
-    });
+  testOkCallsCallback: function () {
+    var sel = AvatarSelection.create(this.playerController);
+    var called = false;
+    sel.onOk(function () { called = true; });
+    sel.show();
     this.okButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     this.okButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals('none', this.avatarSelectionDiv.css('display'));
-    assertTrue(done);
+    assertTrue(called);
   },
 
   testNameInputFocusIsLostWhenPressingReturn: function () {

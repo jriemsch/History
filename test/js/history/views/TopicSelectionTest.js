@@ -13,6 +13,7 @@ TestCase('TopicSelectionTest', {
     this.questionMarksBottom = '<div id="topicQuestionMarksBottom"></div>';
     this.buttonBarDiv = $('<div class="footer"></div>');
     this.okButton = $('<div class="okButton"></div>');
+    this.backButton = $('<div class="backButton"></div>');
 
     $('body').append(this.topicSelectionDiv);
     this.topicSelectionDiv.append(this.topicsDiv);
@@ -20,6 +21,7 @@ TestCase('TopicSelectionTest', {
     this.topicSelectionDiv.append(this.questionMarksBottom);
     this.topicSelectionDiv.append(this.buttonBarDiv);
     this.buttonBarDiv.append(this.okButton);
+    this.buttonBarDiv.append(this.backButton);
 
     this.topicSelectionDiv.hide();
 
@@ -36,11 +38,13 @@ TestCase('TopicSelectionTest', {
     $('body').empty();
   },
 
-  testShow: function () {
+  testShowAndHide: function () {
     var sel = TopicSelection.create(this.topics, this.addOns);
     assertEquals('none', this.topicSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.topicSelectionDiv.css('display'));
+    sel.hide();
+    assertEquals('none', this.topicSelectionDiv.css('display'));
   },
 
   testAllImagesShown: function () {
@@ -49,14 +53,23 @@ TestCase('TopicSelectionTest', {
     assertEquals(2, allImages.length);
   },
 
-  testOkHidesView: function () {
-    var done = false;
-    TopicSelection.create(this.topics, this.addOns).show(function () {
-      done = true;
-    });
+  testOkCallsCallback: function () {
+    var sel = TopicSelection.create(this.topics, this.addOns);
+    var called = false;
+    sel.onOk(function () { called = true; });
+    sel.show();
     this.okButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     this.okButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals('none', this.topicSelectionDiv.css('display'));
-    assertTrue(done);
+    assertTrue(called);
+  },
+
+  testBackCallsCallback: function () {
+    var sel = TopicSelection.create(this.topics, this.addOns);
+    var called = false;
+    sel.onBack(function () { called = true; });
+    sel.show();
+    this.backButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
+    this.backButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
+    assertTrue(called);
   }
 });
