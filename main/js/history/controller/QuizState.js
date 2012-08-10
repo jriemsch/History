@@ -6,7 +6,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
   net.riemschneider.history.controller.QuizState = {
     create: function create(stateMachine, topicSelection) {
-      var state = ViewState.create(stateMachine, 'quiz', topicSelection);
+      var state = ViewState.create(stateMachine, 'quiz', false, topicSelection);
 
       state.onConfigureView = function onConfigureView() {
         topicSelection.onBack(function () { stateMachine.transitionTo('menu'); });

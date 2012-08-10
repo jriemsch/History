@@ -2,11 +2,15 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
 (function () {
   var TypeUtils = net.riemschneider.utils.TypeUtils;
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ViewState = net.riemschneider.structures.ViewState;
+  var PlayerController = net.riemschneider.history.controller.PlayerController;
 
   net.riemschneider.history.controller.AvatarState = {
     create: function create(stateMachine, avatarSelection, playerController) {
-      var state = ViewState.create(stateMachine, 'avatar', avatarSelection);
+      ArgumentUtils.assertType(playerController, PlayerController);
+
+      var state = ViewState.create(stateMachine, 'avatar', false, avatarSelection);
 
       state.onConfigureView = function onConfigureView() {
         avatarSelection.onOk(function () {

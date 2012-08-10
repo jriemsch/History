@@ -15,6 +15,9 @@ load:
   - ../../../jslib/main/js/storage/Storage.js
   - ../../../jslib/main/js/gestures/Scroll.js
   - ../../../jslib/main/js/gestures/Tap.js
+  - ../../../jslib/main/js/structures/State.js
+  - ../../../jslib/main/js/structures/ViewState.js
+  - ../../../jslib/main/js/structures/StateMachine.js
   - ../main/js/history/model/Player.js
   - ../main/js/history/model/LevelOrderChance.js
   - ../main/js/history/model/Difficulty.js
@@ -44,6 +47,9 @@ load:
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
   - ../main/js/history/views/Menu.js
+  - ../main/js/history/controller/AvatarState.js
+  - ../main/js/history/controller/MenuState.js
+  - ../main/js/history/controller/QuizState.js
 serve:
   - images/test.png
 test:
@@ -76,3 +82,6 @@ test:
   - js/history/views/AvatarSelectionTest.js
   - js/history/views/TopicSelectionTest.js
   - js/history/views/MenuTest.js
+  - js/history/controller/AvatarStateTest.js
+  - js/history/controller/MenuStateTest.js
+  - js/history/controller/QuizStateTest.js

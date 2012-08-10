@@ -3,6 +3,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 (function () {
   var Player = net.riemschneider.history.model.Player;
   var Storage = net.riemschneider.storage.Storage;
+  var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   var storage = Storage.create('playerController');
 
@@ -32,4 +33,6 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
       };
     }
   };
+
+  TypeUtils.enhance('net.riemschneider.history.controller.PlayerController', net.riemschneider.history.controller.PlayerController);
 }());

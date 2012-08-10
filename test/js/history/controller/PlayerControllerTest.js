@@ -1,4 +1,5 @@
 var PlayerController = net.riemschneider.history.controller.PlayerController;
+var TypeUtils = net.riemschneider.utils.TypeUtils;
 
 TestCase('PlayerControllerTest', {
   setUp: function () {
@@ -11,6 +12,7 @@ TestCase('PlayerControllerTest', {
 
   testCreateLoadsDefault: function () {
     var playerController = PlayerController.create();
+    assertTrue(TypeUtils.isOfType(playerController, PlayerController));
     var player = playerController.getPlayer();
     assertEquals('Name', player.getName());
     assertEquals(0, player.getAvatarImageIdx());
