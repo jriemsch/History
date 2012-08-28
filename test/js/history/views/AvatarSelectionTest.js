@@ -68,7 +68,7 @@ TestCase('AvatarSelectionTest', {
     var player = this.playerController.getPlayer();
     player.setAvatarImageIdx(2);
     AvatarSelection.create(this.playerController).show();
-    var selectedImage = $('.imageSelectionSelector');
+    var selectedImage = $('.imageSelectionSelector .imageSelectionOptionImage');
     assertEquals(1, selectedImage.length);
     assertEquals('images/avatars/avatar002.png', selectedImage.attr('src'));
   },

@@ -2,9 +2,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
+  var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
-  var ClosureUtils = net.riemschneider.utils.ClosureUtils;
 
   net.riemschneider.history.views.TopicSelection = {
     create: function (topics, addOns) {
@@ -17,6 +17,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       var onOkCallback = null;
       var onBackCallback = null;
+      var onLockedTopicSelectedCallback = null;
 
       function createImageSelection() {
         var options = createTopicOptions();
@@ -41,16 +42,23 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         setTimeout(function () { $(window).resize(); }, 0);
       }
 
+      function createLockedTopicSelectionCallback(topicId) {
+        return function () {
+          onLockedTopicSelectedCallback(topicId);
+        }
+      }
+
       function createTopicOptions() {
         var options = [];
         for (var idx in topics) {
           var topic = topics[idx];
           var isUnlocked = addOns.isUnlocked(topic.getId());
+          var optionDiv = isUnlocked ?
+              ImageSelectionImageDiv.create(topic.getImage(), topic.getName()) :
+              ImageSelectionImageDiv.create(topic.getImage(), topic.getName(), 'images/lock.png', 0.4);
           options[idx] = {
-            imgSrc: topic.getImage(),
-            name: topic.getName(),
-            overlay: isUnlocked ? null : 'images/lock.png',
-            imgOpacity: isUnlocked ? null : 0.4
+            div: optionDiv,
+            callback: isUnlocked ? null : createLockedTopicSelectionCallback(topic.getId())
           };
         }
         return options;
@@ -69,7 +77,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           $('#topicSelection').hide();
         },
         onOk: function onOk(callback) { onOkCallback = callback; },
-        onBack: function onBack(callback) { onBackCallback = callback; }
+        onBack: function onBack(callback) { onBackCallback = callback; },
+        onLockedTopicSelected: function onLockedTopicSelected(callback) { onLockedTopicSelectedCallback = callback; }
       };
     }
   };

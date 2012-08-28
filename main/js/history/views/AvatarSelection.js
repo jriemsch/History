@@ -2,6 +2,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
+  var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var TouchUtils = net.riemschneider.utils.TouchUtils;
   var Tap = net.riemschneider.gestures.Tap;
@@ -58,7 +59,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         var options = [];
         for (var idx = 0; idx <= 30; ++idx) {
           options[idx] = {
-            imgSrc: 'images/avatars/avatar' + (1000 + idx + "").slice(-3) + '.png'
+            div: ImageSelectionImageDiv.create('images/avatars/avatar' + (1000 + idx + "").slice(-3) + '.png')
           };
         }
         return options;

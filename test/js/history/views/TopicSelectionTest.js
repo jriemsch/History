@@ -71,5 +71,27 @@ TestCase('TopicSelectionTest', {
     this.backButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     this.backButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
     assertTrue(called);
+  },
+
+  testSelectLockedTopicCallsCallback: function () {
+    var sel = TopicSelection.create(this.topics, this.addOns);
+    var called = null;
+    sel.onLockedTopicSelected(function (topic) { called = topic; });
+    sel.show();
+    var allImages = $('.imageSelectionOptionImage');
+    $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
+    $(allImages[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
+    assertEquals('topic2', called);
+  },
+
+  testSelectUnlockedTopicDoesNotCallCallback: function () {
+    var sel = TopicSelection.create(this.topics, this.addOns);
+    var called = null;
+    sel.onLockedTopicSelected(function (topic) { called = topic; });
+    sel.show();
+    var allImages = $('.imageSelectionOptionImage');
+    $(allImages[0]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
+    $(allImages[0]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
+    assertNull(called);
   }
 });

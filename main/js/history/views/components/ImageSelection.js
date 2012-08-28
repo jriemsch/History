@@ -7,9 +7,9 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
   net.riemschneider.history.views.components.ImageSelection = {
     create: function (parent, options) {
-      var selectedImg = null;
+      var selectedOptionDiv = null;
       var selectedIdx = null;
-      var images = [];
+      var optionDivs = [];
       var lastScrollPos = 0;
 
       var spacing = getCssImageWidth() * 1.5;
@@ -20,12 +20,12 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       setScrollPosition(0, 0);
 
       function selectImage(idx, scrollTo) {
-        if (selectedImg) {
-          selectedImg.removeClass('imageSelectionSelector');
+        if (selectedOptionDiv) {
+          selectedOptionDiv.removeClass('imageSelectionSelector');
         }
-        selectedImg = images[idx];
+        selectedOptionDiv = optionDivs[idx];
         selectedIdx = idx;
-        selectedImg.addClass('imageSelectionSelector');
+        selectedOptionDiv.addClass('imageSelectionSelector');
 
         if (scrollTo) {
           setScrollPosition((window.innerWidth - spacing) / 2 - idx * spacing, 0);
@@ -74,35 +74,21 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       }
 
       function addOptionToDiv(option, idx) {
-        var optionDiv = $('<div class="imageSelectionOption"></div>');
-        optionDiv.css({
+        option.div.css({
           left: idx * spacing + 'px',
           width: spacing
         });
-        containerDiv.append(optionDiv);
 
-        var img = $('<img class="imageSelectionOptionImage" src=' + option.imgSrc + '></img>');
-        optionDiv.hide();
-        optionDiv.append(img);
-        if (option.name) {
-          optionDiv.append($('<div class="imageSelectionOptionText"><p>' + option.name + '</p></div>'));
-        }
+        containerDiv.append(option.div);
 
-        if (option.overlay) {
-          optionDiv.append($('<img class="imageSelectionOptionOverlay" src=' + option.overlay + '></img>'));
-        }
+        optionDivs[idx] = option.div;
 
-        if (option.imgOpacity) {
-          img.css('opacity', option.imgOpacity);
-        }
-
-        img.load(function () {
-           optionDiv.show();
-        });
-
-        images[idx] = img;
-
-        Tap.create(optionDiv, function () { selectImage(idx, false); }, true);
+        Tap.create(option.div, function () {
+          selectImage(idx, false);
+          if (option.callback) {
+            option.callback();
+          }
+        }, true);
       }
 
       return {

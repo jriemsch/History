@@ -301,6 +301,19 @@ body {
     }
 }
 
+.imageSelectionSelector {
+}
+
+.imageSelectionSelector .imageSelectionOptionImage {
+    border: 8px solid #adff2f;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionSelector .imageSelectionOptionImage {
+        border-width: 4px;
+    }
+}
+
 .imageSelectionOptionOverlay {
     position: absolute;
     top: 16px;
@@ -346,16 +359,6 @@ body {
 .imageSelectionOptionText p {
     vertical-align: middle;
     display: table-cell;
-}
-
-.imageSelectionSelector {
-    border: 8px solid #adff2f;
-}
-
-@media only screen and (max-width: 640px) {
-    .imageSelectionSelector {
-        border-width: 4px;
-    }
 }
 
 #topics {

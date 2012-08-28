@@ -43,6 +43,7 @@ load:
   - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/views/components/ImageSelection.js
+  - ../main/js/history/views/components/ImageSelectionImageDiv.js
   - ../main/js/history/views/components/AnimatedBackground.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js

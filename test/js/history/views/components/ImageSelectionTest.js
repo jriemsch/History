@@ -13,6 +13,10 @@ TestCase('ImageSelectionTest', {
     JQueryTestUtils.clearRecording(this.cssRecorder);
     this.imageCountForScrolling = Math.floor(window.innerWidth / 150) + 2;
     this.scrollingOversize = this.imageCountForScrolling * 150 - window.innerWidth;
+    this.options = [
+      { div: $('<div class="imageSelectionOption"></div>') },
+      { div: $('<div class="imageSelectionOption"></div>') }
+    ];
   },
 
   tearDown: function () {
@@ -21,7 +25,7 @@ TestCase('ImageSelectionTest', {
   },
 
   testCreateImagePlacement: function () {
-    ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    ImageSelection.create($('body'), this.options);
     var container = $('body').find('.imageSelectionOptionContainer');
     assertEquals(1, container.length);
     var optionDivs = container.find('.imageSelectionOption');
@@ -31,29 +35,41 @@ TestCase('ImageSelectionTest', {
   },
 
   testDefaultSelection: function () {
-    var sel = ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    var sel = ImageSelection.create($('body'), this.options);
     assertNull(sel.getSelection());
   },
 
   testSetSelection: function () {
-    var sel = ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    var sel = ImageSelection.create($('body'), this.options);
     sel.setSelection(1);
     assertEquals(1, sel.getSelection());
-    var images = $('body').find('.imageSelectionOptionContainer .imageSelectionOptionImage');
-    assertFalse($(images[0]).hasClass('imageSelectionSelector'));
-    assertTrue($(images[1]).hasClass('imageSelectionSelector'));
+    var optionDivs = $('body').find('.imageSelectionOptionContainer .imageSelectionOption');
+    assertFalse($(optionDivs[0]).hasClass('imageSelectionSelector'));
+    assertTrue($(optionDivs[1]).hasClass('imageSelectionSelector'));
   },
 
   testTapSelectsImage: function () {
-    var sel = ImageSelection.create($('body'), [{ imgSrc: '/test/images/test.png' }, { imgSrc: '/test/images/test.png' }]);
+    var sel = ImageSelection.create($('body'), this.options);
     sel.setSelection(0);
-    var images = $('body').find('.imageSelectionOptionContainer .imageSelectionOptionImage');
-    assertEquals(2, images.length);
-    $(images[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    $(images[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
+    var optionDivs = $('body').find('.imageSelectionOptionContainer .imageSelectionOption');
+    assertEquals(2, optionDivs.length);
+    $(optionDivs[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
+    $(optionDivs[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
     assertEquals(1, sel.getSelection());
-    assertFalse($(images[0]).hasClass('imageSelectionSelector'));
-    assertTrue($(images[1]).hasClass('imageSelectionSelector'));
+    assertFalse($(optionDivs[0]).hasClass('imageSelectionSelector'));
+    assertTrue($(optionDivs[1]).hasClass('imageSelectionSelector'));
+  },
+
+  testTapCallsCallback: function () {
+    var called = false;
+    this.options[1].callback = function () { called = true; };
+    var sel = ImageSelection.create($('body'), this.options);
+    sel.setSelection(0);
+    var optionDivs = $('body').find('.imageSelectionOptionContainer .imageSelectionOption');
+    assertEquals(2, optionDivs.length);
+    $(optionDivs[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
+    $(optionDivs[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
+    assertTrue(called);
   },
 
   testScrolling: function () {
@@ -87,7 +103,7 @@ TestCase('ImageSelectionTest', {
   createImagesForScrolling:function () {
     var images = [];
     for (var idx = 0; idx < this.imageCountForScrolling; ++idx) {
-      images[idx] = { imgSrc:'/test/images/test.png' };
+      images[idx] = { div: $('<div class="imageSelectionOption"></div>') };
     }
     return images;
   }
