@@ -335,7 +335,18 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Sie wurden zentral durch die Nationalversammlung verwaltet'
               ], [0, 1, 2])),
           Question.create(id(15, 4), Difficulty.EASY, 'Wieviele Départements gab es zu Beginn der Französischen Revolution?',
-              ValueChoice.create(0, 30, 110, 83))
+              ValueChoice.create(0, 30, 110, 83)),
+          Question.create(id(15, 5), Difficulty.EASY, '1789/1790 wurden die {provinzen} durch {departements} ersetzt, um sie in Größe und Status einander anzugleichen',
+              GapChoice.create(0, [
+               'Provinzen',
+               'Départements',
+               'Arrondissements',
+               'Kantone',
+               'Distrikte'
+              ], {
+                provinzen: Gap.create([ 'Provinzen', 'Départements', 'Arrondissements', 'Kantone', 'Distrikte' ], 0),
+                departements: Gap.create([ 'Provinzen', 'Départements', 'Arrondissements', 'Kantone', 'Distrikte' ], 1),
+              }))
       ]);
       
       function addFact(factNo, questions) {
