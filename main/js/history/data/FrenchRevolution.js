@@ -117,7 +117,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       ]);
 
       addFact(4, [
-          Question.create(id(4, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge',
+          Question.create(id(4, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge:',
               OrderChoice.create(0, [
                 'Der Ballhausschwur',
                 'Der Beitritt von Adel und Klerus zur Nationalversammlung',
@@ -252,7 +252,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       addFact(12, [
           Question.create(id(12, 0), Difficulty.MEDIUM, 'Wann fand der Zug der Marktfrauen nach Versailles statt?',
               TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(5, 10, 1789))),
-          Question.create(id(12, 1), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge',
+          Question.create(id(12, 1), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge:',
               OrderChoice.create(0, [
                 'Die Augustbeschlüsse',
                 'Zug der Marktfrauen nach Versailles',
@@ -306,6 +306,36 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
               ], [0])),
           Question.create(id(14, 4), Difficulty.MEDIUM, 'Welchen Wertverlust (in Prozent) hatten die „Assignaten“ bis 1793?',
               ValueChoice.create(0, 0, 100, 50))
+      ]);
+      
+      addFact(15, [
+          Question.create(id(15, 0), Difficulty.EASY, 'In welchem Jahr wurden die Départements eingeführt?',
+              TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1789))),
+          Question.create(id(15, 1), Difficulty.EASY, 'Wodurch wurden die Provinzen 1789 ersetzt?',
+              MultipleChoice.create(0, [
+                'Départements',
+                'Bundesländer',
+                'Kantone',
+                'Distrikte',
+                'Arrondissements'
+              ], [0])),
+          Question.create(id(15, 2), Difficulty.EASY, 'Ordne die folgenden Bezirksnamen der Größe nach aufsteigend:',
+              OrderChoice.create(0, [
+                'Département',
+                'Distrikt',
+                'Kanton'
+              ], [0, 1, 2])),
+          Question.create(id(15, 3), Difficulty.EASY, 'Worin unterschieden sich die 1789 eingeführten Départements von den bis dahin gültigen Provinzen?',
+              MultipleChoice.create(0, [
+                'Sie waren in etwa gleich groß',
+                'Die Namensgebung richtete sich nach Bergen oder Flüssen',
+                'Sie wurden von einer gewählten Versammlung verwaltet',
+                'Sie hatten in etwa gleich viele Einwohner',
+                'Sie wurden von einem Gouverneur geführt, der selbst Teil der Nationalversammlung war',
+                'Sie wurden zentral durch die Nationalversammlung verwaltet'
+              ], [0, 1, 2])),
+          Question.create(id(15, 4), Difficulty.EASY, 'Wieviele Départements gab es zu Beginn der Französischen Revolution?',
+              ValueChoice.create(0, 30, 110, 83))
       ]);
       
       function addFact(factNo, questions) {
