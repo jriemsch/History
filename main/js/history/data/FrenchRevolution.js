@@ -345,8 +345,40 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                'Distrikte'
               ], {
                 provinzen: Gap.create([ 'Provinzen', 'Départements', 'Arrondissements', 'Kantone', 'Distrikte' ], 0),
-                departements: Gap.create([ 'Provinzen', 'Départements', 'Arrondissements', 'Kantone', 'Distrikte' ], 1),
+                departements: Gap.create([ 'Provinzen', 'Départements', 'Arrondissements', 'Kantone', 'Distrikte' ], 1)
               }))
+      ]);
+      
+      addFact(16, [
+          Question.create(id(16, 0), Difficulty.EASY, 'Was versteht man unter der „Gabelle“?',
+              MultipleChoice.create(0, [
+                'Eine Steuer auf Salz',
+                'Eine politische Vereinigung',
+                'Eine Art der Hinrichtung',
+                'Ein Ballsaal in Versailles',
+                'Eine Angriffsstrategie von Napoleon'
+              ], [0])),
+          Question.create(id(16, 1), Difficulty.EASY, 'Wieso war die Salzsteuer „Gabelle“ besonders verhaßt bei den Bürgern?',
+              MultipleChoice.create(0, [
+                'Weil sie besonders die arme Bevölkerung benachteiligte',
+                'Weil sie nicht in jeder Provinz gleich hoch war',
+                'Weil die Bevölkerung gezwungen war eine Minimalmenge an Salz zu erwerben'
+              ], [0, 1, 2])),
+          Question.create(id(16, 2), Difficulty.EASY, 'Was geschah mit der Salzsteuer „Gabelle“ am 21. März 1790?',
+              MultipleChoice.create(0, [
+                'Sie aufgrund der finanziellen Probleme Frankreichs eingeführt',
+                'Sie wurde abgeschafft, da sie bei den Bürgern verhaßt war',
+                'Sie wurde umstrukturiert, um die arme Bevölkerung weniger zu belasten'
+              ], [0])),
+          Question.create(id(16, 3), Difficulty.MEDIUM, 'Wann wurden die Salzsteuer „Gabelle“ abgeschafft?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(21, 3, 1790))),
+          Question.create(id(16, 4), Difficulty.EASY, 'Worauf wurde die „Gabelle“ genannte Steuer vor der Französischen Revolution erhoben?',
+              MultipleChoice.create(0, [
+                'Auf Salz',
+                'Auf Lebensmittel',
+                'Auf Grundbesitz',
+                'Auf Einkünfte'
+              ], [0]))
       ]);
       
       function addFact(factNo, questions) {
