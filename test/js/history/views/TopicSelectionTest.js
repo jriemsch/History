@@ -1,5 +1,4 @@
 var TopicSelection = net.riemschneider.history.views.TopicSelection;
-var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
 var Topic = net.riemschneider.history.model.Topic;
 var AddOns = net.riemschneider.history.model.AddOns;
 
@@ -7,23 +6,23 @@ TestCase('TopicSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.topicSelectionDiv = $('<div id="topicSelection"></div>');
-    this.topicsDiv = $('<div id="topics"></div>');
+    this.opponentSelectionDiv = $('<div id="topicSelection"></div>');
+    this.opponentsDiv = $('<div id="topics"></div>');
     this.questionMarksTop = $('<div id="topicQuestionMarksTop"></div>');
     this.questionMarksBottom = '<div id="topicQuestionMarksBottom"></div>';
     this.buttonBarDiv = $('<div class="footer"></div>');
     this.okButton = $('<div class="okButton"></div>');
     this.backButton = $('<div class="backButton"></div>');
 
-    $('body').append(this.topicSelectionDiv);
-    this.topicSelectionDiv.append(this.topicsDiv);
-    this.topicSelectionDiv.append(this.questionMarksTop);
-    this.topicSelectionDiv.append(this.questionMarksBottom);
-    this.topicSelectionDiv.append(this.buttonBarDiv);
+    $('body').append(this.opponentSelectionDiv);
+    this.opponentSelectionDiv.append(this.opponentsDiv);
+    this.opponentSelectionDiv.append(this.questionMarksTop);
+    this.opponentSelectionDiv.append(this.questionMarksBottom);
+    this.opponentSelectionDiv.append(this.buttonBarDiv);
     this.buttonBarDiv.append(this.okButton);
     this.buttonBarDiv.append(this.backButton);
 
-    this.topicSelectionDiv.hide();
+    this.opponentSelectionDiv.hide();
 
     this.topics = [
         Topic.create('topic1', 'Topic1', '/test/images/test.png'),
@@ -40,11 +39,11 @@ TestCase('TopicSelectionTest', {
 
   testShowAndHide: function () {
     var sel = TopicSelection.create(this.topics, this.addOns);
-    assertEquals('none', this.topicSelectionDiv.css('display'));
+    assertEquals('none', this.opponentSelectionDiv.css('display'));
     sel.show();
-    assertEquals('block', this.topicSelectionDiv.css('display'));
+    assertEquals('block', this.opponentSelectionDiv.css('display'));
     sel.hide();
-    assertEquals('none', this.topicSelectionDiv.css('display'));
+    assertEquals('none', this.opponentSelectionDiv.css('display'));
   },
 
   testAllImagesShown: function () {

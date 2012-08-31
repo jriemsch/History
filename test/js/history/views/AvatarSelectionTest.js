@@ -102,7 +102,6 @@ TestCase('AvatarSelectionTest', {
     JQueryTestUtils.clearRecording(blurRecorder);
   },
 
-
   testNameInputFocusIsLostWhenClickingSomewhere: function () {
     AvatarSelection.create(this.playerController).show();
     var blurRecorder = JQueryTestUtils.startRecording('blur');

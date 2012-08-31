@@ -7,7 +7,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.TopicSelection = {
-    create: function (topics, addOns) {
+    create: function create(topics, addOns) {
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
       var topicsDiv = $('#topics');
@@ -50,7 +50,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createTopicOptions() {
         var options = [];
-        for (var idx in topics) {
+        for (var idx = 0, len = topics.length; idx < len; ++idx) {
           var topic = topics[idx];
           var isUnlocked = addOns.isUnlocked(topic.getId());
           var optionDiv = isUnlocked ?

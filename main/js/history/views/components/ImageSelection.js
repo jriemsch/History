@@ -68,7 +68,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       }
 
       function addOptionsToDiv() {
-        for (var idx in options) {
+        for (var idx = 0, len = options.length; idx < len; ++idx) {
           addOptionToDiv(options[idx], idx);
         }
       }

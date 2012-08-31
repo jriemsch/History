@@ -64,7 +64,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createMenuOptions() {
         for (var key in options) {
-          createMenuOption(options[key]);
+          if (options.hasOwnProperty(key)) {
+            createMenuOption(options[key]);
+          }
         }
       }
 

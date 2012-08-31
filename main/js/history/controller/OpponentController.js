@@ -12,20 +12,22 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
           var opponentsByDifficulty = createOpponentsByDifficultyMap();
 
           var results = {};
-          for (var difficulty in Difficulty) {
-            results[difficulty] = getRandomOpponentPairings(difficulty);
+          for (var idx = 0, len = Difficulty.values.length; idx < len; ++idx) {
+            var difficulty = Difficulty.values[idx];
+            results[difficulty.key] = getRandomOpponentPairings(difficulty);
           }
 
           function createOpponentsByDifficultyMap() {
             var map = {};
-            for (var difficulty in Difficulty) {
-              map[difficulty] = createOpponentsByDifficulty(difficulty);
+            for (var idx = 0, len = Difficulty.values.length; idx < len; ++idx) {
+              var difficulty = Difficulty.values[idx];
+              map[difficulty.key] = createOpponentsByDifficulty(difficulty);
             }
             return map;
           }
 
           function createOpponentsByDifficulty(difficulty) {
-            return ArrayUtils.filter(opponentList, function (opponent) { return opponent.getDifficulty() === Difficulty[difficulty]; })
+            return ArrayUtils.filter(opponentList, function (opponent) { return opponent.getDifficulty() === difficulty; });
           }
 
           function getRandomOpponentPairings(difficulty) {
@@ -35,9 +37,9 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
               var difficulty2 = difficulty;
               if (Random.next() >= 0.5) {
                 if (Random.next() >= 0.5) {
-                  difficulty1 = Difficulty[difficulty1].easier().key;
+                  difficulty1 = difficulty1.easier();
                 } else {
-                  difficulty2 = Difficulty[difficulty2].easier().key;
+                  difficulty2 = difficulty2.easier();
                 }
               }
               pairings[idx] = { first: getRandomOpponent(difficulty1), second: getRandomOpponent(difficulty2) };
@@ -47,7 +49,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
           }
 
           function getRandomOpponent(difficulty) {
-            var opponents = opponentsByDifficulty[difficulty];
+            var opponents = opponentsByDifficulty[difficulty.key];
             var rnd = Math.floor(Random.next() * opponents.length);
             var opponent = opponents[rnd];
             ArrayUtils.removeElementAt(opponents, rnd);

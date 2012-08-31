@@ -11,6 +11,7 @@ load:
   - ../../../jslib/main/js/utils/ArgumentUtils.js
   - ../../../jslib/main/js/utils/DeviceUtils.js
   - ../../../jslib/main/js/utils/TouchUtils.js
+  - ../../../jslib/main/js/utils/ClosureUtils.js
   - ../../../jslib/main/js/graphics/Position.js
   - ../../../jslib/main/js/storage/Storage.js
   - ../../../jslib/main/js/gestures/Scroll.js
@@ -35,6 +36,7 @@ load:
   - ../main/js/history/model/GapChoice.js
   - ../main/js/history/model/ValueChoice.js
   - ../main/js/history/data/BaseOpponents.js
+  - ../main/js/history/data/AvatarImages.js
   - ../main/js/history/data/FrenchRevolution.js
   - ../main/js/history/data/AmericanRevolution.js
   - ../main/js/history/data/FirstWorldWar.js
@@ -44,13 +46,16 @@ load:
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/views/components/ImageSelection.js
   - ../main/js/history/views/components/ImageSelectionImageDiv.js
+  - ../main/js/history/views/components/ImageSelectionOpponentDiv.js
   - ../main/js/history/views/components/AnimatedBackground.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
+  - ../main/js/history/views/OpponentSelection.js
   - ../main/js/history/views/Menu.js
   - ../main/js/history/controller/AvatarState.js
   - ../main/js/history/controller/MenuState.js
-  - ../main/js/history/controller/QuizState.js
+  - ../main/js/history/controller/QuizTopicState.js
+  - ../main/js/history/controller/QuizOpponentState.js
 serve:
   - images/test.png
 test:
@@ -79,10 +84,13 @@ test:
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
   - js/history/views/components/ImageSelectionTest.js
+  - js/history/views/components/ImageSelectionImageDivTest.js
   - js/history/views/components/AnimatedBackgroundTest.js
   - js/history/views/AvatarSelectionTest.js
   - js/history/views/TopicSelectionTest.js
+  - js/history/views/OpponentSelectionTest.js
   - js/history/views/MenuTest.js
   - js/history/controller/AvatarStateTest.js
   - js/history/controller/MenuStateTest.js
-  - js/history/controller/QuizStateTest.js
+  - js/history/controller/QuizTopicStateTest.js
+  - js/history/controller/QuizOpponentStateTest.js

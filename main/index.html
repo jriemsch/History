@@ -18,6 +18,9 @@
   <script type="text/javascript" charset="utf-8" src="js/utils/TouchUtils.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/utils/TypeUtils.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/utils/ArgumentUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/utils/ClosureUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/utils/ArrayUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/utils/Random.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/storage/Storage.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/gestures/Scroll.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/gestures/Tap.js"></script>
@@ -42,6 +45,7 @@
   <script type="text/javascript" charset="utf-8" src="js/history/model/Region.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Topic.js"></script>
 
+  <script type="text/javascript" charset="utf-8" src="js/history/data/AvatarImages.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/data/BaseOpponents.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/data/FrenchRevolution.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/data/AmericanRevolution.js"></script>
@@ -55,13 +59,16 @@
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionImageDiv.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionOpponentDiv.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/OpponentSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuState.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizState.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizTopicState.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizOpponentState.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/inject/Injector.js"></script>
 
@@ -73,14 +80,14 @@
     <input type="button" id="resetButton" value="Reset">
   </div>
 
-  <div id="menu" class="viewBackground">
+  <div id="menu" class="view">
     <div id="menuBackground" class="questionMarks"></div>
     <div class="bigTitle">Geschichte im Quiz</div>
     <div id="menuOptions"></div>
     <div class="footer">&copy; 2012 by Jens Riemschneider</div>
   </div>
 
-  <div id="avatarSelection" class="viewBackground">
+  <div id="avatarSelection" class="view">
     <div id="avatars"></div>
     <div id="avatarQuestionMarksTop" class="questionMarks"></div>
     <div id="avatarQuestionMarksBottom" class="questionMarks"></div>
@@ -89,11 +96,19 @@
     <div class="footer"><div class="okButton"></div></div>
   </div>
 
-  <div id="topicSelection" class="viewBackground">
+  <div id="topicSelection" class="view">
     <div id="topics"></div>
     <div id="topicQuestionMarksTop" class="questionMarks"></div>
     <div id="topicQuestionMarksBottom" class="questionMarks"></div>
     <div class="bigTitle">Wähle Das Thema</div>
+    <div class="footer"><div class="okButton"></div><div class="backButton"></div></div>
+  </div>
+
+  <div id="opponentSelection" class="view">
+    <div id="opponents"></div>
+    <div id="opponentQuestionMarksTop" class="questionMarks"></div>
+    <div id="opponentQuestionMarksBottom" class="questionMarks"></div>
+    <div class="bigTitle">Wähle Deine Mitspieler</div>
     <div class="footer"><div class="okButton"></div><div class="backButton"></div></div>
   </div>
 </body>

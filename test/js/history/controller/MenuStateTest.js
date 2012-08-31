@@ -9,7 +9,7 @@ TestCase('MenuStateTest', {
   setUp: function () {
     this.stateMachine = StateMachine.create();
     State.create(this.stateMachine, 'avatar', false);
-    State.create(this.stateMachine, 'quiz', false);
+    State.create(this.stateMachine, 'quizTopic', false);
     this.menu = {
       callbacks: {},
       show: function () {},
@@ -42,6 +42,6 @@ TestCase('MenuStateTest', {
     MenuState.create(this.stateMachine, this.menu);
     this.stateMachine.start();
     this.menu.callbacks[Menu.Option.QUIZ.key]();
-    assertEquals('quiz', this.stateMachine.getCurrentStateId());
+    assertEquals('quizTopic', this.stateMachine.getCurrentStateId());
   }
 });

@@ -11,7 +11,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
       state.onConfigureView = function onConfigureView() {
         menu.onSelect(Option.AVATAR, function () { stateMachine.transitionTo('avatar'); });
-        menu.onSelect(Option.QUIZ, function () { stateMachine.transitionTo('quiz'); });
+        menu.onSelect(Option.QUIZ, function () { stateMachine.transitionTo('quizTopic'); });
       };
 
       return state;

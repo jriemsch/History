@@ -2,13 +2,14 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-.viewBackground {
+.view {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: none;
 
     background-image: -webkit-linear-gradient(bottom, #C9C9C9 0%, #ffffff 58%);
 }
@@ -99,14 +100,6 @@ body {
     border: 8px solid #ffebcd;
     -webkit-border-radius: 8px;
     -webkit-box-shadow: 3px 3px 8px 0px black;
-}
-
-#avatarSelection {
-    display: none;
-}
-
-#topicSelection {
-    display: none;
 }
 
 .bigTitle {

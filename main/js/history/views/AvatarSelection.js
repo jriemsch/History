@@ -1,6 +1,7 @@
 net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
+  var AvatarImages = net.riemschneider.history.data.AvatarImages;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
@@ -57,9 +58,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createAvatarOptions() {
         var options = [];
-        for (var idx = 0; idx <= 30; ++idx) {
+        for (var idx = 0; idx <= AvatarImages.getImageCount(); ++idx) {
           options[idx] = {
-            div: ImageSelectionImageDiv.create('images/avatars/avatar' + (1000 + idx + "").slice(-3) + '.png')
+            div: ImageSelectionImageDiv.create(AvatarImages.getImage(idx))
           };
         }
         return options;

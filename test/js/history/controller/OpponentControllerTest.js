@@ -13,7 +13,7 @@ TestCase('OpponentControllerTest', {
       Opponent.create('OPP3', 'Dr. Siegfried Hubertus', 3, Difficulty.MEDIUM, [ 0.8, 0.7, 0.5 ], []),
       Opponent.create('OPP4', 'Sebastian Weier', 4, Difficulty.HARD, [ 0.95, 0.9, 0.8 ], []),
       Opponent.create('OPP5', 'Tom Stark', 5, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], []),
-      Opponent.create('OPP5', 'Phillip', 6, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
+      Opponent.create('OPP6', 'Phillip', 6, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
     ];
   },
 
