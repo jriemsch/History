@@ -2,39 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/controller/QuizOpponentState.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/data/AvatarImages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizOpponentStateTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/history/controller/QuizState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../test/js/history/controller/QuizStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArrayUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArrayUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/TypeUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/TypeUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/mocks/ClockMock.js" afterPath="$PROJECT_DIR$/../../../jslib/test/mocks/ClockMock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/utils/TypeUtilsTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/utils/TypeUtilsTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/MenuState.js" afterPath="$PROJECT_DIR$/js/history/controller/MenuState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/OpponentController.js" afterPath="$PROJECT_DIR$/js/history/controller/OpponentController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Difficulty.js" afterPath="$PROJECT_DIR$/js/history/model/Difficulty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" afterPath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/Menu.js" afterPath="$PROJECT_DIR$/js/history/views/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/TopicSelection.js" afterPath="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" afterPath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelectionImageDiv.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelectionImageDiv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/MenuStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/MenuStateTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/DifficultyTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/DifficultyTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/tests.jstd" afterPath="$PROJECT_DIR$/../test/tests.jstd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,55 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TypeUtils.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/TypeUtils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="84" selection-start="1984" selection-end="1984" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpponentController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/controller/OpponentController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="49" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpponentControllerTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="68" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OpponentSelection.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/views/OpponentSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="88" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageSelectionOpponentDiv.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="10" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.75159913">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="91" selection-start="4698" selection-end="4698" vertical-scroll-proportion="-16.25">
+            <state line="65" column="59" selection-start="2613" selection-end="2613" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,34 +51,79 @@
       <file leaf-file-name="OpponentSelectionTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="47" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.0">
+            <state line="65" column="4" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageSelection.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
+      <file leaf-file-name="ImageSelectionImageDivTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="44" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0">
+            <state line="49" column="44" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArgumentUtils.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js">
+      <file leaf-file-name="ImageSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="30" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+            <state line="6" column="62" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Injector.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+      <file leaf-file-name="OpponentControllerTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="91" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0">
+            <state line="14" column="17" selection-start="880" selection-end="959" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpponentController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/controller/OpponentController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="80" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AvatarSelection.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="56" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageSelectionOpponentDiv.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="37" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="460" column="50" selection-start="9299" selection-end="9299" vertical-scroll-proportion="0.92030567">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicSelection.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="25" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,22 +147,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/history/model/Difficulty.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/model/DifficultyTest.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/utils/ArrayUtils.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/test/utils/TypeUtilsTest.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/utils/TypeUtils.js" />
         <option value="$PROJECT_DIR$/../../../jslib/test/mocks/ClockMock.js" />
         <option value="$PROJECT_DIR$/js/history/views/Menu.js" />
-        <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
-        <option value="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" />
         <option value="$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js" />
-        <option value="$PROJECT_DIR$/js/history/controller/OpponentController.js" />
-        <option value="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
+        <option value="$PROJECT_DIR$/js/history/views/components/ImageSelectionImageDiv.js" />
+        <option value="$PROJECT_DIR$/js/history/controller/OpponentController.js" />
+        <option value="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" />
+        <option value="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
+        <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
         <option value="$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js" />
+        <option value="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -245,16 +222,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -659,6 +626,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -666,14 +643,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="420" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="418" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="418" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MobilePhotoShare/www/js/mbs/ui" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="424" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1218" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1218" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1218" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="424" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -892,7 +869,11 @@
       <created>1346134742060</created>
       <updated>1346134742060</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Opponent Selection">
+      <created>1346392362147</created>
+      <updated>1346392362147</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -901,20 +882,20 @@
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25597534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26368544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21832669" sideWeight="0.23824209" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29163346" sideWeight="0.7440247" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2940239" sideWeight="0.7440247" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26368544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20215312" sideWeight="0.6700077" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -960,7 +941,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extracted option div creation from ImageSelection.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opponent Selection" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -990,119 +971,116 @@
     <MESSAGE value="StateMachine and refactoring of views" />
     <MESSAGE value="Tests for state controllers" />
     <MESSAGE value="Extracted option div creation from ImageSelection.js" />
+    <MESSAGE value="Opponent Selection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/ArrayUtils.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="60" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0">
+        <state line="43" column="30" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="91" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelectionImageDiv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/DeviceUtils.js">
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizTopicState.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="27" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
+        <state line="12" column="42" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/test/utils/TypeUtilsTest.js">
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizOpponentState.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="51" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/test/mocks/ClockMock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="34" selection-start="2499" selection-end="2499" vertical-scroll-proportion="0.0">
+        <state line="11" column="47" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="44" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0">
+        <state line="38" column="33" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="30" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+        <state line="26" column="56" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/TypeUtils.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="84" selection-start="1984" selection-end="1984" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="68" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/OpponentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="49" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="47" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="91" selection-start="4698" selection-end="4698" vertical-scroll-proportion="-16.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="91" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/OpponentSelection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="88" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
+        <state line="33" column="25" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="10" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.75159913">
+        <state line="25" column="37" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/OpponentController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="80" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="880" selection-end="959" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="44" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="62" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="4" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/views/OpponentSelection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="59" selection-start="2613" selection-end="2613" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="460" column="50" selection-start="9299" selection-end="9299" vertical-scroll-proportion="0.92030567">
           <folding />
         </state>
       </provider>

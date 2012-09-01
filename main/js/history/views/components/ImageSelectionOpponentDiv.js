@@ -18,13 +18,16 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       ArgumentUtils.assertType(opponentPairing.second, net.riemschneider.history.model.Opponent);
       ArgumentUtils.assertType(difficulty, Difficulty);
 
+      var optionDiv = $('<div class="imageSelectionOption imageSelectionOpponent"></div>');
+
       var difficultyClass = difficultyClasses[difficulty.key];
-      var optionDiv = $('<div class="imageSelectionOption ' + difficultyClass + '"></div>');
+      var difficultyDiv = $('<div class="imageSelectionOpponentDifficulty ' + difficultyClass + '"></div>');
+      optionDiv.append(difficultyDiv);
 
       var countDown = ClosureUtils.createCountDown(2, function () { optionDiv.show(); });
 
-      var opponentDiv1 = $('<div class="imageSelectionOpponent"></div>');
-      var opponentDiv2 = $('<div class="imageSelectionOpponent"></div>');
+      var opponentDiv1 = $('<div class="imageSelectionLeftOpponent"></div>');
+      var opponentDiv2 = $('<div class="imageSelectionRightOpponent"></div>');
 
       appendOpponent(opponentDiv1, opponentPairing.first);
       appendOpponent(opponentDiv2, opponentPairing.second);

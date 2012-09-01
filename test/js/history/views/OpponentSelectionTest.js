@@ -32,7 +32,13 @@ TestCase('OpponentSelectionTest', {
       },
       {
         first: Opponent.create('OPP2', 'Martin Salm', 2, Difficulty.EASY, [ 0.8, 0.5, 0.2 ], []),
-        second: Opponent.create('OPP3', 'Dr. Siegfried Hubertus', 3, Difficulty.MEDIUM, [ 0.8, 0.7, 0.5 ], [])
+        second: Opponent.create('OPP3', 'Dr. Siegfried Hubertus', 3, Difficulty.EASY, [ 0.8, 0.7, 0.5 ], [])
+      }
+    ];
+    opponentPairings[Difficulty.MEDIUM.key] = [
+      {
+        first: Opponent.create('OPP4', 'Sebastian Weier', 4, Difficulty.MEDIUM, [ 0.95, 0.9, 0.8 ], []),
+        second: Opponent.create('OPP5', 'Tom Stark', 5, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
       }
     ];
 
@@ -57,7 +63,7 @@ TestCase('OpponentSelectionTest', {
   testAllOptionsShown: function () {
     OpponentSelection.create(this.opponentController).show();
     var allOptionDivs = $('.imageSelectionOption');
-    assertEquals(2, allOptionDivs.length);
+    assertEquals(3, allOptionDivs.length);
   },
 
   testOkCallsCallback: function () {

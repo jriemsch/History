@@ -58,7 +58,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           for (var idx = 0, len = pairings.length; idx < len; ++idx) {
             var pairing = pairings[idx];
             var optionDiv = ImageSelectionOpponentDiv.create(pairing, difficulty);
-            options[idx] = { div: optionDiv };
+            options.push({ div: optionDiv });
           }
         }
         return options;

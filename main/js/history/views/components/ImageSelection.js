@@ -12,7 +12,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       var optionDivs = [];
       var lastScrollPos = 0;
 
-      var spacing = getCssImageWidth() * 1.5;
+      var spacing = getSpacingFromCss();
       var containerDiv = createContainer();
       Scroll.create(containerDiv, onScrolledBy);
       addOptionsToDiv();
@@ -32,11 +32,10 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         }
       }
 
-      function getCssImageWidth() {
-        var dummyDiv = $('<div class="imageSelectionOptionImage"></div>');
-        parent.append(dummyDiv);
-        var width = dummyDiv.width();
-        dummyDiv.remove();
+      function getSpacingFromCss() {
+        parent.append(options[0].div);
+        var width = options[0].div.width();
+        options[0].div.detach();
         return width;
       }
 
@@ -74,10 +73,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       }
 
       function addOptionToDiv(option, idx) {
-        option.div.css({
-          left: idx * spacing + 'px',
-          width: spacing
-        });
+        option.div.css({ left: idx * spacing + 'px' });
 
         containerDiv.append(option.div);
 

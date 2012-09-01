@@ -266,6 +266,7 @@ body {
 .imageSelectionOption {
     position: absolute;
     top: 16px;
+    width: 202.5px;
     text-align: center;
     -webkit-transform: translateZ(0);
 }
@@ -273,6 +274,18 @@ body {
 @media only screen and (max-width: 640px) {
     .imageSelectionOption {
         top: 8px;
+        width: 101.25px;
+    }
+}
+
+.imageSelectionImageFrame {
+    position: absolute;
+    left: 34px;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionImageFrame {
+        left: 18px;
     }
 }
 
@@ -310,7 +323,7 @@ body {
 .imageSelectionOptionOverlay {
     position: absolute;
     top: 16px;
-    right: 40px;
+    right: 16px;
     width: 32px;
     height: 32px;
 }
@@ -320,7 +333,7 @@ body {
         width: 16px;
         height: 16px;
         top: 8px;
-        right: 20px;
+        right: 8px;
     }
 }
 
@@ -328,13 +341,13 @@ body {
     position: absolute;
     width: 135px;
     height: 35px;
-    left: 34px;
     bottom: 15px;
     text-align: center;
     font-size: 13pt;
     font-weight: bold;
     color: white;
     display: table;
+    padding-left: 8px;
     text-shadow: #000000 -2px 0 2px, #000000 0 -2px 2px, #000000 2px 0 2px, #000000 0 2px 2px;
 }
 
@@ -342,9 +355,9 @@ body {
     .imageSelectionOptionText {
         width: 67.5px;
         height: 17.5px;
-        left: 18px;
         bottom: 10px;
         font-size: 7pt;
+        padding-left: 4px;
         text-shadow: #000000 -1px 0 1px, #000000 0 -1px 1px, #000000 1px 0 1px, #000000 0 1px 1px;
     }
 }
@@ -369,6 +382,100 @@ body {
     #topics {
         height: 122px;
         margin-top: -61px;
+    }
+}
+
+#opponents {
+    position: absolute;
+    height: 244px;
+    width: 100%;
+    overflow-x: hidden;
+    top: 50%;
+    margin-top: -122px;
+    background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #C9C9C9 58%);
+    -webkit-box-shadow: 0 3px 8px 0 black;
+}
+
+@media only screen and (max-width: 640px) {
+    #opponents {
+        height: 122px;
+        margin-top: -61px;
+    }
+}
+
+.imageSelectionOpponent {
+    width: 360px;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionOpponent {
+        width: 180px;
+    }
+}
+
+.imageSelectionLeftOpponent {
+    position: absolute;
+    right: 182px;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionLeftOpponent {
+        right: 91px;
+    }
+}
+
+.imageSelectionRightOpponent {
+    position: absolute;
+    left: 182px;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionRightOpponent {
+        left: 91px;
+    }
+}
+
+.imageSelectionOpponentDifficulty {
+    position: absolute;
+    height: 210px;
+    width: 306px;
+    left: 25px;
+    -webkit-border-radius: 2px;
+}
+
+.imageSelectionOpponentEasy {
+    background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #d9f0d9 58%);
+    -webkit-box-shadow: 3px 3px 8px 8px #d9f0d9;
+}
+
+.imageSelectionOpponentMedium {
+    background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #f5f5d0 58%);
+    -webkit-box-shadow: 3px 3px 8px 8px #f9f6d0;
+}
+
+.imageSelectionOpponentHard {
+    background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #f0d9d9 58%);
+    -webkit-box-shadow: 3px 3px 8px 8px #f0d9d9;
+}
+
+@media only screen and (max-width: 640px) {
+    .imageSelectionOpponentDifficulty {
+        height: 105px;
+        width: 153px;
+        left: 12.5px;
+        -webkit-border-radius: 1px;
+    }
+
+    .imageSelectionOpponentEasy {
+        -webkit-box-shadow: 1px 1px 4px 4px #d9f0d9;
+    }
+
+    .imageSelectionOpponentMedium {
+        -webkit-box-shadow: 1px 1px 4px 4px #f9f6d0;
+    }
+
+    .imageSelectionOpponentHard {
+        -webkit-box-shadow: 1px 1px 4px 4px #f0d9d9;
     }
 }
 

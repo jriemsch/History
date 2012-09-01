@@ -4,8 +4,7 @@ TestCase('ImageSelectionTest', {
   setUp: function () {
     $('body').empty();
     var css = $('<style type="text/css">' +
-        '.imageSelectionOptionImage { width: 100px; } ' +
-        '.imageSelectionOption { position: absolute; } ' +
+        '.imageSelectionOption { position: absolute; width: 150px; } ' +
         '.imageSelectionOptionContainer { position: absolute; }' +
         '</style>');
     $('head').append(css);

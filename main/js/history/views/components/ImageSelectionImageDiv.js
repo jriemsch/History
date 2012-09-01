@@ -9,21 +9,23 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       ArgumentUtils.assertString(imgSrc);
 
       var optionDiv = $('<div class="imageSelectionOption"></div>');
+      var optionImageFrame = $('<div class="imageSelectionImageFrame"></div>');
 
       var img = $('<img class="imageSelectionOptionImage" src=' + imgSrc + '></img>');
       optionDiv.hide();
-      optionDiv.append(img);
+      optionDiv.append(optionImageFrame);
+      optionImageFrame.append(img);
 
       img.load(function () { optionDiv.show(); });
 
       if (name) {
         ArgumentUtils.assertString(name);
-        optionDiv.append($('<div class="imageSelectionOptionText"><p>' + name + '</p></div>'));
+        optionImageFrame.append($('<div class="imageSelectionOptionText"><p>' + name + '</p></div>'));
       }
 
       if (overlay) {
         ArgumentUtils.assertString(overlay);
-        optionDiv.append($('<img class="imageSelectionOptionOverlay" src=' + overlay + '></img>'));
+        optionImageFrame.append($('<img class="imageSelectionOptionOverlay" src=' + overlay + '></img>'));
       }
 
       if (imgOpacity) {
