@@ -15,13 +15,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       return {
         getTopicId: function getTopicId() { return topicId },
         getOpponentPairing: function getOpponentPairing() { return opponentPairing; },
-        getDifficulty: function getDifficulty() { return difficulty; },
-        toString: function toString() {
-          return 'Quiz: { topicId = ' + topicId
-              + ', opponent1 = ' + opponentPairing.first.getName()
-              + ', opponent2 = ' + opponentPairing.second.getName()
-              + ', difficulty = ' + difficulty.key + ' }';
-        }
+        getDifficulty: function getDifficulty() { return difficulty; }
       };
     }
   };

@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="Refine Css for Opponent Selection">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/controller/QuizController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/model/Quiz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
+    <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizControllerTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizOpponentState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizOpponentState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" afterPath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/TopicSelection.js" afterPath="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/QuizOpponentStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizOpponentStateTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Quiz.js" afterPath="$PROJECT_DIR$/js/history/model/Quiz.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/tests.jstd" afterPath="$PROJECT_DIR$/../test/tests.jstd" />
     </list>
     <ignored path="www.iws" />
@@ -35,7 +21,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/www$Tests_JsLib.coverage" NAME="Tests JsLib Coverage Results" MODIFIED="1344494102032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$All_Tests.coverage" NAME="All Tests Coverage Results" MODIFIED="1339564322597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1346569144394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1346573327717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -51,25 +37,25 @@
       <file leaf-file-name="QuizController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/controller/QuizController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="14" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
+            <state line="22" column="68" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageSelection.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="66" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="46" selection-start="6881" selection-end="6891" vertical-scroll-proportion="0.69730943">
+            <state line="105" column="46" selection-start="6881" selection-end="6891" vertical-scroll-proportion="-25.916666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuizControllerTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizControllerTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="42" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -78,16 +64,16 @@
       <file leaf-file-name="Quiz.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/model/Quiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="90" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
+            <state line="17" column="70" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuizTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/model/QuizTest.js">
+      <file leaf-file-name="OpponentControllerTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="43" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="0" selection-end="356" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,10 +88,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="QuizOpponentState.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/history/controller/QuizOpponentState.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="90" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.37663755">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="QuizTopicStateTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="28" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
+            <state line="34" column="28" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,16 +109,7 @@
       <file leaf-file-name="tests.jstd" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpponentTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/model/OpponentTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="40" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+            <state line="88" column="47" selection-start="3777" selection-end="3777" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,7 +118,7 @@
       <file leaf-file-name="OpponentSelectionTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="73" selection-start="1480" selection-end="1561" vertical-scroll-proportion="0.0">
+            <state line="40" column="73" selection-start="1869" selection-end="1948" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js" />
         <option value="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
         <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
         <option value="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" />
@@ -164,14 +149,15 @@
         <option value="$PROJECT_DIR$/js/history/controller/OpponentController.js" />
         <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
         <option value="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" />
-        <option value="$PROJECT_DIR$/js/history/controller/QuizOpponentState.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/history/model/Quiz.js" />
-        <option value="$PROJECT_DIR$/../test/tests.jstd" />
         <option value="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" />
         <option value="$PROJECT_DIR$/../test/js/history/controller/QuizOpponentStateTest.js" />
         <option value="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" />
         <option value="$PROJECT_DIR$/js/history/controller/QuizController.js" />
+        <option value="$PROJECT_DIR$/../test/tests.jstd" />
+        <option value="$PROJECT_DIR$/../test/js/history/controller/QuizControllerTest.js" />
+        <option value="$PROJECT_DIR$/js/history/model/Quiz.js" />
+        <option value="$PROJECT_DIR$/js/history/controller/QuizOpponentState.js" />
       </list>
     </option>
   </component>
@@ -386,62 +372,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,7 +690,11 @@
       <created>1346491379132</created>
       <updated>1346491379132</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="random opponent pairings are calculated every time the opponent selection is shown&#10;topic and opponent selection do not require clicking ok&#10;create basic quiz via controller">
+      <created>1346572894663</created>
+      <updated>1346572894663</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -774,6 +708,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20215312" sideWeight="0.7440247" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21832669" sideWeight="0.23824209" order="1" side_tool="true" content_ui="tabs" />
@@ -784,7 +719,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -828,7 +762,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refine Css for Opponent Selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="random opponent pairings are calculated every time the opponent selection is shown&#10;topic and opponent selection do not require clicking ok&#10;create basic quiz via controller" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -860,25 +794,12 @@
     <MESSAGE value="Extracted option div creation from ImageSelection.js" />
     <MESSAGE value="Opponent Selection" />
     <MESSAGE value="Refine Css for Opponent Selection" />
+    <MESSAGE value="random opponent pairings are calculated every time the opponent selection is shown&#10;topic and opponent selection do not require clicking ok&#10;create basic quiz via controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/history/views/OpponentSelection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="32" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/OpponentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="265" selection-end="327" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0">
@@ -893,23 +814,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizOpponentState.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/history/model/Question.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/Quiz.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="90" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -921,44 +828,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="73" selection-start="1480" selection-end="1561" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../test/js/history/model/QuizTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="43" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizOpponentStateTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="28" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -972,7 +844,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="46" selection-start="6881" selection-end="6891" vertical-scroll-proportion="0.69730943">
+        <state line="105" column="46" selection-start="6881" selection-end="6891" vertical-scroll-proportion="-25.916666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/OpponentControllerTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="0" selection-end="356" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="28" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="73" selection-start="1869" selection-end="1948" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="47" selection-start="3777" selection-end="3777" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="68" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizControllerTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="42" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/model/Quiz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="70" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizOpponentStateTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizOpponentState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="90" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.37663755">
           <folding />
         </state>
       </provider>

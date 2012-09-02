@@ -14,8 +14,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
         opponentSelection.onOpponentsSelected(function (pairing, difficulty) {
           quizController.setCurrentOpponents(pairing);
           quizController.setCurrentDifficulty(difficulty);
-          var quiz = quizController.createQuiz();
-          console.log(quiz.toString());
+          quizController.createQuiz();
           stateMachine.transitionTo('menu');
         });
       };

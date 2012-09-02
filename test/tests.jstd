@@ -86,6 +86,7 @@ test:
   - js/history/data/WorldHistoryTest.js
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
+  - js/history/controller/QuizControllerTest.js
   - js/history/views/components/ImageSelectionTest.js
   - js/history/views/components/ImageSelectionImageDivTest.js
   - js/history/views/components/ImageSelectionOpponentDivTest.js
