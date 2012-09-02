@@ -8,27 +8,29 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.OpponentSelection = {
-    create: function create(opponentController) {
+    create: function create() {
       var questionMarksDivTop = $('#opponentQuestionMarksTop');
       var questionMarksDivBottom = $('#opponentQuestionMarksBottom');
       var opponentsDiv = $('#opponents');
 
-      createImageSelection();
-
       prepareButtonBar();
 
-      var onOkCallback = null;
       var onBackCallback = null;
+      var onOpponentsSelectedCallback = null;
+      var opponentPairings = null;
+      var imageSelection = null;
 
       function createImageSelection() {
         var options = createOpponentOptions();
-        ImageSelection.create(opponentsDiv, options);
+        imageSelection = ImageSelection.create(opponentsDiv, options);
+      }
+
+      function destroyImageSelection() {
+        imageSelection.destroy();
+        imageSelection = null;
       }
 
       function prepareButtonBar() {
-        var okButton = $('#opponentSelection .footer .okButton');
-        Tap.create(okButton, function() { onOkCallback(); }, false, 'okPressed');
-
         var backButton = $('#opponentSelection .footer .backButton');
         Tap.create(backButton, function() { onBackCallback(); }, false, 'backPressed');
       }
@@ -44,7 +46,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function createOpponentOptions() {
-        var opponentPairings = opponentController.getRandomOpponentPairings(2);
         var options = [];
         for (var idx = 0, len = Difficulty.values.length; idx < len; ++idx) {
           var difficulty = Difficulty.values[idx];
@@ -58,26 +59,36 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           for (var idx = 0, len = pairings.length; idx < len; ++idx) {
             var pairing = pairings[idx];
             var optionDiv = ImageSelectionOpponentDiv.create(pairing, difficulty);
-            options.push({ div: optionDiv });
+            options.push({ div: optionDiv, callback: createOpponentsSelectionCallback(pairing, difficulty) });
           }
         }
+
+        function createOpponentsSelectionCallback(pairing, difficulty) {
+          return function onOpponentsSelected() {
+            onOpponentsSelectedCallback(pairing, difficulty);
+          };
+        }
+
         return options;
       }
 
       return {
         show: function show() {
+          createImageSelection();
           $('#opponentSelection').show();
           AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
           AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
           prepareOnResize();
         },
         hide: function hide() {
+          destroyImageSelection();
           questionMarksDivTop.empty();
           questionMarksDivBottom.empty();
           $('#opponentSelection').hide();
         },
-        onOk: function onOk(callback) { onOkCallback = callback; },
-        onBack: function onBack(callback) { onBackCallback = callback; }
+        onOpponentsSelected: function onOpponentsSelected(callback) { onOpponentsSelectedCallback = callback; },
+        onBack: function onBack(callback) { onBackCallback = callback; },
+        setOpponentPairings: function setOpponentPairings(pairings) { opponentPairings = pairings; }
       };
     }
   };

@@ -5,12 +5,19 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
   var ViewState = net.riemschneider.structures.ViewState;
 
   net.riemschneider.history.controller.QuizOpponentState = {
-    create: function create(stateMachine, opponentSelection) {
+    create: function create(stateMachine, opponentSelection, opponentController, quizController) {
       var state = ViewState.create(stateMachine, 'quizOpponent', false, opponentSelection);
 
       state.onConfigureView = function onConfigureView() {
+        opponentSelection.setOpponentPairings(opponentController.getRandomOpponentPairings(2));
         opponentSelection.onBack(function () { stateMachine.transitionTo('quizTopic'); });
-        opponentSelection.onOk(function () { stateMachine.transitionTo('menu'); });
+        opponentSelection.onOpponentsSelected(function (pairing, difficulty) {
+          quizController.setCurrentOpponents(pairing);
+          quizController.setCurrentDifficulty(difficulty);
+          var quiz = quizController.createQuiz();
+          console.log(quiz.toString());
+          stateMachine.transitionTo('menu');
+        });
       };
 
       return state;

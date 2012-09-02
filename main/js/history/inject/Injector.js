@@ -21,6 +21,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
 
       injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();
+      injector.quizController = net.riemschneider.history.controller.QuizController.create();
 
       injector.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(injector.playerController);
       injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topics, injector.addOns);
@@ -30,8 +31,8 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       injector.stateMachine = net.riemschneider.structures.StateMachine.create();
       injector.menuState = net.riemschneider.history.controller.MenuState.create(injector.stateMachine, injector.menu);
       injector.avatarState = net.riemschneider.history.controller.AvatarState.create(injector.stateMachine, injector.avatarSelection, injector.playerController);
-      injector.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(injector.stateMachine, injector.topicSelection);
-      injector.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(injector.stateMachine, injector.opponentSelection);
+      injector.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(injector.stateMachine, injector.topicSelection, injector.quizController);
+      injector.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(injector.stateMachine, injector.opponentSelection, injector.opponentController, injector.quizController);
 
       return injector;
     }

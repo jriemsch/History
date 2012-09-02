@@ -11,23 +11,25 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
       var topicsDiv = $('#topics');
-      createImageSelection();
 
       prepareButtonBar();
 
-      var onOkCallback = null;
       var onBackCallback = null;
+      var onTopicSelectedCallback = null;
       var onLockedTopicSelectedCallback = null;
+      var imageSelection = null;
 
       function createImageSelection() {
         var options = createTopicOptions();
-        ImageSelection.create(topicsDiv, options);
+        imageSelection = ImageSelection.create(topicsDiv, options);
+      }
+
+      function destroyImageSelection() {
+        imageSelection.destroy();
+        imageSelection = null;
       }
 
       function prepareButtonBar() {
-        var okButton = $('#topicSelection .footer .okButton');
-        Tap.create(okButton, function() { onOkCallback(); }, false, 'okPressed');
-
         var backButton = $('#topicSelection .footer .backButton');
         Tap.create(backButton, function() { onBackCallback(); }, false, 'backPressed');
       }
@@ -42,9 +44,15 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         setTimeout(function () { $(window).resize(); }, 0);
       }
 
-      function createLockedTopicSelectionCallback(topicId) {
-        return function () {
-          onLockedTopicSelectedCallback(topicId);
+      function createLockedTopicSelectionCallback(topic) {
+        return function onLockedTopicSelected() {
+          onLockedTopicSelectedCallback(topic.getId());
+        }
+      }
+
+      function createTopicSelectionCallback(topic) {
+        return function onTopicSelected() {
+          onTopicSelectedCallback(topic.getId());
         }
       }
 
@@ -58,7 +66,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
               ImageSelectionImageDiv.create(topic.getImage(), topic.getName(), 'images/lock.png', 0.4);
           options[idx] = {
             div: optionDiv,
-            callback: isUnlocked ? null : createLockedTopicSelectionCallback(topic.getId())
+            callback: isUnlocked ? createTopicSelectionCallback(topic) : createLockedTopicSelectionCallback(topic)
           };
         }
         return options;
@@ -66,18 +74,20 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       return {
         show: function show() {
+          createImageSelection();
           $('#topicSelection').show();
           AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
           AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
           prepareOnResize();
         },
         hide: function hide() {
+          destroyImageSelection();
           questionMarksDivTop.empty();
           questionMarksDivBottom.empty();
           $('#topicSelection').hide();
         },
-        onOk: function onOk(callback) { onOkCallback = callback; },
         onBack: function onBack(callback) { onBackCallback = callback; },
+        onTopicSelected: function onTopicSelected(callback) { onTopicSelectedCallback = callback; },
         onLockedTopicSelected: function onLockedTopicSelected(callback) { onLockedTopicSelectedCallback = callback; }
       };
     }

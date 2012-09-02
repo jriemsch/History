@@ -10,32 +10,45 @@ TestCase('QuizTopicStateTest', {
     State.create(this.stateMachine, 'menu', true);
     State.create(this.stateMachine, 'quizOpponent', false);
     this.topicSelection = {
-      okCallback: null,
+      topicSelectionCallback: null,
       backCallback: null,
       show: function () {},
       hide: function () {},
-      onOk: function (callback) { this.okCallback = callback; },
+      onTopicSelected: function (callback) { this.topicSelectionCallback = callback; },
       onBack: function (callback) { this.backCallback = callback; }
+    };
+
+    this.quizController = {
+      topicId: null,
+      setCurrentTopic: function setCurrentTopic(topicId) { this.topicId = topicId; }
     };
   },
 
   testCreate: function () {
-    var state = QuizTopicState.create(this.stateMachine, this.topicSelection);
+    var state = QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
     assertTrue(TypeUtils.isOfType(state, QuizTopicState));
     assertTrue(TypeUtils.isOfType(state, ViewState));
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
-  testCanTransitionToMenuOnOk: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection);
+  testCanTransitionToMenuOnTopicSelection: function () {
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
-    this.topicSelection.okCallback();
+    this.topicSelection.topicSelectionCallback('topicId');
     assertEquals('quizOpponent', this.stateMachine.getCurrentStateId());
   },
 
+  testSetsTopicOnTopicSelection: function () {
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
+    this.stateMachine.start();
+    this.stateMachine.transitionTo('quizTopic');
+    this.topicSelection.topicSelectionCallback('topicId');
+    assertEquals('topicId', this.quizController.topicId);
+  },
+
   testCanTransitionToMenuOnBack: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection);
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
     this.topicSelection.backCallback();

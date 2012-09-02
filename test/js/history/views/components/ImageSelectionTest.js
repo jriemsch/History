@@ -33,6 +33,12 @@ TestCase('ImageSelectionTest', {
     assertEquals('150px', this.getLastRecording($(optionDivs[1])).arguments[0].left);
   },
 
+  testDestroy: function () {
+    var sel = ImageSelection.create($('body'), this.options);
+    sel.destroy();
+    assertEquals(0, $('body').find('.imageSelectionOptionContainer').length);
+  },
+
   testDefaultSelection: function () {
     var sel = ImageSelection.create($('body'), this.options);
     assertNull(sel.getSelection());

@@ -89,9 +89,8 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
       return {
         getSelection: function getSelection() { return selectedIdx; },
-        setSelection: function setSelection(idx) {
-          selectImage(idx, true);
-        }
+        setSelection: function setSelection(idx) { selectImage(idx, true); },
+        destroy: function destroy() { containerDiv.remove(); }
       };
     }
   };

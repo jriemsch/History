@@ -19,7 +19,6 @@ TestCase('TopicSelectionTest', {
     this.opponentSelectionDiv.append(this.questionMarksTop);
     this.opponentSelectionDiv.append(this.questionMarksBottom);
     this.opponentSelectionDiv.append(this.buttonBarDiv);
-    this.buttonBarDiv.append(this.okButton);
     this.buttonBarDiv.append(this.backButton);
 
     this.opponentSelectionDiv.hide();
@@ -48,18 +47,17 @@ TestCase('TopicSelectionTest', {
 
   testAllImagesShown: function () {
     TopicSelection.create(this.topics, this.addOns).show();
-    var allImages = $('.imageSelectionOptionImage');
-    assertEquals(2, allImages.length);
+    assertEquals(2, $('.imageSelectionOptionImage').length);
+    assertEquals(1, $('.imageSelectionOptionOverlay').length);
   },
 
-  testOkCallsCallback: function () {
+  testCanShowNewTopicState: function () {
     var sel = TopicSelection.create(this.topics, this.addOns);
-    var called = false;
-    sel.onOk(function () { called = true; });
     sel.show();
-    this.okButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    this.okButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertTrue(called);
+    sel.hide();
+    this.addOns.unlock('topic2');
+    sel.show();
+    assertEquals(0, $('.imageSelectionOptionOverlay').length);
   },
 
   testBackCallsCallback: function () {
@@ -83,14 +81,14 @@ TestCase('TopicSelectionTest', {
     assertEquals('topic2', called);
   },
 
-  testSelectUnlockedTopicDoesNotCallCallback: function () {
+  testSelectUnlockedTopicCallsCallback: function () {
     var sel = TopicSelection.create(this.topics, this.addOns);
     var called = null;
-    sel.onLockedTopicSelected(function (topic) { called = topic; });
+    sel.onTopicSelected(function (topic) { called = topic; });
     sel.show();
     var allImages = $('.imageSelectionOptionImage');
     $(allImages[0]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[0]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertNull(called);
+    assertEquals('topic1', called);
   }
 });
