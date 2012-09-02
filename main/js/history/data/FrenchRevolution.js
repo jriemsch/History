@@ -288,9 +288,9 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       ]);
       
       addFact(14, [
-          Question.create(id(14, 0), Difficulty.EASY, 'In welchem Jahr wurden die Assignaten eingeführt?',
+          Question.create(id(14, 0), Difficulty.EASY, 'In welchem Jahr wurde die Einführung der Assignaten per Gesetz beschlossen?',
               TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1789))),
-          Question.create(id(14, 1), Difficulty.MEDIUM, 'Wann wurden die Assignaten eingeführt?',
+          Question.create(id(14, 1), Difficulty.MEDIUM, 'Wann wurde die Einführung der Assignaten per Gesetz beschlossen?',
               TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(17, 6, 1789))),
           Question.create(id(14, 2), Difficulty.MEDIUM, 'Was waren die sogenannten „Assignaten“?',
               MultipleChoice.create(0, [
@@ -305,7 +305,11 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Durch die Ländereien von Adligen'
               ], [0])),
           Question.create(id(14, 4), Difficulty.MEDIUM, 'Welchen Wertverlust (in Prozent) hatten die „Assignaten“ bis 1793?',
-              ValueChoice.create(0, 0, 100, 50))
+              ValueChoice.create(0, 0, 100, 50)),
+          Question.create(id(14, 5), Difficulty.MEDIUM, 'Wann wurden die ersten Assignaten ausgegeben?',
+              TimeChoice.create(0, DateSelector.month(1, 1780), DateSelector.month(12, 1810), DateSelector.month(4, 1790))),
+          Question.create(id(14, 6), Difficulty.MEDIUM, 'Welchen Gesamtwert hatte die erste Auflage der Assignaten vom April 1790?',
+              ValueChoice.create(0, 10, 1000, 400, 'Millionen Livre')),
       ]);
       
       addFact(15, [
@@ -378,6 +382,23 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Auf Lebensmittel',
                 'Auf Grundbesitz',
                 'Auf Einkünfte'
+              ], [0]))
+      ]);
+
+      addFact(17, [
+          Question.create(id(17, 0), Difficulty.EASY, 'Wann wurde der Club des Cordeliers gegründet?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(27, 4, 1790))),
+          Question.create(id(17, 1), Difficulty.EASY, 'Aus welchem Klub ging 1790 der Club des Cordeliers hervor?',
+              MultipleChoice.create(0, [
+                'Aus dem bretonischen Klub',
+                'Aus den Jakobinern',
+                'Aus den Girondisten'
+              ], [0])),
+          Question.create(id(17, 2), Difficulty.EASY, 'Wonach wurde der Club des Cordeliers benannt?',
+              MultipleChoice.create(0, [
+                'Nach dem ursprünglichen Versammlungsort, einem Franziskanerkloster',
+                'Nach der Tatsache, dass sie Adelige aufhängten',
+                'Nach der Kleiderordnung, wonach alle Mitglieder einen Strick als Gürtel trugen'
               ], [0]))
       ]);
       
