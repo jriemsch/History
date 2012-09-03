@@ -6,22 +6,28 @@ TestCase('FrenchRevolutionTest', {
     var topics = [];
     var questionsByTopicAndFact = {};
     var addOns = AddOns.create();
-    FrenchRevolution.init(topics, questionsByTopicAndFact, addOns);
+    var regionsByTopic = {};
+    FrenchRevolution.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
     assertEquals(2, questionsByTopicAndFact.FRENCH_REVOLUTION.FACT0.length);
     assertTrue(addOns.isUnlocked('FRENCH_REVOLUTION'));
+    assertEquals(1, regionsByTopic.FRENCH_REVOLUTION.length);
   },
 
   testNullAndTypeSafe: function () {
     var topics = [];
     var questionsByTopicAndFact = {};
     var addOns = AddOns.create();
+    var regionsByTopic = {};
 
-    assertException(function () { FrenchRevolution.init(topics, questionsByTopicAndFact, null); }, 'TypeError');
-    assertException(function () { FrenchRevolution.init(topics, null, addOns); }, 'TypeError');
-    assertException(function () { FrenchRevolution.init(null, questionsByTopicAndFact, addOns); }, 'TypeError');
-    assertException(function () { FrenchRevolution.init(topics, questionsByTopicAndFact, {}); }, 'TypeError');
-    assertException(function () { FrenchRevolution.init(topics, [], addOns); }, 'TypeError');
-    assertException(function () { FrenchRevolution.init({}, questionsByTopicAndFact, addOns); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init(topics, questionsByTopicAndFact, addOns, null); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init(topics, questionsByTopicAndFact, null, regionsByTopic); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init(topics, null, addOns, regionsByTopic); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init(null, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
+
+    assertException(function () { FrenchRevolution.init(topics, questionsByTopicAndFact, addOns, []); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init(topics, questionsByTopicAndFact, {}, regionsByTopic); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init(topics, [], addOns, regionsByTopic); }, 'TypeError');
+    assertException(function () { FrenchRevolution.init({}, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
   }
 });

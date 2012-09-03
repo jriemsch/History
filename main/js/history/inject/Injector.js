@@ -13,11 +13,12 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
 
       injector.topics = [];
       injector.questionsByTopicAndFact = {};
-      net.riemschneider.history.data.FrenchRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
-      net.riemschneider.history.data.AmericanRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
-      net.riemschneider.history.data.FirstWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
-      net.riemschneider.history.data.SecondWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
-      net.riemschneider.history.data.WorldHistory.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns);
+      injector.regionsByTopic = {};
+      net.riemschneider.history.data.FrenchRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
+      net.riemschneider.history.data.AmericanRevolution.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
+      net.riemschneider.history.data.FirstWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
+      net.riemschneider.history.data.SecondWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
+      net.riemschneider.history.data.WorldHistory.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
 
       injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();
@@ -25,7 +26,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
 
       injector.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(injector.playerController);
       injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topics, injector.addOns);
-      injector.opponentSelection = net.riemschneider.history.views.OpponentSelection.create(injector.opponentController);
+      injector.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
       injector.menu = net.riemschneider.history.views.Menu.create();
 
       injector.stateMachine = net.riemschneider.structures.StateMachine.create();

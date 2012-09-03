@@ -6,22 +6,28 @@ TestCase('WorldHistoryTest', {
     var topics = [];
     var questionsByTopicAndFact = {};
     var addOns = AddOns.create();
-    WorldHistory.init(topics, questionsByTopicAndFact, addOns);
+    var regionsByTopic = {};
+    WorldHistory.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertNotNull(0, questionsByTopicAndFact.WORLD_HISTORY);
+    assertNotUndefined(questionsByTopicAndFact.WORLD_HISTORY);
     assertFalse(addOns.isUnlocked('WORLD_HISTORY'));
+    assertNotUndefined(regionsByTopic.WORLD_HISTORY);
   },
 
   testNullAndTypeSafe: function () {
     var topics = [];
     var questionsByTopicAndFact = {};
     var addOns = AddOns.create();
+    var regionsByTopic = {};
 
-    assertException(function () { WorldHistory.init(topics, questionsByTopicAndFact, null); }, 'TypeError');
-    assertException(function () { WorldHistory.init(topics, null, addOns); }, 'TypeError');
-    assertException(function () { WorldHistory.init(null, questionsByTopicAndFact, addOns); }, 'TypeError');
-    assertException(function () { WorldHistory.init(topics, questionsByTopicAndFact, {}); }, 'TypeError');
-    assertException(function () { WorldHistory.init(topics, [], addOns); }, 'TypeError');
-    assertException(function () { WorldHistory.init({}, questionsByTopicAndFact, addOns); }, 'TypeError');
+    assertException(function () { WorldHistory.init(topics, questionsByTopicAndFact, addOns, null); }, 'TypeError');
+    assertException(function () { WorldHistory.init(topics, questionsByTopicAndFact, null, regionsByTopic); }, 'TypeError');
+    assertException(function () { WorldHistory.init(topics, null, addOns, regionsByTopic); }, 'TypeError');
+    assertException(function () { WorldHistory.init(null, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
+
+    assertException(function () { WorldHistory.init(topics, questionsByTopicAndFact, addOns, []); }, 'TypeError');
+    assertException(function () { WorldHistory.init(topics, questionsByTopicAndFact, {}, regionsByTopic); }, 'TypeError');
+    assertException(function () { WorldHistory.init(topics, [], addOns, regionsByTopic); }, 'TypeError');
+    assertException(function () { WorldHistory.init({}, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
   }
 });

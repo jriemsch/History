@@ -14,7 +14,8 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
         setCurrentOpponents: function setCurrentOpponents(opponentPairing) { currentOpponentPairing = opponentPairing; },
         setCurrentDifficulty: function setCurrentDifficulty(difficulty) { currentDifficulty = difficulty; },
         createQuiz: function createQuiz() {
-          return Quiz.create(currentTopicId, currentOpponentPairing, currentDifficulty);
+          var questionsByRegion = {};
+          return Quiz.create(currentTopicId, currentOpponentPairing, currentDifficulty, questionsByRegion);
         }
       };
     }

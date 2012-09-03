@@ -5,15 +5,17 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   net.riemschneider.history.model.Region = {
-    create: function create(id, imgSrc, imgPos) {
+    create: function create(id, imgSrc, imgPos, difficultyPos) {
       ArgumentUtils.assertNotNull(id);
       ArgumentUtils.assertString(imgSrc);
       ArgumentUtils.assertType(imgPos, net.riemschneider.graphics.Position);
+      ArgumentUtils.assertType(difficultyPos, net.riemschneider.graphics.Position);
 
       return {
         getId: function getId() { return id; },
         getImgSrc: function getImgSrc() { return imgSrc; },
-        getImgPos: function getImgPos() { return imgPos; }
+        getImgPos: function getImgPos() { return imgPos; },
+        getDifficultyPos: function getDifficultyPos() { return difficultyPos; }
       };
     }
   };

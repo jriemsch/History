@@ -6,22 +6,28 @@ TestCase('AmericanRevolutionTest', {
     var topics = [];
     var questionsByTopicAndFact = {};
     var addOns = AddOns.create();
-    AmericanRevolution.init(topics, questionsByTopicAndFact, addOns);
+    var regionsByTopic = {};
+    AmericanRevolution.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertNotNull(0, questionsByTopicAndFact.AMERICAN_REVOLUTION);
+    assertNotUndefined(questionsByTopicAndFact.AMERICAN_REVOLUTION);
     assertFalse(addOns.isUnlocked('AMERICAN_REVOLUTION'));
+    assertNotUndefined(regionsByTopic.AMERICAN_REVOLUTION);
   },
 
   testNullAndTypeSafe: function () {
     var topics = [];
     var questionsByTopicAndFact = {};
     var addOns = AddOns.create();
+    var regionsByTopic = {};
 
-    assertException(function () { AmericanRevolution.init(topics, questionsByTopicAndFact, null); }, 'TypeError');
-    assertException(function () { AmericanRevolution.init(topics, null, addOns); }, 'TypeError');
-    assertException(function () { AmericanRevolution.init(null, questionsByTopicAndFact, addOns); }, 'TypeError');
-    assertException(function () { AmericanRevolution.init(topics, questionsByTopicAndFact, {}); }, 'TypeError');
-    assertException(function () { AmericanRevolution.init(topics, [], addOns); }, 'TypeError');
-    assertException(function () { AmericanRevolution.init({}, questionsByTopicAndFact, addOns); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init(topics, questionsByTopicAndFact, addOns, null); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init(topics, questionsByTopicAndFact, null, regionsByTopic); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init(topics, null, addOns, regionsByTopic); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init(null, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
+
+    assertException(function () { AmericanRevolution.init(topics, questionsByTopicAndFact, addOns, []); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init(topics, questionsByTopicAndFact, {}, regionsByTopic); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init(topics, [], addOns, regionsByTopic); }, 'TypeError');
+    assertException(function () { AmericanRevolution.init({}, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
   }
 });

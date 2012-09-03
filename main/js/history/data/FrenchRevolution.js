@@ -13,17 +13,25 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var ValueChoice = net.riemschneider.history.model.ValueChoice;
   var DateSelector = net.riemschneider.history.model.DateSelector;
   var AddOns = net.riemschneider.history.model.AddOns;
+  var Position = net.riemschneider.graphics.Position;
+  var Region = net.riemschneider.history.model.Region;
 
   net.riemschneider.history.data.FrenchRevolution = {
-    init: function init(topics, questionsByTopicAndFact, addOns) {
+    init: function init(topics, questionsByTopicAndFact, addOns, regionsByTopic) {
       ArgumentUtils.assertArray(topics);
       ArgumentUtils.assertMap(questionsByTopicAndFact);
       ArgumentUtils.assertType(addOns, AddOns);
+      ArgumentUtils.assertMap(regionsByTopic);
 
       var topicId = 'FRENCH_REVOLUTION';
       topics.push(Topic.create(topicId, 'Französische Revolution', 'images/frenchRevolution.png'));
 
       addOns.unlock(topicId);
+
+      var regions = [
+          Region.create(regionId(0), '', Position.create(0, 0), Position.create(0, 0))
+      ];
+      regionsByTopic[topicId] = regions;
 
       questionsByTopicAndFact[topicId] = {};
     
@@ -261,7 +269,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       ]);
       
       addFact(13, [
-          Question.create(id(13, 0), Difficulty.MEDIUM, 'Was versteht man unter der Säkularisation',
+          Question.create(id(13, 0), Difficulty.MEDIUM, 'Was versteht man unter der Säkularisation?',
               MultipleChoice.create(0, [
                 'Die Verstaatlichung des Kirchenbesitzes',
                 'Die Trennung in Stände',
@@ -305,11 +313,11 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Durch die Ländereien von Adligen'
               ], [0])),
           Question.create(id(14, 4), Difficulty.MEDIUM, 'Welchen Wertverlust (in Prozent) hatten die „Assignaten“ bis 1793?',
-              ValueChoice.create(0, 0, 100, 50)),
+              ValueChoice.create(0, 0, 100, 50, '%')),
           Question.create(id(14, 5), Difficulty.MEDIUM, 'Wann wurden die ersten Assignaten ausgegeben?',
               TimeChoice.create(0, DateSelector.month(1, 1780), DateSelector.month(12, 1810), DateSelector.month(4, 1790))),
           Question.create(id(14, 6), Difficulty.MEDIUM, 'Welchen Gesamtwert hatte die erste Auflage der Assignaten vom April 1790?',
-              ValueChoice.create(0, 10, 1000, 400, 'Millionen Livre')),
+              ValueChoice.create(0, 10, 1000, 400, 'Millionen Livre'))
       ]);
       
       addFact(15, [
@@ -339,7 +347,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Sie wurden zentral durch die Nationalversammlung verwaltet'
               ], [0, 1, 2])),
           Question.create(id(15, 4), Difficulty.EASY, 'Wieviele Départements gab es zu Beginn der Französischen Revolution?',
-              ValueChoice.create(0, 30, 110, 83)),
+              ValueChoice.create(0, 30, 110, 83, '')),
           Question.create(id(15, 5), Difficulty.EASY, '1789/1790 wurden die {provinzen} durch {departements} ersetzt, um sie in Größe und Status einander anzugleichen',
               GapChoice.create(0, [
                'Provinzen',
@@ -408,6 +416,10 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
 
       function id(factNo, questionNo) {
         return topicId + '_FACT' + factNo + '_QUESTION' + questionNo;
+      }
+
+      function regionId(regionNo) {
+        return topicId + '_REGION' + regionNo;
       }
     }
   };
