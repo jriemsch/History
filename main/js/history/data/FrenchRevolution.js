@@ -7,6 +7,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Question = net.riemschneider.history.model.Question;
   var MultipleChoice = net.riemschneider.history.model.MultipleChoice;
   var OrderChoice = net.riemschneider.history.model.OrderChoice;
+  var MappingChoice = net.riemschneider.history.model.MappingChoice;
   var TimeChoice = net.riemschneider.history.model.TimeChoice;
   var GapChoice = net.riemschneider.history.model.GapChoice;
   var Gap = net.riemschneider.history.model.Gap;
@@ -126,11 +127,16 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
 
       addFact(4, [
           Question.create(id(4, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge:',
-              OrderChoice.create(0, [
+              Mapping.create(0, [
                 'Der Ballhausschwur',
                 'Der Beitritt von Adel und Klerus zur Nationalversammlung',
                 'Die Nationalversammlung wird zur Verfassungsgebenden Versammlung',
                 'Die Erklärung der Menschen- und Bürgerrechte'
+              ], [
+                '20. Juni 1789',
+                '27. Juni 1789',
+                '9. Juli 1789',
+                '26. August 1789'
               ], [0, 1, 2, 3]))
       ]);
     
@@ -408,6 +414,40 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Nach der Tatsache, dass sie Adelige aufhängten',
                 'Nach der Kleiderordnung, wonach alle Mitglieder einen Strick als Gürtel trugen'
               ], [0]))
+      ]);
+      
+      addFact(18, [
+          Question.create(id(18, 0), Difficulty.EASY, 'Wann wurden die Adelstitel abgeschafft?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(19, 6, 1790))),
+          Question.create(id(18, 1), Difficulty.EASY, 'Wann wurden die Adelstitel abgeschafft?',
+              TimeChoice.create(0, DateSelector.year(1780), DateSelector.year(1810), DateSelector.year(1790)))
+      ]);
+
+      addFact(19, [
+          Question.create(id(19, 0), Difficulty.EASY, 'Wann wurden die Zivilverfassung des Klerus verabschiedet?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(12, 7, 1790))),
+          Question.create(id(19, 1), Difficulty.EASY, 'Wann trat die Zivilverfassung des Klerus in Kraft?',
+              TimeChoice.create(0, DateSelector.day(1, 1, 1780), DateSelector.day(31, 12, 1810), DateSelector.day(27, 11, 1790))),
+          Question.create(id(19, 2), Difficulty.EASY, 'Was wurde in der Zivilverfassung des Klerus von 1790 festgelegt?',
+              MultipleChoice.create(0, [
+                'Die Anpassung der Diözesen an die Départements',
+                'Die Geistlichen werden zu Staatsbeamten',
+                'Die Besoldung der Geistlichen',
+                'Die Geistlichen sollen gewählt werden',
+                'Der Klerus wird abgeschafft',
+                'Die Verstaatlichung des Kirchenbesitzes',
+                'Die Abschaffung von Adelstiteln des Klerus'
+              ], [0, 1, 2, 3])),
+          Question.create(id(19, 3), Difficulty.EASY, 'Bringe die folgenden Ereignisse in ihre korrekte Reihenfolge',
+              MappingChoice.create(0, [
+                'Die Säkularisation',
+                'Die Verpflichtung des Klerus einen Eid auf die Verfassung zu leisten',
+                'Die Annahme der Verfassung'
+              ], [
+                '2. November 1789',
+                '27. November 1790',
+                '3. September 1791'
+              ], [0, 1, 2]))
       ]);
       
       function addFact(factNo, questions) {
