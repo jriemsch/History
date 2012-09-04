@@ -28,6 +28,7 @@ load:
   - ../main/js/history/model/Answer.js
   - ../main/js/history/model/MultipleChoice.js
   - ../main/js/history/model/OrderChoice.js
+  - ../main/js/history/model/MapChoice.js
   - ../main/js/history/model/TimeChoice.js
   - ../main/js/history/model/Question.js
   - ../main/js/history/model/Region.js
@@ -36,6 +37,7 @@ load:
   - ../main/js/history/model/GapChoice.js
   - ../main/js/history/model/ValueChoice.js
   - ../main/js/history/model/Quiz.js
+  - ../main/js/history/model/QuestionDistribution.js
   - ../main/js/history/data/BaseOpponents.js
   - ../main/js/history/data/AvatarImages.js
   - ../main/js/history/data/FrenchRevolution.js
@@ -70,6 +72,7 @@ test:
   - js/history/model/AnswerTest.js
   - js/history/model/MultipleChoiceTest.js
   - js/history/model/OrderChoiceTest.js
+  - js/history/model/MapChoiceTest.js
   - js/history/model/TimeChoiceTest.js
   - js/history/model/QuestionTest.js
   - js/history/model/RegionTest.js
@@ -78,6 +81,7 @@ test:
   - js/history/model/GapChoiceTest.js
   - js/history/model/ValueChoiceTest.js
   - js/history/model/QuizTest.js
+  - js/history/model/QuestionDistributionTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js
   - js/history/data/AmericanRevolutionTest.js

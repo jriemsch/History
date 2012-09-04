@@ -20,9 +20,13 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       net.riemschneider.history.data.SecondWorldWar.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
       net.riemschneider.history.data.WorldHistory.init(injector.topics, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
 
+      injector.questionDistribution = net.riemschneider.history.model.QuestionDistribution.create([
+          [0.7, 0.2, 0.1], [0.5, 0.4, 0.2], [0.33, 0.34, 0.33]
+      ]);
+
       injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
       injector.playerController = net.riemschneider.history.controller.PlayerController.create();
-      injector.quizController = net.riemschneider.history.controller.QuizController.create();
+      injector.quizController = net.riemschneider.history.controller.QuizController.create(injector.questionDistribution);
 
       injector.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(injector.playerController);
       injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topics, injector.addOns);

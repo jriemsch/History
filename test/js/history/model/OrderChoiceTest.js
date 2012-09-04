@@ -5,7 +5,7 @@ var TypeUtils = net.riemschneider.utils.TypeUtils;
 TestCase('OrderChoicesTest', {
   testCreateAndGetters: function () {
     var choices = ['answer1', 'answer2'];
-    var correctOrder = [1];
+    var correctOrder = [0, 1];
     var answer = OrderChoice.create(5, choices, correctOrder);
     assertNotNull(answer);
     assertTrue(TypeUtils.isOfType(answer, Answer));
@@ -20,9 +20,10 @@ TestCase('OrderChoicesTest', {
     assertException(function () { OrderChoice.create(5, null, [0]); }, 'TypeError');
     assertException(function () { OrderChoice.create(null, [''], [0]); }, 'TypeError');
 
-    assertException(function () { OrderChoice.create(5, [], 0); }, 'TypeError');
+    assertException(function () { OrderChoice.create(5, [''], 0); }, 'TypeError');
     assertException(function () { OrderChoice.create(5, [], [0]); }, 'TypeError');
     assertException(function () { OrderChoice.create(5, [5, 6], [0]); }, 'TypeError');
+    assertException(function () { OrderChoice.create(5, ['', ''], [0]); }, 'TypeError');
     assertException(function () { OrderChoice.create(5, [''], [1]); }, 'TypeError');
   }
 });

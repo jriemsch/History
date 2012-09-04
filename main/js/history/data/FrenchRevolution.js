@@ -29,10 +29,9 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
 
       addOns.unlock(topicId);
 
-      var regions = [
+      regionsByTopic[topicId] = [
           Region.create(regionId(0), '', Position.create(0, 0), Position.create(0, 0))
       ];
-      regionsByTopic[topicId] = regions;
 
       questionsByTopicAndFact[topicId] = {};
     
@@ -127,7 +126,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
 
       addFact(4, [
           Question.create(id(4, 0), Difficulty.MEDIUM, 'Bringe die folgenden Ereignisse in die richtige Reihenfolge:',
-              Mapping.create(0, [
+              MapChoice.create(0, [
                 'Der Ballhausschwur',
                 'Der Beitritt von Adel und Klerus zur Nationalversammlung',
                 'Die Nationalversammlung wird zur Verfassungsgebenden Versammlung',
@@ -439,7 +438,7 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
                 'Die Abschaffung von Adelstiteln des Klerus'
               ], [0, 1, 2, 3])),
           Question.create(id(19, 3), Difficulty.EASY, 'Bringe die folgenden Ereignisse in ihre korrekte Reihenfolge',
-              MappingChoice.create(0, [
+              MapChoice.create(0, [
                 'Die Säkularisation',
                 'Die Verpflichtung des Klerus einen Eid auf die Verfassung zu leisten',
                 'Die Annahme der Verfassung'

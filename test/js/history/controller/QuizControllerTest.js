@@ -2,10 +2,11 @@ var Difficulty = net.riemschneider.history.model.Difficulty;
 var Opponent = net.riemschneider.history.model.Opponent;
 var QuizController = net.riemschneider.history.controller.QuizController;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
+var QuestionDistribution = net.riemschneider.history.model.QuestionDistribution;
 
 TestCase('QuizControllerTest', {
   setUp: function () {
-    this.quizController = QuizController.create();
+    this.quizController = QuizController.create(QuestionDistribution.create([[1, 0, 0], [0, 1, 0], [0, 0, 1]]));
   },
 
   testCreateQuiz: function () {
