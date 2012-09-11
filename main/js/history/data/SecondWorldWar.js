@@ -4,6 +4,8 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var Topic = net.riemschneider.history.model.Topic;
   var AddOns = net.riemschneider.history.model.AddOns;
+  var Facts = net.riemschneider.history.model.Facts;
+  var Regions = net.riemschneider.history.model.Regions;
 
   net.riemschneider.history.data.SecondWorldWar = {
     init: function init(topics, questionsByTopicAndFact, addOns, regionsByTopic) {
@@ -15,10 +17,9 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       var topicId = 'SECOND_WORLD_WAR';
       topics.push(Topic.create(topicId, 'Zweiter Weltkrieg', 'images/secondWorldWar.png'));
 
-      var regions = [];
-      regionsByTopic[topicId] = regions;
+      regionsByTopic[topicId] = Regions.create([]);
 
-      questionsByTopicAndFact[topicId] = {};
+      questionsByTopicAndFact[topicId] = Facts.create([]);
     }
   };
 }());

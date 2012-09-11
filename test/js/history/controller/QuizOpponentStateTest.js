@@ -9,7 +9,7 @@ TestCase('QuizOpponentStateTest', {
   setUp: function () {
     this.stateMachine = StateMachine.create();
     State.create(this.stateMachine, 'quizTopic', true);
-    State.create(this.stateMachine, 'menu', false);
+    State.create(this.stateMachine, 'quiz', false);
     this.opponentSelection = {
       backCallback: null,
       opponentsSelectionCallback: null,
@@ -29,44 +29,52 @@ TestCase('QuizOpponentStateTest', {
       }
     };
 
-    this.quizController = {
+    var quiz = {};
+    this.quiz = quiz;
+    this.quizGenerator = {
       opponentPairings: null,
       difficulty: null,
       created: false,
       setCurrentOpponents: function setCurrentOpponents(pairings) { this.opponentPairings = pairings; },
       setCurrentDifficulty: function setCurrentDifficulty(difficulty) { this.difficulty = difficulty; },
-      createQuiz: function createQuiz() { this.created = true; return {}; }
+      generate: function generate() { this.created = true; return quiz; }
     };
+
+    this.quizController = {
+      createdQuiz: null,
+      setCurrentQuiz: function setCurrentQuiz(quiz) { this.createdQuiz = quiz; }
+    }
   },
 
   testCreate: function () {
-    var state = QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizController);
+    var state = QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     assertTrue(TypeUtils.isOfType(state, QuizOpponentState));
     assertTrue(TypeUtils.isOfType(state, ViewState));
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
-  testCanTransitionToMenuOnOpponentsSelection: function () {
-    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizController);
+  testCanTransitionToQuizOnOpponentsSelection: function () {
+    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizOpponent');
     this.opponentSelection.opponentSelectionCallback({}, Difficulty.EASY);
-    assertEquals('menu', this.stateMachine.getCurrentStateId());
+    assertEquals('quiz', this.stateMachine.getCurrentStateId());
   },
 
   testCreatesQuizOnOpponentSelection: function () {
-    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizController);
+    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizOpponent');
     var pairing = {};
     this.opponentSelection.opponentSelectionCallback(pairing, Difficulty.EASY);
-    assertSame(pairing, this.quizController.opponentPairings);
-    assertSame(Difficulty.EASY, this.quizController.difficulty);
-    assertTrue(this.quizController.created);
+    assertSame(pairing, this.quizGenerator.opponentPairings);
+    assertSame(Difficulty.EASY, this.quizGenerator.difficulty);
+    assertTrue(this.quizGenerator.created);
+    assertSame(this.quiz, this.quizController.createdQuiz);
   },
 
-  testCanTransitionToMenuOnBack: function () {
-    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizController);
+  testCanTransitionToQuizTopicStateOnBack: function () {
+    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizOpponent');
     this.opponentSelection.backCallback();
@@ -74,7 +82,7 @@ TestCase('QuizOpponentStateTest', {
   },
 
   testSetsOpponentPairingsOnEnter: function () {
-    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizController);
+    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizOpponent');
     assertSame(this.pairings, this.opponentSelection.opponentPairings);

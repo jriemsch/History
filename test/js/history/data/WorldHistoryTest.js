@@ -9,9 +9,9 @@ TestCase('WorldHistoryTest', {
     var regionsByTopic = {};
     WorldHistory.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertNotUndefined(questionsByTopicAndFact.WORLD_HISTORY);
+    assertTrue(TypeUtils.isOfType(questionsByTopicAndFact.WORLD_HISTORY, net.riemschneider.history.model.Facts));
+    assertTrue(TypeUtils.isOfType(regionsByTopic.WORLD_HISTORY, net.riemschneider.history.model.Regions));
     assertFalse(addOns.isUnlocked('WORLD_HISTORY'));
-    assertNotUndefined(regionsByTopic.WORLD_HISTORY);
   },
 
   testNullAndTypeSafe: function () {

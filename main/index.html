@@ -27,6 +27,7 @@
   <script type="text/javascript" charset="utf-8" src="js/structures/StateMachine.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/structures/State.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/structures/ViewState.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/graphics/Position.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/model/Player.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/AddOns.js"></script>
@@ -40,11 +41,16 @@
   <script type="text/javascript" charset="utf-8" src="js/history/model/TimeChoice.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/GapChoice.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/ValueChoice.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/MapChoice.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Question.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Opponent.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Region.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/Regions.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Topic.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/Fact.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/Facts.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/Quiz.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/model/QuestionDistribution.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/data/AvatarImages.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/data/BaseOpponents.js"></script>
@@ -56,7 +62,9 @@
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/PlayerController.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/OpponentController.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizGenerator.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizController.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuestionListGenerator.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
@@ -66,11 +74,13 @@
   <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/OpponentSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/QuizView.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizTopicState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizOpponentState.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizState.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/inject/Injector.js"></script>
 
@@ -113,5 +123,7 @@
     <div class="bigTitle">Wähle Deine Mitspieler</div>
     <div class="footer"><div class="backButton"></div></div>
   </div>
+
+  <div id="quizView"></div>
 </body>
 </html>

@@ -25,7 +25,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
           distribution[Difficulty.values[idx].key] = percentage;
           sum += percentage;
         }
-        ArgumentUtils.assertTrue(sum === 1);
+        ArgumentUtils.assertTrue(sum >= 0.99999 && sum <= 1.00001);
         return distribution;
       }
 

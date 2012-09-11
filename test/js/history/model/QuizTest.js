@@ -1,6 +1,7 @@
 var Difficulty = net.riemschneider.history.model.Difficulty;
 var Opponent = net.riemschneider.history.model.Opponent;
 var Quiz = net.riemschneider.history.model.Quiz;
+var Question = net.riemschneider.history.model.Question;
 
 TestCase('QuizTest', {
   setUp: function () {
@@ -10,8 +11,8 @@ TestCase('QuizTest', {
     };
 
     this.questionsByRegion = {
-      REG1: 'QUESTION1',
-      REG2: 'QUESTION2'
+      REG1: Question.create('Q1', Difficulty.EASY, 'question?', Answer.create(0)),
+      REG2: Question.create('Q2', Difficulty.EASY, 'question?', Answer.create(0))
     };
   },
 
@@ -25,13 +26,15 @@ TestCase('QuizTest', {
   },
 
   testNullAndTypeSafe: function () {
+    var question = Question.create('Q1', Difficulty.EASY, 'question?', Answer.create(0));
+
     assertException(function () { Quiz.create('topicId', this.pairing, Difficulty.EASY, null); }, 'TypeError');
     assertException(function () { Quiz.create('topicId', this.pairing, null, this.questionsByRegion); }, 'TypeError');
     assertException(function () { Quiz.create('topicId', null, Difficulty.EASY, this.questionsByRegion); }, 'TypeError');
     assertException(function () { Quiz.create(null, this.pairing, Difficulty.EASY, this.questionsByRegion); }, 'TypeError');
 
     assertException(function () { Quiz.create('topicId', this.pairing, 1, []); }, 'TypeError');
-    assertException(function () { Quiz.create('topicId', this.pairing, 1, { 1: 'QUESTION1'}); }, 'TypeError');
+    assertException(function () { Quiz.create('topicId', this.pairing, 1, { 1: question}); }, 'TypeError');
     assertException(function () { Quiz.create('topicId', this.pairing, 1, { REG1: {}}); }, 'TypeError');
     assertException(function () { Quiz.create('topicId', this.pairing, 1, this.questionsByRegion); }, 'TypeError');
     assertException(function () { Quiz.create('topicId', {}, Difficulty.EASY, this.questionsByRegion); }, 'TypeError');

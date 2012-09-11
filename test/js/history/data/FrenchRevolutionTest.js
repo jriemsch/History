@@ -9,9 +9,9 @@ TestCase('FrenchRevolutionTest', {
     var regionsByTopic = {};
     FrenchRevolution.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertEquals(2, questionsByTopicAndFact.FRENCH_REVOLUTION.FACT0.length);
+    assertTrue(TypeUtils.isOfType(questionsByTopicAndFact.FRENCH_REVOLUTION, net.riemschneider.history.model.Facts));
+    assertTrue(TypeUtils.isOfType(regionsByTopic.FRENCH_REVOLUTION, net.riemschneider.history.model.Regions));
     assertTrue(addOns.isUnlocked('FRENCH_REVOLUTION'));
-    assertEquals(1, regionsByTopic.FRENCH_REVOLUTION.length);
   },
 
   testNullAndTypeSafe: function () {

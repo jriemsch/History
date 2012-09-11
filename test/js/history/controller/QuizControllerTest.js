@@ -1,27 +1,37 @@
-var Difficulty = net.riemschneider.history.model.Difficulty;
-var Opponent = net.riemschneider.history.model.Opponent;
 var QuizController = net.riemschneider.history.controller.QuizController;
-var TypeUtils = net.riemschneider.utils.TypeUtils;
-var QuestionDistribution = net.riemschneider.history.model.QuestionDistribution;
+var Quiz = net.riemschneider.history.model.Quiz;
+var Opponent = net.riemschneider.history.model.Opponent;
+var Question = net.riemschneider.history.model.Question;
 
 TestCase('QuizControllerTest', {
   setUp: function () {
-    this.quizController = QuizController.create(QuestionDistribution.create([[1, 0, 0], [0, 1, 0], [0, 0, 1]]));
+    this.pairing = {
+      first: Opponent.create('OPP0', 'Hans Schenk', 0, Difficulty.EASY, [ 0.9, 0.8, 0.5 ], []),
+      second: Opponent.create('OPP2', 'Martin Salm', 2, Difficulty.EASY, [ 0.8, 0.5, 0.2 ], [])
+    };
+
+    this.questionsByRegion = {
+      REG1: Question.create('Q1', Difficulty.EASY, 'question?', Answer.create(0)),
+      REG2: Question.create('Q2', Difficulty.EASY, 'question?', Answer.create(0))
+    };
   },
 
-  testCreateQuiz: function () {
-    this.quizController.setCurrentTopic('topicId');
-    this.quizController.setCurrentDifficulty(Difficulty.MEDIUM);
-    var pairing = {
-      first: Opponent.create('OPP4', 'Sebastian Weier', 4, Difficulty.MEDIUM, [ 0.95, 0.9, 0.8 ], []),
-      second: Opponent.create('OPP5', 'Tom Stark', 5, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
-    };
-    this.quizController.setCurrentOpponents(pairing);
-    var quiz = this.quizController.createQuiz();
-    assertNotNull(quiz);
-    assertTrue(TypeUtils.isOfType(quiz, net.riemschneider.history.model.Quiz));
-    assertEquals('topicId', quiz.getTopicId());
-    assertSame(Difficulty.MEDIUM, quiz.getDifficulty());
-    assertSame(pairing, quiz.getOpponentPairing());
+  testCreate: function () {
+    var quizController = QuizController.create();
+    assertNotNull(quizController);
+  },
+
+  testSetAndGetCurrentQuiz: function () {
+    var quizController = QuizController.create();
+    var quiz = Quiz.create('topicId', this.pairing, Difficulty.EASY, this.questionsByRegion);
+    quizController.setCurrentQuiz(quiz);
+    assertSame(quiz, quizController.getCurrentQuiz());
+  },
+
+  testSetCurrentQuizNullAndTypeSafe: function () {
+    var quizController = QuizController.create();
+    assertException(function () { quizController.setCurrentQuiz(null); }, 'TypeError');
+
+    assertException(function () { quizController.setCurrentQuiz({}); }, 'TypeError');
   }
 });

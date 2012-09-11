@@ -9,9 +9,9 @@ TestCase('AmericanRevolutionTest', {
     var regionsByTopic = {};
     AmericanRevolution.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertNotUndefined(questionsByTopicAndFact.AMERICAN_REVOLUTION);
+    assertTrue(TypeUtils.isOfType(questionsByTopicAndFact.AMERICAN_REVOLUTION, net.riemschneider.history.model.Facts));
+    assertTrue(TypeUtils.isOfType(regionsByTopic.AMERICAN_REVOLUTION, net.riemschneider.history.model.Regions));
     assertFalse(addOns.isUnlocked('AMERICAN_REVOLUTION'));
-    assertNotUndefined(regionsByTopic.AMERICAN_REVOLUTION);
   },
 
   testNullAndTypeSafe: function () {

@@ -13,7 +13,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       ArgumentUtils.assertType(opponentPairing.second, net.riemschneider.history.model.Opponent);
       ArgumentUtils.assertMap(questionsByRegion, function (key, value) {
         ArgumentUtils.assertString(key);
-        ArgumentUtils.assertString(value);
+        ArgumentUtils.assertType(value, net.riemschneider.history.model.Question);
       });
 
       return {

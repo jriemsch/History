@@ -1,11 +1,13 @@
 var Region = net.riemschneider.history.model.Region;
 var Position = net.riemschneider.graphics.Position;
+var TypeUtils = net.riemschneider.utils.TypeUtils;
 
 TestCase('RegionTest', {
   testCreate: function () {
     var imgPos = Position.create(1, 2);
     var difficultyPos = Position.create(3, 4);
     var region = Region.create('id', 'img', imgPos, difficultyPos);
+    assertTrue(TypeUtils.isOfType(region, Region));
     assertEquals('id', region.getId());
     assertEquals('img', region.getImgSrc());
     assertSame(imgPos, region.getImgPos());

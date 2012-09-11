@@ -9,9 +9,9 @@ TestCase('SecondWorldWarTest', {
     var regionsByTopic = {} ;
     SecondWorldWar.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertNotUndefined(questionsByTopicAndFact.SECOND_WORLD_WAR);
+    assertTrue(TypeUtils.isOfType(questionsByTopicAndFact.SECOND_WORLD_WAR, net.riemschneider.history.model.Facts));
+    assertTrue(TypeUtils.isOfType(regionsByTopic.SECOND_WORLD_WAR, net.riemschneider.history.model.Regions));
     assertFalse(addOns.isUnlocked('SECOND_WORLD_WAR'));
-    assertNotUndefined(regionsByTopic.SECOND_WORLD_WAR);
   },
 
   testNullAndTypeSafe: function () {

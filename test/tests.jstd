@@ -32,10 +32,13 @@ load:
   - ../main/js/history/model/TimeChoice.js
   - ../main/js/history/model/Question.js
   - ../main/js/history/model/Region.js
+  - ../main/js/history/model/Regions.js
   - ../main/js/history/model/AddOns.js
   - ../main/js/history/model/Gap.js
   - ../main/js/history/model/GapChoice.js
   - ../main/js/history/model/ValueChoice.js
+  - ../main/js/history/model/Fact.js
+  - ../main/js/history/model/Facts.js
   - ../main/js/history/model/Quiz.js
   - ../main/js/history/model/QuestionDistribution.js
   - ../main/js/history/data/BaseOpponents.js
@@ -47,7 +50,10 @@ load:
   - ../main/js/history/data/WorldHistory.js
   - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
+  - ../main/js/history/controller/QuizGenerator.js
   - ../main/js/history/controller/QuizController.js
+  - ../main/js/history/controller/QuestionListGenerator.js
+  - ../main/js/history/controller/QuizState.js
   - ../main/js/history/views/components/ImageSelection.js
   - ../main/js/history/views/components/ImageSelectionImageDiv.js
   - ../main/js/history/views/components/ImageSelectionOpponentDiv.js
@@ -56,6 +62,7 @@ load:
   - ../main/js/history/views/TopicSelection.js
   - ../main/js/history/views/OpponentSelection.js
   - ../main/js/history/views/Menu.js
+  - ../main/js/history/views/QuizView.js
   - ../main/js/history/controller/AvatarState.js
   - ../main/js/history/controller/MenuState.js
   - ../main/js/history/controller/QuizTopicState.js
@@ -76,12 +83,15 @@ test:
   - js/history/model/TimeChoiceTest.js
   - js/history/model/QuestionTest.js
   - js/history/model/RegionTest.js
+  - js/history/model/RegionsTest.js
   - js/history/model/AddOnsTest.js
   - js/history/model/GapTest.js
   - js/history/model/GapChoiceTest.js
   - js/history/model/ValueChoiceTest.js
   - js/history/model/QuizTest.js
   - js/history/model/QuestionDistributionTest.js
+  - js/history/model/FactTest.js
+  - js/history/model/FactsTest.js
   - js/history/data/BaseOpponentsTest.js
   - js/history/data/FrenchRevolutionTest.js
   - js/history/data/AmericanRevolutionTest.js
@@ -90,7 +100,10 @@ test:
   - js/history/data/WorldHistoryTest.js
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
+  - js/history/controller/QuizGeneratorTest.js
   - js/history/controller/QuizControllerTest.js
+  - js/history/controller/QuestionListGeneratorTest.js
+  - js/history/controller/QuizStateTest.js
   - js/history/views/components/ImageSelectionTest.js
   - js/history/views/components/ImageSelectionImageDivTest.js
   - js/history/views/components/ImageSelectionOpponentDivTest.js
@@ -99,6 +112,7 @@ test:
   - js/history/views/TopicSelectionTest.js
   - js/history/views/OpponentSelectionTest.js
   - js/history/views/MenuTest.js
+  - js/history/views/QuizViewTest.js
   - js/history/controller/AvatarStateTest.js
   - js/history/controller/MenuStateTest.js
   - js/history/controller/QuizTopicStateTest.js

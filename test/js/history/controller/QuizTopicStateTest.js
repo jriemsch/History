@@ -18,21 +18,21 @@ TestCase('QuizTopicStateTest', {
       onBack: function (callback) { this.backCallback = callback; }
     };
 
-    this.quizController = {
+    this.quizGenerator = {
       topicId: null,
       setCurrentTopic: function setCurrentTopic(topicId) { this.topicId = topicId; }
     };
   },
 
   testCreate: function () {
-    var state = QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
+    var state = QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
     assertTrue(TypeUtils.isOfType(state, QuizTopicState));
     assertTrue(TypeUtils.isOfType(state, ViewState));
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
   testCanTransitionToMenuOnTopicSelection: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
     this.topicSelection.topicSelectionCallback('topicId');
@@ -40,15 +40,15 @@ TestCase('QuizTopicStateTest', {
   },
 
   testSetsTopicOnTopicSelection: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
     this.topicSelection.topicSelectionCallback('topicId');
-    assertEquals('topicId', this.quizController.topicId);
+    assertEquals('topicId', this.quizGenerator.topicId);
   },
 
   testCanTransitionToMenuOnBack: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizController);
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
     this.topicSelection.backCallback();

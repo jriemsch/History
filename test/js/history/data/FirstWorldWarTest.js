@@ -9,9 +9,9 @@ TestCase('FirstWorldWarTest', {
     var regionsByTopic = {};
     FirstWorldWar.init(topics, questionsByTopicAndFact, addOns, regionsByTopic);
     assertEquals(1, topics.length);
-    assertNotUndefined(questionsByTopicAndFact.FIRST_WORLD_WAR);
+    assertTrue(TypeUtils.isOfType(questionsByTopicAndFact.FIRST_WORLD_WAR, net.riemschneider.history.model.Facts));
+    assertTrue(TypeUtils.isOfType(regionsByTopic.FIRST_WORLD_WAR, net.riemschneider.history.model.Regions));
     assertFalse(addOns.isUnlocked('FIRST_WORLD_WAR'));
-    assertNotUndefined(regionsByTopic.FIRST_WORLD_WAR);
   },
 
   testNullAndTypeSafe: function () {
