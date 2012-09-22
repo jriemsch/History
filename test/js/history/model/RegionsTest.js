@@ -6,8 +6,8 @@ var TypeUtils = net.riemschneider.utils.TypeUtils;
 TestCase('RegionsTest', {
   testCreate: function () {
     var pos = Position.create(1, 2);
-    var region1 = Region.create('id1', 'img', pos, pos);
-    var region2 = Region.create('id2', 'img', pos, pos);
+    var region1 = Region.create('id1', 'img', pos, pos, pos);
+    var region2 = Region.create('id2', 'img', pos, pos, pos);
     var regionArray = [region1, region2];
     var regions = Regions.create(regionArray);
     assertTrue(TypeUtils.isOfType(regions, Regions));

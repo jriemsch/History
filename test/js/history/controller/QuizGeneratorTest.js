@@ -13,10 +13,10 @@ TestCase('QuizGeneratorTest', {
   setUp: function () {
     var pos = Position.create(1, 2);
     var regions = Regions.create([
-      Region.create('REG1', 'img', pos, pos),
-      Region.create('REG2', 'img', pos, pos),
-      Region.create('REG3', 'img', pos, pos),
-      Region.create('REG4', 'img', pos, pos)
+      Region.create('REG1', 'img', pos, pos, pos),
+      Region.create('REG2', 'img', pos, pos, pos),
+      Region.create('REG3', 'img', pos, pos, pos),
+      Region.create('REG4', 'img', pos, pos, pos)
     ]);
 
     var regionsByTopic = { topicId: regions };

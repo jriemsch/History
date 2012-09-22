@@ -33,8 +33,36 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
       addOns.unlock(topicId);
 
       regionsByTopic[topicId] = Regions.create([
-          Region.create(regionId(0), '', Position.create(0, 0), Position.create(0, 0))
+        Region.create(regionId(0), 'images/maps/regions/france/0.png', abs(336, 660), rel(344, 136), rel(152, 28)),
+        Region.create(regionId(1), 'images/maps/regions/france/1.png', abs(588, 584), rel(268, 148), rel(112, 32)),
+        Region.create(regionId(2), 'images/maps/regions/france/2.png', abs(768, 556), rel(160, 132), rel(64, 28)),
+        Region.create(regionId(3), 'images/maps/regions/france/3.png', abs(536, 688), rel(316, 212), rel(136, 64)),
+        Region.create(regionId(4), 'images/maps/regions/france/4.png', abs(904, 464), rel(240, 108), rel(100, 4)),
+        Region.create(regionId(5), 'images/maps/regions/france/5.png', abs(888, 528), rel(264, 144), rel(112, 32)),
+        Region.create(regionId(6), 'images/maps/regions/france/6.png', abs(892, 628), rel(192, 108), rel(76, 16)),
+        Region.create(regionId(7), 'images/maps/regions/france/7.png', abs(1068, 548), rel(228, 236), rel(64, 96)),
+        Region.create(regionId(8), 'images/maps/regions/france/8.png', abs(768, 656), rel(280, 236), rel(120, 96)),
+        Region.create(regionId(9), 'images/maps/regions/france/9.png', abs(1016, 704), rel(248, 204), rel(104, 68)),
+        Region.create(regionId(10), 'images/maps/regions/france/10.png', abs(652, 816), rel(224, 188), rel(92, 52)),
+        Region.create(regionId(11), 'images/maps/regions/france/11.png', abs(1204, 596), rel(252, 168), rel(96, 44)),
+        Region.create(regionId(12), 'images/maps/regions/france/12.png', abs(1376, 644), rel(128, 156), rel(44, 28)),
+        Region.create(regionId(13), 'images/maps/regions/france/13.png', abs(1232, 740), rel(176, 160), rel(64, 40)),
+        Region.create(regionId(14), 'images/maps/regions/france/14.png', abs(1092, 872), rel(320, 220), rel(140, 68)),
+        Region.create(regionId(15), 'images/maps/regions/france/15.png', abs(948, 848), rel(224, 200), rel(72, 60)),
+        Region.create(regionId(16), 'images/maps/regions/france/16.png', abs(820, 876), rel(184, 144), rel(72, 32)),
+        Region.create(regionId(17), 'images/maps/regions/france/17.png', abs(604, 944), rel(296, 268), rel(128, 84)),
+        Region.create(regionId(18), 'images/maps/regions/france/18.png', abs(736, 1004), rel(344, 228), rel(140, 80)),
+        Region.create(regionId(19), 'images/maps/regions/france/19.png', abs(916, 1012), rel(288, 240), rel(124, 76)),
+        Region.create(regionId(20), 'images/maps/regions/france/20.png', abs(1144, 996), rel(312, 192), rel(136, 80))
       ]);
+
+      function abs(x, y) {
+        return Position.create((x + 92) * 100 / 2048, (y + 198) * 100 / 2048, Position.Unit.PERCENT);
+      }
+
+      function rel(x, y) {
+        return Position.create(x * 100 / 2048, y * 100 / 2048, Position.Unit.PERCENT);
+      }
 
       questionsByTopicAndFact[topicId] = Facts.create([
           Fact.create([

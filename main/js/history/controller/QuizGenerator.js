@@ -52,10 +52,10 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
           var regions = regionsByTopic[currentTopicId];
           var distribution = questionDistribution.getDistribution(currentDifficulty);
 
-          var questions = questionListGenerator.generate(currentTopicId, regions, distribution);
-          var questionsByRegion = mapQuestions(regions, questions);
+//          var questions = questionListGenerator.generate(currentTopicId, regions, distribution);
+//          var questionsByRegion = mapQuestions(regions, questions);
 
-          return Quiz.create(currentTopicId, currentOpponentPairing, currentDifficulty, questionsByRegion);
+          return Quiz.create(currentTopicId, currentOpponentPairing, currentDifficulty, {}); //questionsByRegion);
         }
       };
     }

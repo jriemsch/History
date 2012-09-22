@@ -28,6 +28,7 @@
   <script type="text/javascript" charset="utf-8" src="js/structures/State.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/structures/ViewState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/graphics/Position.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/graphics/ImageUtils.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/model/Player.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/model/AddOns.js"></script>
@@ -70,6 +71,7 @@
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionImageDiv.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionOpponentDiv.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageMap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/OpponentSelection.js"></script>
@@ -124,6 +126,9 @@
     <div class="footer"><div class="backButton"></div></div>
   </div>
 
-  <div id="quizView"></div>
+  <div id="quizView" class="view">
+    <div class="quizMap"><div class="quizMapTopo"></div></div>
+    <div class="quizPlayers"><div class="quizPlayerHeightAdjuster"></div></div>
+  </div>
 </body>
 </html>

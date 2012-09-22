@@ -32,10 +32,10 @@ TestCase('QuestionListGeneratorTest', {
     var pos = Position.create(0, 0);
 
     this.regions = Regions.create([
-      Region.create('R1', 'img', pos, pos),
-      Region.create('R2', 'img', pos, pos),
-      Region.create('R3', 'img', pos, pos),
-      Region.create('R4', 'img', pos, pos)
+      Region.create('R1', 'img', pos, pos, pos),
+      Region.create('R2', 'img', pos, pos, pos),
+      Region.create('R3', 'img', pos, pos, pos),
+      Region.create('R4', 'img', pos, pos, pos)
     ]);
 
     this.distribution = {};

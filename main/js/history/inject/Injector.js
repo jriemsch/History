@@ -34,7 +34,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topics, injector.addOns);
       injector.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
       injector.menu = net.riemschneider.history.views.Menu.create();
-      injector.quizView = net.riemschneider.history.views.QuizView.create(injector.quizController);
+      injector.quizView = net.riemschneider.history.views.QuizView.create(injector.playerController, injector.quizController, injector.regionsByTopic);
 
       injector.stateMachine = net.riemschneider.structures.StateMachine.create();
       injector.menuState = net.riemschneider.history.controller.MenuState.create(injector.stateMachine, injector.menu);
