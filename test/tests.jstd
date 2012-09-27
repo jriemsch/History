@@ -13,6 +13,7 @@ load:
   - ../../../jslib/main/js/utils/TouchUtils.js
   - ../../../jslib/main/js/utils/ClosureUtils.js
   - ../../../jslib/main/js/graphics/Position.js
+  - ../../../jslib/main/js/graphics/ImageUtils.js
   - ../../../jslib/main/js/storage/Storage.js
   - ../../../jslib/main/js/gestures/Scroll.js
   - ../../../jslib/main/js/gestures/Tap.js
@@ -58,6 +59,7 @@ load:
   - ../main/js/history/views/components/ImageSelectionImageDiv.js
   - ../main/js/history/views/components/ImageSelectionOpponentDiv.js
   - ../main/js/history/views/components/AnimatedBackground.js
+  - ../main/js/history/views/components/ImageMap.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
   - ../main/js/history/views/OpponentSelection.js
@@ -108,6 +110,7 @@ test:
   - js/history/views/components/ImageSelectionImageDivTest.js
   - js/history/views/components/ImageSelectionOpponentDivTest.js
   - js/history/views/components/AnimatedBackgroundTest.js
+  - js/history/views/components/ImageMapTest.js
   - js/history/views/AvatarSelectionTest.js
   - js/history/views/TopicSelectionTest.js
   - js/history/views/OpponentSelectionTest.js

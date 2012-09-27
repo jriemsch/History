@@ -8,14 +8,14 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Regions = net.riemschneider.history.model.Regions;
 
   net.riemschneider.history.data.AmericanRevolution = {
-    init: function init(topics, questionsByTopicAndFact, addOns, regionsByTopic) {
-      ArgumentUtils.assertArray(topics);
+    init: function init(topicsById, questionsByTopicAndFact, addOns, regionsByTopic) {
+      ArgumentUtils.assertMap(topicsById);
       ArgumentUtils.assertMap(questionsByTopicAndFact);
       ArgumentUtils.assertType(addOns, AddOns);
       ArgumentUtils.assertMap(regionsByTopic);
 
       var topicId = 'AMERICAN_REVOLUTION';
-      topics.push(Topic.create(topicId, 'Amerikanische Revolution', 'images/americanRevolution.png'));
+      topicsById[topicId] = Topic.create(topicId, 'Amerikanische Revolution', 'images/americanRevolution.png', '');
 
       regionsByTopic[topicId] = Regions.create([]);
 

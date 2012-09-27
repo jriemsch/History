@@ -8,14 +8,14 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Regions = net.riemschneider.history.model.Regions;
 
   net.riemschneider.history.data.FirstWorldWar = {
-    init: function init(topics, questionsByTopicAndFact, addOns, regionsByTopic) {
-      ArgumentUtils.assertArray(topics);
+    init: function init(topicsById, questionsByTopicAndFact, addOns, regionsByTopic) {
+      ArgumentUtils.assertMap(topicsById);
       ArgumentUtils.assertMap(questionsByTopicAndFact);
       ArgumentUtils.assertType(addOns, AddOns);
       ArgumentUtils.assertMap(regionsByTopic);
 
       var topicId = 'FIRST_WORLD_WAR';
-      topics.push(Topic.create(topicId, 'Erster Weltkrieg', 'images/firstWorldWar.png'));
+      topicsById[topicId] = Topic.create(topicId, 'Erster Weltkrieg', 'images/firstWorldWar.png', '');
 
       regionsByTopic[topicId] = Regions.create([]);
 

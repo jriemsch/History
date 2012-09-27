@@ -5,9 +5,13 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
 
   net.riemschneider.history.views.TopicSelection = {
-    create: function create(topics, addOns) {
+    create: function create(topicsById, addOns) {
+      ArgumentUtils.assertMap(topicsById);
+      ArgumentUtils.assertType(addOns, net.riemschneider.history.model.AddOns);
+
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
       var topicsDiv = $('#topics');
@@ -30,7 +34,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function prepareButtonBar() {
-        var backButton = $('#topicSelection .footer .backButton');
+        var backButton = $('#topicSelection').find('.footer .backButton');
         Tap.create(backButton, function() { onBackCallback(); }, false, 'backPressed');
       }
 
@@ -58,16 +62,18 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createTopicOptions() {
         var options = [];
-        for (var idx = 0, len = topics.length; idx < len; ++idx) {
-          var topic = topics[idx];
-          var isUnlocked = addOns.isUnlocked(topic.getId());
-          var optionDiv = isUnlocked ?
-              ImageSelectionImageDiv.create(topic.getImage(), topic.getName()) :
-              ImageSelectionImageDiv.create(topic.getImage(), topic.getName(), 'images/lock.png', 0.4);
-          options[idx] = {
-            div: optionDiv,
-            callback: isUnlocked ? createTopicSelectionCallback(topic) : createLockedTopicSelectionCallback(topic)
-          };
+        for (var topicId in topicsById) {
+          if (topicsById.hasOwnProperty(topicId)) {
+            var topic = topicsById[topicId];
+            var isUnlocked = addOns.isUnlocked(topic.getId());
+            var optionDiv = isUnlocked ?
+                ImageSelectionImageDiv.create(topic.getImage(), topic.getName()) :
+                ImageSelectionImageDiv.create(topic.getImage(), topic.getName(), 'images/lock.png', 0.4);
+            options.push({
+              div: optionDiv,
+              callback: isUnlocked ? createTopicSelectionCallback(topic) : createLockedTopicSelectionCallback(topic)
+            });
+          }
         }
         return options;
       }

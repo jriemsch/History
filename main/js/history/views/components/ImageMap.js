@@ -4,9 +4,13 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 (function () {
   var Tap = net.riemschneider.gestures.Tap;
   var ImageUtils = net.riemschneider.graphics.ImageUtils;
+  var TypeUtils = net.riemschneider.utils.TypeUtils;
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
 
   net.riemschneider.history.views.components.ImageMap = {
     create: function (parent) {
+      ArgumentUtils.assertNotNull(parent);
+
       var tapHandler = Tap.create(parent, onParentTapped);
       var imageInfos = [];
 
@@ -35,26 +39,29 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
       return {
         addImage: function addImage(imgSrc, imgPos, imgSize, onTapped) {
+          ArgumentUtils.assertString(imgSrc);
+          ArgumentUtils.assertType(imgPos, net.riemschneider.graphics.Position);
+          ArgumentUtils.assertType(imgSize, net.riemschneider.graphics.Position);
+          ArgumentUtils.assertFunction(onTapped);
+
           var maskWrapper = $('<div></div>');
           var img = $('<img src="' + imgSrc + '">');
 
-          img.load(function () {
-            maskWrapper.css({
-              position: 'absolute',
-              left: imgPos.getX() + imgPos.getUnit().css,
-              top: imgPos.getY() + imgPos.getUnit().css,
-              width: imgSize.getX() + imgSize.getUnit().css,
-              height: imgSize.getY() + imgSize.getUnit().css,
-              webkitMaskBoxImage: 'url("' + imgSrc + '")'
-            });
+          maskWrapper.css({
+            position: 'absolute',
+            left: imgPos.getX() + imgPos.getUnit().css,
+            top: imgPos.getY() + imgPos.getUnit().css,
+            width: imgSize.getX() + imgSize.getUnit().css,
+            height: imgSize.getY() + imgSize.getUnit().css,
+            webkitMaskBoxImage: 'url("' + imgSrc + '")'
+          });
 
-            img.css({
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              width: '100%',
-              height: '100%'
-            });
+          img.css({
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%'
           });
 
           maskWrapper.append(img);
@@ -64,9 +71,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
           return {
             addImageClass: function addImageClass(style) { img.addClass(style); },
-            removeImageClass: function removeImageClass(style) { img.removeClass(style); },
-            addMaskClass: function addMaskClass(style) { maskWrapper.addClass(style); },
-            removeMaskClass: function removeMaskClass(style) { maskWrapper.removeClass(style); }
+            addMaskClass: function addMaskClass(style) { maskWrapper.addClass(style); }
           };
         },
 
@@ -81,4 +86,6 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       };
     }
   };
+
+  TypeUtils.enhance('net.riemschneider.history.views.components.ImageMap', net.riemschneider.history.views.components.ImageMap);
 }());

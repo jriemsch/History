@@ -5,7 +5,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var ImageMap = net.riemschneider.history.views.components.ImageMap;
 
   net.riemschneider.history.views.QuizView = {
-    create: function (playerController, quizController, regionsByTopic) {
+    create: function (playerController, quizController, regionsByTopic, topicsById) {
       return {
         show: function show() {
           var quizView = $('#quizView');
@@ -16,13 +16,16 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           var opponents = quiz.getOpponentPairing();
           var player = playerController.getPlayer();
           var players = [ player, opponents.first, opponents.second ];
+          var topicId = quiz.getTopicId();
+          var topic = topicsById[topicId];
           fillQuizPlayers();
           addRegions();
+          quizMapTopo.css({ backgroundImage: 'url("' + topic.getMapImage() + '")'});
           quizView.show();
 
           function addRegions() {
             var imageMap = ImageMap.create(quizMapTopo);
-            var regions = regionsByTopic[quiz.getTopicId()].getRegions();
+            var regions = regionsByTopic[topicId].getRegions();
             for (var idx = 0, len = regions.length; idx < len; ++idx) {
               var region = regions[idx];
               var imgSrc = region.getImgSrc();

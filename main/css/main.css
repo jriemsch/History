@@ -535,9 +535,8 @@ body {
 }
 
 .quizMapTopo {
-    background: url('../images/maps/frenchRevolution.png') no-repeat;
+    background: no-repeat 46px 99px;
     background-size: 932px 826px;
-    background-position: 46px 99px;
     position: absolute;
     width: 1024px;
     height: 1024px;

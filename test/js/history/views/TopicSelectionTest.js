@@ -23,10 +23,10 @@ TestCase('TopicSelectionTest', {
 
     this.opponentSelectionDiv.hide();
 
-    this.topics = [
-        Topic.create('topic1', 'Topic1', '/test/images/test.png'),
-        Topic.create('topic2', 'Topic2', '/test/images/test.png')
-    ];
+    this.topicsById = {
+        topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png'),
+        topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png')
+  };
 
     this.addOns = AddOns.create();
     this.addOns.unlock('topic1');
@@ -37,7 +37,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testShowAndHide: function () {
-    var sel = TopicSelection.create(this.topics, this.addOns);
+    var sel = TopicSelection.create(this.topicsById, this.addOns);
     assertEquals('none', this.opponentSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.opponentSelectionDiv.css('display'));
@@ -46,13 +46,13 @@ TestCase('TopicSelectionTest', {
   },
 
   testAllImagesShown: function () {
-    TopicSelection.create(this.topics, this.addOns).show();
+    TopicSelection.create(this.topicsById, this.addOns).show();
     assertEquals(2, $('.imageSelectionOptionImage').length);
     assertEquals(1, $('.imageSelectionOptionOverlay').length);
   },
 
   testCanShowNewTopicState: function () {
-    var sel = TopicSelection.create(this.topics, this.addOns);
+    var sel = TopicSelection.create(this.topicsById, this.addOns);
     sel.show();
     sel.hide();
     this.addOns.unlock('topic2');
@@ -61,7 +61,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testBackCallsCallback: function () {
-    var sel = TopicSelection.create(this.topics, this.addOns);
+    var sel = TopicSelection.create(this.topicsById, this.addOns);
     var called = false;
     sel.onBack(function () { called = true; });
     sel.show();
@@ -71,7 +71,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testSelectLockedTopicCallsCallback: function () {
-    var sel = TopicSelection.create(this.topics, this.addOns);
+    var sel = TopicSelection.create(this.topicsById, this.addOns);
     var called = null;
     sel.onLockedTopicSelected(function (topic) { called = topic; });
     sel.show();
@@ -82,7 +82,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testSelectUnlockedTopicCallsCallback: function () {
-    var sel = TopicSelection.create(this.topics, this.addOns);
+    var sel = TopicSelection.create(this.topicsById, this.addOns);
     var called = null;
     sel.onTopicSelected(function (topic) { called = topic; });
     sel.show();
@@ -90,5 +90,16 @@ TestCase('TopicSelectionTest', {
     $(allImages[0]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[0]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
     assertEquals('topic1', called);
+  },
+
+  testCreateNullAndTypeSafe: function () {
+    var topicsById = this.topicsById;
+    var addOns = this.addOns;
+
+    assertException(function () { TopicSelection.create(topicsById, null);  }, 'TypeError');
+    assertException(function () { TopicSelection.create(null, addOns);  }, 'TypeError');
+
+    assertException(function () { TopicSelection.create(topicsById, {});  }, 'TypeError');
+    assertException(function () { TopicSelection.create([], addOns);  }, 'TypeError');
   }
 });

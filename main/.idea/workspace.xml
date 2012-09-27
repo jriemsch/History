@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="quiz generation and initial quiz view">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/mapFrenchRevolution.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assets/mapTemplate.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/frenchRevolution.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/maps/regions/france/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../jslib/main/js/graphics/ImageUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+    <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/gestures/Tap.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/gestures/Tap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History/History-Info.plist" afterPath="$PROJECT_DIR$/../History/History-Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/BaseOpponents.js" afterPath="$PROJECT_DIR$/js/history/data/BaseOpponents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/AmericanRevolution.js" afterPath="$PROJECT_DIR$/js/history/data/AmericanRevolution.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/FirstWorldWar.js" afterPath="$PROJECT_DIR$/js/history/data/FirstWorldWar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/FrenchRevolution.js" afterPath="$PROJECT_DIR$/js/history/data/FrenchRevolution.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/SecondWorldWar.js" afterPath="$PROJECT_DIR$/js/history/data/SecondWorldWar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/WorldHistory.js" afterPath="$PROJECT_DIR$/js/history/data/WorldHistory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Region.js" afterPath="$PROJECT_DIR$/js/history/model/Region.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Topic.js" afterPath="$PROJECT_DIR$/js/history/model/Topic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/QuizView.js" afterPath="$PROJECT_DIR$/js/history/views/QuizView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/QuestionListGeneratorTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuestionListGeneratorTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/QuizGeneratorTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizGeneratorTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/TopicSelection.js" afterPath="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/data/AmericanRevolutionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/data/AmericanRevolutionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/data/FirstWorldWarTest.js" afterPath="$PROJECT_DIR$/../test/js/history/data/FirstWorldWarTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/data/FrenchRevolutionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/data/FrenchRevolutionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js" afterPath="$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js" afterPath="$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/TopicTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/TopicTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/tests.jstd" afterPath="$PROJECT_DIR$/../test/tests.jstd" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +37,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1347344819777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1348727668564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$All_Tests.coverage" NAME="All Tests Coverage Results" MODIFIED="1339564322597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$Tests_JsLib.coverage" NAME="Tests JsLib Coverage Results" MODIFIED="1346573503851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -75,91 +53,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="QuizStateTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizStateTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="74" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.jstd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="79" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageMapTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="10" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="QuizView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="45" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.0">
+            <state line="22" column="96" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="796" column="39" selection-start="16535" selection-end="16535" vertical-scroll-proportion="5.012658">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrenchRevolution.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/data/FrenchRevolution.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="61" selection-start="3864" selection-end="3864" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Region.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/model/Region.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="58" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegionTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/model/RegionTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="88" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionListGeneratorTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuestionListGeneratorTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="43" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuizGeneratorTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizGeneratorTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="45" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegionsTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/model/RegionsTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="51" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PositionTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="13" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageMap.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ImageMap.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2259" selection-end="2259" vertical-scroll-proportion="0.0">
+            <state line="29" column="35" selection-start="1215" selection-end="1225" vertical-scroll-proportion="-0.027563395">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageSelectionImageDivTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="62" selection-start="667" selection-end="690" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnimatedBackgroundTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/AnimatedBackgroundTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="37" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageSelectionOpponentDivTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddOns.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/model/AddOns.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="113" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,22 +161,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/gestures/Tap.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$USER_HOME$/Downloads/array/test.html" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/graphics/ImageUtils.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" />
-        <option value="$PROJECT_DIR$/js/history/model/Region.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/controller/QuestionListGeneratorTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/controller/QuizGeneratorTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
-        <option value="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+        <option value="$PROJECT_DIR$/js/history/data/AmericanRevolution.js" />
+        <option value="$PROJECT_DIR$/js/history/data/FirstWorldWar.js" />
+        <option value="$PROJECT_DIR$/js/history/data/SecondWorldWar.js" />
+        <option value="$PROJECT_DIR$/js/history/data/WorldHistory.js" />
         <option value="$PROJECT_DIR$/js/history/views/QuizView.js" />
-        <option value="$PROJECT_DIR$/js/history/data/FrenchRevolution.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/../test/js/history/data/FrenchRevolutionTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/data/AmericanRevolutionTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/data/FirstWorldWarTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js" />
+        <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
+        <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
+        <option value="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+        <option value="$PROJECT_DIR$/../test/tests.jstd" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" />
       </list>
     </option>
   </component>
@@ -218,6 +196,9 @@
             <id>GeneralJavaScript</id>
           </State>
           <State>
+            <id>JSJQueryEfficiency</id>
+          </State>
+          <State>
             <id>JSUnusedGlobalSymbols</id>
           </State>
           <State>
@@ -226,7 +207,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>JSUnfilteredForInLoop</id>
+            <id>JSJQueryEfficiency</id>
           </State>
         </selected-state>
       </profile-state>
@@ -258,16 +239,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -338,7 +309,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,36 +336,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,6 +635,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -750,7 +705,7 @@
       <recent name="$PROJECT_DIR$/js/history/views" />
     </key>
   </component>
-  <component name="RunManager" selected="JsTestDriver.Tests JsLib">
+  <component name="RunManager" selected="JsTestDriver.Tests History">
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
@@ -954,31 +909,35 @@
       <created>1347344923828</created>
       <updated>1347344923828</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="map, region and difficulty display">
+      <created>1348313611646</created>
+      <updated>1348313611646</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2556" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27251732" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.85758275" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.49840638" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26368544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.7359507" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26404926" sideWeight="0.49840638" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2434263" sideWeight="0.21939954" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2434263" sideWeight="0.14241724" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.49840638" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.49880478" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25139442" sideWeight="0.7359507" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26368544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.49203187" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26404926" sideWeight="0.49880478" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27251732" sideWeight="0.49840638" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.49681276" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20175439" sideWeight="0.7440247" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1020,7 +979,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="quiz generation and initial quiz view" />
+    <option name="LAST_COMMIT_MESSAGE" value="map, region and difficulty display" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1057,6 +1016,7 @@
     <MESSAGE value="RegionsByTopic initialization" />
     <MESSAGE value="MapChoice&#10;QuestionDistribution" />
     <MESSAGE value="quiz generation and initial quiz view" />
+    <MESSAGE value="map, region and difficulty display" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1064,114 +1024,104 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/gestures/Tap.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="49" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
+        <state line="19" column="82" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="66" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="55" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="72" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="120" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../jslib/test/gestures/TapTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="864" selection-end="939" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizStateTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
+        <state line="37" column="74" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/Difficulty.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="62" selection-start="667" selection-end="690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/AnimatedBackgroundTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="37" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/DateSelector.js">
+    <entry file="file://$PROJECT_DIR$/js/history/model/AddOns.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1162" selection-end="1359" vertical-scroll-proportion="0.0">
+        <state line="36" column="113" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js">
+    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="14" selection-start="2666" selection-end="2666" vertical-scroll-proportion="0.0">
+        <state line="30" column="79" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="76" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/Region.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="58" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuestionListGeneratorTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="43" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizGeneratorTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="45" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/model/RegionsTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="51" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/model/RegionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="88" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2259" selection-end="2259" vertical-scroll-proportion="0.0">
+        <state line="86" column="10" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="45" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.0">
+        <state line="22" column="96" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/data/FrenchRevolution.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="61" selection-start="3864" selection-end="3864" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="796" column="39" selection-start="16535" selection-end="16535" vertical-scroll-proportion="5.012658">
+        <state line="29" column="35" selection-start="1215" selection-end="1225" vertical-scroll-proportion="-0.027563395">
           <folding />
         </state>
       </provider>

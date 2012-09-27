@@ -21,14 +21,14 @@ net.riemschneider.history.data = net.riemschneider.history.data || {};
   var Fact = net.riemschneider.history.model.Fact;
 
   net.riemschneider.history.data.FrenchRevolution = {
-    init: function init(topics, questionsByTopicAndFact, addOns, regionsByTopic) {
-      ArgumentUtils.assertArray(topics);
+    init: function init(topicsById, questionsByTopicAndFact, addOns, regionsByTopic) {
+      ArgumentUtils.assertMap(topicsById);
       ArgumentUtils.assertMap(questionsByTopicAndFact);
       ArgumentUtils.assertType(addOns, AddOns);
       ArgumentUtils.assertMap(regionsByTopic);
 
       var topicId = 'FRENCH_REVOLUTION';
-      topics.push(Topic.create(topicId, 'Französische Revolution', 'images/frenchRevolution.png'));
+      topicsById[topicId] = Topic.create(topicId, 'Französische Revolution', 'images/frenchRevolution.png', '/images/maps/frenchRevolution.png');
 
       addOns.unlock(topicId);
 
