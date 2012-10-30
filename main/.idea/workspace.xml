@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/Log.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/Log.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../LICENSE.TXT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Opponent.js" afterPath="$PROJECT_DIR$/js/history/model/Opponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,24 +45,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageSelection.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="102" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageMapTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="86" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Injector.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,37 +72,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Opponent.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Opponent.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/model/Opponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="93" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.45209903">
+            <state line="28" column="93" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarImages.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/data/AvatarImages.js">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="43" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+            <state line="0" column="57" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicDataReader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/data/TopicDataReader.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../pages/History/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="26" column="276" selection-start="993" selection-end="993" vertical-scroll-proportion="-12.791667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpponentSelectionTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
+      <file leaf-file-name="stylesheet.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../pages/History/stylesheets/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="233" column="17" selection-start="4158" selection-end="4158" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE.TXT" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LICENSE.TXT">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="127" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="print.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../pages/History/stylesheets/print.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="18" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -144,10 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" />
-        <option value="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
         <option value="$PROJECT_DIR$/js/history/controller/QuizState.js" />
         <option value="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
         <option value="$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js" />
@@ -160,6 +156,10 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../../../jslib/main/js/utils/Log.js" />
         <option value="$PROJECT_DIR$/js/history/model/Opponent.js" />
+        <option value="$PROJECT_DIR$/../README" />
+        <option value="$PROJECT_DIR$/../../../pages/History/index.html" />
+        <option value="$PROJECT_DIR$/../LICENSE.TXT" />
+        <option value="$PROJECT_DIR$/../README.md" />
       </list>
     </option>
   </component>
@@ -632,7 +632,19 @@
       <created>1351599705727</created>
       <updated>1351599705727</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fixed opponent reading in injector">
+      <created>1351600481251</created>
+      <updated>1351600481251</updated>
+    </task>
+    <task id="LOCAL-00034" summary="readme">
+      <created>1351601515088</created>
+      <updated>1351601515088</updated>
+    </task>
+    <task id="LOCAL-00035" summary="readme">
+      <created>1351601721182</created>
+      <updated>1351601721182</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -698,7 +710,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Commit after rebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -711,8 +723,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added region model" />
-    <MESSAGE value="Added AddOns model to track unlocked addons" />
     <MESSAGE value="Added stubs for other topics" />
     <MESSAGE value="world history image" />
     <MESSAGE value="american history image" />
@@ -736,6 +746,8 @@
     <MESSAGE value="Moved images to separate repo" />
     <MESSAGE value="Moved data to separate repo" />
     <MESSAGE value="Test Commit after rebase" />
+    <MESSAGE value="Fixed opponent reading in injector" />
+    <MESSAGE value="readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,39 +755,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="46" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="63" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="63" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/MenuTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -848,7 +827,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/model/Opponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="93" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.45209903">
+        <state line="28" column="93" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../pages/History/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="276" selection-start="993" selection-end="993" vertical-scroll-proportion="-12.791667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../pages/History/stylesheets/print.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../pages/History/stylesheets/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="17" selection-start="4158" selection-end="4158" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LICENSE.TXT">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="127" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="57" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
