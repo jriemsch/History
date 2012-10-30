@@ -20,8 +20,14 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       answer.getCorrect = function getCorrect() { return correct; };
       answer.getUnit = function getUnit() { return unit; };
       return answer;
+    },
+
+    createFromState: function createFromState(state) {
+      return net.riemschneider.history.model.ValueChoice.create(state.time, state.from, state.to, state.correct, state.unit);
     }
   };
 
   TypeUtils.enhance('net.riemschneider.history.model.ValueChoice', net.riemschneider.history.model.ValueChoice);
+
+  Answer.registerStateReader('valueChoice', net.riemschneider.history.model.ValueChoice.createFromState);
 }());

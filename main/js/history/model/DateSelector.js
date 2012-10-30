@@ -24,7 +24,11 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       },
       getDay: function getDay() { return day; },
       getMonth: function getMonth() { return month; },
-      getYear: function getYear() { return year; }
+      getYear: function getYear() { return year; },
+      equals: function equals(other) {
+        ArgumentUtils.assertType(other, net.riemschneider.history.model.DateSelector);
+        return year === other.getYear() && month === other.getMonth() && day === other.getDay();
+      }
     }
   }
 
@@ -38,19 +42,33 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
     day: function day(day, month, year) {
       ArgumentUtils.assertRange(day, 1, 31);
       ArgumentUtils.assertRange(month, 1, 12);
-      ArgumentUtils.assertNotNull(year);
+      ArgumentUtils.assertNumber(year);
       return create(year, month, day);
     },
 
     month: function month(month, year) {
       ArgumentUtils.assertRange(month, 1, 12);
-      ArgumentUtils.assertNotNull(year);
+      ArgumentUtils.assertNumber(year);
       return create(year, month);
     },
 
     year: function year(year) {
-      ArgumentUtils.assertNotNull(year);
+      ArgumentUtils.assertNumber(year);
       return create(year);
+    },
+
+    fromStr: function fromStr(dateStr) {
+      ArgumentUtils.assertString(dateStr);
+      var parts = dateStr.split('.');
+      ArgumentUtils.assertRange(parts.length, 1, 3);
+      if (parts.length === 1) {
+        return net.riemschneider.history.model.DateSelector.year(parseInt(parts[0]));
+      }
+      else if (parts.length === 2) {
+        return net.riemschneider.history.model.DateSelector.month(parseInt(parts[0]), parseInt(parts[1]));
+      }
+
+      return net.riemschneider.history.model.DateSelector.day(parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2]));
     }
   };
 

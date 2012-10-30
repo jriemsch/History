@@ -5,9 +5,10 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArrayUtils = net.riemschneider.utils.ArrayUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var Difficulty = net.riemschneider.history.model.Difficulty;
+  var Fact = net.riemschneider.history.model.Fact;
 
   net.riemschneider.history.model.Facts = {
-    create: function (facts) {
+    create: function create(facts) {
       ArgumentUtils.assertArray(facts, function (elem) {
         ArgumentUtils.assertType(elem, net.riemschneider.history.model.Fact);
       });
@@ -26,6 +27,15 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getFacts: function getFacts() { return facts; },
         getFactsOfDifficulty: function getFactsOfDifficulty(difficulty) { return factsByDifficulty[difficulty.key]; }
       };
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertArray(state);
+      var facts = [];
+      for (var idx = 0, len = state.length; idx < len; ++idx) {
+        facts.push(Fact.createFromState(state[idx]));
+      }
+      return net.riemschneider.history.model.Facts.create(facts);
     }
   };
 

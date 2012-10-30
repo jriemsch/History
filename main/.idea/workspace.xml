@@ -2,146 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/americanRevolution.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar000.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar002.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar003.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar004.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar005.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar006.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar007.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar008.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar009.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar010.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar011.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar012.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar013.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar014.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar015.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar016.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar017.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar018.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar019.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar020.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar021.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar022.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar023.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar024.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar025.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar026.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar027.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar028.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar029.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatars/avatar030.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/avatarselection.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/cancel-pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/cancel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/firstWorldWar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/frenchRevolution.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/learn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/frenchRevolution.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/maps/regions/france/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/ok-pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/ok.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/questionMark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/quiz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/secondWorldWar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/stats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/images/worldHistory.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/americanRevolution.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar016.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar017.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar018.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar019.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar020.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar021.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar022.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar023.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar024.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar025.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar026.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar027.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar028.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar029.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatars/avatar030.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/avatarselection.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/cancel-pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/firstWorldWar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/frenchRevolution.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/learn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/frenchRevolution.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/maps/regions/france/9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ok-pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ok.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/questionMark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/quiz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/secondWorldWar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/stats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/worldHistory.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/americanRevolution.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/baseOpponents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/firstWorldWar.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/frenchRevolution.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/secondWorldWar.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/worldHistory.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/data/BaseOpponentsReader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/components/QuizPlayers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/data/BaseOpponentsReaderTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/data/TopicDataReaderTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/QuizPlayersTest.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/BaseOpponents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/FirstWorldWar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/FrenchRevolution.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/SecondWorldWar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/WorldHistory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/AmericanRevolutionTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/BaseOpponentsTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/FirstWorldWarTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/FrenchRevolutionTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/history/data/AmericanRevolution.js" afterPath="$PROJECT_DIR$/js/history/data/TopicDataReader.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/WebUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/WebUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/utils/ArgumentUtilsTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/utils/ArgumentUtilsTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/utils/WebUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/test/utils/WebUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/www.iml" afterPath="$PROJECT_DIR$/.idea/www.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizState.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Answer.js" afterPath="$PROJECT_DIR$/js/history/model/Answer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/DateSelector.js" afterPath="$PROJECT_DIR$/js/history/model/DateSelector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Fact.js" afterPath="$PROJECT_DIR$/js/history/model/Fact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Facts.js" afterPath="$PROJECT_DIR$/js/history/model/Facts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/GapChoice.js" afterPath="$PROJECT_DIR$/js/history/model/GapChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" afterPath="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/MapChoice.js" afterPath="$PROJECT_DIR$/js/history/model/MapChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/MultipleChoice.js" afterPath="$PROJECT_DIR$/js/history/model/MultipleChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Opponent.js" afterPath="$PROJECT_DIR$/js/history/model/Opponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/OrderChoice.js" afterPath="$PROJECT_DIR$/js/history/model/OrderChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Question.js" afterPath="$PROJECT_DIR$/js/history/model/Question.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Region.js" afterPath="$PROJECT_DIR$/js/history/model/Region.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Regions.js" afterPath="$PROJECT_DIR$/js/history/model/Regions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/TimeChoice.js" afterPath="$PROJECT_DIR$/js/history/model/TimeChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Topic.js" afterPath="$PROJECT_DIR$/js/history/model/Topic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/ValueChoice.js" afterPath="$PROJECT_DIR$/js/history/model/ValueChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/QuizView.js" afterPath="$PROJECT_DIR$/js/history/views/QuizView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/AnswerTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/AnswerTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/DateSelectorTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/DateSelectorTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/FactTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/FactTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/FactsTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/FactsTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/GapChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/GapChoiceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/LevelOrderChanceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/LevelOrderChanceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/MapChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/MapChoiceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/MultipleChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/MultipleChoiceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/OpponentTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/OpponentTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/OrderChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/OrderChoiceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/QuestionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/QuestionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/TimeChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/TimeChoiceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/TopicTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/TopicTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/ValueChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/ValueChoiceTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/tests.jstd" afterPath="$PROJECT_DIR$/../test/tests.jstd" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,7 +95,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1348727668564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/www$QuizMapSelectionTest.coverage" NAME="QuizMapSelectionTest Coverage Results" MODIFIED="1350973744621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1350626952475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$All_Tests.coverage" NAME="All Tests Coverage Results" MODIFIED="1339564322597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$Tests_JsLib.coverage" NAME="Tests JsLib Coverage Results" MODIFIED="1346573503851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -170,28 +112,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="QuizStateTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizStateTest.js">
+      <file leaf-file-name="QuizViewTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="74" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
+            <state line="32" column="63" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuizView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
+      <file leaf-file-name="BaseOpponentsReader.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/data/BaseOpponentsReader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="96" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageMap.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageMap.js">
+      <file leaf-file-name="ImageSelection.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="95" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.42518836">
+            <state line="22" column="49" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0861141">
               <folding />
             </state>
           </provider>
@@ -200,32 +142,14 @@
       <file leaf-file-name="ImageSelectionImageDivTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="62" selection-start="667" selection-end="690" vertical-scroll-proportion="0.0">
+            <state line="41" column="63" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimatedBackgroundTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/AnimatedBackgroundTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="37" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageSelectionTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageSelectionOpponentDivTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js">
+      <file leaf-file-name="TopicSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -233,28 +157,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddOns.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/model/AddOns.js">
+      <file leaf-file-name="AvatarImages.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/data/AvatarImages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="113" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
+            <state line="10" column="43" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageMapTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
+      <file leaf-file-name="MenuTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/MenuTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="10" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.jstd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
+      <file leaf-file-name="TopicDataReader.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/data/TopicDataReader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="79" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AvatarSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpponentSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -278,22 +220,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/history/data/AmericanRevolution.js" />
-        <option value="$PROJECT_DIR$/js/history/data/FirstWorldWar.js" />
-        <option value="$PROJECT_DIR$/js/history/data/SecondWorldWar.js" />
-        <option value="$PROJECT_DIR$/js/history/data/WorldHistory.js" />
-        <option value="$PROJECT_DIR$/js/history/views/QuizView.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/data/FrenchRevolutionTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/data/AmericanRevolutionTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/data/FirstWorldWarTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js" />
-        <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
-        <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
-        <option value="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../test/tests.jstd" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/history/model/Regions.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
+        <option value="$PROJECT_DIR$/js/history/controller/QuizState.js" />
+        <option value="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
+        <option value="$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js" />
+        <option value="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
+        <option value="$PROJECT_DIR$/js/history/views/QuizView.js" />
         <option value="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" />
       </list>
     </option>
   </component>
@@ -309,24 +251,7 @@
           <State>
             <id />
           </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>JSJQueryEfficiency</id>
-          </State>
-          <State>
-            <id>JSUnusedGlobalSymbols</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>JSJQueryEfficiency</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -384,34 +309,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="converted" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -442,7 +339,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="web.server" />
+    <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSHint" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -463,11 +360,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../../assets/History/converted/json" />
       <recent name="$PROJECT_DIR$/../../../assets/History/converted/images" />
       <recent name="$PROJECT_DIR$/../test/js/history/model" />
       <recent name="$PROJECT_DIR$/js/history/model" />
       <recent name="$PROJECT_DIR$/../test/js/history/views/components" />
-      <recent name="$PROJECT_DIR$/../test/js/history/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../../../jslib/main/js/graphics" />
@@ -476,6 +373,46 @@
     </key>
   </component>
   <component name="RunManager" selected="JsTestDriver.Tests History">
+    <configuration default="false" name="RegionsTest" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_CASE" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/../test/tests.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
+      <setting name="testCase" value="RegionsTest" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="QuizMapSelectionTest" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_CASE" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/../test/tests.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
+      <setting name="testCase" value="QuizMapSelectionTest" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImageMapTest" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_CASE" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/../test/tests.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" />
+      <setting name="testCase" value="ImageMapTest" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
@@ -521,8 +458,10 @@
       <setting name="preferredDebugBrowser" value="CHROME" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
       <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
       <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
       <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
       <method />
     </configuration>
     <configuration default="false" name="Tests JsLib" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -539,11 +478,21 @@
       <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.History" />
-      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.Tests History" />
-      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.Tests JsLib" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JsTestDriver.RegionsTest" />
+      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.QuizMapSelectionTest" />
+      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.History" />
+      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.Tests History" />
+      <item index="5" class="java.lang.String" itemvalue="JsTestDriver.Tests JsLib" />
     </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest" />
+        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.QuizMapSelectionTest" />
+        <item index="2" class="java.lang.String" itemvalue="JsTestDriver.RegionsTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
@@ -687,31 +636,35 @@
       <created>1348727784645</created>
       <updated>1348727784645</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Moved images to separate repo">
+      <created>1348813508691</created>
+      <updated>1348813508691</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2556" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27251732" sideWeight="0.49681276" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26404926" sideWeight="0.4936255" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26404926" sideWeight="0.49203187" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2434263" sideWeight="0.21939954" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25338647" sideWeight="0.7359507" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26368544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21434262" sideWeight="0.7359507" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.49203187" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26404926" sideWeight="0.50358564" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.48406374" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27251732" sideWeight="0.51474106" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27251732" sideWeight="0.48247012" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.49681276" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.7359507" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.66589683" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -753,7 +706,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some refactoring and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved images to separate repo" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -766,7 +719,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Tests and model" />
     <MESSAGE value="Removed deployed files" />
     <MESSAGE value="Added more choices" />
     <MESSAGE value="Added region model" />
@@ -791,6 +743,7 @@
     <MESSAGE value="quiz generation and initial quiz view" />
     <MESSAGE value="map, region and difficulty display" />
     <MESSAGE value="Some refactoring and tests" />
+    <MESSAGE value="Moved images to separate repo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,102 +751,102 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="82" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" />
+        <state line="47" column="10" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="66" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" />
+        <state line="4" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="55" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0" />
+        <state line="38" column="43" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="72" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" />
+        <state line="98" column="0" selection-start="3839" selection-end="3839" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/model/QuizTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="120" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0" />
+        <state line="31" column="129" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/test/gestures/TapTest.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="864" selection-end="939" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizStateTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="74" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="41" column="46" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionImageDivTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="62" selection-start="667" selection-end="690" vertical-scroll-proportion="0.0">
+        <state line="41" column="63" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/AnimatedBackgroundTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionOpponentDivTest.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="79" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+        <state line="32" column="63" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/MenuTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="10" selection-start="3425" selection-end="3425" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="96" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/AddOns.js">
+    <entry file="file://$PROJECT_DIR$/js/history/data/AvatarImages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="113" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
+        <state line="10" column="43" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageMap.js">
+    <entry file="file://$PROJECT_DIR$/js/history/data/TopicDataReader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="95" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.42518836">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/data/BaseOpponentsReader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="49" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0861141">
           <folding />
         </state>
       </provider>

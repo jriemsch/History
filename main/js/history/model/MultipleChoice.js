@@ -15,8 +15,15 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       answer.getChoices = function getChoices() { return choices; };
       answer.getCorrectChoices = function getCorrectChoices() { return correctChoices; };
       return answer;
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertNotNull(state);
+      return net.riemschneider.history.model.MultipleChoice.create(state.time, state.choices, state.correct);
     }
   };
 
   TypeUtils.enhance('net.riemschneider.history.model.MultipleChoice', net.riemschneider.history.model.MultipleChoice);
+
+  Answer.registerStateReader('multipleChoice', net.riemschneider.history.model.MultipleChoice.createFromState);
 }());

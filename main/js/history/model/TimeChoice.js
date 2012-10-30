@@ -21,8 +21,18 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       answer.getTo = function getTo() { return to; };
       answer.getCorrect = function getCorrect() { return correct; };
       return answer;
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertNotNull(state);
+      var from = DateSelector.fromStr(state.from);
+      var to = DateSelector.fromStr(state.to);
+      var correct = DateSelector.fromStr(state.correct);
+      return net.riemschneider.history.model.TimeChoice.create(state.time, from, to, correct);
     }
   };
 
   TypeUtils.enhance('net.riemschneider.history.model.TimeChoice', net.riemschneider.history.model.TimeChoice);
+
+  Answer.registerStateReader('timeChoice', net.riemschneider.history.model.TimeChoice.createFromState);
 }());

@@ -16,6 +16,11 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getLevelOrder: function getLevelOrder() { return levelOrder; },
         getChance: function getChance() { return chance; }
       };
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertNotNull(state);
+      return net.riemschneider.history.model.LevelOrderChance.create(state.levelOrder, state.chance);
     }
   };
 

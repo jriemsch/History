@@ -25,5 +25,36 @@ TestCase('ValueChoiceTest', {
     assertException(function () { ValueChoice.create(5, 1, 3, 20, 2); }, 'TypeError');
     assertException(function () { ValueChoice.create(5, 1, 3, 20, ''); }, 'TypeError');
     assertException(function () { ValueChoice.create(5, 3, 3, 2, ''); }, 'TypeError');
+  },
+
+  testCreateFromState: function () {
+    var answer = ValueChoice.createFromState({ time: 5, from: 1, to: 3, correct: 2, unit: 'km' });
+    assertNotNull(answer);
+    assertTrue(TypeUtils.isOfType(answer, Answer));
+    assertTrue(TypeUtils.isOfType(answer, ValueChoice));
+    assertEquals(5, answer.getTime());
+    assertSame(1, answer.getFrom());
+    assertSame(3, answer.getTo());
+    assertSame(2, answer.getCorrect());
+    assertEquals('km', answer.getUnit());
+  },
+
+  testCreateFromStateNullAndTypeSafe: function () {
+    assertException(function () { ValueChoice.createFromState(null); }, 'TypeError');
+
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: 3, correct: 2 }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: 3, unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, correct: 2, unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, to: 3, correct: 2, unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ from: 1, to: 3, correct: 2, unit: 'km' }); }, 'TypeError');
+
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: 3, correct: 2, unit: 0 }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: 3, correct: '2', unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: '3', correct: 2, unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: '1', to: 3, correct: 2, unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: '5', from: 1, to: 3, correct: 2, unit: 'km' }); }, 'TypeError');
+
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: 3, correct: 4, unit: 'km' }); }, 'TypeError');
+    assertException(function () { ValueChoice.createFromState({ time: 5, from: 1, to: 0, correct: 1, unit: 'km' }); }, 'TypeError');
   }
 });

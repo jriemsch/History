@@ -534,7 +534,7 @@ body {
     }
 }
 
-.quizMapTopo {
+.quizMapSelection {
     background: no-repeat 46px 99px;
     background-size: 932px 826px;
     position: absolute;
@@ -547,7 +547,7 @@ body {
 }
 
 @media only screen and (max-width: 640px) {
-    .quizMapTopo {
+    .quizMapSelection {
         background-size: 466px 413px;
         background-position: 23px 49.5px;
         width: 512px;

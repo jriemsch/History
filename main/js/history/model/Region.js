@@ -3,10 +3,11 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 (function () {
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
+  var Position = net.riemschneider.graphics.Position;
 
   net.riemschneider.history.model.Region = {
     create: function create(id, imgSrc, imgPos, imgSize, difficultyPos) {
-      ArgumentUtils.assertNotNull(id);
+      ArgumentUtils.assertString(id);
       ArgumentUtils.assertString(imgSrc);
       ArgumentUtils.assertType(imgPos, net.riemschneider.graphics.Position);
       ArgumentUtils.assertType(imgSize, net.riemschneider.graphics.Position);
@@ -19,6 +20,15 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getImgSize: function getImgSize() { return imgSize; },
         getDifficultyPos: function getDifficultyPos() { return difficultyPos; }
       };
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertNotNull(state);
+
+      var imgPos = Position.create(state.imgPos.x, state.imgPos.y);
+      var imgSize = Position.create(state.imgSize.x, state.imgSize.y);
+      var difficultyPos = Position.create(state.difficultyPos.x, state.difficultyPos.y);
+      return net.riemschneider.history.model.Region.create(state.id, state.imgSrc, imgPos, imgSize, difficultyPos);
     }
   };
 

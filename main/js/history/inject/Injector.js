@@ -14,11 +14,12 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       injector.topicsById = {};
       injector.questionsByTopicAndFact = {};
       injector.regionsByTopic = {};
-      net.riemschneider.history.data.FrenchRevolution.init(injector.topicsById, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
-      net.riemschneider.history.data.AmericanRevolution.init(injector.topicsById, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
-      net.riemschneider.history.data.FirstWorldWar.init(injector.topicsById, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
-      net.riemschneider.history.data.SecondWorldWar.init(injector.topicsById, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
-      net.riemschneider.history.data.WorldHistory.init(injector.topicsById, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
+      injector.topicDataReader = net.riemschneider.history.data.TopicDataReader.create(injector.topicsById, injector.questionsByTopicAndFact, injector.addOns, injector.regionsByTopic);
+      injector.topicDataReader.read('json/frenchRevolution.json');
+      injector.topicDataReader.read('json/americanRevolution.json');
+      injector.topicDataReader.read('json/firstWorldWar.json');
+      injector.topicDataReader.read('json/secondWorldWar.json');
+      injector.topicDataReader.read('json/worldHistory.json');
 
       injector.questionDistribution = net.riemschneider.history.model.QuestionDistribution.create([
           [0.7, 0.2, 0.1], [0.5, 0.3, 0.2], [0.33, 0.34, 0.33]

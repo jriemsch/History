@@ -6,7 +6,11 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
   net.riemschneider.history.controller.QuizState = {
     create: function create(stateMachine, quizView, quizController) {
-      return ViewState.create(stateMachine, 'quiz', false, quizView);
+      var state = ViewState.create(stateMachine, 'quiz', false, quizView);
+      state.onConfigureView = function onConfigureView() {
+        quizView.setQuiz(quizController.getCurrentQuiz());
+      };
+      return state;
     }
   };
 

@@ -8,9 +8,9 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 
   net.riemschneider.history.model.Question = {
     create: function create(id, difficulty, text, answer) {
-      ArgumentUtils.assertNotNull(id);
+      ArgumentUtils.assertString(id);
       ArgumentUtils.assertType(difficulty, Difficulty);
-      ArgumentUtils.assertNotNull(text);
+      ArgumentUtils.assertString(text);
       ArgumentUtils.assertType(answer, Answer);
 
       return {
@@ -19,6 +19,16 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getText: function getText() { return text; },
         getAnswer: function getAnswer() { return answer; }
       };
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertNotNull(state);
+
+      var difficulty = Difficulty[state.difficulty];
+      ArgumentUtils.assertNotNull(difficulty);
+      var answer = Answer.createFromState(state.answer);
+
+      return net.riemschneider.history.model.Question.create(state.id, difficulty, state.text, answer);
     }
   };
 

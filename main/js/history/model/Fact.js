@@ -5,9 +5,10 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArrayUtils = net.riemschneider.utils.ArrayUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var Difficulty = net.riemschneider.history.model.Difficulty;
+  var Question = net.riemschneider.history.model.Question;
 
   net.riemschneider.history.model.Fact = {
-    create: function (questions) {
+    create: function create(questions) {
       ArgumentUtils.assertArray(questions, function (elem) {
         ArgumentUtils.assertType(elem, net.riemschneider.history.model.Question);
       });
@@ -26,6 +27,15 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getQuestions: function getQuestions() { return questions; },
         getQuestionsOfDifficulty: function getQuestionsOfDifficulty(difficulty) { return questionByDifficulty[difficulty.key]; }
       };
+    },
+
+    createFromState: function createFromState(state) {
+      ArgumentUtils.assertArray(state);
+      var questions = [];
+      for (var idx = 0, len = state.length; idx < len; ++idx) {
+        questions.push(Question.createFromState(state[idx]));
+      }
+      return net.riemschneider.history.model.Fact.create(questions);
     }
   };
 

@@ -12,6 +12,7 @@ load:
   - ../../../jslib/main/js/utils/DeviceUtils.js
   - ../../../jslib/main/js/utils/TouchUtils.js
   - ../../../jslib/main/js/utils/ClosureUtils.js
+  - ../../../jslib/test/utils/WebUtils.js
   - ../../../jslib/main/js/graphics/Position.js
   - ../../../jslib/main/js/graphics/ImageUtils.js
   - ../../../jslib/main/js/storage/Storage.js
@@ -42,13 +43,9 @@ load:
   - ../main/js/history/model/Facts.js
   - ../main/js/history/model/Quiz.js
   - ../main/js/history/model/QuestionDistribution.js
-  - ../main/js/history/data/BaseOpponents.js
+  - ../main/js/history/data/BaseOpponentsReader.js
   - ../main/js/history/data/AvatarImages.js
-  - ../main/js/history/data/FrenchRevolution.js
-  - ../main/js/history/data/AmericanRevolution.js
-  - ../main/js/history/data/FirstWorldWar.js
-  - ../main/js/history/data/SecondWorldWar.js
-  - ../main/js/history/data/WorldHistory.js
+  - ../main/js/history/data/TopicDataReader.js
   - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/controller/QuizGenerator.js
@@ -60,6 +57,8 @@ load:
   - ../main/js/history/views/components/ImageSelectionOpponentDiv.js
   - ../main/js/history/views/components/AnimatedBackground.js
   - ../main/js/history/views/components/ImageMap.js
+  - ../main/js/history/views/components/QuizPlayers.js
+  - ../main/js/history/views/components/QuizMapSelection.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
   - ../main/js/history/views/OpponentSelection.js
@@ -94,12 +93,8 @@ test:
   - js/history/model/QuestionDistributionTest.js
   - js/history/model/FactTest.js
   - js/history/model/FactsTest.js
-  - js/history/data/BaseOpponentsTest.js
-  - js/history/data/FrenchRevolutionTest.js
-  - js/history/data/AmericanRevolutionTest.js
-  - js/history/data/FirstWorldWarTest.js
-  - js/history/data/SecondWorldWarTest.js
-  - js/history/data/WorldHistoryTest.js
+  - js/history/data/BaseOpponentsReaderTest.js
+  - js/history/data/TopicDataReaderTest.js
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
   - js/history/controller/QuizGeneratorTest.js
@@ -111,6 +106,8 @@ test:
   - js/history/views/components/ImageSelectionOpponentDivTest.js
   - js/history/views/components/AnimatedBackgroundTest.js
   - js/history/views/components/ImageMapTest.js
+  - js/history/views/components/QuizPlayersTest.js
+  - js/history/views/components/QuizMapSelectionTest.js
   - js/history/views/AvatarSelectionTest.js
   - js/history/views/TopicSelectionTest.js
   - js/history/views/OpponentSelectionTest.js

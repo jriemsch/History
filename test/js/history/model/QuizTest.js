@@ -2,6 +2,7 @@ var Difficulty = net.riemschneider.history.model.Difficulty;
 var Opponent = net.riemschneider.history.model.Opponent;
 var Quiz = net.riemschneider.history.model.Quiz;
 var Question = net.riemschneider.history.model.Question;
+var Answer = net.riemschneider.history.model.Answer;
 
 TestCase('QuizTest', {
   setUp: function () {

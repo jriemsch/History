@@ -1,6 +1,7 @@
 var TopicSelection = net.riemschneider.history.views.TopicSelection;
 var Topic = net.riemschneider.history.model.Topic;
 var AddOns = net.riemschneider.history.model.AddOns;
+var Position = net.riemschneider.graphics.Position;
 
 TestCase('TopicSelectionTest', {
   setUp: function () {
@@ -24,8 +25,8 @@ TestCase('TopicSelectionTest', {
     this.opponentSelectionDiv.hide();
 
     this.topicsById = {
-        topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png'),
-        topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png')
+        topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1)),
+        topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1))
   };
 
     this.addOns = AddOns.create();
