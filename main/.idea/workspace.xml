@@ -78,20 +78,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="77" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+            <state line="1" column="812" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../pages/History/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="276" selection-start="993" selection-end="993" vertical-scroll-proportion="-12.791667">
-              <folding />
+            <state line="50" column="690" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.74775785">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#p#2;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,9 +156,9 @@
         <option value="$PROJECT_DIR$/../../../jslib/main/js/utils/Log.js" />
         <option value="$PROJECT_DIR$/js/history/model/Opponent.js" />
         <option value="$PROJECT_DIR$/../README" />
-        <option value="$PROJECT_DIR$/../../../pages/History/index.html" />
         <option value="$PROJECT_DIR$/../LICENSE.TXT" />
         <option value="$PROJECT_DIR$/../README.md" />
+        <option value="$PROJECT_DIR$/../../../pages/History/index.html" />
       </list>
     </option>
   </component>
@@ -645,7 +647,11 @@
       <created>1351605763340</created>
       <updated>1351605763340</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fixed readme">
+      <created>1351605796370</created>
+      <updated>1351605796370</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,7 +717,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="license" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed readme" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -724,7 +730,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="world history image" />
     <MESSAGE value="american history image" />
     <MESSAGE value="images for first and second world war" />
     <MESSAGE value="new answer GapChoice" />
@@ -749,6 +754,7 @@
     <MESSAGE value="Fixed opponent reading in injector" />
     <MESSAGE value="readme" />
     <MESSAGE value="license" />
+    <MESSAGE value="fixed readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../pages/History/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="276" selection-start="993" selection-end="993" vertical-scroll-proportion="-12.791667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../pages/History/stylesheets/print.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="18" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
@@ -863,8 +862,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="77" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+        <state line="1" column="812" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../pages/History/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="690" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.74775785">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#p#2;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
