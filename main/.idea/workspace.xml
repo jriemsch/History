@@ -2,87 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/americanRevolution.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/baseOpponents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/firstWorldWar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/frenchRevolution.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/secondWorldWar.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/converted/json/worldHistory.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/data/BaseOpponentsReader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/history/views/components/QuizPlayers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/data/BaseOpponentsReaderTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/data/TopicDataReaderTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/views/components/QuizPlayersTest.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/BaseOpponents.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/FirstWorldWar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/FrenchRevolution.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/SecondWorldWar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/data/WorldHistory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/AmericanRevolutionTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/BaseOpponentsTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/FirstWorldWarTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/FrenchRevolutionTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/SecondWorldWarTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/js/history/data/WorldHistoryTest.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/history/data/AmericanRevolution.js" afterPath="$PROJECT_DIR$/js/history/data/TopicDataReader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/graphics/Position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/ArgumentUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/utils/WebUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/utils/WebUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/graphics/PositionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/utils/ArgumentUtilsTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/utils/ArgumentUtilsTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/utils/WebUtils.js" afterPath="$PROJECT_DIR$/../../../jslib/test/utils/WebUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/avatars.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/boy2_flickr_dbrekke.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/boy_flickr_dbrekke.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/girl_flickr_Julija.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy bald flickr mozzley.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy body builder.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy long hair.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy old.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_beard_glasses_flickr_kevin dooley.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_business.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_cap_flickr_Robert Bejil Photography.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_glasses_flickr_ethanhickerson.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_old3_flickr_herry.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_old4_flickr_Duncan Brown (Cradlehall).xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_old5_flickr_Duncan Brown (Cradlehall).xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_old_2.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_old_cap_flickr_Duncan Brown (Cradlehall).xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_old_glasses_flickr_GollyGforce.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_persian_flickr_Hamed Saber.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_young2_flickr_blupics.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/guy_young_flickr_juhrdr.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_blond.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_blond2_flickr_Astragony.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_brown_hair_flickr_iwolkow.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_business_flickr_victor1558.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_dark_hair.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_dark_hair2_flickr_chumpolo.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_dark_hair3_flickr_21TonGiant.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_old2_flickr_Sukanto Debnath.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_old_flickr_Duncan~.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_red_hair_flickr_Alaskan Dude.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_scarf_flickr_Hamed Saber.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/avatars/references/woman_smiling_flickr_mac.rj.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/frenchRevolution.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/mapFrenchRevolution.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/mapTemplate.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/menu/avatarselection.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/menu/learn.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/menu/quiz.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/menu/stats.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../assets/History/raw/images/sources.rtf" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/avatars.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/boy2_flickr_dbrekke.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/boy_flickr_dbrekke.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/girl_flickr_Julija.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy bald flickr mozzley.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy body builder.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy long hair.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy old.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_beard_glasses_flickr_kevin dooley.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_business.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_cap_flickr_Robert Bejil Photography.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_glasses_flickr_ethanhickerson.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_old3_flickr_herry.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_old4_flickr_Duncan Brown (Cradlehall).xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_old5_flickr_Duncan Brown (Cradlehall).xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_old_2.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_old_cap_flickr_Duncan Brown (Cradlehall).xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_old_glasses_flickr_GollyGforce.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_persian_flickr_Hamed Saber.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_young2_flickr_blupics.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/guy_young_flickr_juhrdr.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_blond.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_blond2_flickr_Astragony.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_brown_hair_flickr_iwolkow.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_business_flickr_victor1558.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_dark_hair.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_dark_hair2_flickr_chumpolo.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_dark_hair3_flickr_21TonGiant.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_old2_flickr_Sukanto Debnath.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_old_flickr_Duncan~.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_red_hair_flickr_Alaskan Dude.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_scarf_flickr_Hamed Saber.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/avatars/references/woman_smiling_flickr_mac.rj.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/frenchRevolution.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/mapFrenchRevolution.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/mapTemplate.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/menu/avatarselection.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/menu/learn.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/menu/quiz.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/menu/stats.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../assets/sources.rtf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Answer.js" afterPath="$PROJECT_DIR$/js/history/model/Answer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/DateSelector.js" afterPath="$PROJECT_DIR$/js/history/model/DateSelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Fact.js" afterPath="$PROJECT_DIR$/js/history/model/Fact.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Facts.js" afterPath="$PROJECT_DIR$/js/history/model/Facts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/GapChoice.js" afterPath="$PROJECT_DIR$/js/history/model/GapChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" afterPath="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/MapChoice.js" afterPath="$PROJECT_DIR$/js/history/model/MapChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/MultipleChoice.js" afterPath="$PROJECT_DIR$/js/history/model/MultipleChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Opponent.js" afterPath="$PROJECT_DIR$/js/history/model/Opponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/OrderChoice.js" afterPath="$PROJECT_DIR$/js/history/model/OrderChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Question.js" afterPath="$PROJECT_DIR$/js/history/model/Question.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Region.js" afterPath="$PROJECT_DIR$/js/history/model/Region.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Regions.js" afterPath="$PROJECT_DIR$/js/history/model/Regions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/TimeChoice.js" afterPath="$PROJECT_DIR$/js/history/model/TimeChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Topic.js" afterPath="$PROJECT_DIR$/js/history/model/Topic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/ValueChoice.js" afterPath="$PROJECT_DIR$/js/history/model/ValueChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/QuizView.js" afterPath="$PROJECT_DIR$/js/history/views/QuizView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/AnswerTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/AnswerTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/DateSelectorTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/DateSelectorTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/FactTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/FactTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/FactsTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/FactsTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/GapChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/GapChoiceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/LevelOrderChanceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/LevelOrderChanceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/MapChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/MapChoiceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/MultipleChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/MultipleChoiceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/OpponentTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/OpponentTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/OrderChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/OrderChoiceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/QuestionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/QuestionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/QuizTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/RegionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/RegionsTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/TimeChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/TimeChoiceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/TopicTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/TopicTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/model/ValueChoiceTest.js" afterPath="$PROJECT_DIR$/../test/js/history/model/ValueChoiceTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/tests.jstd" afterPath="$PROJECT_DIR$/../test/tests.jstd" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -133,7 +135,7 @@
       <file leaf-file-name="ImageSelection.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="49" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0861141">
+            <state line="62" column="58" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.73196983">
               <folding />
             </state>
           </provider>
@@ -640,13 +642,18 @@
       <created>1348813508691</created>
       <updated>1348813508691</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Moved data to separate repo">
+      <created>1351595087295</created>
+      <updated>1351595087295</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2556" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26404926" sideWeight="0.49203187" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2434263" sideWeight="0.21939954" order="1" side_tool="true" content_ui="tabs" />
@@ -663,7 +670,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.49681276" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.66589683" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -706,7 +712,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved images to separate repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved data to separate repo" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -719,7 +725,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Removed deployed files" />
     <MESSAGE value="Added more choices" />
     <MESSAGE value="Added region model" />
     <MESSAGE value="Added AddOns model to track unlocked addons" />
@@ -744,6 +749,7 @@
     <MESSAGE value="map, region and difficulty display" />
     <MESSAGE value="Some refactoring and tests" />
     <MESSAGE value="Moved images to separate repo" />
+    <MESSAGE value="Moved data to separate repo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -846,7 +852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0861141">
+        <state line="62" column="58" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.73196983">
           <folding />
         </state>
       </provider>
