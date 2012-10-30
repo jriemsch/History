@@ -15,6 +15,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       var spacing = getSpacingFromCss();
       var containerDiv = createContainer();
       Scroll.create(containerDiv, onScrolledBy);
+
       addOptionsToDiv();
 
       setScrollPosition(0, 0);
