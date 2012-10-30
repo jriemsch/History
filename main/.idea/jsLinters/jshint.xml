@@ -11,7 +11,7 @@
     <option browser="true" />
     <option jquery="true" />
     <option maxerr="50" />
-    <option predef="net, TestCase, assertEquals, assertNotUndefined, assertTrue, assertFalse, assertException, assertNotNull, assertSame" />
+    <option predef="net, TestCase, assertEquals, assertNotUndefined, assertTrue, assertFalse, assertException, assertNotNull, assertSame, console" />
   </component>
 </project>
 

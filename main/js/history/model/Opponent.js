@@ -2,8 +2,9 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 
 (function () {
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var Difficulty = net.riemschneider.history.model.Difficulty;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
+  var Difficulty = net.riemschneider.history.model.Difficulty;
+  var LevelOrderChance = net.riemschneider.history.model.LevelOrderChance;
 
   net.riemschneider.history.model.Opponent = {
     create: function create(id, name, avatarImageIdx, difficulty, knowledgeChancesByLevel, levelOrderChances) {

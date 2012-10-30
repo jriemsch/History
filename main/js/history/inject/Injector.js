@@ -9,7 +9,8 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       injector.addOns = net.riemschneider.history.model.AddOns.create();
 
       injector.opponents = [];
-      net.riemschneider.history.data.BaseOpponents.init(injector.opponents);
+      injector.baseOpponentsReader = net.riemschneider.history.data.BaseOpponentsReader.create(injector.opponents);
+      injector.baseOpponentsReader.read('json/baseOpponents.json');
 
       injector.topicsById = {};
       injector.questionsByTopicAndFact = {};
