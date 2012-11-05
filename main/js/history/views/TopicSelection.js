@@ -1,6 +1,8 @@
 net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
+  "use strict";
+
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
@@ -51,13 +53,13 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       function createLockedTopicSelectionCallback(topic) {
         return function onLockedTopicSelected() {
           onLockedTopicSelectedCallback(topic.getId());
-        }
+        };
       }
 
       function createTopicSelectionCallback(topic) {
         return function onTopicSelected() {
           onTopicSelectedCallback(topic.getId());
-        }
+        };
       }
 
       function createTopicOptions() {

@@ -10,29 +10,21 @@ TestCase('QuizStateTest', {
     State.create(this.stateMachine, 'menu', true);
     this.quizView = {
       quiz: null,
-      setQuiz: function setQuiz(quiz) { this.quiz = quiz; },
       show: function show() {},
       hide: function hide() {}
     };
-
-    this.currentQuiz = {};
-    var currentQuiz = this.currentQuiz;
-    this.quizController = {
-      getCurrentQuiz: function getCurrentQuiz() { return currentQuiz; }
-    }
   },
 
   testCreate: function () {
-    var state = QuizState.create(this.stateMachine, this.quizView, this.quizController);
+    var state = QuizState.create(this.stateMachine, this.quizView);
     assertTrue(TypeUtils.isOfType(state, QuizState));
     assertTrue(TypeUtils.isOfType(state, ViewState));
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
-  testOnConfigureView: function () {
-    var state = QuizState.create(this.stateMachine, this.quizView, this.quizController);
+  testTransition: function () {
+    QuizState.create(this.stateMachine, this.quizView);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quiz');
-    assertSame(this.currentQuiz, this.quizView.quiz);
   }
 });

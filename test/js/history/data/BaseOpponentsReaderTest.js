@@ -1,23 +1,14 @@
-var AddOns = net.riemschneider.history.model.AddOns;
 var BaseOpponentsReader = net.riemschneider.history.data.BaseOpponentsReader;
 var WebUtils = net.riemschneider.utils.WebUtils;
 
 TestCase('BaseOpponentsReader', {
   testCreate: function () {
-    var opponents = [];
-    var reader = BaseOpponentsReader.create(opponents);
+    var reader = BaseOpponentsReader.create();
     assertNotUndefined(reader);
   },
 
-  testCreateNullAndTypeSafe: function () {
-    assertException(function () { BaseOpponentsReader.create(null); }, 'TypeError');
-
-    assertException(function () { BaseOpponentsReader.create({}); }, 'TypeError');
-  },
-
   testRead: function () {
-    var opponents = [];
-    var reader = BaseOpponentsReader.create(opponents);
+    var reader = BaseOpponentsReader.create();
     var testData = [
       {
         id: 'OPP0',
@@ -37,18 +28,32 @@ TestCase('BaseOpponentsReader', {
       }
     ];
     WebUtils.expectRequest('testOpponentsData.json', testData);
-    reader.read('testOpponentsData.json');
+    var opponents = [];
+    var onDoneCalled = false;
+    reader.read('testOpponentsData.json', addOpponent, onDone);
+
+    function addOpponent(opponent) {
+      opponents.push(opponent);
+      assertFalse(onDoneCalled);
+    }
+    function onDone() { onDoneCalled = true; }
+
     assertEquals(2, opponents.length);
     assertEquals('OPP0', opponents[0].getId());
     assertEquals('OPP1', opponents[1].getId());
+    assertTrue(onDoneCalled);
   },
 
   testReadNullAndTypeSafe: function () {
-    var opponents = [];
-    var reader = BaseOpponentsReader.create(opponents);
+    var reader = BaseOpponentsReader.create();
+    var func = function () {};
 
-    assertException(function () { reader.read(null); }, 'TypeError');
+    assertException(function () { reader.read('testOpponentsData.json', func, null); }, 'TypeError');
+    assertException(function () { reader.read('testOpponentsData.json', null, func); }, 'TypeError');
+    assertException(function () { reader.read(null, func, func); }, 'TypeError');
 
-    assertException(function () { reader.read({}); }, 'TypeError');
+    assertException(function () { reader.read('testOpponentsData.json', func, {}); }, 'TypeError');
+    assertException(function () { reader.read('testOpponentsData.json', {}, func); }, 'TypeError');
+    assertException(function () { reader.read({}, func, func); }, 'TypeError');
   }
 });

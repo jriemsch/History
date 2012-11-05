@@ -1,40 +1,16 @@
 var AddOns = net.riemschneider.history.model.AddOns;
 var TopicDataReader = net.riemschneider.history.data.TopicDataReader;
 var WebUtils = net.riemschneider.utils.WebUtils;
+var TypeUtils = net.riemschneider.utils.TypeUtils;
 
 TestCase('TopicDataReaderTest', {
   testCreate: function () {
-    var topicsById = {};
-    var questionsByTopicAndFact = {};
-    var addOns = AddOns.create();
-    var regionsByTopic = {};
-    var reader = TopicDataReader.create(topicsById, questionsByTopicAndFact, addOns, regionsByTopic);
+    var reader = TopicDataReader.create();
     assertNotUndefined(reader);
   },
 
-  testCreateNullAndTypeSafe: function () {
-    var topicsById = {};
-    var questionsByTopicAndFact = {};
-    var addOns = AddOns.create();
-    var regionsByTopic = {};
-
-    assertException(function () { TopicDataReader.create(topicsById, questionsByTopicAndFact, addOns, null); }, 'TypeError');
-    assertException(function () { TopicDataReader.create(topicsById, questionsByTopicAndFact, null, regionsByTopic); }, 'TypeError');
-    assertException(function () { TopicDataReader.create(topicsById, null, addOns, regionsByTopic); }, 'TypeError');
-    assertException(function () { TopicDataReader.create(null, questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
-
-    assertException(function () { TopicDataReader.create(topicsById, questionsByTopicAndFact, addOns, []); }, 'TypeError');
-    assertException(function () { TopicDataReader.create(topicsById, questionsByTopicAndFact, {}, regionsByTopic); }, 'TypeError');
-    assertException(function () { TopicDataReader.create(topicsById, [], addOns, regionsByTopic); }, 'TypeError');
-    assertException(function () { TopicDataReader.create([], questionsByTopicAndFact, addOns, regionsByTopic); }, 'TypeError');
-  },
-
   testRead: function () {
-    var topicsById = {};
-    var questionsByTopicAndFact = {};
-    var addOns = AddOns.create();
-    var regionsByTopic = {};
-    var reader = TopicDataReader.create(topicsById, questionsByTopicAndFact, addOns, regionsByTopic);
+    var reader = TopicDataReader.create();
     var testData = {
       topic: {
         id: 'TEST_TOPIC',
@@ -48,22 +24,35 @@ TestCase('TopicDataReaderTest', {
       facts: []
     };
     WebUtils.expectRequest('testTopicData.json', testData);
-    reader.read('testTopicData.json');
-    assertNotUndefined(topicsById['TEST_TOPIC']);
-    assertTrue(TypeUtils.isOfType(questionsByTopicAndFact['TEST_TOPIC'], net.riemschneider.history.model.Facts));
-    assertTrue(TypeUtils.isOfType(regionsByTopic['TEST_TOPIC'], net.riemschneider.history.model.Regions));
-    assertTrue(addOns.isUnlocked('TEST_TOPIC'));
+    var addTopicCalled = false;
+    var onDoneCalled = false;
+    reader.read('testTopicData.json', addTopic, onDone);
+
+    function addTopic(topic, regions, facts, unlocked) {
+      assertTrue(TypeUtils.isOfType(topic, net.riemschneider.history.model.Topic));
+      assertTrue(TypeUtils.isOfType(facts, net.riemschneider.history.model.Facts));
+      assertTrue(TypeUtils.isOfType(regions, net.riemschneider.history.model.Regions));
+      assertEquals('TEST_TOPIC', topic.getId());
+      assertTrue(unlocked);
+      assertFalse(onDoneCalled);
+      addTopicCalled = true;
+    }
+    function onDone() { onDoneCalled = true; }
+
+    assertTrue(addTopicCalled);
+    assertTrue(onDoneCalled);
   },
 
   testReadNullAndTypeSafe: function () {
-    var topicsById = {};
-    var questionsByTopicAndFact = {};
-    var addOns = AddOns.create();
-    var regionsByTopic = {};
-    var reader = TopicDataReader.create(topicsById, questionsByTopicAndFact, addOns, regionsByTopic);
+    var reader = TopicDataReader.create();
+    var func = function () {};
 
-    assertException(function () { reader.read(null); }, 'TypeError');
+    assertException(function () { reader.read('testTopicData.json', func, null); }, 'TypeError');
+    assertException(function () { reader.read('testTopicData.json', null, func); }, 'TypeError');
+    assertException(function () { reader.read(null, func, func); }, 'TypeError');
 
-    assertException(function () { reader.read(23); }, 'TypeError');
+    assertException(function () { reader.read('testTopicData.json', func, {}); }, 'TypeError');
+    assertException(function () { reader.read('testTopicData.json', {}, func); }, 'TypeError');
+    assertException(function () { reader.read({}, func, func); }, 'TypeError');
   }
 });

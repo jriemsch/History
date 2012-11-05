@@ -14,15 +14,13 @@
     }
 
     $('#startButton').click(function () {
-      var injector = net.riemschneider.history.inject.Injector.create();
-      init(injector);
+      net.riemschneider.history.inject.Injector.create(init);
     });
 
     $('#resetButton').click(function () {
       net.riemschneider.history.controller.PlayerController.resetState();
 
-      var injector = net.riemschneider.history.inject.Injector.create();
-      init(injector);
+      net.riemschneider.history.inject.Injector.create(init);
     });
   });
 })();

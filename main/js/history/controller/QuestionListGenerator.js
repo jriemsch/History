@@ -99,7 +99,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
           return generateQuestions(questionCounts, randomFactGetter);
         }
-      }
+      };
     }
   };
 }());

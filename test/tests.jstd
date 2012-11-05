@@ -46,6 +46,7 @@ load:
   - ../main/js/history/data/BaseOpponentsReader.js
   - ../main/js/history/data/AvatarImages.js
   - ../main/js/history/data/TopicDataReader.js
+  - ../main/js/history/data/QuestionDistributionReader.js
   - ../main/js/history/controller/OpponentController.js
   - ../main/js/history/controller/PlayerController.js
   - ../main/js/history/controller/QuizGenerator.js
@@ -95,6 +96,7 @@ test:
   - js/history/model/FactsTest.js
   - js/history/data/BaseOpponentsReaderTest.js
   - js/history/data/TopicDataReaderTest.js
+  - js/history/data/QuestionDistributionReaderTest.js
   - js/history/controller/PlayerControllerTest.js
   - js/history/controller/OpponentControllerTest.js
   - js/history/controller/QuizGeneratorTest.js
