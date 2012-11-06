@@ -17,7 +17,8 @@ TestCase('TopicDataReaderTest', {
         name: 'Test Topic',
         imgSrc: 'topic.png',
         mapImageSrc: 'map.png',
-        mapImageSize: { x: 42, y: 52 }
+        mapImageSize: { x: 42, y: 52 },
+        year: 1900
       },
       unlocked: true,
       regions: [],

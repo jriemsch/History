@@ -62,20 +62,39 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         };
       }
 
-      function createTopicOptions() {
-        var options = [];
+      function sortTopics() {
+        var sorted = [];
         for (var topicId in topicsById) {
           if (topicsById.hasOwnProperty(topicId)) {
-            var topic = topicsById[topicId];
-            var isUnlocked = addOns.isUnlocked(topic.getId());
-            var optionDiv = isUnlocked ?
-                ImageSelectionImageDiv.create(topic.getImage(), topic.getName()) :
-                ImageSelectionImageDiv.create(topic.getImage(), topic.getName(), 'images/lock.png', 0.4);
-            options.push({
-              div: optionDiv,
-              callback: isUnlocked ? createTopicSelectionCallback(topic) : createLockedTopicSelectionCallback(topic)
-            });
+            sorted.push(topicsById[topicId]);
           }
+        }
+        sorted.sort(compareTopics);
+        return sorted;
+      }
+
+      function compareTopics(topic1, topic2) {
+        var unlocked1 = addOns.isUnlocked(topic1.getId()) ? 0 : 1;
+        var unlocked2 = addOns.isUnlocked(topic2.getId()) ? 0 : 1;
+        if (unlocked1 === unlocked2) {
+          return topic1.getYear() - topic2.getYear();
+        }
+        return unlocked1 - unlocked2;
+      }
+
+      function createTopicOptions() {
+        var topics = sortTopics();
+        var options = [];
+        for (var idx = 0, len = topics.length; idx < len; ++idx) {
+          var topic = topics[idx];
+          var isUnlocked = addOns.isUnlocked(topic.getId());
+          var optionDiv = isUnlocked ?
+              ImageSelectionImageDiv.create(topic.getImage(), topic.getName()) :
+              ImageSelectionImageDiv.create(topic.getImage(), topic.getName(), 'images/lock.png', 0.4);
+          options.push({
+            div: optionDiv,
+            callback: isUnlocked ? createTopicSelectionCallback(topic) : createLockedTopicSelectionCallback(topic)
+          });
         }
         return options;
       }

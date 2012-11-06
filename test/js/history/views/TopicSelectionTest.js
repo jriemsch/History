@@ -25,9 +25,9 @@ TestCase('TopicSelectionTest', {
     this.opponentSelectionDiv.hide();
 
     this.topicsById = {
-        topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1)),
-        topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1))
-  };
+      topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1900),
+      topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1901)
+    };
 
     this.addOns = AddOns.create();
     this.addOns.unlock('topic1');
@@ -50,6 +50,20 @@ TestCase('TopicSelectionTest', {
     TopicSelection.create(this.topicsById, this.addOns).show();
     assertEquals(2, $('.imageSelectionOptionImage').length);
     assertEquals(1, $('.imageSelectionOptionOverlay').length);
+  },
+
+  testTopicsAreSorted: function () {
+    this.topicsById.topic3 = Topic.create('topic3', 'Topic3', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1800);
+    this.topicsById.topic4 = Topic.create('topic4', 'Topic4', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1801);
+    this.addOns.unlock('topic3');
+
+    TopicSelection.create(this.topicsById, this.addOns).show();
+    var texts = $('.imageSelectionOptionText');
+    assertEquals(4, texts.length);
+    assertEquals('Topic3', $(texts[0]).find('p').text());
+    assertEquals('Topic1', $(texts[1]).find('p').text());
+    assertEquals('Topic4', $(texts[2]).find('p').text());
+    assertEquals('Topic2', $(texts[3]).find('p').text());
   },
 
   testCanShowNewTopicState: function () {

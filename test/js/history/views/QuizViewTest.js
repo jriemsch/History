@@ -42,7 +42,7 @@ TestCase('QuizViewTest', {
       topicId: Regions.create([ Region.create('R1', 'R1src', pos, pos, pos),  Region.create('R2', 'R2src', pos, pos, pos)  ])
     };
     var topicsById = {
-      topicId: Topic.create('topicId', 'topic', 'image', 'mapImage', pos)
+      topicId: Topic.create('topicId', 'topic', 'image', 'mapImage', pos, 1900)
     };
     var menu = QuizView.create(playerController, quizController, regionsByTopic, topicsById);
     assertEquals('none', this.quizView.css('display'));

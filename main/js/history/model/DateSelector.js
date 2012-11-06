@@ -1,6 +1,8 @@
 net.riemschneider.history.model = net.riemschneider.history.model || {};
 
 (function () {
+  "use strict";
+
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
@@ -29,7 +31,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         ArgumentUtils.assertType(other, net.riemschneider.history.model.DateSelector);
         return year === other.getYear() && month === other.getMonth() && day === other.getDay();
       }
-    }
+    };
   }
 
   net.riemschneider.history.model.DateSelector = {
@@ -39,22 +41,22 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       DAY: { key: 'DAY' }
     }),
 
-    day: function day(day, month, year) {
-      ArgumentUtils.assertRange(day, 1, 31);
-      ArgumentUtils.assertRange(month, 1, 12);
-      ArgumentUtils.assertNumber(year);
-      return create(year, month, day);
+    day: function day(d, m, y) {
+      ArgumentUtils.assertRange(d, 1, 31);
+      ArgumentUtils.assertRange(m, 1, 12);
+      ArgumentUtils.assertNumber(y);
+      return create(y, m, d);
     },
 
-    month: function month(month, year) {
-      ArgumentUtils.assertRange(month, 1, 12);
-      ArgumentUtils.assertNumber(year);
-      return create(year, month);
+    month: function month(m, y) {
+      ArgumentUtils.assertRange(m, 1, 12);
+      ArgumentUtils.assertNumber(y);
+      return create(y, m);
     },
 
-    year: function year(year) {
-      ArgumentUtils.assertNumber(year);
-      return create(year);
+    year: function year(y) {
+      ArgumentUtils.assertNumber(y);
+      return create(y);
     },
 
     fromStr: function fromStr(dateStr) {
@@ -62,13 +64,13 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
       var parts = dateStr.split('.');
       ArgumentUtils.assertRange(parts.length, 1, 3);
       if (parts.length === 1) {
-        return net.riemschneider.history.model.DateSelector.year(parseInt(parts[0]));
+        return net.riemschneider.history.model.DateSelector.year(parseInt(parts[0], 10));
       }
       else if (parts.length === 2) {
-        return net.riemschneider.history.model.DateSelector.month(parseInt(parts[0]), parseInt(parts[1]));
+        return net.riemschneider.history.model.DateSelector.month(parseInt(parts[0], 10), parseInt(parts[1], 10));
       }
 
-      return net.riemschneider.history.model.DateSelector.day(parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2]));
+      return net.riemschneider.history.model.DateSelector.day(parseInt(parts[0], 10), parseInt(parts[1], 10), parseInt(parts[2], 10));
     }
   };
 

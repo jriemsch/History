@@ -17,7 +17,7 @@ TestCase('QuizMapSelectionTest', {
     $('head').append(css);
 
     var pos = Position.create(1280, 256);
-    this.topic = Topic.create('topic', 'Topic', 'image', 'mapImage', pos);
+    this.topic = Topic.create('topic', 'Topic', 'image', 'mapImage', pos, 1900);
 
     var region1 = Region.create('R1', 'src1', Position.create(128, 128), Position.create(256, 128), Position.create(10, 20));
     var region2 = Region.create('R2', 'src2', Position.create(64, 256), Position.create(512, 1024), Position.create(20, 10));
