@@ -29,8 +29,8 @@ TestCase('ImageSelectionTest', {
     assertEquals(1, container.length);
     var optionDivs = container.find('.imageSelectionOption');
     assertEquals(2, optionDivs.length);
-    assertEquals('0px', this.getLastRecording($(optionDivs[0])).arguments[0].left);
-    assertEquals('150px', this.getLastRecording($(optionDivs[1])).arguments[0].left);
+    assertEquals('0px', this.getLastRecording($(optionDivs[0])).args[0].left);
+    assertEquals('150px', this.getLastRecording($(optionDivs[1])).args[0].left);
   },
 
   testDestroy: function () {
@@ -82,7 +82,7 @@ TestCase('ImageSelectionTest', {
     var container = $('body').find('.imageSelectionOptionContainer');
     container.trigger(jQuery.Event('mousedown', { pageX: 120, pageY: 0 }));
     container.trigger(jQuery.Event('mousemove', { pageX: 100, pageY: 0 }));
-    assertEquals(-20, this.getLastRecording(container).arguments[0].marginLeft);
+    assertEquals(-20, this.getLastRecording(container).args[0].marginLeft);
   },
 
   testMaxScroll: function () {
@@ -90,7 +90,7 @@ TestCase('ImageSelectionTest', {
     var container = $('body').find('.imageSelectionOptionContainer');
     container.trigger(jQuery.Event('mousedown', { pageX: 120, pageY: 0 }));
     container.trigger(jQuery.Event('mousemove', { pageX: 121, pageY: 0 }));
-    assertEquals(0, this.getLastRecording(container).arguments[0].marginLeft);
+    assertEquals(0, this.getLastRecording(container).args[0].marginLeft);
   },
 
   testMinScroll: function () {
@@ -98,7 +98,7 @@ TestCase('ImageSelectionTest', {
     var container = $('body').find('.imageSelectionOptionContainer');
     container.trigger(jQuery.Event('mousedown', { pageX: 200, pageY: 0 }));
     container.trigger(jQuery.Event('mousemove', { pageX: 0, pageY: 0 }));
-    assertEquals(-this.scrollingOversize, this.getLastRecording(container).arguments[0].marginLeft);
+    assertEquals(-this.scrollingOversize, this.getLastRecording(container).args[0].marginLeft);
   },
 
   getLastRecording: function getLastRecording(obj) {

@@ -757,9 +757,13 @@ body {
     background-color: gray;
 }
 
+.quizRegionSelected {
+    background-color: white;
+}
+
 .quizMaskRegion {
     opacity: 0.8;
-    -webkit-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.1s;
 }
 
 .quizDifficultyMarker {

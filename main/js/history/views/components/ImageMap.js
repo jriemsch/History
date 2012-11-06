@@ -29,7 +29,9 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
             var height = imageInfo.img.outerHeight();
             var width = imageInfo.img.outerWidth();
             if (y >= offset.top && y < offset.top + height && x >= offset.left && x < offset.left + width) {
-              var data = ImageUtils.getPixelFromImage(imageInfo.img, x - offset.left, y - offset.top);
+              var xInImage = (x - offset.left) / width * imageInfo.img[0].naturalWidth;
+              var yInImage = (y - offset.top) / height * imageInfo.img[0].naturalHeight;
+              var data = ImageUtils.getPixelFromImage(imageInfo.img, xInImage, yInImage);
               if (data[3] > 0) {
                 return imageInfo;
               }
@@ -73,7 +75,8 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
           return {
             addImageClass: function addImageClass(style) { img.addClass(style); },
-            addMaskClass: function addMaskClass(style) { maskWrapper.addClass(style); }
+            addMaskClass: function addMaskClass(style) { maskWrapper.addClass(style); },
+            removeMaskClass: function removeMaskClass(style) { maskWrapper.removeClass(style); }
           };
         },
 

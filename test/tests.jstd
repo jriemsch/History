@@ -53,6 +53,7 @@ load:
   - ../main/js/history/controller/QuizController.js
   - ../main/js/history/controller/QuestionListGenerator.js
   - ../main/js/history/controller/QuizState.js
+  - ../main/js/history/controller/QuizPlayerSelectsRegionState.js
   - ../main/js/history/views/components/ImageSelection.js
   - ../main/js/history/views/components/ImageSelectionImageDiv.js
   - ../main/js/history/views/components/ImageSelectionOpponentDiv.js
@@ -103,6 +104,7 @@ test:
   - js/history/controller/QuizControllerTest.js
   - js/history/controller/QuestionListGeneratorTest.js
   - js/history/controller/QuizStateTest.js
+  - js/history/controller/QuizPlayerSelectsRegionStateTest.js
   - js/history/views/components/ImageSelectionTest.js
   - js/history/views/components/ImageSelectionImageDivTest.js
   - js/history/views/components/ImageSelectionOpponentDivTest.js

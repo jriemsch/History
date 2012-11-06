@@ -39,9 +39,9 @@ TestCase('AnimatedBackgroundTest', {
 
   getLastLeftChange: function getLastLeftChange(image) {
     var isLeftChange = function (recording) {
-      return recording.obj[0] === image && recording.arguments[0].left;
+      return recording.obj[0] === image && recording.args[0].left;
     };
     var lastRecording = JQueryTestUtils.getLastRecording(this.cssRecorder, isLeftChange);
-    return lastRecording.arguments[0].left;
+    return lastRecording.args[0].left;
   }
 });

@@ -2,7 +2,7 @@ var ImageMap = net.riemschneider.history.views.components.ImageMap;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
 var Position = net.riemschneider.graphics.Position;
 
-TestCase('ImageMapTest', {
+AsyncTestCase('ImageMapTest', {
   setUp: function () {
     this.imgSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAYAAAD0In+KAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3AkbBTUx1gTEfAAAABFJREFUCNdj+P///38GBgYGABnvA/2GA2UfAAAAAElFTkSuQmCC';
     this.imgSize = Position.create(2, 1);
@@ -67,6 +67,14 @@ TestCase('ImageMapTest', {
     assertEquals(1, this.parent.find('.maskClass').length);
   },
 
+  testRemoveMaskClass: function () {
+    var imageMap = ImageMap.create(this.parent);
+    var image = imageMap.addImage(this.imgSrc, this.imgPos, this.imgSize, function () {});
+    image.addMaskClass('maskClass');
+    image.removeMaskClass('maskClass');
+    assertEquals(0, this.parent.find('.maskClass').length);
+  },
+
   testDestroy: function () {
     var imageMap = ImageMap.create(this.parent);
     imageMap.addImage(this.imgSrc, this.imgPos, this.imgSize, function () {});
@@ -74,15 +82,30 @@ TestCase('ImageMapTest', {
     assertEquals(0, this.parent.children().length);
   },
 
-  testTapInFilledArea: function () {
-    var imageMap = ImageMap.create(this.parent);
-    var called = false;
-    imageMap.addImage(this.imgSrc, Position.create(0, 0), this.imgSize, function () {
-      called = true;
+  testTapInFilledArea: function (queue) {
+    var test = this;
+    var loaded = false;
+
+    queue.call('initiate image loading', function () {
+      var img = $('<img src="' + test.imgSrc + '">');
+      $('body').append(img);
+      img.load(function () { loaded = true; });
     });
-    this.parent.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    this.parent.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertTrue(called);
+
+    queue.call('make sure image is loaded', function () {
+      assertTrue(loaded);
+    });
+
+    queue.call('check that tapping on image works', function () {
+      var imageMap = ImageMap.create(test.parent);
+      var called = false;
+      imageMap.addImage(test.imgSrc, Position.create(0, 0), test.imgSize, function () {
+        called = true;
+      });
+      test.parent.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
+      test.parent.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
+      assertTrue(called);
+    });
   },
 
   testTapInTransparentArea: function () {

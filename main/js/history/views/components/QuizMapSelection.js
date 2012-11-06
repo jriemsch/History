@@ -26,12 +26,13 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       var containerDiv = $('<div class="quizMapSelection"></div>');
       var imageMap = ImageMap.create(containerDiv);
       var regionArray = regions.getRegions();
+
       for (var idx = 0, len = regionArray.length; idx < len; ++idx) {
         var region = regionArray[idx];
         var imgSrc = region.getImgSrc();
         var imgPos = abs(region.getImgPos());
         var imgSize = rel(region.getImgSize());
-        var mapElement = imageMap.addImage(imgSrc, imgPos, imgSize, onTapped);
+        var mapElement = addImage(imgSrc, imgPos, imgSize, region);
         mapElement.addImageClass('quizRegion');
         mapElement.addMaskClass('quizMaskRegion');
         mapElement.addMaskClass('quizRegionUnclaimed');
@@ -64,9 +65,21 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         return Position.create(pos.getX() * 100 / 2048, pos.getY() * 100 / 2048, Position.Unit.PERCENT);
       }
 
+      function addImage(imgSrc, imgPos, imgSize, region) {
+        var mapElement = imageMap.addImage(imgSrc, imgPos, imgSize, onImageTapped);
+
+        function onImageTapped() {
+          mapElement.addMaskClass('quizRegionSelected');
+          setTimeout(function () { mapElement.removeMaskClass('quizRegionSelected'); }, 100);
+          onTapped(region);
+        }
+
+        return mapElement;
+      }
+
       return {
         destroy: function destroy() { containerDiv.remove(); }
       };
     }
-  }
+  };
 }());

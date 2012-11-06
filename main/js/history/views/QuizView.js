@@ -16,6 +16,13 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
     create: function (playerController, quizController, regionsByTopic, topicsById) {
       var quizPlayers = null;
       var quizMapSelection = null;
+      var onRegionSelectedCallback = null;
+
+      function onTapped(region) {
+        if (onRegionSelectedCallback !== null) {
+          onRegionSelectedCallback(region);
+        }
+      }
 
       return {
         show: function show() {
@@ -32,20 +39,15 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
           quizPlayers = QuizPlayers.create(quizView, players);
 
-          quizMapSelection = QuizMapSelection.create(quizMap, topic, regions, questionsByRegion, scoreByDifficulty, function onTapped() {});
+          quizMapSelection = QuizMapSelection.create(quizMap, topic, regions, questionsByRegion, scoreByDifficulty, onTapped);
           quizView.show();
-
-          var selected = 0;
-          setInterval(function () {
-            selected = (selected + 1) % 3;
-            quizPlayers.selectPlayer(selected);
-          }, 5000);
         },
         hide: function hide() {
           $('#quizView').hide();
           quizMapSelection.destroy();
           quizPlayers.destroy();
-        }
+        },
+        onRegionSelected: function onRegionSelected(callback) { onRegionSelectedCallback = callback; }
       };
     }
   };

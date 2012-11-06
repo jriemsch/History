@@ -7,6 +7,7 @@ var Question = net.riemschneider.history.model.Question;
 var Answer = net.riemschneider.history.model.Answer;
 var Difficulty = net.riemschneider.history.model.Difficulty;
 var ImageMap = net.riemschneider.history.views.components.ImageMap;
+var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
 
 TestCase('QuizMapSelectionTest', {
   setUp: function () {
@@ -49,7 +50,7 @@ TestCase('QuizMapSelectionTest', {
     assertNotNull(selection);
     var container = $('body').find('.quizMapSelection');
     assertEquals(1, container.length);
-    assertEquals('url("mapImage")', this.getLastRecording(container).arguments[0].backgroundImage);
+    assertEquals('url("mapImage")', this.getLastRecording(container).args[0].backgroundImage);
     assertEquals(2, this.createdImages.length);
     assertEquals('src1', this.createdImages[0].imgSrc);
     assertEquals('src2', this.createdImages[1].imgSrc);
@@ -61,14 +62,12 @@ TestCase('QuizMapSelectionTest', {
     assertEquals('quizRegion', this.createdImages[1].lastImageClass);
     assertEquals('quizRegionUnclaimed', this.createdImages[0].lastMaskClass);
     assertEquals('quizRegionUnclaimed', this.createdImages[1].lastMaskClass);
-    assertSame(onTapped, this.createdImages[0].onTapped);
-    assertSame(onTapped, this.createdImages[1].onTapped);
     var difficultyMarkers = container.find('.quizDifficultyMarker');
     assertEquals(2, difficultyMarkers.length);
-    assertEquals('35%', this.getLastRecording($(difficultyMarkers[0])).arguments[0].left);
-    assertEquals('70%', this.getLastRecording($(difficultyMarkers[0])).arguments[0].top);
-    assertEquals('41.875%', this.getLastRecording($(difficultyMarkers[1])).arguments[0].left);
-    assertEquals('66.25%', this.getLastRecording($(difficultyMarkers[1])).arguments[0].top);
+    assertEquals('35%', this.getLastRecording($(difficultyMarkers[0])).args[0].left);
+    assertEquals('70%', this.getLastRecording($(difficultyMarkers[0])).args[0].top);
+    assertEquals('41.875%', this.getLastRecording($(difficultyMarkers[1])).args[0].left);
+    assertEquals('66.25%', this.getLastRecording($(difficultyMarkers[1])).args[0].top);
   },
 
   testCreateNullAndTypeSafe: function () {
@@ -96,6 +95,16 @@ TestCase('QuizMapSelectionTest', {
     var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, onTapped);
     selection.destroy();
     assertEquals(0, $('body').children().length);
+  },
+
+  testTapping: function () {
+    var tappedRegion = null;
+    var onTapped = function (region) { tappedRegion = region; };
+    QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, onTapped);
+    this.createdImages[0].onTapped();
+    assertEquals('R1', tappedRegion.getId());
+    this.createdImages[1].onTapped();
+    assertEquals('R2', tappedRegion.getId());
   },
 
   createImageMapMock: function () {

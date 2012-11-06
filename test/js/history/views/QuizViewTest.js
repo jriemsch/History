@@ -9,21 +9,18 @@ var Region = net.riemschneider.history.model.Region;
 var Position = net.riemschneider.graphics.Position;
 var Topic = net.riemschneider.history.model.Topic;
 var Answer = net.riemschneider.history.model.Answer;
+var ImageMap = net.riemschneider.history.views.components.ImageMap;
 
 TestCase('QuizViewTest', {
   setUp: function () {
+    this.createImageMapMock();
+
     $('body').empty();
     this.quizView = $('<div id="quizView"></div>');
     $('body').append(this.quizView);
     this.quizView.hide();
-  },
 
-  tearDown: function () {
-    $('body').empty();
-  },
-
-  testShowAndHide: function () {
-    var playerController = {
+    this.playerController = {
       getPlayer: function getPlayer() { return Player.create('player', 0); }
     };
     var pairing = {
@@ -34,21 +31,73 @@ TestCase('QuizViewTest', {
       R1: Question.create('Q1', Difficulty.EASY, 'question?', Answer.create(0)),
       R2: Question.create('Q2', Difficulty.EASY, 'question?', Answer.create(0))
     };
-    var quizController = {
+    this.quizController = {
       getCurrentQuiz: function getCurrentQuiz() { return Quiz.create('topicId', pairing, Difficulty.EASY, questionsByRegion); }
     };
     var pos = Position.create(0, 0);
-    var regionsByTopic = {
+    this.regionsByTopic = {
       topicId: Regions.create([ Region.create('R1', 'R1src', pos, pos, pos),  Region.create('R2', 'R2src', pos, pos, pos)  ])
     };
-    var topicsById = {
+    this.topicsById = {
       topicId: Topic.create('topicId', 'topic', 'image', 'mapImage', pos, 1900)
     };
-    var menu = QuizView.create(playerController, quizController, regionsByTopic, topicsById);
+  },
+
+  tearDown: function () {
+    $('body').empty();
+    net.riemschneider.history.views.components.ImageMap.create = this.oldImageMapCreate;
+  },
+
+  testShowAndHide: function () {
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
     assertEquals('none', this.quizView.css('display'));
-    menu.show();
+    view.show();
     assertEquals('block', this.quizView.css('display'));
-    menu.hide();
+    view.hide();
     assertEquals('none', this.quizView.css('display'));
+  },
+
+  testRegionSelectedCalledIfCallbackWasSet: function () {
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    view.show();
+    var selectedRegion = null;
+    view.onRegionSelected(function (region) { selectedRegion = region; });
+    this.createdImages[0].onTapped();
+    assertEquals('R1', selectedRegion.getId());
+  },
+
+  testRegionSelectedNotCalledIfCallbackWasUnSet: function () {
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    view.show();
+    var selectedRegion = null;
+    view.onRegionSelected(function (region) { selectedRegion = region; });
+    view.onRegionSelected(null);
+    this.createdImages[0].onTapped();
+    assertNull(selectedRegion);
+  },
+
+  createImageMapMock: function () {
+    this.oldImageMapCreate = ImageMap.create;
+    var createdImages = [];
+    this.createdImages = createdImages;
+    ImageMap.create = function create(containerDiv) {
+      assertTrue(containerDiv.hasClass('quizMapSelection'));
+      return {
+        addImage: function addImage(imgSrc, imgPos, imgSize, onTapped) {
+          var img = {
+            addImageClass: function addImageClass(style) { img.lastImageClass = style; },
+            addMaskClass: function addMaskClass(style) { img.lastMaskClass = style; },
+            imgSrc: imgSrc,
+            imgPos: imgPos,
+            imgSize: imgSize,
+            onTapped: onTapped,
+            lastImageClass: null,
+            lastMaskClass: null
+          };
+          createdImages.push(img);
+          return img;
+        }
+      };
+    };
   }
 });
