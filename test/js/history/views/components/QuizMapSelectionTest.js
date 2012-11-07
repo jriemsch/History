@@ -1,3 +1,4 @@
+var RegionState = net.riemschneider.history.views.components.RegionState;
 var QuizMapSelection = net.riemschneider.history.views.components.QuizMapSelection;
 var Topic = net.riemschneider.history.model.Topic;
 var Position = net.riemschneider.graphics.Position;
@@ -60,8 +61,8 @@ TestCase('QuizMapSelectionTest', {
     assertTrue(Position.create(25, 50, Position.Unit.PERCENT).equals(this.createdImages[1].imgSize));
     assertEquals('quizRegion', this.createdImages[0].lastImageClass);
     assertEquals('quizRegion', this.createdImages[1].lastImageClass);
-    assertEquals('quizRegionUnclaimed', this.createdImages[0].lastMaskClass);
-    assertEquals('quizRegionUnclaimed', this.createdImages[1].lastMaskClass);
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[1].lastMaskClass);
     var difficultyMarkers = container.find('.quizDifficultyMarker');
     assertEquals(2, difficultyMarkers.length);
     assertEquals('35%', this.getLastRecording($(difficultyMarkers[0])).args[0].left);
@@ -91,8 +92,7 @@ TestCase('QuizMapSelectionTest', {
   },
 
   testDestroy: function () {
-    var onTapped = function () {};
-    var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, onTapped);
+    var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, function () {});
     selection.destroy();
     assertEquals(0, $('body').children().length);
   },
@@ -105,6 +105,40 @@ TestCase('QuizMapSelectionTest', {
     assertEquals('R1', tappedRegion.getId());
     this.createdImages[1].onTapped();
     assertEquals('R2', tappedRegion.getId());
+  },
+
+  testSetRegionState: function () {
+    var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, function () {});
+    selection.setRegionState('R2', RegionState.OWNED_PLAYER0);
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
+    assertEquals('quizRegionOWNED_PLAYER0', this.createdImages[1].lastMaskClass);
+  },
+
+  testSetRegionStateNullAndTypeSafe: function () {
+    var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, function () {});
+
+    assertException(function () { selection.setRegionState('R2', null); }, 'TypeError');
+    assertException(function () { selection.setRegionState(null, RegionState.OWNED_PLAYER0); }, 'TypeError');
+
+    assertException(function () { selection.setRegionState('R2', 'state'); }, 'TypeError');
+    assertException(function () { selection.setRegionState(2, RegionState.OWNED_PLAYER0); }, 'TypeError');
+    assertException(function () { selection.setRegionState('other', RegionState.OWNED_PLAYER0); }, 'TypeError');
+  },
+
+  testFlashRegion: function () {
+    var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, function () {});
+    selection.flashRegion('R2');
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
+    assertEquals('quizRegionSelectionFlash', this.createdImages[1].lastMaskClass);
+  },
+
+  testFlashRegionNullAndTypeSafe: function () {
+    var selection = QuizMapSelection.create($('body'), this.topic, this.regions, this.questionsByRegion, this.scoreByDifficulty, function () {});
+
+    assertException(function () { selection.flashRegion(null); }, 'TypeError');
+
+    assertException(function () { selection.flashRegion(2); }, 'TypeError');
+    assertException(function () { selection.flashRegion('other'); }, 'TypeError');
   },
 
   createImageMapMock: function () {

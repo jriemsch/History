@@ -1,6 +1,8 @@
 net.riemschneider.history.controller = net.riemschneider.history.controller || {};
 
 (function () {
+  "use strict";
+
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
 
   net.riemschneider.history.controller.QuizController = {

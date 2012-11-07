@@ -753,11 +753,31 @@ body {
     opacity: 0.3;
 }
 
-.quizRegionUnclaimed {
+.quizRegionUNCLAIMED {
     background-color: gray;
 }
 
-.quizRegionSelected {
+.quizRegionSELECTED {
+    background-color: white;
+}
+
+.quizRegionOWNED_PLAYER0 {
+    background-color: #0919f0;
+}
+
+.quizRegionOWNED_PLAYER1 {
+    background-color: #09f0f0;
+}
+
+.quizRegionOWNED_PLAYER2 {
+    background-color: #f019e0;
+}
+
+.quizRegionOWNED_LOST {
+    background-color: #2f4f4f;
+}
+
+.quizRegionSelectionFlash {
     background-color: white;
 }
 

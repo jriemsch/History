@@ -2,10 +2,13 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 net.riemschneider.history.views.components = net.riemschneider.history.views.components || {};
 
 (function () {
+  "use strict";
+
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ImageMap = net.riemschneider.history.views.components.ImageMap;
   var Position = net.riemschneider.graphics.Position;
   var Difficulty = net.riemschneider.history.model.Difficulty;
+  var RegionState = net.riemschneider.history.views.components.RegionState;
 
   var difficultyClasses = {};
   difficultyClasses[Difficulty.EASY.key] = 'quizDifficultyEasy';
@@ -26,6 +29,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       var containerDiv = $('<div class="quizMapSelection"></div>');
       var imageMap = ImageMap.create(containerDiv);
       var regionArray = regions.getRegions();
+      var mapElements = {};
 
       for (var idx = 0, len = regionArray.length; idx < len; ++idx) {
         var region = regionArray[idx];
@@ -35,7 +39,8 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         var mapElement = addImage(imgSrc, imgPos, imgSize, region);
         mapElement.addImageClass('quizRegion');
         mapElement.addMaskClass('quizMaskRegion');
-        mapElement.addMaskClass('quizRegionUnclaimed');
+        mapElement.addMaskClass('quizRegionUNCLAIMED');
+        mapElements[region.getId()] = mapElement;
 
         var difficultyMarker = $('<div class="quizDifficultyMarker"></div>');
         var difficultyPos = region.getDifficultyPos();
@@ -66,19 +71,25 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
       }
 
       function addImage(imgSrc, imgPos, imgSize, region) {
-        var mapElement = imageMap.addImage(imgSrc, imgPos, imgSize, onImageTapped);
-
-        function onImageTapped() {
-          mapElement.addMaskClass('quizRegionSelected');
-          setTimeout(function () { mapElement.removeMaskClass('quizRegionSelected'); }, 100);
-          onTapped(region);
-        }
-
-        return mapElement;
+        return imageMap.addImage(imgSrc, imgPos, imgSize, function () { onTapped(region); });
       }
 
       return {
-        destroy: function destroy() { containerDiv.remove(); }
+        destroy: function destroy() { containerDiv.remove(); },
+        setRegionState: function setRegionState(regionId, regionState) {
+          ArgumentUtils.assertString(regionId);
+          ArgumentUtils.assertNotNull(mapElements[regionId]);
+          ArgumentUtils.assertType(regionState, RegionState);
+
+          mapElements[regionId].addMaskClass('quizRegion' + regionState.key);
+        },
+        flashRegion: function flashRegion(regionId) {
+          ArgumentUtils.assertString(regionId);
+          ArgumentUtils.assertNotNull(mapElements[regionId]);
+
+          mapElements[regionId].addMaskClass('quizRegionSelectionFlash');
+          setTimeout(function () { mapElements[regionId].removeMaskClass('quizRegionSelectionFlash'); }, 100);
+        }
       };
     }
   };

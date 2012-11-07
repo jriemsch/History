@@ -1,6 +1,8 @@
 net.riemschneider.history.model = net.riemschneider.history.model || {};
 
 (function () {
+  "use strict";
+
   var TypeUtils = net.riemschneider.utils.TypeUtils;
 
   net.riemschneider.history.model.Difficulty = TypeUtils.enhanceEnum('net.riemschneider.history.model.Difficulty', {

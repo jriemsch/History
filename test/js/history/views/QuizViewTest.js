@@ -31,8 +31,9 @@ TestCase('QuizViewTest', {
       R1: Question.create('Q1', Difficulty.EASY, 'question?', Answer.create(0)),
       R2: Question.create('Q2', Difficulty.EASY, 'question?', Answer.create(0))
     };
+    var quiz = Quiz.create('topicId', pairing, Difficulty.EASY, questionsByRegion);
     this.quizController = {
-      getCurrentQuiz: function getCurrentQuiz() { return Quiz.create('topicId', pairing, Difficulty.EASY, questionsByRegion); }
+      getCurrentQuiz: function getCurrentQuiz() { return quiz; }
     };
     var pos = Position.create(0, 0);
     this.regionsByTopic = {
@@ -74,6 +75,23 @@ TestCase('QuizViewTest', {
     view.onRegionSelected(null);
     this.createdImages[0].onTapped();
     assertNull(selectedRegion);
+  },
+
+  testQuizSelectedRegionIdChangesClassOfImageWhileShown: function () {
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    view.show();
+    this.quizController.getCurrentQuiz().setSelectedRegionId('R2');
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
+    assertEquals('quizRegionSELECTED', this.createdImages[1].lastMaskClass);
+  },
+
+  testQuizSelectedRegionIdDoesNotChangeClassOfImageWhileHidden: function () {
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    view.show();
+    view.hide();
+    this.quizController.getCurrentQuiz().setSelectedRegionId('R2');
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
+    assertEquals('quizRegionUNCLAIMED', this.createdImages[1].lastMaskClass);
   },
 
   createImageMapMock: function () {

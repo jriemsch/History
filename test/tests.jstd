@@ -12,6 +12,7 @@ load:
   - ../../../jslib/main/js/utils/DeviceUtils.js
   - ../../../jslib/main/js/utils/TouchUtils.js
   - ../../../jslib/main/js/utils/ClosureUtils.js
+  - ../../../jslib/main/js/utils/Observer.js
   - ../../../jslib/test/utils/WebUtils.js
   - ../../../jslib/main/js/graphics/Position.js
   - ../../../jslib/main/js/graphics/ImageUtils.js
@@ -54,12 +55,14 @@ load:
   - ../main/js/history/controller/QuestionListGenerator.js
   - ../main/js/history/controller/QuizState.js
   - ../main/js/history/controller/QuizPlayerSelectsRegionState.js
+  - ../main/js/history/controller/QuizQuestionState.js
   - ../main/js/history/views/components/ImageSelection.js
   - ../main/js/history/views/components/ImageSelectionImageDiv.js
   - ../main/js/history/views/components/ImageSelectionOpponentDiv.js
   - ../main/js/history/views/components/AnimatedBackground.js
   - ../main/js/history/views/components/ImageMap.js
   - ../main/js/history/views/components/QuizPlayers.js
+  - ../main/js/history/views/components/RegionState.js
   - ../main/js/history/views/components/QuizMapSelection.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
@@ -105,6 +108,7 @@ test:
   - js/history/controller/QuestionListGeneratorTest.js
   - js/history/controller/QuizStateTest.js
   - js/history/controller/QuizPlayerSelectsRegionStateTest.js
+  - js/history/controller/QuizQuestionStateTest.js
   - js/history/views/components/ImageSelectionTest.js
   - js/history/views/components/ImageSelectionImageDivTest.js
   - js/history/views/components/ImageSelectionOpponentDivTest.js
@@ -112,6 +116,7 @@ test:
   - js/history/views/components/ImageMapTest.js
   - js/history/views/components/QuizPlayersTest.js
   - js/history/views/components/QuizMapSelectionTest.js
+  - js/history/views/components/RegionStateTest.js
   - js/history/views/AvatarSelectionTest.js
   - js/history/views/TopicSelectionTest.js
   - js/history/views/OpponentSelectionTest.js

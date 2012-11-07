@@ -8,18 +8,18 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
 
   net.riemschneider.history.inject.Injector = {
     create: function (onInjectorCreated) {
-      var injector = {};
+      var inj = {};
       var countDown = ClosureUtils.createCountDown(7, onDataRead);
 
-      injector.addOns = net.riemschneider.history.model.AddOns.create();
+      inj.addOns = net.riemschneider.history.model.AddOns.create();
 
-      injector.opponents = [];
+      inj.opponents = [];
       var baseOpponentsReader = net.riemschneider.history.data.BaseOpponentsReader.create();
       baseOpponentsReader.read('json/baseOpponents.json', addOpponent, countDown);
 
-      injector.topicsById = {};
-      injector.questionsByTopicAndFact = {};
-      injector.regionsByTopic = {};
+      inj.topicsById = {};
+      inj.questionsByTopicAndFact = {};
+      inj.regionsByTopic = {};
       var topicDataReader = net.riemschneider.history.data.TopicDataReader.create();
       topicDataReader.read('json/frenchRevolution.json', addTopic, countDown);
       topicDataReader.read('json/americanRevolution.json', addTopic, countDown);
@@ -32,39 +32,40 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
 
       function addTopic(topic, regions, facts, unlocked) {
         var topicId = topic.getId();
-        injector.topicsById[topicId] = topic;
-        injector.regionsByTopic[topicId] = regions;
-        injector.questionsByTopicAndFact[topicId] = facts;
+        inj.topicsById[topicId] = topic;
+        inj.regionsByTopic[topicId] = regions;
+        inj.questionsByTopicAndFact[topicId] = facts;
 
         if (unlocked) {
-          injector.addOns.unlock(topicId);
+          inj.addOns.unlock(topicId);
         }
       }
-      function addOpponent(opponent) { injector.opponents.push(opponent); }
-      function setDistribution(distribution) { injector.questionDistribution = distribution; }
+      function addOpponent(opponent) { inj.opponents.push(opponent); }
+      function setDistribution(distribution) { inj.questionDistribution = distribution; }
 
       function onDataRead() {
-        injector.opponentController = net.riemschneider.history.controller.OpponentController.create(injector.opponents);
-        injector.playerController = net.riemschneider.history.controller.PlayerController.create();
-        injector.questionListGenerator = net.riemschneider.history.controller.QuestionListGenerator.create(injector.questionsByTopicAndFact);
-        injector.quizGenerator = net.riemschneider.history.controller.QuizGenerator.create(injector.regionsByTopic, injector.questionListGenerator, injector.questionDistribution);
-        injector.quizController = net.riemschneider.history.controller.QuizController.create();
+        inj.opponentController = net.riemschneider.history.controller.OpponentController.create(inj.opponents);
+        inj.playerController = net.riemschneider.history.controller.PlayerController.create();
+        inj.questionListGenerator = net.riemschneider.history.controller.QuestionListGenerator.create(inj.questionsByTopicAndFact);
+        inj.quizGenerator = net.riemschneider.history.controller.QuizGenerator.create(inj.regionsByTopic, inj.questionListGenerator, inj.questionDistribution);
+        inj.quizController = net.riemschneider.history.controller.QuizController.create();
 
-        injector.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(injector.playerController);
-        injector.topicSelection = net.riemschneider.history.views.TopicSelection.create(injector.topicsById, injector.addOns);
-        injector.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
-        injector.menu = net.riemschneider.history.views.Menu.create();
-        injector.quizView = net.riemschneider.history.views.QuizView.create(injector.playerController, injector.quizController, injector.regionsByTopic, injector.topicsById);
+        inj.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(inj.playerController);
+        inj.topicSelection = net.riemschneider.history.views.TopicSelection.create(inj.topicsById, inj.addOns);
+        inj.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
+        inj.menu = net.riemschneider.history.views.Menu.create();
+        inj.quizView = net.riemschneider.history.views.QuizView.create(inj.playerController, inj.quizController, inj.regionsByTopic, inj.topicsById);
 
-        injector.stateMachine = net.riemschneider.structures.StateMachine.create();
-        injector.menuState = net.riemschneider.history.controller.MenuState.create(injector.stateMachine, injector.menu);
-        injector.avatarState = net.riemschneider.history.controller.AvatarState.create(injector.stateMachine, injector.avatarSelection, injector.playerController);
-        injector.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(injector.stateMachine, injector.topicSelection, injector.quizGenerator);
-        injector.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(injector.stateMachine, injector.opponentSelection, injector.opponentController, injector.quizGenerator, injector.quizController);
-        injector.quizState = net.riemschneider.history.controller.QuizState.create(injector.stateMachine, injector.quizView);
-        injector.quizPlayerSelectsRegionState = net.riemschneider.history.controller.QuizPlayerSelectsRegionState.create(injector.stateMachine, injector.quizView);
+        inj.stateMachine = net.riemschneider.structures.StateMachine.create();
+        inj.menuState = net.riemschneider.history.controller.MenuState.create(inj.stateMachine, inj.menu);
+        inj.avatarState = net.riemschneider.history.controller.AvatarState.create(inj.stateMachine, inj.avatarSelection, inj.playerController);
+        inj.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(inj.stateMachine, inj.topicSelection, inj.quizGenerator);
+        inj.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(inj.stateMachine, inj.opponentSelection, inj.opponentController, inj.quizGenerator, inj.quizController);
+        inj.quizState = net.riemschneider.history.controller.QuizState.create(inj.stateMachine, inj.quizView);
+        inj.quizPlayerSelectsRegionState = net.riemschneider.history.controller.QuizPlayerSelectsRegionState.create(inj.stateMachine, inj.quizController, inj.quizView);
+        inj.quizQuestionState = net.riemschneider.history.controller.QuizQuestionState.create(inj.stateMachine, inj.quizView);
 
-        onInjectorCreated(injector);
+        onInjectorCreated(inj);
       }
     }
   };

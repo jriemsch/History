@@ -8,7 +8,8 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
   var State = net.riemschneider.structures.State;
 
   net.riemschneider.history.controller.QuizPlayerSelectsRegionState = {
-    create: function create(stateMachine, quizView) {
+    create: function create(stateMachine, quizController, quizView) {
+      ArgumentUtils.assertNotNull(quizController);
       ArgumentUtils.assertNotNull(quizView);
       ArgumentUtils.assertFunction(quizView.onRegionSelected);
 
@@ -21,6 +22,8 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
       };
 
       function onRegionSelected(region) {
+        quizController.getCurrentQuiz().setSelectedRegionId(region.getId());
+        stateMachine.transitionTo('quizQuestion');
       }
 
       return state;
