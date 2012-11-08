@@ -16,7 +16,7 @@ TestCase('QuizViewTest', {
     this.createImageMapMock();
 
     $('body').empty();
-    this.quizView = $('<div id="quizView"></div>');
+    this.quizView = $('<div id="quizView"><div class="quizMap"></div></div>');
     $('body').append(this.quizView);
     this.quizView.hide();
 
@@ -27,11 +27,11 @@ TestCase('QuizViewTest', {
       first: Opponent.create('OPP0', 'Hans Schenk', 0, Difficulty.EASY, [ 0.9, 0.8, 0.5 ], []),
       second: Opponent.create('OPP2', 'Martin Salm', 2, Difficulty.EASY, [ 0.8, 0.5, 0.2 ], [])
     };
-    var questionsByRegion = {
+    this.questionsByRegion = {
       R1: Question.create('Q1', Difficulty.EASY, 'question?', Answer.create(0)),
       R2: Question.create('Q2', Difficulty.EASY, 'question?', Answer.create(0))
     };
-    var quiz = Quiz.create('topicId', pairing, Difficulty.EASY, questionsByRegion);
+    var quiz = Quiz.create('topicId', pairing, Difficulty.EASY, this.questionsByRegion);
     this.quizController = {
       getCurrentQuiz: function getCurrentQuiz() { return quiz; }
     };
@@ -92,6 +92,13 @@ TestCase('QuizViewTest', {
     this.quizController.getCurrentQuiz().setSelectedRegionId('R2');
     assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
     assertEquals('quizRegionUNCLAIMED', this.createdImages[1].lastMaskClass);
+  },
+
+  testShowQuestion: function () {
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    view.show();
+    view.showQuestion(this.questionsByRegion.R1);
+    assertEquals('question?', $('body').find('.quizQuestion').text());
   },
 
   createImageMapMock: function () {

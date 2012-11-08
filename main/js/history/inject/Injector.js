@@ -63,7 +63,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(inj.stateMachine, inj.opponentSelection, inj.opponentController, inj.quizGenerator, inj.quizController);
         inj.quizState = net.riemschneider.history.controller.QuizState.create(inj.stateMachine, inj.quizView);
         inj.quizPlayerSelectsRegionState = net.riemschneider.history.controller.QuizPlayerSelectsRegionState.create(inj.stateMachine, inj.quizController, inj.quizView);
-        inj.quizQuestionState = net.riemschneider.history.controller.QuizQuestionState.create(inj.stateMachine, inj.quizView);
+        inj.quizQuestionState = net.riemschneider.history.controller.QuizQuestionState.create(inj.stateMachine, inj.quizController, inj.quizView);
 
         onInjectorCreated(inj);
       }

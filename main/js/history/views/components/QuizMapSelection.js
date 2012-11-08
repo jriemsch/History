@@ -43,7 +43,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         mapElements[region.getId()] = mapElement;
 
         var difficultyMarker = $('<div class="quizDifficultyMarker"></div>');
-        var difficultyPos = region.getDifficultyPos();
+        var difficultyPos = rel(region.getDifficultyPos());
         difficultyMarker.css({
           left: imgPos.getX() + difficultyPos.getX() + imgPos.getUnit().css,
           top: imgPos.getY() + difficultyPos.getY() + imgPos.getUnit().css

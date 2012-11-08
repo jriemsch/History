@@ -21,8 +21,8 @@ TestCase('QuizMapSelectionTest', {
     var pos = Position.create(1280, 256);
     this.topic = Topic.create('topic', 'Topic', 'image', 'mapImage', pos, 1900);
 
-    var region1 = Region.create('R1', 'src1', Position.create(128, 128), Position.create(256, 128), Position.create(10, 20));
-    var region2 = Region.create('R2', 'src2', Position.create(64, 256), Position.create(512, 1024), Position.create(20, 10));
+    var region1 = Region.create('R1', 'src1', Position.create(128, 128), Position.create(256, 128), Position.create(512, 256));
+    var region2 = Region.create('R2', 'src2', Position.create(64, 256), Position.create(512, 1024), Position.create(128, 64));
     this.regions = Regions.create([region1, region2]);
 
     this.questionsByRegion = {
@@ -65,10 +65,10 @@ TestCase('QuizMapSelectionTest', {
     assertEquals('quizRegionUNCLAIMED', this.createdImages[1].lastMaskClass);
     var difficultyMarkers = container.find('.quizDifficultyMarker');
     assertEquals(2, difficultyMarkers.length);
-    assertEquals('35%', this.getLastRecording($(difficultyMarkers[0])).args[0].left);
-    assertEquals('70%', this.getLastRecording($(difficultyMarkers[0])).args[0].top);
-    assertEquals('41.875%', this.getLastRecording($(difficultyMarkers[1])).args[0].left);
-    assertEquals('66.25%', this.getLastRecording($(difficultyMarkers[1])).args[0].top);
+    assertEquals('50%', this.getLastRecording($(difficultyMarkers[0])).args[0].left);
+    assertEquals('62.5%', this.getLastRecording($(difficultyMarkers[0])).args[0].top);
+    assertEquals('28.125%', this.getLastRecording($(difficultyMarkers[1])).args[0].left);
+    assertEquals('59.375%', this.getLastRecording($(difficultyMarkers[1])).args[0].top);
   },
 
   testCreateNullAndTypeSafe: function () {

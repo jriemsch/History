@@ -7,6 +7,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var QuizPlayers = net.riemschneider.history.views.components.QuizPlayers;
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var RegionState = net.riemschneider.history.views.components.RegionState;
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
+  var AnswerComponent = net.riemschneider.history.views.components.AnswerComponent;
 
   var scoreByDifficulty = {};
   scoreByDifficulty[Difficulty.EASY.key] = 5;
@@ -57,7 +59,26 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           quizPlayers.destroy();
           quiz.getSelectedRegionIdTopic().unregisterObserver(onSelectedRegionChanged);
         },
-        onRegionSelected: function onRegionSelected(callback) { onRegionSelectedCallback = callback; }
+        onRegionSelected: function onRegionSelected(callback) { onRegionSelectedCallback = callback; },
+        showQuestion: function showQuestion(question) {
+          ArgumentUtils.assertType(question, net.riemschneider.history.model.Question);
+
+          var quizView = $('#quizView');
+          var quizMap = quizView.find('.quizMap');
+          var quizQuestionDiv = $('<div class="quizQuestion">' + question.getText() + '</div>');
+          quizMap.append(quizQuestionDiv);
+          var answer = question.getAnswer();
+          var answerComponent = AnswerComponent.create(answer);
+          var fadeInElements = answerComponent.show();
+          fadeIn(quizQuestionDiv, 300);
+          for (var idx = 0, len = fadeInElements.length; idx < len; ++idx) {
+            fadeIn(fadeInElements[idx], 300 * (idx + 1));
+          }
+
+          function fadeIn(element, time) {
+            setTimeout(function () { element.css({ opacity: 1 }); }, time);
+          }
+        }
       };
     }
   };
