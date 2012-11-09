@@ -64,7 +64,7 @@ load:
   - ../main/js/history/views/components/QuizPlayers.js
   - ../main/js/history/views/components/RegionState.js
   - ../main/js/history/views/components/QuizMapSelection.js
-  - ../main/js/history/views/components/AnswerComponent.js
+  - ../main/js/history/views/components/AnswerComponentRegistry.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
   - ../main/js/history/views/OpponentSelection.js
@@ -118,7 +118,7 @@ test:
   - js/history/views/components/QuizPlayersTest.js
   - js/history/views/components/QuizMapSelectionTest.js
   - js/history/views/components/RegionStateTest.js
-  - js/history/views/components/AnswerComponentTest.js
+  - js/history/views/components/AnswerComponentRegistryTest.js
   - js/history/views/AvatarSelectionTest.js
   - js/history/views/TopicSelectionTest.js
   - js/history/views/OpponentSelectionTest.js

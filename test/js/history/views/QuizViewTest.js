@@ -10,6 +10,7 @@ var Position = net.riemschneider.graphics.Position;
 var Topic = net.riemschneider.history.model.Topic;
 var Answer = net.riemschneider.history.model.Answer;
 var ImageMap = net.riemschneider.history.views.components.ImageMap;
+var AnswerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry;
 
 TestCase('QuizViewTest', {
   setUp: function () {
@@ -42,6 +43,7 @@ TestCase('QuizViewTest', {
     this.topicsById = {
       topicId: Topic.create('topicId', 'topic', 'image', 'mapImage', pos, 1900)
     };
+	this.answerComponentRegistry = AnswerComponentRegistry.create();
   },
 
   tearDown: function () {
@@ -50,7 +52,7 @@ TestCase('QuizViewTest', {
   },
 
   testShowAndHide: function () {
-    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById, this.answerComponentRegistry);
     assertEquals('none', this.quizView.css('display'));
     view.show();
     assertEquals('block', this.quizView.css('display'));
@@ -59,7 +61,7 @@ TestCase('QuizViewTest', {
   },
 
   testRegionSelectedCalledIfCallbackWasSet: function () {
-    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById, this.answerComponentRegistry);
     view.show();
     var selectedRegion = null;
     view.onRegionSelected(function (region) { selectedRegion = region; });
@@ -68,7 +70,7 @@ TestCase('QuizViewTest', {
   },
 
   testRegionSelectedNotCalledIfCallbackWasUnSet: function () {
-    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById, this.answerComponentRegistry);
     view.show();
     var selectedRegion = null;
     view.onRegionSelected(function (region) { selectedRegion = region; });
@@ -78,7 +80,7 @@ TestCase('QuizViewTest', {
   },
 
   testQuizSelectedRegionIdChangesClassOfImageWhileShown: function () {
-    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById, this.answerComponentRegistry);
     view.show();
     this.quizController.getCurrentQuiz().setSelectedRegionId('R2');
     assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
@@ -86,7 +88,7 @@ TestCase('QuizViewTest', {
   },
 
   testQuizSelectedRegionIdDoesNotChangeClassOfImageWhileHidden: function () {
-    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById, this.answerComponentRegistry);
     view.show();
     view.hide();
     this.quizController.getCurrentQuiz().setSelectedRegionId('R2');
@@ -95,7 +97,7 @@ TestCase('QuizViewTest', {
   },
 
   testShowQuestion: function () {
-    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById);
+    var view = QuizView.create(this.playerController, this.quizController, this.regionsByTopic, this.topicsById, this.answerComponentRegistry);
     view.show();
     view.showQuestion(this.questionsByRegion.R1);
     assertEquals('question?', $('body').find('.quizQuestion').text());

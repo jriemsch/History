@@ -8,7 +8,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var RegionState = net.riemschneider.history.views.components.RegionState;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var AnswerComponent = net.riemschneider.history.views.components.AnswerComponent;
 
   var scoreByDifficulty = {};
   scoreByDifficulty[Difficulty.EASY.key] = 5;
@@ -16,7 +15,13 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   scoreByDifficulty[Difficulty.HARD.key] = 20;
 
   net.riemschneider.history.views.QuizView = {
-    create: function (playerController, quizController, regionsByTopic, topicsById) {
+    create: function (playerController, quizController, regionsByTopic, topicsById, answerComponentRegistry) {
+	  ArgumentUtils.assertNotNull(playerController);
+	  ArgumentUtils.assertNotNull(quizController);
+	  ArgumentUtils.assertMap(regionsByTopic);
+	  ArgumentUtils.assertMap(topicsById);
+	  ArgumentUtils.assertNotNull(answerComponentRegistry);
+	
       var quizPlayers = null;
       var quizMapSelection = null;
       var onRegionSelectedCallback = null;
@@ -68,8 +73,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           var quizQuestionDiv = $('<div class="quizQuestion">' + question.getText() + '</div>');
           quizMap.append(quizQuestionDiv);
           var answer = question.getAnswer();
-          var answerComponent = AnswerComponent.create(answer);
-          var fadeInElements = answerComponent.show();
+          var answerComponent = answerComponentRegistry.createAnswerComponent(answer);
+          var fadeInElements = answerComponent.show(quizMap);
           fadeIn(quizQuestionDiv, 300);
           for (var idx = 0, len = fadeInElements.length; idx < len; ++idx) {
             fadeIn(fadeInElements[idx], 300 * (idx + 1));

@@ -857,6 +857,7 @@ body {
     opacity: 0;
     -webkit-transform: translateZ(0);
     -webkit-transition: opacity 0.5s linear;
+	z-Index: 30;
 }
 
 @media only screen and (max-width: 640px) {
@@ -864,4 +865,30 @@ body {
         font-size: 10pt;
         text-shadow: #000000 -1px 0 1px, #000000 0 -1px 1px, #000000 1px 0 1px, #000000 0 1px 1px;
     }
+}
+
+.multipleChoiceContainer {
+	position: absolute;
+	top: 30%;
+	bottom: 10%;
+	left: 10%;
+	right: 10%;
+    font-size: 11pt;
+    color: white;
+    text-shadow: #000000 -2px 0 2px, #000000 0 -2px 2px, #000000 2px 0 2px, #000000 0 2px 2px;
+    -webkit-transform: translateZ(0);
+	z-Index: 30;
+}
+
+.multipleChoiceChoice {
+	position: absolute;
+	left: 10%;
+	right: 10%;
+    -webkit-transform: translateZ(0);
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear;
+    border: 8px solid #ffebcd;
+    background-color: #ffebcd;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 3px 3px 8px 0 black;
 }
