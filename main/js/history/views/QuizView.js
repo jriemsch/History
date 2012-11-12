@@ -16,11 +16,11 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   net.riemschneider.history.views.QuizView = {
     create: function (playerController, quizController, regionsByTopic, topicsById, answerComponentRegistry) {
-	  ArgumentUtils.assertNotNull(playerController);
-	  ArgumentUtils.assertNotNull(quizController);
-	  ArgumentUtils.assertMap(regionsByTopic);
-	  ArgumentUtils.assertMap(topicsById);
-	  ArgumentUtils.assertNotNull(answerComponentRegistry);
+      ArgumentUtils.assertNotNull(playerController);
+      ArgumentUtils.assertNotNull(quizController);
+      ArgumentUtils.assertMap(regionsByTopic);
+      ArgumentUtils.assertMap(topicsById);
+      ArgumentUtils.assertNotNull(answerComponentRegistry);
 	
       var quizPlayers = null;
       var quizMapSelection = null;

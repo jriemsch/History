@@ -1,20 +1,20 @@
 var AnswerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry;
 var Answer = net.riemschneider.history.model.Answer;
 
-TestCase('AnswerComponentTest', {
+TestCase('AnswerComponentRegistryTest', {
   setUp: function () {
-	this.registry = AnswerComponentRegistry.create();
+    this.registry = AnswerComponentRegistry.create();
   
     var answerComponentType = {
       isCompatible: function isCompatible(answer) { return answer.getTime() === 10; },
-      create: function create(answer) {
+      createAnswerComponent: function createAnswerComponent(answer) {
         return {
           getAnswer: function getAnswer() { return answer; }
         };
       }
     };
 
-    registry.registerAnswerComponentType(answerComponentType);
+    this.registry.registerAnswerComponentType(answerComponentType);
   },
 
   testCreateAnswerComponent: function () {
