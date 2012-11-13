@@ -1,5 +1,4 @@
 var AvatarSelection = net.riemschneider.history.views.AvatarSelection;
-var PlayerController = net.riemschneider.history.controller.PlayerController;
 var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
 
 TestCase('AvatarSelectionTest', {
@@ -27,8 +26,6 @@ TestCase('AvatarSelectionTest', {
     this.buttonBarDiv.append(this.okButton);
 
     this.avatarSelectionDiv.hide();
-
-    this.playerController = PlayerController.create();
   },
 
   tearDown: function () {
@@ -36,7 +33,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testShowAndHide: function () {
-    var sel = AvatarSelection.create(this.playerController);
+    var sel = AvatarSelection.create();
     assertEquals('none', this.avatarSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.avatarSelectionDiv.css('display'));
@@ -45,36 +42,36 @@ TestCase('AvatarSelectionTest', {
   },
 
   testPreviousNameIsShown: function () {
-    var player = this.playerController.getPlayer();
-    player.setName('initial');
-    AvatarSelection.create(this.playerController).show();
+    var sel = AvatarSelection.create();
+    sel.setName('initial');
+    sel.show();
     assertEquals('initial', this.nameInput.val());
   },
 
   testSelectName: function () {
-    var sel = AvatarSelection.create(this.playerController);
+    var sel = AvatarSelection.create();
     sel.show();
     this.nameInput.val('changed');
     assertEquals('changed', sel.getName());
   },
 
   testAllImagesShown: function () {
-    AvatarSelection.create(this.playerController).show();
+    AvatarSelection.create().show();
     var allImages = $('.imageSelectionOptionImage');
     assertEquals(31, allImages.length);
   },
 
   testPreviousImageIsSelected: function () {
-    var player = this.playerController.getPlayer();
-    player.setAvatarImageIdx(2);
-    AvatarSelection.create(this.playerController).show();
+    var sel = AvatarSelection.create();
+    sel.setAvatarImageIdx(2);
+    sel.show();
     var selectedImage = $('.imageSelectionSelector .imageSelectionOptionImage');
     assertEquals(1, selectedImage.length);
     assertEquals('images/avatars/avatar002.png', selectedImage.attr('src'));
   },
 
   testSelectImage: function () {
-    var sel = AvatarSelection.create(this.playerController);
+    var sel = AvatarSelection.create();
     sel.show();
     var allImages = $('.imageSelectionOptionImage');
     $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
@@ -83,7 +80,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testOkCallsCallback: function () {
-    var sel = AvatarSelection.create(this.playerController);
+    var sel = AvatarSelection.create();
     var called = false;
     sel.onOk(function () { called = true; });
     sel.show();
@@ -93,7 +90,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testNameInputFocusIsLostWhenPressingReturn: function () {
-    AvatarSelection.create(this.playerController).show();
+    AvatarSelection.create().show();
     var blurRecorder = JQueryTestUtils.startRecording('blur');
     this.nameInput.trigger(jQuery.Event('keydown', { which: 13 }));
     JQueryTestUtils.stopRecording(blurRecorder);
@@ -103,7 +100,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testNameInputFocusIsLostWhenClickingSomewhere: function () {
-    AvatarSelection.create(this.playerController).show();
+    AvatarSelection.create().show();
     var blurRecorder = JQueryTestUtils.startRecording('blur');
     $(document).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     JQueryTestUtils.stopRecording(blurRecorder);

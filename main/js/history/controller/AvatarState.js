@@ -17,6 +17,10 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
           savePlayer();
           stateMachine.transitionTo('menu');
         });
+
+        var player = playerController.getPlayer();
+        avatarSelection.setAvatarImageIdx(player.getAvatarImageIdx());
+        avatarSelection.setName(player.getName());
       };
 
       function savePlayer() {

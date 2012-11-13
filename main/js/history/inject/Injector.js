@@ -50,12 +50,12 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.quizGenerator = net.riemschneider.history.controller.QuizGenerator.create(inj.regionsByTopic, inj.questionListGenerator, inj.questionDistribution);
         inj.quizController = net.riemschneider.history.controller.QuizController.create();
 
-        inj.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(inj.playerController);
+        inj.avatarSelection = net.riemschneider.history.views.AvatarSelection.create();
         inj.topicSelection = net.riemschneider.history.views.TopicSelection.create(inj.topicsById, inj.addOns);
         inj.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
         inj.menu = net.riemschneider.history.views.Menu.create();
-		inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
-		inj.multipleChoiceComponent = net.riemschneider.history.views.components.MultipleChoiceComponent.create(inj.answerComponentRegistry);
+	    	inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
+		    inj.multipleChoiceComponent = net.riemschneider.history.views.components.MultipleChoiceComponent.create(inj.answerComponentRegistry);
         inj.quizView = net.riemschneider.history.views.QuizView.create(inj.playerController, inj.quizController, inj.regionsByTopic, inj.topicsById, inj.answerComponentRegistry);
 
         inj.stateMachine = net.riemschneider.structures.StateMachine.create();

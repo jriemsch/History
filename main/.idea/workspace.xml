@@ -4,10 +4,11 @@
     <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/QuizView.js" afterPath="$PROJECT_DIR$/js/history/views/QuizView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js" afterPath="$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js" afterPath="$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/AvatarState.js" afterPath="$PROJECT_DIR$/js/history/controller/AvatarState.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" afterPath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,28 +38,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="QuizViewTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="16" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="QuizView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="26" selection-start="3534" selection-end="3534" vertical-scroll-proportion="0.0">
+            <state line="47" column="115" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultipleChoiceComponent.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AvatarSelection.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AvatarState.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarState.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="68" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AvatarSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="104" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AvatarStateTest.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="16" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.6777996">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Injector.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="148" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultipleChoiceComponent.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="40" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.5421687">
+            <state line="40" column="77" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,42 +114,6 @@
         <entry file="file://$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="34" column="42" selection-start="1281" selection-end="1302" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageMapTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="100" selection-start="6419" selection-end="6419" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Answer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/model/Answer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="4" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.jstd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="54" selection-start="5448" selection-end="5448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,11 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
-        <option value="$PROJECT_DIR$/../../../assets/History/converted/json/frenchRevolution.json" />
-        <option value="$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
         <option value="$PROJECT_DIR$/../test/js/history/controller/QuizQuestionStateTest.js" />
         <option value="$PROJECT_DIR$/js/history/controller/QuizQuestionState.js" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -161,6 +157,11 @@
         <option value="$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js" />
         <option value="$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js" />
         <option value="$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js" />
+        <option value="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
+        <option value="$PROJECT_DIR$/js/history/controller/AvatarState.js" />
+        <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" />
       </list>
     </option>
   </component>
@@ -701,121 +702,6 @@
       <recent name="$PROJECT_DIR$/js/history/views" />
     </key>
   </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/css/main.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/index.html</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/js/history/inject/Injector.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/js/history/views/QuizView.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/../test/tests.jstd</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/js/history/views/components/AnswerComponent.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentTest.js</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
-  </component>
   <component name="RunManager" selected="JsTestDriver.Tests History">
     <configuration default="false" name="QuizMapSelectionTest" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
       <setting name="configLocationType" value="TEST_CASE" />
@@ -1172,31 +1058,35 @@
       <created>1352360697436</created>
       <updated>1352360697436</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Fixed AnswerComponentRegistryTest and formatting">
+      <created>1352697597382</created>
+      <updated>1352697597382</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2556" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.47609562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.474502" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19553503" sideWeight="0.48725098" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.804465" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2434263" sideWeight="0.21939954" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19641434" sideWeight="0.804465" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.47290838" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.5243028" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19960159" sideWeight="0.804465" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.47131473" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.52589643" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.49681276" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.804465" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1238,7 +1128,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Display Question" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed AnswerComponentRegistryTest and formatting" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1251,7 +1141,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Tests for state controllers" />
     <MESSAGE value="Extracted option div creation from ImageSelection.js" />
     <MESSAGE value="Opponent Selection" />
     <MESSAGE value="Refine Css for Opponent Selection" />
@@ -1276,6 +1165,7 @@
     <MESSAGE value="Region selection is quiz view" />
     <MESSAGE value="Track selected region in quiz&#10;Go to quiz question state after region selection" />
     <MESSAGE value="Display Question" />
+    <MESSAGE value="Fixed AnswerComponentRegistryTest and formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1283,31 +1173,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="866" column="93" selection-start="17992" selection-end="17992" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/Topic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="67" selection-start="374" selection-end="386" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="23" selection-start="3721" selection-end="3721" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizQuestionStateTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="43" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/MenuTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="63" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/history/controller/QuizQuestionState.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
@@ -1371,16 +1236,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="26" selection-start="3534" selection-end="3534" vertical-scroll-proportion="0.0">
+        <state line="40" column="77" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="40" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.5421687">
+        <state line="47" column="115" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="68" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="148" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="104" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="16" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.6777996">
           <folding />
         </state>
       </provider>

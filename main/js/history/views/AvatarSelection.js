@@ -9,7 +9,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.AvatarSelection = {
-    create: function (playerController) {
+    create: function () {
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
@@ -72,10 +72,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
           AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
 
-          var player = playerController.getPlayer();
-          imageSelection.setSelection(player.getAvatarImageIdx());
-          nameInput.val(player.getName());
-
           prepareOnResize();
         },
         hide: function hide() {
@@ -84,7 +80,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           $('#avatarSelection').hide();
         },
         onOk: function onOk(callback) { onOkCallback = callback; },
+        setAvatarImageIdx: function setAvatarImageIdx(avatarImageIdx) { imageSelection.setSelection(avatarImageIdx); },
         getAvatarImageIdx: function getAvatarImageIdx() { return imageSelection.getSelection(); },
+        setName: function setName(name) { nameInput.val(name); },
         getName: function getName() { return nameInput.val(); }
       };
     }
