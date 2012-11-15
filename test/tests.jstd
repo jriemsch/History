@@ -13,6 +13,7 @@ load:
   - ../../../jslib/main/js/utils/TouchUtils.js
   - ../../../jslib/main/js/utils/ClosureUtils.js
   - ../../../jslib/main/js/utils/Observer.js
+  - ../../../jslib/main/js/utils/ObservedProperty.js
   - ../../../jslib/test/utils/WebUtils.js
   - ../../../jslib/main/js/graphics/Position.js
   - ../../../jslib/main/js/graphics/ImageUtils.js
