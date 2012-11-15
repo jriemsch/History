@@ -1,4 +1,5 @@
 var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
+var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
 
 TestCase('ImageSelectionTest', {
   setUp: function () {

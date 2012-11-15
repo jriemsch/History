@@ -52,5 +52,5 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         }
       }
     }
-  }
+  };
 }());

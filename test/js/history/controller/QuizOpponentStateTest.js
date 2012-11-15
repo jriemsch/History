@@ -43,7 +43,7 @@ TestCase('QuizOpponentStateTest', {
     this.quizController = {
       createdQuiz: null,
       setCurrentQuiz: function setCurrentQuiz(quiz) { this.createdQuiz = quiz; }
-    }
+    };
   },
 
   testCreate: function () {

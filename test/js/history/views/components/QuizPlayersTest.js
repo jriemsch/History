@@ -1,6 +1,7 @@
 var QuizPlayers = net.riemschneider.history.views.components.QuizPlayers;
 var Opponent = net.riemschneider.history.model.Opponent;
 var Player = net.riemschneider.history.model.Player;
+var Difficulty = net.riemschneider.history.model.Difficulty;
 
 TestCase('QuizPlayersTest', {
   setUp: function () {

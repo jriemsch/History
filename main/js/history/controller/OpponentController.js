@@ -16,7 +16,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
           var results = {};
           for (var idx = 0, len = Difficulty.values.length; idx < len; ++idx) {
             var difficulty = Difficulty.values[idx];
-            results[difficulty.key] = getRandomOpponentPairings(difficulty);
+            results[difficulty.key] = getRandomOpponentPairingsForDifficulty(difficulty);
           }
 
           function createOpponentsByDifficultyMap() {
@@ -32,7 +32,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
             return ArrayUtils.filter(opponentList, function (opponent) { return opponent.getDifficulty() === difficulty; });
           }
 
-          function getRandomOpponentPairings(difficulty) {
+          function getRandomOpponentPairingsForDifficulty(difficulty) {
             var pairings = [];
             for (var idx = 0; idx < countPerDifficulty; ++idx) {
               var difficulty1 = difficulty;

@@ -2,6 +2,8 @@ var QuizController = net.riemschneider.history.controller.QuizController;
 var Quiz = net.riemschneider.history.model.Quiz;
 var Opponent = net.riemschneider.history.model.Opponent;
 var Question = net.riemschneider.history.model.Question;
+var Difficulty = net.riemschneider.history.model.Difficulty;
+var Answer = net.riemschneider.history.model.Answer;
 
 TestCase('QuizControllerTest', {
   setUp: function () {

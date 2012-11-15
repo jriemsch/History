@@ -22,7 +22,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         getState: function getState() {
           return {
             unlocked: unlocked
-          }
+          };
         },
 
         setState: function setState(newState) {

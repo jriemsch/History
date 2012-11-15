@@ -41,7 +41,7 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
             name: name,
             avatarImageIdx: avatarImageIdx,
             statistics: statistics
-          }
+          };
         },
 
         setState: function setState(newState) {

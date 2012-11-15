@@ -8,6 +8,7 @@ var Regions = net.riemschneider.history.model.Regions;
 var Question = net.riemschneider.history.model.Question;
 var Answer = net.riemschneider.history.model.Answer;
 var Random = net.riemschneider.utils.Random;
+var Position = net.riemschneider.graphics.Position;
 
 TestCase('QuizGeneratorTest', {
   setUp: function () {

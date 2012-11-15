@@ -26,7 +26,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var quizPlayers = null;
       var quizMapSelection = null;
       var onRegionSelectedCallback = null;
-	  var selectedRegionIdTopic = null;
+      var selectedRegionIdTopic = null;
 
       function onTapped(region) {
         if (onRegionSelectedCallback !== null) {
@@ -52,7 +52,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           var topic = topicsById[topicId];
           var regions = regionsByTopic[topicId];
 
-		  selectedRegionIdTopic = ObservedProperty.create(quiz, 'selectedRegionId', onSelectedRegionChanged);
+          selectedRegionIdTopic = ObservedProperty.create(quiz, 'selectedRegionId', onSelectedRegionChanged);
 
           quizPlayers = QuizPlayers.create(quizView, players);
 
@@ -60,11 +60,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           quizView.show();
         },
         hide: function hide() {
-          var quiz = quizController.getCurrentQuiz();
           $('#quizView').hide();
           quizMapSelection.destroy();
           quizPlayers.destroy();
-		  selectedRegionIdTopic.destroy();
+          selectedRegionIdTopic.destroy();
         },
         onRegionSelected: function onRegionSelected(callback) { onRegionSelectedCallback = callback; },
         showQuestion: function showQuestion(question) {

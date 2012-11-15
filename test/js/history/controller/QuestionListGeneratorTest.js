@@ -7,6 +7,7 @@ var Facts = net.riemschneider.history.model.Facts;
 var Region = net.riemschneider.history.model.Region;
 var Regions = net.riemschneider.history.model.Regions;
 var Position = net.riemschneider.graphics.Position;
+var Random = net.riemschneider.utils.Random;
 
 TestCase('QuestionListGeneratorTest', {
   setUp: function () {
