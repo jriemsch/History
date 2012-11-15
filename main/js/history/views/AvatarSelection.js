@@ -1,6 +1,8 @@
 net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
+  "use strict";
+
   var AvatarImages = net.riemschneider.history.data.AvatarImages;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
@@ -15,12 +17,12 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var avatarsDiv = $('#avatars');
       var imageSelection = createImageSelection();
       var nameDiv = $('#nameInput');
-      var nameInput = $('#nameInput div input');
+      var nameInput = nameDiv.find('div input');
 
       prepareNameInput();
       prepareButtonBar();
 
-      var onOkCallback = null;
+      var onOkCallback = function () {};
 
       function createImageSelection() {
         var options = createAvatarOptions();
@@ -28,7 +30,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function prepareButtonBar() {
-        var okButton = $('#avatarSelection .footer .okButton');
+        var okButton = $('#avatarSelection').find('.footer .okButton');
         Tap.create(okButton, function () { onOkCallback(); }, false, 'okPressed');
       }
 

@@ -1,6 +1,8 @@
 net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
+  "use strict";
+
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
@@ -44,7 +46,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function createMenuOptionTap(tappable, option) {
-        Tap.create(tappable, function () { option.onSelect() }, false, 'menuOptionSelected');
+        Tap.create(tappable, function () { option.onSelect(); }, false, 'menuOptionSelected');
       }
 
       function createMenuOption(option) {
@@ -76,5 +78,5 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         onSelect: onSelect
       };
     }
-  }
+  };
 }());

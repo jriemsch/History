@@ -1,6 +1,8 @@
 net.riemschneider.history.views = net.riemschneider.history.views || {};
 
 (function () {
+  "use strict";
+
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var ImageSelectionOpponentDiv = net.riemschneider.history.views.components.ImageSelectionOpponentDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
@@ -31,7 +33,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function prepareButtonBar() {
-        var backButton = $('#opponentSelection .footer .backButton');
+        var backButton = $('#opponentSelection').find('.footer .backButton');
         Tap.create(backButton, function() { onBackCallback(); }, false, 'backPressed');
       }
 

@@ -51,17 +51,17 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.quizController = net.riemschneider.history.controller.QuizController.create();
 
         inj.avatarSelection = net.riemschneider.history.views.AvatarSelection.create();
-        inj.topicSelection = net.riemschneider.history.views.TopicSelection.create(inj.topicsById, inj.addOns);
+        inj.topicSelection = net.riemschneider.history.views.TopicSelection.create();
         inj.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
         inj.menu = net.riemschneider.history.views.Menu.create();
-	    	inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
-		    inj.multipleChoiceComponent = net.riemschneider.history.views.components.MultipleChoiceComponent.create(inj.answerComponentRegistry);
+        inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
+        inj.multipleChoiceComponent = net.riemschneider.history.views.components.MultipleChoiceComponent.create(inj.answerComponentRegistry);
         inj.quizView = net.riemschneider.history.views.QuizView.create(inj.playerController, inj.quizController, inj.regionsByTopic, inj.topicsById, inj.answerComponentRegistry);
 
         inj.stateMachine = net.riemschneider.structures.StateMachine.create();
         inj.menuState = net.riemschneider.history.controller.MenuState.create(inj.stateMachine, inj.menu);
         inj.avatarState = net.riemschneider.history.controller.AvatarState.create(inj.stateMachine, inj.avatarSelection, inj.playerController);
-        inj.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(inj.stateMachine, inj.topicSelection, inj.quizGenerator);
+        inj.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(inj.stateMachine, inj.topicSelection, inj.quizGenerator, inj.topicsById, inj.addOns);
         inj.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(inj.stateMachine, inj.opponentSelection, inj.opponentController, inj.quizGenerator, inj.quizController);
         inj.quizState = net.riemschneider.history.controller.QuizState.create(inj.stateMachine, inj.quizView);
         inj.quizPlayerSelectsRegionState = net.riemschneider.history.controller.QuizPlayerSelectsRegionState.create(inj.stateMachine, inj.quizController, inj.quizView);

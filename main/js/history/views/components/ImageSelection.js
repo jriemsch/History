@@ -2,6 +2,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 net.riemschneider.history.views.components = net.riemschneider.history.views.components || {};
 
 (function () {
+  "use strict";
+
   var Scroll = net.riemschneider.gestures.Scroll;
   var Tap = net.riemschneider.gestures.Tap;
 

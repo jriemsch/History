@@ -1,6 +1,8 @@
 net.riemschneider.history.controller = net.riemschneider.history.controller || {};
 
 (function () {
+  "use strict";
+
   var Quiz = net.riemschneider.history.model.Quiz;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ArrayUtils = net.riemschneider.utils.ArrayUtils;

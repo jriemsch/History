@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
+    <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="Removed dependency of AvatarSelection on Player and PlayerController">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/AvatarState.js" afterPath="$PROJECT_DIR$/js/history/controller/AvatarState.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/MenuState.js" afterPath="$PROJECT_DIR$/js/history/controller/MenuState.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/OpponentController.js" afterPath="$PROJECT_DIR$/js/history/controller/OpponentController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/PlayerController.js" afterPath="$PROJECT_DIR$/js/history/controller/PlayerController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuestionListGenerator.js" afterPath="$PROJECT_DIR$/js/history/controller/QuestionListGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" afterPath="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/data/AvatarImages.js" afterPath="$PROJECT_DIR$/js/history/data/AvatarImages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/inject/Injector.js" afterPath="$PROJECT_DIR$/js/history/inject/Injector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/AddOns.js" afterPath="$PROJECT_DIR$/js/history/model/AddOns.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Answer.js" afterPath="$PROJECT_DIR$/js/history/model/Answer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Fact.js" afterPath="$PROJECT_DIR$/js/history/model/Fact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Facts.js" afterPath="$PROJECT_DIR$/js/history/model/Facts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Gap.js" afterPath="$PROJECT_DIR$/js/history/model/Gap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/GapChoice.js" afterPath="$PROJECT_DIR$/js/history/model/GapChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" afterPath="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/MapChoice.js" afterPath="$PROJECT_DIR$/js/history/model/MapChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Opponent.js" afterPath="$PROJECT_DIR$/js/history/model/Opponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/OrderChoice.js" afterPath="$PROJECT_DIR$/js/history/model/OrderChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Player.js" afterPath="$PROJECT_DIR$/js/history/model/Player.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Question.js" afterPath="$PROJECT_DIR$/js/history/model/Question.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/QuestionDistribution.js" afterPath="$PROJECT_DIR$/js/history/model/QuestionDistribution.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/Regions.js" afterPath="$PROJECT_DIR$/js/history/model/Regions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/model/ValueChoice.js" afterPath="$PROJECT_DIR$/js/history/model/ValueChoice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" afterPath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/Menu.js" afterPath="$PROJECT_DIR$/js/history/views/Menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" afterPath="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/TopicSelection.js" afterPath="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/AnimatedBackground.js" afterPath="$PROJECT_DIR$/js/history/views/components/AnimatedBackground.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelectionImageDiv.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelectionImageDiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js" afterPath="$PROJECT_DIR$/js/history/views/components/ImageSelectionOpponentDiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/views/components/QuizPlayers.js" afterPath="$PROJECT_DIR$/js/history/views/components/QuizPlayers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" afterPath="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +52,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/www$QuizMapSelectionTest.coverage" NAME="QuizMapSelectionTest Coverage Results" MODIFIED="1350973744621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1352697457331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/www$Tests_History.coverage" NAME="Tests History Coverage Results" MODIFIED="1352964316625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$All_Tests.coverage" NAME="All Tests Coverage Results" MODIFIED="1339564322597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/www$Tests_JsLib.coverage" NAME="Tests JsLib Coverage Results" MODIFIED="1352273149873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JstdCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -38,10 +68,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="QuizView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
+      <file leaf-file-name="TopicSelection.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="115" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0">
+            <state line="74" column="10" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuizTopicState.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/controller/QuizTopicState.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="40" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateMachine.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/structures/StateMachine.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewState.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/structures/ViewState.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="40" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -50,34 +107,43 @@
       <file leaf-file-name="AvatarSelection.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0">
+            <state line="84" column="40" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarState.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarState.js">
+      <file leaf-file-name="OpponentSelection.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/views/OpponentSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="68" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
+            <state line="90" column="77" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarSelectionTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
+      <file leaf-file-name="TopicSelectionTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="104" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
+            <state line="38" column="67" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarStateTest.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js">
+      <file leaf-file-name="QuizTopicStateTest.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="16" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.6777996">
+            <state line="43" column="138" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.64759034">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuizGenerator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/history/controller/QuizGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,43 +152,7 @@
       <file leaf-file-name="Injector.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="148" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultipleChoiceComponent.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="77" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnswerComponentRegistryTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="66" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnswerComponentRegistry.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="42" selection-start="1281" selection-end="1302" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuizMapSelection.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="0" selection-start="3548" selection-end="4349" vertical-scroll-proportion="0.0">
+            <state line="63" column="166" selection-start="3756" selection-end="3839" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,22 +176,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../test/js/history/controller/QuizQuestionStateTest.js" />
-        <option value="$PROJECT_DIR$/js/history/controller/QuizQuestionState.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/../test/tests.jstd" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" />
-        <option value="$PROJECT_DIR$/js/history/views/components/AnswerComponent.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentTest.js" />
-        <option value="$PROJECT_DIR$/js/history/views/QuizView.js" />
-        <option value="$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js" />
-        <option value="$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js" />
+        <option value="$PROJECT_DIR$/js/history/model/LevelOrderChance.js" />
+        <option value="$PROJECT_DIR$/js/history/model/MapChoice.js" />
+        <option value="$PROJECT_DIR$/js/history/model/Opponent.js" />
+        <option value="$PROJECT_DIR$/js/history/model/OrderChoice.js" />
+        <option value="$PROJECT_DIR$/js/history/model/Player.js" />
+        <option value="$PROJECT_DIR$/js/history/model/Question.js" />
+        <option value="$PROJECT_DIR$/js/history/model/QuestionDistribution.js" />
+        <option value="$PROJECT_DIR$/js/history/model/Regions.js" />
+        <option value="$PROJECT_DIR$/js/history/model/ValueChoice.js" />
+        <option value="$PROJECT_DIR$/js/history/views/Menu.js" />
+        <option value="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
         <option value="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
-        <option value="$PROJECT_DIR$/js/history/controller/AvatarState.js" />
-        <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" />
+        <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
+        <option value="$PROJECT_DIR$/js/history/controller/QuizTopicState.js" />
+        <option value="$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js" />
       </list>
     </option>
   </component>
@@ -181,6 +211,9 @@
             <id>Code quality toolsJavaScript</id>
           </State>
           <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
             <id>JSHint</id>
           </State>
           <State>
@@ -189,7 +222,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>JSHint</id>
+            <id>JSJQueryEfficiency</id>
           </State>
         </selected-state>
       </profile-state>
@@ -221,16 +254,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -497,6 +520,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="history" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="history" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -641,6 +716,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -648,14 +733,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="420" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="418" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../assets/History/converted" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="424" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1218" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1218" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1218" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="424" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -703,20 +788,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JsTestDriver.Tests History">
-    <configuration default="false" name="QuizMapSelectionTest" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
-      <setting name="configLocationType" value="TEST_CASE" />
-      <setting name="configType" value="FILE_PATH" />
-      <setting name="settingsFile" value="$PROJECT_DIR$/../test/tests.jstd" />
-      <setting name="jsFile" value="$PROJECT_DIR$/../test/js/history/views/components/QuizMapSelectionTest.js" />
-      <setting name="testCase" value="QuizMapSelectionTest" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
-      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
-      <RunnerSettings RunnerId="JstdCoverageProgramRunner" />
-      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
-      <ConfigurationWrapper RunnerId="JstdCoverageProgramRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="ImageMapTest" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
       <setting name="configLocationType" value="TEST_CASE" />
       <setting name="configType" value="FILE_PATH" />
@@ -761,6 +832,19 @@
       <setting name="jsFile" value="$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js" />
       <setting name="testCase" value="QuizViewTest" />
       <setting name="testMethod" value="testQuizSelectedRegionIdChangesClassOfImageWhileShown" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JsTestDriverClientRunner" />
+      <ConfigurationWrapper RunnerId="JsTestDriverClientRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TopicSelectionTest.testSelectTopicCallsCallback" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/../test/tests.jstd" />
+      <setting name="jsFile" value="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
+      <setting name="testCase" value="TopicSelectionTest" />
+      <setting name="testMethod" value="testSelectTopicCallsCallback" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
       <RunnerSettings RunnerId="JsTestDriverClientRunner" />
@@ -833,22 +917,22 @@
       <method />
     </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="JsTestDriver.QuizMapSelectionTest" />
-      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest" />
-      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.TopicSelectionTest" />
-      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest.testTapInFilledArea" />
-      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.QuizViewTest.testQuizSelectedRegionIdChangesClassOfImageWhileShown" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.History" />
-      <item index="6" class="java.lang.String" itemvalue="JsTestDriver.Tests History" />
-      <item index="7" class="java.lang.String" itemvalue="JsTestDriver.Tests JsLib" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.History" />
+      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.Tests History" />
+      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.Tests JsLib" />
+      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest" />
+      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.TopicSelectionTest" />
+      <item index="5" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest.testTapInFilledArea" />
+      <item index="6" class="java.lang.String" itemvalue="JsTestDriver.QuizViewTest.testQuizSelectedRegionIdChangesClassOfImageWhileShown" />
+      <item index="7" class="java.lang.String" itemvalue="JsTestDriver.TopicSelectionTest.testSelectTopicCallsCallback" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.QuizViewTest.testQuizSelectedRegionIdChangesClassOfImageWhileShown" />
-        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest.testTapInFilledArea" />
-        <item index="2" class="java.lang.String" itemvalue="JsTestDriver.TopicSelectionTest" />
-        <item index="3" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest" />
-        <item index="4" class="java.lang.String" itemvalue="JsTestDriver.QuizMapSelectionTest" />
+        <item index="0" class="java.lang.String" itemvalue="JsTestDriver.TopicSelectionTest.testSelectTopicCallsCallback" />
+        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.QuizViewTest.testQuizSelectedRegionIdChangesClassOfImageWhileShown" />
+        <item index="2" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest.testTapInFilledArea" />
+        <item index="3" class="java.lang.String" itemvalue="JsTestDriver.TopicSelectionTest" />
+        <item index="4" class="java.lang.String" itemvalue="JsTestDriver.ImageMapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1062,31 +1146,35 @@
       <created>1352697597382</created>
       <updated>1352697597382</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Removed dependency of AvatarSelection on Player and PlayerController">
+      <created>1352791077651</created>
+      <updated>1352791077651</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2556" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.474502" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.47290838" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19553503" sideWeight="0.48725098" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.804465" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2434263" sideWeight="0.21939954" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.7363146" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19960159" sideWeight="0.804465" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.47131473" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.52589643" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20756972" sideWeight="0.804465" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26404926" sideWeight="0.4697211" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.52749" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.49681276" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.804465" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1128,7 +1216,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed AnswerComponentRegistryTest and formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed dependency of AvatarSelection on Player and PlayerController" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1141,7 +1229,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Extracted option div creation from ImageSelection.js" />
     <MESSAGE value="Opponent Selection" />
     <MESSAGE value="Refine Css for Opponent Selection" />
     <MESSAGE value="random opponent pairings are calculated every time the opponent selection is shown&#10;topic and opponent selection do not require clicking ok&#10;create basic quiz via controller" />
@@ -1166,6 +1253,7 @@
     <MESSAGE value="Track selected region in quiz&#10;Go to quiz question state after region selection" />
     <MESSAGE value="Display Question" />
     <MESSAGE value="Fixed AnswerComponentRegistryTest and formatting" />
+    <MESSAGE value="Removed dependency of AvatarSelection on Player and PlayerController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1173,114 +1261,108 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizQuestionState.js">
+    <entry file="file://$PROJECT_DIR$/js/history/model/ValueChoice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageMapTest.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/AnimatedBackground.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="100" selection-start="6419" selection-end="6419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="54" selection-start="5448" selection-end="5448" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/model/Answer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/QuizViewTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/components/QuizMapSelection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="3548" selection-end="4349" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/views/components/AnswerComponentRegistry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="42" selection-start="1281" selection-end="1302" vertical-scroll-proportion="0.0">
+        <state line="45" column="58" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/model/GapChoice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/model/Quiz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="75" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/AnswerComponentRegistryTest.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/Menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="66" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+        <state line="48" column="61" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/components/MultipleChoiceComponent.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/OpponentSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="77" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
+        <state line="90" column="77" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/QuizView.js">
+    <entry file="file://$PROJECT_DIR$/js/history/views/TopicSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="115" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0">
+        <state line="74" column="10" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarState.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
+        <state line="84" column="40" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="148" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+        <state line="63" column="166" selection-start="3756" selection-end="3839" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js">
+    <entry file="file://$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="104" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
+        <state line="38" column="67" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/structures/StateMachine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="16" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.6777996">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizTopicState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="40" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/structures/ViewState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="40" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/QuizTopicStateTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="138" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.64759034">
           <folding />
         </state>
       </provider>

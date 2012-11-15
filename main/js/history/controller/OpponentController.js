@@ -1,6 +1,8 @@
 net.riemschneider.history.controller = net.riemschneider.history.controller || {};
 
 (function () {
+  "use strict";
+
   var Random = net.riemschneider.utils.Random;
   var ArrayUtils = net.riemschneider.utils.ArrayUtils;
   var Difficulty = net.riemschneider.history.model.Difficulty;

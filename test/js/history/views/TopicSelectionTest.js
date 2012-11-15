@@ -1,7 +1,4 @@
 var TopicSelection = net.riemschneider.history.views.TopicSelection;
-var Topic = net.riemschneider.history.model.Topic;
-var AddOns = net.riemschneider.history.model.AddOns;
-var Position = net.riemschneider.graphics.Position;
 
 TestCase('TopicSelectionTest', {
   setUp: function () {
@@ -24,13 +21,22 @@ TestCase('TopicSelectionTest', {
 
     this.opponentSelectionDiv.hide();
 
-    this.topicsById = {
-      topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1900),
-      topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1901)
-    };
-
-    this.addOns = AddOns.create();
-    this.addOns.unlock('topic1');
+    this.topicInfos = [
+      {
+        called: false,
+        name: 'Topic1',
+        image: '/test/images/test.png',
+        showLockOverlay: false,
+        callback: function () { this.called = true; }
+      },
+      {
+        called: false,
+        name: 'Topic2',
+        image: '/test/images/test.png',
+        showLockOverlay: true,
+        callback: function () { this.called = true; }
+      }
+    ];
   },
 
   tearDown: function () {
@@ -38,7 +44,8 @@ TestCase('TopicSelectionTest', {
   },
 
   testShowAndHide: function () {
-    var sel = TopicSelection.create(this.topicsById, this.addOns);
+    var sel = TopicSelection.create();
+    sel.setTopicInfos(this.topicInfos);
     assertEquals('none', this.opponentSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.opponentSelectionDiv.css('display'));
@@ -47,36 +54,26 @@ TestCase('TopicSelectionTest', {
   },
 
   testAllImagesShown: function () {
-    TopicSelection.create(this.topicsById, this.addOns).show();
+    var sel = TopicSelection.create();
+    sel.setTopicInfos(this.topicInfos);
+    sel.show();
     assertEquals(2, $('.imageSelectionOptionImage').length);
     assertEquals(1, $('.imageSelectionOptionOverlay').length);
   },
 
-  testTopicsAreSorted: function () {
-    this.topicsById.topic3 = Topic.create('topic3', 'Topic3', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1800);
-    this.topicsById.topic4 = Topic.create('topic4', 'Topic4', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1801);
-    this.addOns.unlock('topic3');
-
-    TopicSelection.create(this.topicsById, this.addOns).show();
-    var texts = $('.imageSelectionOptionText');
-    assertEquals(4, texts.length);
-    assertEquals('Topic3', $(texts[0]).find('p').text());
-    assertEquals('Topic1', $(texts[1]).find('p').text());
-    assertEquals('Topic4', $(texts[2]).find('p').text());
-    assertEquals('Topic2', $(texts[3]).find('p').text());
-  },
-
   testCanShowNewTopicState: function () {
-    var sel = TopicSelection.create(this.topicsById, this.addOns);
+    var sel = TopicSelection.create();
+    sel.setTopicInfos(this.topicInfos);
     sel.show();
     sel.hide();
-    this.addOns.unlock('topic2');
+    this.topicInfos[1].showLockOverlay = false;
     sel.show();
     assertEquals(0, $('.imageSelectionOptionOverlay').length);
   },
 
   testBackCallsCallback: function () {
-    var sel = TopicSelection.create(this.topicsById, this.addOns);
+    var sel = TopicSelection.create();
+    sel.setTopicInfos(this.topicInfos);
     var called = false;
     sel.onBack(function () { called = true; });
     sel.show();
@@ -85,36 +82,32 @@ TestCase('TopicSelectionTest', {
     assertTrue(called);
   },
 
-  testSelectLockedTopicCallsCallback: function () {
-    var sel = TopicSelection.create(this.topicsById, this.addOns);
-    var called = null;
-    sel.onLockedTopicSelected(function (topic) { called = topic; });
-    sel.show();
-    var allImages = $('.imageSelectionOptionImage');
-    $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    $(allImages[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals('topic2', called);
-  },
-
-  testSelectUnlockedTopicCallsCallback: function () {
-    var sel = TopicSelection.create(this.topicsById, this.addOns);
-    var called = null;
-    sel.onTopicSelected(function (topic) { called = topic; });
+  testSelectTopicCallsCallback: function () {
+    var sel = TopicSelection.create();
+    sel.setTopicInfos(this.topicInfos);
     sel.show();
     var allImages = $('.imageSelectionOptionImage');
     $(allImages[0]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[0]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals('topic1', called);
+    assertTrue(this.topicInfos[0].called);
   },
 
-  testCreateNullAndTypeSafe: function () {
-    var topicsById = this.topicsById;
-    var addOns = this.addOns;
+  testSetTopicInfosNullAndTypeSafe: function () {
+    var sel = TopicSelection.create();
+    var callback = function () {};
 
-    assertException(function () { TopicSelection.create(topicsById, null);  }, 'TypeError');
-    assertException(function () { TopicSelection.create(null, addOns);  }, 'TypeError');
+    assertException(function () { sel.setTopicInfos(null); }, 'TypeError');
 
-    assertException(function () { TopicSelection.create(topicsById, {});  }, 'TypeError');
-    assertException(function () { TopicSelection.create([], addOns);  }, 'TypeError');
+    assertException(function () { sel.setTopicInfos({}); }, 'TypeError');
+
+    assertException(function () { sel.setTopicInfos([ { name: 'name', image: 'img', showLockOverlay: false } ]); }, 'TypeError');
+    assertException(function () { sel.setTopicInfos([ { name: 'name', image: 'img', callback: callback } ]); }, 'TypeError');
+    assertException(function () { sel.setTopicInfos([ { name: 'name', showLockOverlay: false, callback: callback } ]); }, 'TypeError');
+    assertException(function () { sel.setTopicInfos([ { image: 'img', showLockOverlay: false, callback: callback } ]); }, 'TypeError');
+
+    assertException(function () { sel.setTopicInfos([ { name: 'name', image: 'img', showLockOverlay: false, callback: 1 } ]); }, 'TypeError');
+    assertException(function () { sel.setTopicInfos([ { name: 'name', image: 'img', showLockOverlay: 1, callback: callback } ]); }, 'TypeError');
+    assertException(function () { sel.setTopicInfos([ { name: 'name', image: 1, showLockOverlay: false, callback: callback } ]); }, 'TypeError');
+    assertException(function () { sel.setTopicInfos([ { name: 1, image: 'img', showLockOverlay: false, callback: callback } ]); }, 'TypeError');
   }
 });

@@ -1,6 +1,8 @@
 net.riemschneider.history.model = net.riemschneider.history.model || {};
 
 (function () {
+  "use strict";
+
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var Region = net.riemschneider.history.model.Region;

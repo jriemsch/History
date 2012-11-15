@@ -2,6 +2,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 net.riemschneider.history.views.components = net.riemschneider.history.views.components || {};
 
 (function () {
+  "use strict";
+
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
 
   net.riemschneider.history.views.components.ImageSelectionImageDiv = {

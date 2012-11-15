@@ -2,6 +2,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 net.riemschneider.history.views.components = net.riemschneider.history.views.components || {};
 
 (function () {
+  "use strict";
+
   var AvatarImages = net.riemschneider.history.data.AvatarImages;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
 

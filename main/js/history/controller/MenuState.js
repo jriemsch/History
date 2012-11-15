@@ -1,6 +1,8 @@
 net.riemschneider.history.controller = net.riemschneider.history.controller || {};
 
 (function () {
+  "use strict";
+
   var Option = net.riemschneider.history.views.Menu.Option;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var ViewState = net.riemschneider.structures.ViewState;

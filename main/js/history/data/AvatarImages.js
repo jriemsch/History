@@ -1,6 +1,8 @@
 net.riemschneider.history.data = net.riemschneider.history.data || {};
 
 (function () {
+  "use strict";
+
   net.riemschneider.history.data.AvatarImages = {
     getImageCount: function getImageCount() { return 30; },
     getImage: function getImage(idx) {

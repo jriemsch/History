@@ -2,6 +2,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 net.riemschneider.history.views.components = net.riemschneider.history.views.components || {};
 
 (function () {
+  "use strict";
+
   var Clock = net.riemschneider.utils.Clock;
 
   net.riemschneider.history.views.components.AnimatedBackground = {

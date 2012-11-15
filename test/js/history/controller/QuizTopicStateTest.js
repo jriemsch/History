@@ -3,6 +3,9 @@ var ViewState = net.riemschneider.structures.ViewState;
 var State = net.riemschneider.structures.State;
 var StateMachine = net.riemschneider.structures.StateMachine;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
+var Topic = net.riemschneider.history.model.Topic;
+var AddOns = net.riemschneider.history.model.AddOns;
+var Position = net.riemschneider.graphics.Position;
 
 TestCase('QuizTopicStateTest', {
   setUp: function () {
@@ -10,11 +13,11 @@ TestCase('QuizTopicStateTest', {
     State.create(this.stateMachine, 'menu', true);
     State.create(this.stateMachine, 'quizOpponent', false);
     this.topicSelection = {
-      topicSelectionCallback: null,
+      topicInfos: null,
       backCallback: null,
       show: function () {},
       hide: function () {},
-      onTopicSelected: function (callback) { this.topicSelectionCallback = callback; },
+      setTopicInfos: function (topicInfos) { this.topicInfos = topicInfos; },
       onBack: function (callback) { this.backCallback = callback; }
     };
 
@@ -22,33 +25,69 @@ TestCase('QuizTopicStateTest', {
       topicId: null,
       setCurrentTopic: function setCurrentTopic(topicId) { this.topicId = topicId; }
     };
+
+    this.topicsById = {
+      topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1901),
+      topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1900)
+    };
+
+    this.addOns = AddOns.create();
   },
 
   testCreate: function () {
-    var state = QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
+    var state = QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns);
     assertTrue(TypeUtils.isOfType(state, QuizTopicState));
     assertTrue(TypeUtils.isOfType(state, ViewState));
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
-  testCanTransitionToMenuOnTopicSelection: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
+  testCreateNullAndTypeSafe: function () {
+    assertException(function () { QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, null); }, 'TypeError');
+    assertException(function () { QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, null, this.addOns); }, 'TypeError');
+    assertException(function () { QuizTopicState.create(this.stateMachine, this.topicSelection, null, this.topicsById, this.addOns); }, 'TypeError');
+    assertException(function () { QuizTopicState.create(null, null, this.quizGenerator, this.topicsById, this.addOns); }, 'TypeError');
+
+    assertException(function () { QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, {}); }, 'TypeError');
+    assertException(function () { QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, { id: {} }, this.addOns); }, 'TypeError');
+    assertException(function () { QuizTopicState.create(this.stateMachine, {}, this.quizGenerator, this.topicsById, this.addOns); }, 'TypeError');
+    assertException(function () { QuizTopicState.create({}, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns); }, 'TypeError');
+  },
+
+  testSortingWithoutUnlock: function () {
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
-    this.topicSelection.topicSelectionCallback('topicId');
+    assertEquals('Topic2', this.topicSelection.topicInfos[0].name);
+    assertEquals('Topic1', this.topicSelection.topicInfos[1].name);
+  },
+
+  testSortingWithUnlock: function () {
+    this.addOns.unlock('topic1');
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns);
+    this.stateMachine.start();
+    this.stateMachine.transitionTo('quizTopic');
+    assertEquals('Topic1', this.topicSelection.topicInfos[0].name);
+    assertEquals('Topic2', this.topicSelection.topicInfos[1].name);
+  },
+
+  testCanTransitionToOpponentSelectionOnTopicSelection: function () {
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns);
+    this.stateMachine.start();
+    this.stateMachine.transitionTo('quizTopic');
+    this.topicSelection.topicInfos[0].callback();
     assertEquals('quizOpponent', this.stateMachine.getCurrentStateId());
   },
 
   testSetsTopicOnTopicSelection: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
-    this.topicSelection.topicSelectionCallback('topicId');
-    assertEquals('topicId', this.quizGenerator.topicId);
+    this.topicSelection.topicInfos[0].callback();
+    assertEquals('topic2', this.quizGenerator.topicId);
   },
 
   testCanTransitionToMenuOnBack: function () {
-    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator);
+    QuizTopicState.create(this.stateMachine, this.topicSelection, this.quizGenerator, this.topicsById, this.addOns);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizTopic');
     this.topicSelection.backCallback();
