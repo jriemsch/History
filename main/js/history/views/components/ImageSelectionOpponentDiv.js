@@ -10,9 +10,9 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
   var Difficulty = net.riemschneider.history.model.Difficulty;
 
   var difficultyClasses = {};
-  difficultyClasses[Difficulty.EASY.key] = 'imageSelectionOpponentEasy';
-  difficultyClasses[Difficulty.MEDIUM.key] = 'imageSelectionOpponentMedium';
-  difficultyClasses[Difficulty.HARD.key] = 'imageSelectionOpponentHard';
+  difficultyClasses[Difficulty.EASY.key] = 'backgroundGreen';
+  difficultyClasses[Difficulty.MEDIUM.key] = 'backgroundYellow';
+  difficultyClasses[Difficulty.HARD.key] = 'backgroundRed';
 
   net.riemschneider.history.views.components.ImageSelectionOpponentDiv = {
     create: function create(opponentPairing, difficulty) {

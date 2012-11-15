@@ -443,17 +443,17 @@ body {
     -webkit-border-radius: 2px;
 }
 
-.imageSelectionOpponentEasy {
+.backgroundGreen {
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #d9f0d9 58%);
     -webkit-box-shadow: 3px 3px 8px 8px #d9f0d9;
 }
 
-.imageSelectionOpponentMedium {
+.backgroundYellow {
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #f5f5d0 58%);
     -webkit-box-shadow: 3px 3px 8px 8px #f9f6d0;
 }
 
-.imageSelectionOpponentHard {
+.backgroundRed {
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #f0d9d9 58%);
     -webkit-box-shadow: 3px 3px 8px 8px #f0d9d9;
 }
