@@ -54,14 +54,6 @@ TestCase('QuizTest', {
     assertEquals('REG1', quiz.getSelectedRegionId());
   },
 
-  testSetSelectedRegionIdTriggersObserver: function () {
-    var quiz = Quiz.create('topicId', this.pairing, Difficulty.EASY, this.questionsByRegion);
-    var regionId = null;
-    quiz.getSelectedRegionIdTopic().registerObserver(function (data) { regionId = data; });
-    quiz.setSelectedRegionId('REG1');
-    assertEquals('REG1', regionId);
-  },
-
   testSetSelectedRegionIdNullAndTypeSafe: function () {
     var quiz = Quiz.create('topicId', this.pairing, Difficulty.EASY, this.questionsByRegion);
 
