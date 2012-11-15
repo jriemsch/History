@@ -8,6 +8,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var RegionState = net.riemschneider.history.views.components.RegionState;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
+  var ObservedProperty = net.riemschneider.utils.ObservedProperty;
 
   var scoreByDifficulty = {};
   scoreByDifficulty[Difficulty.EASY.key] = 5;
@@ -25,6 +26,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var quizPlayers = null;
       var quizMapSelection = null;
       var onRegionSelectedCallback = null;
+	  var selectedRegionIdTopic = null;
 
       function onTapped(region) {
         if (onRegionSelectedCallback !== null) {
@@ -50,7 +52,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           var topic = topicsById[topicId];
           var regions = regionsByTopic[topicId];
 
-          quiz.getSelectedRegionIdTopic().registerObserver(onSelectedRegionChanged);
+		  selectedRegionIdTopic = ObservedProperty.create(quiz, 'selectedRegionId', onSelectedRegionChanged);
 
           quizPlayers = QuizPlayers.create(quizView, players);
 
@@ -62,7 +64,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           $('#quizView').hide();
           quizMapSelection.destroy();
           quizPlayers.destroy();
-          quiz.getSelectedRegionIdTopic().unregisterObserver(onSelectedRegionChanged);
+		  selectedRegionIdTopic.destroy();
         },
         onRegionSelected: function onRegionSelected(callback) { onRegionSelectedCallback = callback; },
         showQuestion: function showQuestion(question) {

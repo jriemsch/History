@@ -5,7 +5,6 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
 
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var Observer = net.riemschneider.utils.Observer;
 
   net.riemschneider.history.model.Quiz = {
     create: function create(topicId, opponentPairing, difficulty, questionsByRegion) {
@@ -19,7 +18,6 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
         ArgumentUtils.assertType(value, net.riemschneider.history.model.Question);
       });
 
-      var selectedRegionIdTopic = Observer.createTopic();
       var selectedRegionId = null;
 
       return {
@@ -31,10 +29,8 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
           ArgumentUtils.assertString(regionId);
           ArgumentUtils.assertNotNull(questionsByRegion[regionId]);
           selectedRegionId = regionId;
-          selectedRegionIdTopic.notify(selectedRegionId);
         },
-        getSelectedRegionId: function getSelectedRegionId() { return selectedRegionId; },
-        getSelectedRegionIdTopic: function getSelectedRegionIdTopic() { return selectedRegionIdTopic; }
+        getSelectedRegionId: function getSelectedRegionId() { return selectedRegionId; }
       };
     }
   };
