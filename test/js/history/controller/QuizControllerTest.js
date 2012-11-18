@@ -7,7 +7,7 @@ var Answer = net.riemschneider.history.model.Answer;
 
 TestCase('QuizControllerTest', {
   setUp: function () {
-    this.pairing = {
+    this.imageInfos = {
       first: Opponent.create('OPP0', 'Hans Schenk', 0, Difficulty.EASY, [ 0.9, 0.8, 0.5 ], []),
       second: Opponent.create('OPP2', 'Martin Salm', 2, Difficulty.EASY, [ 0.8, 0.5, 0.2 ], [])
     };
@@ -25,7 +25,7 @@ TestCase('QuizControllerTest', {
 
   testSetAndGetCurrentQuiz: function () {
     var quizController = QuizController.create();
-    var quiz = Quiz.create('topicId', this.pairing, Difficulty.EASY, this.questionsByRegion);
+    var quiz = Quiz.create('topicId', this.imageInfos, Difficulty.EASY, this.questionsByRegion);
     quizController.setCurrentQuiz(quiz);
     assertSame(quiz, quizController.getCurrentQuiz());
   },

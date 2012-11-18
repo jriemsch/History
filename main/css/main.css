@@ -403,39 +403,39 @@ body {
     }
 }
 
-.imageSelectionOpponent {
+.imageSelectionWideOption {
     width: 360px;
 }
 
 @media only screen and (max-width: 640px) {
-    .imageSelectionOpponent {
+    .imageSelectionWideOption {
         width: 180px;
     }
 }
 
-.imageSelectionLeftOpponent {
+.imageSelectionImage0 {
     position: absolute;
     right: 182px;
 }
 
 @media only screen and (max-width: 640px) {
-    .imageSelectionLeftOpponent {
+    .imageSelectionImage0 {
         right: 91px;
     }
 }
 
-.imageSelectionRightOpponent {
+.imageSelectionImage1 {
     position: absolute;
     left: 182px;
 }
 
 @media only screen and (max-width: 640px) {
-    .imageSelectionRightOpponent {
+    .imageSelectionImage1 {
         left: 91px;
     }
 }
 
-.imageSelectionOpponentDifficulty {
+.imageSelectionBackgroundGlow {
     position: absolute;
     height: 210px;
     width: 306px;
@@ -443,38 +443,38 @@ body {
     -webkit-border-radius: 2px;
 }
 
-.backgroundGreen {
+.imageSelectionBackgroundGlowGreen {
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #d9f0d9 58%);
     -webkit-box-shadow: 3px 3px 8px 8px #d9f0d9;
 }
 
-.backgroundYellow {
+.imageSelectionBackgroundGlowYellow {
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #f5f5d0 58%);
     -webkit-box-shadow: 3px 3px 8px 8px #f9f6d0;
 }
 
-.backgroundRed {
+.imageSelectionBackgroundGlowRed {
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #f0d9d9 58%);
     -webkit-box-shadow: 3px 3px 8px 8px #f0d9d9;
 }
 
 @media only screen and (max-width: 640px) {
-    .imageSelectionOpponentDifficulty {
+    .imageSelectionBackgroundGlow {
         height: 105px;
         width: 153px;
         left: 12.5px;
         -webkit-border-radius: 1px;
     }
 
-    .imageSelectionOpponentEasy {
+    .imageSelectionBackgroundGlowGreen {
         -webkit-box-shadow: 1px 1px 4px 4px #d9f0d9;
     }
 
-    .imageSelectionOpponentMedium {
+    .imageSelectionBackgroundGlowYellow {
         -webkit-box-shadow: 1px 1px 4px 4px #f9f6d0;
     }
 
-    .imageSelectionOpponentHard {
+    .imageSelectionBackgroundGlowRed {
         -webkit-box-shadow: 1px 1px 4px 4px #f0d9d9;
     }
 }

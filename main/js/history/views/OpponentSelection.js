@@ -3,10 +3,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 (function () {
   "use strict";
 
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
-  var ImageSelectionOpponentDiv = net.riemschneider.history.views.components.ImageSelectionOpponentDiv;
+  var ImageSelectionMultipleImagesDiv = net.riemschneider.history.views.components.ImageSelectionMultipleImagesDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
-  var Difficulty = net.riemschneider.history.model.Difficulty;
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.OpponentSelection = {
@@ -18,9 +18,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       prepareButtonBar();
 
       var onBackCallback = null;
-      var onOpponentsSelectedCallback = null;
-      var opponentPairings = null;
       var imageSelection = null;
+      var opponentInfos = [];
 
       function createImageSelection() {
         var options = createOpponentOptions();
@@ -49,29 +48,19 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createOpponentOptions() {
         var options = [];
-        for (var idx = 0, len = Difficulty.values.length; idx < len; ++idx) {
-          var difficulty = Difficulty.values[idx];
-          var pairings = opponentPairings[difficulty.key];
-          if (pairings) {
-            createOpponentOptionsForPairings(pairings, difficulty);
-          }
-        }
-
-        function createOpponentOptionsForPairings(pairings, difficulty) {
-          for (var idx = 0, len = pairings.length; idx < len; ++idx) {
-            var pairing = pairings[idx];
-            var optionDiv = ImageSelectionOpponentDiv.create(pairing, difficulty);
-            options.push({ div: optionDiv, callback: createOpponentsSelectionCallback(pairing, difficulty) });
-          }
-        }
-
-        function createOpponentsSelectionCallback(pairing, difficulty) {
-          return function onOpponentsSelected() {
-            onOpponentsSelectedCallback(pairing, difficulty);
-          };
+        for (var idx = 0, len = opponentInfos.length; idx < len; ++idx) {
+          var opponentInfo = opponentInfos[idx];
+          options[idx] = createOpponentOption(opponentInfo);
         }
 
         return options;
+      }
+
+      function createOpponentOption(opponentInfo) {
+        var backgroundClass = opponentInfo.backgroundClass;
+        var imageInfos = opponentInfo.imageInfos;
+        var optionDiv = ImageSelectionMultipleImagesDiv.create(imageInfos, backgroundClass);
+        return { div: optionDiv, callback: function () { opponentInfo.callback(); } };
       }
 
       return {
@@ -88,9 +77,15 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           questionMarksDivBottom.empty();
           $('#opponentSelection').hide();
         },
-        onOpponentsSelected: function onOpponentsSelected(callback) { onOpponentsSelectedCallback = callback; },
         onBack: function onBack(callback) { onBackCallback = callback; },
-        setOpponentPairings: function setOpponentPairings(pairings) { opponentPairings = pairings; }
+        setOpponentInfos: function setOpponentInfos(newOpponentInfos) {
+          ArgumentUtils.assertArray(newOpponentInfos, function (elem) {
+            ArgumentUtils.assertString(elem.backgroundClass);
+            ArgumentUtils.assertFunction(elem.callback);
+            ArgumentUtils.assertArray(elem.imageInfos);
+          });
+          opponentInfos = newOpponentInfos;
+        }
       };
     }
   };

@@ -60,7 +60,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createAvatarOptions() {
         var options = [];
-        for (var idx = 0; idx <= AvatarImages.getImageCount(); ++idx) {
+        for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
           options[idx] = {
             div: ImageSelectionImageDiv.create(AvatarImages.getImage(idx))
           };

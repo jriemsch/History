@@ -24,22 +24,10 @@ TestCase('OpponentSelectionTest', {
 
     this.opponentSelectionDiv.hide();
 
-    this.opponentPairings = {};
-    this.opponentPairings[Difficulty.EASY.key] = [
-      {
-        first: Opponent.create('OPP0', 'Hans Schenk', 0, Difficulty.EASY, [ 0.9, 0.8, 0.5 ], []),
-        second: Opponent.create('OPP1', 'Günther Wernbach', 1, Difficulty.EASY, [ 0.95, 0.85, 0.7 ], [])
-      },
-      {
-        first: Opponent.create('OPP2', 'Martin Salm', 2, Difficulty.EASY, [ 0.8, 0.5, 0.2 ], []),
-        second: Opponent.create('OPP3', 'Dr. Siegfried Hubertus', 3, Difficulty.EASY, [ 0.8, 0.7, 0.5 ], [])
-      }
-    ];
-    this.opponentPairings[Difficulty.MEDIUM.key] = [
-      {
-        first: Opponent.create('OPP4', 'Sebastian Weier', 4, Difficulty.MEDIUM, [ 0.95, 0.9, 0.8 ], []),
-        second: Opponent.create('OPP5', 'Tom Stark', 5, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
-      }
+    this.opponentInfos = [
+      { backgroundClass: 'green', imageInfos: [ { avatarImageIdx: 0, name: 'Hans' }, { avatarImageIdx: 1, name: 'Günther' } ], callback: function () { this.called = true; }, called: false },
+      { backgroundClass: 'green', imageInfos: [ { avatarImageIdx: 2, name: 'Martin' }, { avatarImageIdx: 3, name: 'Siegfried' } ], callback: function () { this.called = true; }, called: false },
+      { backgroundClass: 'yellow', imageInfos: [ { avatarImageIdx: 4, name: 'Sebastian' }, { avatarImageIdx: 5, name: 'Tom' } ], callback: function () { this.called = true; }, called: false }
     ];
   },
 
@@ -49,7 +37,7 @@ TestCase('OpponentSelectionTest', {
 
   testShowAndHide: function () {
     var sel = OpponentSelection.create();
-    sel.setOpponentPairings(this.opponentPairings);
+    sel.setOpponentInfos(this.opponentInfos);
     assertEquals('none', this.opponentSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.opponentSelectionDiv.css('display'));
@@ -59,44 +47,38 @@ TestCase('OpponentSelectionTest', {
 
   testAllOptionsShown: function () {
     var sel = OpponentSelection.create();
-    sel.setOpponentPairings(this.opponentPairings);
+    sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     var allOptionDivs = $('.imageSelectionOption');
     assertEquals(3, allOptionDivs.length);
   },
 
-  testCanShowNewPairings: function () {
+  testCanShowNewInfos: function () {
     var sel = OpponentSelection.create();
-    sel.setOpponentPairings(this.opponentPairings);
+    sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     sel.hide();
-    this.opponentPairings[Difficulty.MEDIUM.key] = [];
-    sel.setOpponentPairings(this.opponentPairings);
+    sel.setOpponentInfos([ this.opponentInfos[0], this.opponentInfos[1] ]);
     sel.show();
     var allOptionDivs = $('.imageSelectionOption');
     assertEquals(2, allOptionDivs.length);
   },
 
-  testTopicSelectionCallsCallback: function () {
+  testOpponentSelectionCallsCallback: function () {
     var sel = OpponentSelection.create();
-    sel.setOpponentPairings(this.opponentPairings);
-    var calledPairing = null;
-    var calledDifficulty = null;
-    sel.onOpponentsSelected(function (pairing, difficulty) {
-      calledPairing = pairing;
-      calledDifficulty = difficulty;
-    });
+    sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     var allImages = $('.imageSelectionOptionImage');
     $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertSame(this.opponentPairings[Difficulty.EASY.key][0], calledPairing);
-    assertSame(Difficulty.EASY, calledDifficulty);
+    assertTrue(this.opponentInfos[0].called);
+    assertFalse(this.opponentInfos[1].called);
+    assertFalse(this.opponentInfos[2].called);
   },
 
   testBackCallsCallback: function () {
     var sel = OpponentSelection.create();
-    sel.setOpponentPairings(this.opponentPairings);
+    sel.setOpponentInfos(this.opponentInfos);
     var called = false;
     sel.onBack(function () { called = true; });
     sel.show();

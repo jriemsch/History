@@ -4,6 +4,7 @@ var State = net.riemschneider.structures.State;
 var StateMachine = net.riemschneider.structures.StateMachine;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
 var Difficulty = net.riemschneider.history.model.Difficulty;
+var Opponent = net.riemschneider.history.model.Opponent;
 
 TestCase('QuizOpponentStateTest', {
   setUp: function () {
@@ -12,16 +13,31 @@ TestCase('QuizOpponentStateTest', {
     State.create(this.stateMachine, 'quiz', false);
     this.opponentSelection = {
       backCallback: null,
-      opponentsSelectionCallback: null,
-      opponentPairings: null,
+      opponentInfos: null,
       show: function () {},
       hide: function () {},
       onBack: function (callback) { this.backCallback = callback; },
-      onOpponentsSelected: function (callback) { this.opponentSelectionCallback = callback; },
-      setOpponentPairings: function (pairings) { this.opponentPairings = pairings; }
+      setOpponentInfos: function (infos) { this.opponentInfos = infos; }
     };
 
     var pairings = {};
+    pairings[Difficulty.EASY.key] = [
+      {
+        first: Opponent.create('OPP0', 'Hans', 0, Difficulty.EASY, [ 0.9, 0.8, 0.5 ], []),
+        second: Opponent.create('OPP1', 'Günther', 1, Difficulty.EASY, [ 0.95, 0.85, 0.7 ], [])
+      },
+      {
+        first: Opponent.create('OPP2', 'Martin', 2, Difficulty.EASY, [ 0.8, 0.5, 0.2 ], []),
+        second: Opponent.create('OPP3', 'Siegfried', 3, Difficulty.EASY, [ 0.8, 0.7, 0.5 ], [])
+      }
+    ];
+    pairings[Difficulty.MEDIUM.key] = [
+      {
+        first: Opponent.create('OPP4', 'Sebastian', 4, Difficulty.MEDIUM, [ 0.95, 0.9, 0.8 ], []),
+        second: Opponent.create('OPP5', 'Tom', 5, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
+      }
+    ];
+
     this.pairings = pairings;
     this.opponentController = {
       getRandomOpponentPairings: function getRandomOpponentPairings() {
@@ -32,10 +48,10 @@ TestCase('QuizOpponentStateTest', {
     var quiz = {};
     this.quiz = quiz;
     this.quizGenerator = {
-      opponentPairings: null,
+      opponentPairing: null,
       difficulty: null,
       created: false,
-      setCurrentOpponents: function setCurrentOpponents(pairings) { this.opponentPairings = pairings; },
+      setCurrentOpponents: function setCurrentOpponents(pairing) { this.opponentPairing = pairing; },
       setCurrentDifficulty: function setCurrentDifficulty(difficulty) { this.difficulty = difficulty; },
       generate: function generate() { this.created = true; return quiz; }
     };
@@ -53,24 +69,32 @@ TestCase('QuizOpponentStateTest', {
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
-  testCanTransitionToQuizOnOpponentsSelection: function () {
-    QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
-    this.stateMachine.start();
-    this.stateMachine.transitionTo('quizOpponent');
-    this.opponentSelection.opponentSelectionCallback({}, Difficulty.EASY);
-    assertEquals('quiz', this.stateMachine.getCurrentStateId());
+  testCreateNullAndTypeSafe: function () {
+    var stateMachine = this.stateMachine;
+    var opponentSelection = this.opponentSelection;
+    var opponentController = this.opponentController;
+    var quizGenerator = this.quizGenerator;
+    var quizController = this.quizController;
+
+    assertException(function () { QuizOpponentState.create(stateMachine, opponentSelection, opponentController, quizGenerator, null ); }, 'TypeError');
+    assertException(function () { QuizOpponentState.create(stateMachine, opponentSelection, opponentController, null, quizController ); }, 'TypeError');
+    assertException(function () { QuizOpponentState.create(stateMachine, opponentSelection, null, quizGenerator, quizController ); }, 'TypeError');
+    assertException(function () { QuizOpponentState.create(stateMachine, null, opponentController, quizGenerator, quizController ); }, 'TypeError');
+    assertException(function () { QuizOpponentState.create(null, opponentSelection, opponentController, quizGenerator, quizController ); }, 'TypeError');
+
+    assertException(function () { QuizOpponentState.create({}, opponentSelection, opponentController, quizGenerator, quizController ); }, 'TypeError');
   },
 
-  testCreatesQuizOnOpponentSelection: function () {
+  testOpponentsSelection: function () {
     QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizOpponent');
-    var pairing = {};
-    this.opponentSelection.opponentSelectionCallback(pairing, Difficulty.EASY);
-    assertSame(pairing, this.quizGenerator.opponentPairings);
+    this.opponentSelection.opponentInfos[1].callback();
+    assertSame(this.pairings[Difficulty.EASY.key][1], this.quizGenerator.opponentPairing);
     assertSame(Difficulty.EASY, this.quizGenerator.difficulty);
     assertTrue(this.quizGenerator.created);
     assertSame(this.quiz, this.quizController.createdQuiz);
+    assertEquals('quiz', this.stateMachine.getCurrentStateId());
   },
 
   testCanTransitionToQuizTopicStateOnBack: function () {
@@ -81,10 +105,31 @@ TestCase('QuizOpponentStateTest', {
     assertEquals('quizTopic', this.stateMachine.getCurrentStateId());
   },
 
-  testSetsOpponentPairingsOnEnter: function () {
+  testSetsOpponentInfosOnEnter: function () {
     QuizOpponentState.create(this.stateMachine, this.opponentSelection, this.opponentController, this.quizGenerator, this.quizController);
     this.stateMachine.start();
     this.stateMachine.transitionTo('quizOpponent');
-    assertSame(this.pairings, this.opponentSelection.opponentPairings);
+    assertEquals(3, this.opponentSelection.opponentInfos.length);
+
+    assertEquals('imageSelectionBackgroundGlowGreen', this.opponentSelection.opponentInfos[0].backgroundClass);
+    assertEquals(2, this.opponentSelection.opponentInfos[0].imageInfos.length);
+    assertEquals(0, this.opponentSelection.opponentInfos[0].imageInfos[0].avatarImageIdx);
+    assertEquals('Hans', this.opponentSelection.opponentInfos[0].imageInfos[0].name);
+    assertEquals(1, this.opponentSelection.opponentInfos[0].imageInfos[1].avatarImageIdx);
+    assertEquals('Günther', this.opponentSelection.opponentInfos[0].imageInfos[1].name);
+
+    assertEquals('imageSelectionBackgroundGlowGreen', this.opponentSelection.opponentInfos[1].backgroundClass);
+    assertEquals(2, this.opponentSelection.opponentInfos[1].imageInfos.length);
+    assertEquals(2, this.opponentSelection.opponentInfos[1].imageInfos[0].avatarImageIdx);
+    assertEquals('Martin', this.opponentSelection.opponentInfos[1].imageInfos[0].name);
+    assertEquals(3, this.opponentSelection.opponentInfos[1].imageInfos[1].avatarImageIdx);
+    assertEquals('Siegfried', this.opponentSelection.opponentInfos[1].imageInfos[1].name);
+
+    assertEquals('imageSelectionBackgroundGlowYellow', this.opponentSelection.opponentInfos[2].backgroundClass);
+    assertEquals(2, this.opponentSelection.opponentInfos[2].imageInfos.length);
+    assertEquals(4, this.opponentSelection.opponentInfos[2].imageInfos[0].avatarImageIdx);
+    assertEquals('Sebastian', this.opponentSelection.opponentInfos[2].imageInfos[0].name);
+    assertEquals(5, this.opponentSelection.opponentInfos[2].imageInfos[1].avatarImageIdx);
+    assertEquals('Tom', this.opponentSelection.opponentInfos[2].imageInfos[1].name);
   }
 });

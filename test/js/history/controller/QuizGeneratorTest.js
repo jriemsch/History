@@ -41,7 +41,7 @@ TestCase('QuizGeneratorTest', {
 
     Random.setNext([0.8, 0.1, 0.5, 0.99]);
 
-    this.pairing = {
+    this.imageInfos = {
       first: Opponent.create('OPP4', 'Sebastian Weier', 4, Difficulty.MEDIUM, [ 0.95, 0.9, 0.8 ], []),
       second: Opponent.create('OPP5', 'Tom Stark', 5, Difficulty.EASY, [ 0.8, 0.7, 0.3 ], [])
     };
@@ -50,13 +50,13 @@ TestCase('QuizGeneratorTest', {
   testGenerate: function () {
     this.quizGenerator.setCurrentTopic('topicId');
     this.quizGenerator.setCurrentDifficulty(Difficulty.MEDIUM);
-    this.quizGenerator.setCurrentOpponents(this.pairing);
+    this.quizGenerator.setCurrentOpponents(this.imageInfos);
     var quiz = this.quizGenerator.generate();
     assertNotNull(quiz);
     assertTrue(TypeUtils.isOfType(quiz, net.riemschneider.history.model.Quiz));
     assertEquals('topicId', quiz.getTopicId());
     assertSame(Difficulty.MEDIUM, quiz.getDifficulty());
-    assertSame(this.pairing, quiz.getOpponentPairing());
+    assertSame(this.imageInfos, quiz.getOpponentPairing());
     var questionsByRegion = quiz.getQuestionsByRegion();
     assertEquals('Q4', questionsByRegion.REG1.getId());
     assertEquals('Q1', questionsByRegion.REG2.getId());
@@ -73,23 +73,23 @@ TestCase('QuizGeneratorTest', {
     assertException(function () { quizGenerator.setCurrentDifficulty(null); }, 'TypeError');
     assertException(function () { quizGenerator.setCurrentDifficulty('easy'); }, 'TypeError');
 
-    assertException(function () { quizGenerator.setCurrentOpponents({ first: this.pairing.first }); }, 'TypeError');
-    assertException(function () { quizGenerator.setCurrentOpponents({ second: this.pairing.second }); }, 'TypeError');
-    assertException(function () { quizGenerator.setCurrentOpponents({ first: this.pairing.first, second: {} }); }, 'TypeError');
-    assertException(function () { quizGenerator.setCurrentOpponents({ first: {}, second: this.pairing.second }); }, 'TypeError');
+    assertException(function () { quizGenerator.setCurrentOpponents({ first: this.imageInfos.first }); }, 'TypeError');
+    assertException(function () { quizGenerator.setCurrentOpponents({ second: this.imageInfos.second }); }, 'TypeError');
+    assertException(function () { quizGenerator.setCurrentOpponents({ first: this.imageInfos.first, second: {} }); }, 'TypeError');
+    assertException(function () { quizGenerator.setCurrentOpponents({ first: {}, second: this.imageInfos.second }); }, 'TypeError');
   },
 
   testGenerateWithoutCallingSetCurrentTopic: function () {
     var quizGenerator = this.quizGenerator;
     quizGenerator.setCurrentDifficulty(Difficulty.MEDIUM);
-    quizGenerator.setCurrentOpponents(this.pairing);
+    quizGenerator.setCurrentOpponents(this.imageInfos);
     assertException(function () { quizGenerator.generate(); }, 'TypeError');
   },
 
   testGenerateWithoutCallingSetCurrentDifficulty: function () {
     var quizGenerator = this.quizGenerator;
     quizGenerator.setCurrentTopic('topicId');
-    quizGenerator.setCurrentOpponents(this.pairing);
+    quizGenerator.setCurrentOpponents(this.imageInfos);
     assertException(function () { quizGenerator.generate(); }, 'TypeError');
   },
 
