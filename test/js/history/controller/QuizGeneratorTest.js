@@ -9,15 +9,17 @@ var Question = net.riemschneider.history.model.Question;
 var Answer = net.riemschneider.history.model.Answer;
 var Random = net.riemschneider.utils.Random;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 
 TestCase('QuizGeneratorTest', {
   setUp: function () {
     var pos = Position.create(1, 2);
+    var imgData = ImageData.create('img', pos, pos);
     var regions = Regions.create([
-      Region.create('REG1', 'img', pos, pos, pos),
-      Region.create('REG2', 'img', pos, pos, pos),
-      Region.create('REG3', 'img', pos, pos, pos),
-      Region.create('REG4', 'img', pos, pos, pos)
+      Region.create('REG1', imgData, pos),
+      Region.create('REG2', imgData, pos),
+      Region.create('REG3', imgData, pos),
+      Region.create('REG4', imgData, pos)
     ]);
 
     var regionsByTopic = { topicId: regions };

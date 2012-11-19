@@ -16,6 +16,7 @@ load:
   - ../../../jslib/main/js/utils/ObservedProperty.js
   - ../../../jslib/test/utils/WebUtils.js
   - ../../../jslib/main/js/graphics/Position.js
+  - ../../../jslib/main/js/graphics/ImageData.js
   - ../../../jslib/main/js/graphics/ImageUtils.js
   - ../../../jslib/main/js/storage/Storage.js
   - ../../../jslib/main/js/gestures/Scroll.js
@@ -64,7 +65,7 @@ load:
   - ../main/js/history/views/components/ImageMap.js
   - ../main/js/history/views/components/QuizPlayers.js
   - ../main/js/history/views/components/RegionState.js
-  - ../main/js/history/views/components/QuizMapSelection.js
+  - ../main/js/history/views/components/DecoratedImageMap.js
   - ../main/js/history/views/components/AnswerComponentRegistry.js
   - ../main/js/history/views/AvatarSelection.js
   - ../main/js/history/views/TopicSelection.js
@@ -117,7 +118,7 @@ test:
   - js/history/views/components/AnimatedBackgroundTest.js
   - js/history/views/components/ImageMapTest.js
   - js/history/views/components/QuizPlayersTest.js
-  - js/history/views/components/QuizMapSelectionTest.js
+  - js/history/views/components/DecoratedImageMapTest.js
   - js/history/views/components/RegionStateTest.js
   - js/history/views/components/AnswerComponentRegistryTest.js
   - js/history/views/AvatarSelectionTest.js

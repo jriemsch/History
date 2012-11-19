@@ -7,6 +7,7 @@ var Player = net.riemschneider.history.model.Player;
 var Regions = net.riemschneider.history.model.Regions;
 var Region = net.riemschneider.history.model.Region;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 var Topic = net.riemschneider.history.model.Topic;
 var Answer = net.riemschneider.history.model.Answer;
 var ImageMap = net.riemschneider.history.views.components.ImageMap;
@@ -38,10 +39,13 @@ TestCase('QuizViewTest', {
     };
     var pos = Position.create(0, 0);
     this.regionsByTopic = {
-      topicId: Regions.create([ Region.create('R1', 'R1src', pos, pos, pos),  Region.create('R2', 'R2src', pos, pos, pos)  ])
+      topicId: Regions.create([
+        Region.create('R1', ImageData.create('R1src', pos, pos), pos),
+        Region.create('R2', ImageData.create('R2src', pos, pos), pos)
+      ])
     };
     this.topicsById = {
-      topicId: Topic.create('topicId', 'topic', 'image', 'mapImage', pos, 1900)
+      topicId: Topic.create('topicId', 'topic', 'image', ImageData.create('mapImage', Position.ZERO, pos), 1900)
     };
 	this.answerComponentRegistry = AnswerComponentRegistry.create();
   },

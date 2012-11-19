@@ -6,31 +6,30 @@ net.riemschneider.history.model = net.riemschneider.history.model || {};
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var Position = net.riemschneider.graphics.Position;
+  var ImageData = net.riemschneider.graphics.ImageData;
 
   net.riemschneider.history.model.Topic = {
-    create: function create(id, name, image, mapImage, mapImageSize, year) {
+    create: function create(id, name, image, mapImgData, year) {
       ArgumentUtils.assertString(id);
       ArgumentUtils.assertString(name);
       ArgumentUtils.assertString(image);
-      ArgumentUtils.assertString(mapImage);
-      ArgumentUtils.assertType(mapImageSize, Position);
+      ArgumentUtils.assertType(mapImgData, ImageData);
       ArgumentUtils.assertNumber(year);
 
       return {
         getId: function getId() { return id; },
         getName: function getName() { return name; },
         getImage: function getImage() { return image; },
-        getMapImage: function getMapImage() { return mapImage; },
-        getMapImageSize: function getMapImageSize() { return mapImageSize; },
+        getMapImgData: function getMapImgData() { return mapImgData; },
         getYear: function getYear() { return year; }
       };
     },
 
     createFromState: function createFromState(state) {
       ArgumentUtils.assertNotNull(state);
-      var mapImageSize = Position.create(state.mapImageSize.x, state.mapImageSize.y);
-      return net.riemschneider.history.model.Topic.create(
-          state.id, state.name, state.imgSrc, state.mapImageSrc, mapImageSize, state.year);
+      var mapImgSize = Position.create(state.mapImageSize.x, state.mapImageSize.y);
+      var mapImgData = ImageData.create(state.mapImageSrc, Position.ZERO, mapImgSize);
+      return net.riemschneider.history.model.Topic.create(state.id, state.name, state.imgSrc, mapImgData, state.year);
     }
   };
 

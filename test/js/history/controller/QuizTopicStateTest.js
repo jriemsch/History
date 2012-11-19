@@ -6,6 +6,7 @@ var TypeUtils = net.riemschneider.utils.TypeUtils;
 var Topic = net.riemschneider.history.model.Topic;
 var AddOns = net.riemschneider.history.model.AddOns;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 
 TestCase('QuizTopicStateTest', {
   setUp: function () {
@@ -26,9 +27,10 @@ TestCase('QuizTopicStateTest', {
       setCurrentTopic: function setCurrentTopic(topicId) { this.topicId = topicId; }
     };
 
+    var mapImgData = ImageData.create('/test/images/test.png', Position.ZERO, Position.create(1, 1));
     this.topicsById = {
-      topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1901),
-      topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', '/test/images/test.png', Position.create(1, 1), 1900)
+      topic1: Topic.create('topic1', 'Topic1', '/test/images/test.png', mapImgData, 1901),
+      topic2: Topic.create('topic2', 'Topic2', '/test/images/test.png', mapImgData, 1900)
     };
 
     this.addOns = AddOns.create();

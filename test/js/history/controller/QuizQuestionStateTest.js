@@ -3,6 +3,7 @@ var State = net.riemschneider.structures.State;
 var StateMachine = net.riemschneider.structures.StateMachine;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 var QuizController = net.riemschneider.history.controller.QuizController;
 var Region = net.riemschneider.history.model.Region;
 var Regions = net.riemschneider.history.model.Regions;
@@ -31,7 +32,10 @@ TestCase('QuizQuestionStateTest', {
     };
     var pos = Position.create(0, 0);
     this.regionsByTopic = {
-      topicId: Regions.create([ Region.create('R1', 'R1src', pos, pos, pos),  Region.create('R2', 'R2src', pos, pos, pos)  ])
+      topicId: Regions.create([
+        Region.create('R1', ImageData.create('R1src', pos, pos), pos),
+        Region.create('R2', ImageData.create('R2src', pos, pos), pos)
+      ])
     };
     this.quiz = Quiz.create('topicId', pairing, Difficulty.EASY, questionsByRegion);
     this.quizController.setCurrentQuiz(this.quiz);

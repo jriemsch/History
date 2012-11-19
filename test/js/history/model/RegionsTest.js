@@ -1,13 +1,15 @@
 var Region = net.riemschneider.history.model.Region;
 var Regions = net.riemschneider.history.model.Regions;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
 
 TestCase('RegionsTest', {
   testCreate: function () {
     var pos = Position.create(1, 2);
-    var region1 = Region.create('id1', 'img', pos, pos, pos);
-    var region2 = Region.create('id2', 'img', pos, pos, pos);
+    var imgData = ImageData.create('img', pos, pos);
+    var region1 = Region.create('id1', imgData, pos);
+    var region2 = Region.create('id2', imgData, pos);
     var regionArray = [region1, region2];
     var regions = Regions.create(regionArray);
     assertTrue(TypeUtils.isOfType(regions, Regions));
@@ -44,8 +46,9 @@ TestCase('RegionsTest', {
 
   testGetRegion: function () {
     var pos = Position.create(1, 2);
-    var region1 = Region.create('id1', 'img', pos, pos, pos);
-    var region2 = Region.create('id2', 'img', pos, pos, pos);
+    var imgData = ImageData.create('img', pos, pos);
+    var region1 = Region.create('id1', imgData, pos);
+    var region2 = Region.create('id2', imgData, pos);
     var regionArray = [region1, region2];
     var regions = Regions.create(regionArray);
     assertSame(region1, regions.getRegion('id1'));

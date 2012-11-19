@@ -7,6 +7,7 @@ var Facts = net.riemschneider.history.model.Facts;
 var Region = net.riemschneider.history.model.Region;
 var Regions = net.riemschneider.history.model.Regions;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 var Random = net.riemschneider.utils.Random;
 
 TestCase('QuestionListGeneratorTest', {
@@ -31,12 +32,13 @@ TestCase('QuestionListGeneratorTest', {
     };
 
     var pos = Position.create(0, 0);
+    var imgData = ImageData.create('img', pos, pos);
 
     this.regions = Regions.create([
-      Region.create('R1', 'img', pos, pos, pos),
-      Region.create('R2', 'img', pos, pos, pos),
-      Region.create('R3', 'img', pos, pos, pos),
-      Region.create('R4', 'img', pos, pos, pos)
+      Region.create('R1', imgData, pos),
+      Region.create('R2', imgData, pos),
+      Region.create('R3', imgData, pos),
+      Region.create('R4', imgData, pos)
     ]);
 
     this.distribution = {};

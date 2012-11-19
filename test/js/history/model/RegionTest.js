@@ -1,5 +1,6 @@
 var Region = net.riemschneider.history.model.Region;
 var Position = net.riemschneider.graphics.Position;
+var ImageData = net.riemschneider.graphics.ImageData;
 var TypeUtils = net.riemschneider.utils.TypeUtils;
 
 TestCase('RegionTest', {
@@ -7,14 +8,15 @@ TestCase('RegionTest', {
     var imgPos = Position.create(1, 2);
     var imgSize = Position.create(10, 20);
     var difficultyPos = Position.create(3, 4);
-    var region = Region.create('id', 'img', imgPos, imgSize, difficultyPos);
+    var imgData = ImageData.create('img', imgPos, imgSize);
+    var region = Region.create('id', imgData, difficultyPos);
     assertTrue(TypeUtils.isOfType(region, Region));
     assertEquals('id', region.getId());
-    assertEquals('img', region.getImgSrc());
-    assertEquals(1, region.getImgPos().getX());
-    assertEquals(2, region.getImgPos().getY());
-    assertEquals(10, region.getImgSize().getX());
-    assertEquals(20, region.getImgSize().getY());
+    assertEquals('img', region.getImgData().getImgSrc());
+    assertEquals(1, region.getImgData().getImgPos().getX());
+    assertEquals(2, region.getImgData().getImgPos().getY());
+    assertEquals(10, region.getImgData().getImgSize().getX());
+    assertEquals(20, region.getImgData().getImgSize().getY());
     assertEquals(3, region.getDifficultyPos().getX());
     assertEquals(4, region.getDifficultyPos().getY());
   },
@@ -23,18 +25,15 @@ TestCase('RegionTest', {
     var imgPos = Position.create(1, 2);
     var imgSize = Position.create(10, 20);
     var difficultyPos = Position.create(3, 4);
+    var imgData = ImageData.create('img', imgPos, imgSize);
 
-    assertException(function () { Region.create('id', 'img', imgPos, imgSize, null); }, 'TypeError');
-    assertException(function () { Region.create('id', 'img', imgPos, null, difficultyPos); }, 'TypeError');
-    assertException(function () { Region.create('id', 'img', null, imgSize, difficultyPos); }, 'TypeError');
-    assertException(function () { Region.create('id', null, imgPos, imgSize, difficultyPos); }, 'TypeError');
-    assertException(function () { Region.create(null, 'img', imgPos, imgSize, difficultyPos); }, 'TypeError');
+    assertException(function () { Region.create('id', imgData, null); }, 'TypeError');
+    assertException(function () { Region.create('id', null, difficultyPos); }, 'TypeError');
+    assertException(function () { Region.create(null, imgData, difficultyPos); }, 'TypeError');
 
-    assertException(function () { Region.create('id', 'img', imgPos, imgSize, {}); }, 'TypeError');
-    assertException(function () { Region.create('id', 'img', imgPos, {}, difficultyPos); }, 'TypeError');
-    assertException(function () { Region.create('id', 'img', {}, imgSize, difficultyPos); }, 'TypeError');
-    assertException(function () { Region.create('id', 2, imgPos, imgSize, difficultyPos); }, 'TypeError');
-    assertException(function () { Region.create(2, 'img', imgPos, imgSize, difficultyPos); }, 'TypeError');
+    assertException(function () { Region.create('id', imgData, {}); }, 'TypeError');
+    assertException(function () { Region.create('id', 2, difficultyPos); }, 'TypeError');
+    assertException(function () { Region.create(2, imgData, difficultyPos); }, 'TypeError');
   },
 
   testCreateFromState: function () {
@@ -44,11 +43,11 @@ TestCase('RegionTest', {
     var region = Region.createFromState({ id: 'id', imgSrc: 'img', imgPos: imgPos, imgSize: imgSize, difficultyPos: difficultyPos });
     assertTrue(TypeUtils.isOfType(region, Region));
     assertEquals('id', region.getId());
-    assertEquals('img', region.getImgSrc());
-    assertEquals(1, region.getImgPos().getX());
-    assertEquals(2, region.getImgPos().getY());
-    assertEquals(10, region.getImgSize().getX());
-    assertEquals(20, region.getImgSize().getY());
+    assertEquals('img', region.getImgData().getImgSrc());
+    assertEquals(1, region.getImgData().getImgPos().getX());
+    assertEquals(2, region.getImgData().getImgPos().getY());
+    assertEquals(10, region.getImgData().getImgSize().getX());
+    assertEquals(20, region.getImgData().getImgSize().getY());
     assertEquals(3, region.getDifficultyPos().getX());
     assertEquals(4, region.getDifficultyPos().getY());
   },

@@ -3,7 +3,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 (function () {
   "use strict";
 
-  var QuizMapSelection = net.riemschneider.history.views.components.QuizMapSelection;
+  var DecoratedImageMap = net.riemschneider.history.views.components.DecoratedImageMap;
   var QuizPlayers = net.riemschneider.history.views.components.QuizPlayers;
   var Difficulty = net.riemschneider.history.model.Difficulty;
   var RegionState = net.riemschneider.history.views.components.RegionState;
@@ -14,6 +14,11 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   scoreByDifficulty[Difficulty.EASY.key] = 5;
   scoreByDifficulty[Difficulty.MEDIUM.key] = 10;
   scoreByDifficulty[Difficulty.HARD.key] = 20;
+
+  var difficultyClasses = {};
+  difficultyClasses[Difficulty.EASY.key] = 'quizDifficultyEasy';
+  difficultyClasses[Difficulty.MEDIUM.key] = 'quizDifficultyMedium';
+  difficultyClasses[Difficulty.HARD.key] = 'quizDifficultyHard';
 
   net.riemschneider.history.views.QuizView = {
     create: function (playerController, quizController, regionsByTopic, topicsById, answerComponentRegistry) {
@@ -56,8 +61,22 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
           quizPlayers = QuizPlayers.create(quizView, players);
 
-          quizMapSelection = QuizMapSelection.create(quizMap, topic, regions, questionsByRegion, scoreByDifficulty, onTapped);
+          quizMapSelection = DecoratedImageMap.create(quizMap, topic.getMapImgData());
+          var regionArray = regions.getRegions();
+          for (var idx = 0, len = regionArray.length; idx < len; ++idx) {
+            addRegion(regionArray[idx]);
+          }
           quizView.show();
+
+          function addRegion(region) {
+            var question = questionsByRegion[region.getId()];
+            var difficulty = question.getDifficulty();
+            var score = scoreByDifficulty[difficulty.key];
+            var scoreClass = difficultyClasses[difficulty.key];
+            quizMapSelection.addImage(region.getId(), region.getImgData(), region.getDifficultyPos(), score, scoreClass, function () {
+              onTapped(region);
+            });
+          }
         },
         hide: function hide() {
           $('#quizView').hide();
