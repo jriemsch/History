@@ -2,6 +2,10 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.templates {
+    display: none;
+}
+
 .view {
     position: absolute;
     left: 0;
