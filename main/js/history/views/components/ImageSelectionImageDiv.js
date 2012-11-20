@@ -7,28 +7,17 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
 
   net.riemschneider.history.views.components.ImageSelectionImageDiv = {
-    create: function create(imgSrc, name, overlay, imgOpacity) {
-      ArgumentUtils.assertString(imgSrc);
+    create: function create(template, data, imgOpacity) {
+      ArgumentUtils.assertType(template, net.riemschneider.ui.Template);
+      ArgumentUtils.assertNotNull(data);
+      ArgumentUtils.assertNotNull(data.image);
 
-      var optionDiv = $('<div class="imageSelectionOption"></div>');
-      var optionImageFrame = $('<div class="imageSelectionImageFrame"></div>');
-
-      var img = $('<img class="imageSelectionOptionImage" src=' + imgSrc + '></img>');
+      var clone = template.clone(data);
+      var optionDiv = clone.getClone();
       optionDiv.hide();
-      optionDiv.append(optionImageFrame);
-      optionImageFrame.append(img);
 
+      var img = clone.getElement('image');
       img.load(function () { optionDiv.show(); });
-
-      if (name) {
-        ArgumentUtils.assertString(name);
-        optionImageFrame.append($('<div class="imageSelectionOptionText"><p>' + name + '</p></div>'));
-      }
-
-      if (overlay) {
-        ArgumentUtils.assertString(overlay);
-        optionImageFrame.append($('<img class="imageSelectionOptionOverlay" src=' + overlay + '></img>'));
-      }
 
       if (imgOpacity) {
         ArgumentUtils.assertNumber(imgOpacity);

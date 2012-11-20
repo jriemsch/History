@@ -9,9 +9,11 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var TouchUtils = net.riemschneider.utils.TouchUtils;
   var Tap = net.riemschneider.gestures.Tap;
+  var Template = net.riemschneider.ui.Template;
 
   net.riemschneider.history.views.AvatarSelection = {
     create: function () {
+      var template = Template.create('imageSelectionImageDiv');
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
@@ -62,7 +64,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         var options = [];
         for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
           options[idx] = {
-            div: ImageSelectionImageDiv.create(AvatarImages.getImage(idx))
+            div: ImageSelectionImageDiv.create(template, { image: AvatarImages.getImage(idx) })
           };
         }
         return options;

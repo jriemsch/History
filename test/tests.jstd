@@ -24,6 +24,7 @@ load:
   - ../../../jslib/main/js/structures/State.js
   - ../../../jslib/main/js/structures/ViewState.js
   - ../../../jslib/main/js/structures/StateMachine.js
+  - ../../../jslib/main/js/ui/Template.js
   - ../main/js/history/model/Player.js
   - ../main/js/history/model/LevelOrderChance.js
   - ../main/js/history/model/Difficulty.js

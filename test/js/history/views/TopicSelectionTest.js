@@ -4,22 +4,28 @@ TestCase('TopicSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.opponentSelectionDiv = $('<div id="topicSelection"></div>');
-    this.opponentsDiv = $('<div id="topics"></div>');
+    this.templateDiv = $('<div data-template-id="imageSelectionImageDiv"></div>');
+    this.templateDiv.append('<img data-id="image" data-attr="src" class="imageClass">');
+    this.templateDiv.append('<div data-id="text" data-attr="text"></div>');
+    this.templateDiv.append('<img data-id="overlay" data-attr="src" class="overlay">');
+
+    this.topicSelectionDiv = $('<div id="topicSelection"></div>');
+    this.topicsDiv = $('<div id="topics"></div>');
     this.questionMarksTop = $('<div id="topicQuestionMarksTop"></div>');
     this.questionMarksBottom = '<div id="topicQuestionMarksBottom"></div>';
     this.buttonBarDiv = $('<div class="footer"></div>');
     this.okButton = $('<div class="okButton"></div>');
     this.backButton = $('<div class="backButton"></div>');
 
-    $('body').append(this.opponentSelectionDiv);
-    this.opponentSelectionDiv.append(this.opponentsDiv);
-    this.opponentSelectionDiv.append(this.questionMarksTop);
-    this.opponentSelectionDiv.append(this.questionMarksBottom);
-    this.opponentSelectionDiv.append(this.buttonBarDiv);
+    $('body').append(this.templateDiv);
+    $('body').append(this.topicSelectionDiv);
+    this.topicSelectionDiv.append(this.topicsDiv);
+    this.topicSelectionDiv.append(this.questionMarksTop);
+    this.topicSelectionDiv.append(this.questionMarksBottom);
+    this.topicSelectionDiv.append(this.buttonBarDiv);
     this.buttonBarDiv.append(this.backButton);
 
-    this.opponentSelectionDiv.hide();
+    this.topicSelectionDiv.hide();
 
     this.topicInfos = [
       {
@@ -46,19 +52,19 @@ TestCase('TopicSelectionTest', {
   testShowAndHide: function () {
     var sel = TopicSelection.create();
     sel.setTopicInfos(this.topicInfos);
-    assertEquals('none', this.opponentSelectionDiv.css('display'));
+    assertEquals('none', this.topicSelectionDiv.css('display'));
     sel.show();
-    assertEquals('block', this.opponentSelectionDiv.css('display'));
+    assertEquals('block', this.topicSelectionDiv.css('display'));
     sel.hide();
-    assertEquals('none', this.opponentSelectionDiv.css('display'));
+    assertEquals('none', this.topicSelectionDiv.css('display'));
   },
 
   testAllImagesShown: function () {
     var sel = TopicSelection.create();
     sel.setTopicInfos(this.topicInfos);
     sel.show();
-    assertEquals(2, $('.imageSelectionOptionImage').length);
-    assertEquals(1, $('.imageSelectionOptionOverlay').length);
+    assertEquals(2, this.topicSelectionDiv.find('.imageClass').length);
+    assertEquals(1, this.topicSelectionDiv.find('.overlay').length);
   },
 
   testCanShowNewTopicState: function () {
@@ -68,7 +74,7 @@ TestCase('TopicSelectionTest', {
     sel.hide();
     this.topicInfos[1].showLockOverlay = false;
     sel.show();
-    assertEquals(0, $('.imageSelectionOptionOverlay').length);
+    assertEquals(0, this.topicSelectionDiv.find('.overlay').length);
   },
 
   testBackCallsCallback: function () {
@@ -86,7 +92,7 @@ TestCase('TopicSelectionTest', {
     var sel = TopicSelection.create();
     sel.setTopicInfos(this.topicInfos);
     sel.show();
-    var allImages = $('.imageSelectionOptionImage');
+    var allImages = this.topicSelectionDiv.find('.imageClass');
     $(allImages[0]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[0]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
     assertTrue(this.topicInfos[0].called);

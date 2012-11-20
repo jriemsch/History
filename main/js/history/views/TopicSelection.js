@@ -8,9 +8,11 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
+  var Template = net.riemschneider.ui.Template;
 
   net.riemschneider.history.views.TopicSelection = {
     create: function create() {
+      var template = Template.create('imageSelectionImageDiv');
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
       var topicsDiv = $('#topics');
@@ -47,8 +49,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createTopicOption(topicInfo) {
         var optionDiv = topicInfo.showLockOverlay ?
-            ImageSelectionImageDiv.create(topicInfo.image, topicInfo.name, 'images/lock.png', 0.4) :
-            ImageSelectionImageDiv.create(topicInfo.image, topicInfo.name);
+            ImageSelectionImageDiv.create(template, { image: topicInfo.image, text: topicInfo.name, overlay: 'images/lock.png' }, 0.4) :
+            ImageSelectionImageDiv.create(template, { image: topicInfo.image, text: topicInfo.name });
         return {
           div: optionDiv,
           callback: function () { topicInfo.callback(); }

@@ -5,6 +5,8 @@ TestCase('AvatarSelectionTest', {
   setUp: function () {
     $('body').empty();
 
+    this.templateDiv = $('<div data-template-id="imageSelectionImageDiv"><img data-id="image" data-attr="src" class="imageClass"></div>');
+
     this.avatarSelectionDiv = $('<div id="avatarSelection"></div>');
     this.avatarsDiv = $('<div id="avatars"></div>');
     this.questionMarksTop = $('<div id="avatarQuestionMarksTop"></div>');
@@ -15,6 +17,7 @@ TestCase('AvatarSelectionTest', {
     this.buttonBarDiv = $('<div class="footer"></div>');
     this.okButton = $('<div class="okButton"></div>');
 
+    $('body').append(this.templateDiv);
     $('body').append(this.avatarSelectionDiv);
     this.avatarSelectionDiv.append(this.avatarsDiv);
     this.avatarSelectionDiv.append(this.questionMarksTop);
@@ -57,7 +60,7 @@ TestCase('AvatarSelectionTest', {
 
   testAllImagesShown: function () {
     AvatarSelection.create().show();
-    var allImages = $('.imageSelectionOptionImage');
+    var allImages = this.avatarSelectionDiv.find('.imageClass');
     assertEquals(31, allImages.length);
   },
 
@@ -65,7 +68,7 @@ TestCase('AvatarSelectionTest', {
     var sel = AvatarSelection.create();
     sel.setAvatarImageIdx(2);
     sel.show();
-    var selectedImage = $('.imageSelectionSelector .imageSelectionOptionImage');
+    var selectedImage = this.avatarSelectionDiv.find('.imageSelectionSelector .imageClass');
     assertEquals(1, selectedImage.length);
     assertEquals('images/avatars/avatar002.png', selectedImage.attr('src'));
   },
@@ -73,7 +76,7 @@ TestCase('AvatarSelectionTest', {
   testSelectImage: function () {
     var sel = AvatarSelection.create();
     sel.show();
-    var allImages = $('.imageSelectionOptionImage');
+    var allImages = this.avatarSelectionDiv.find('.imageClass');
     $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(allImages[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
     assertEquals(1, sel.getAvatarImageIdx());
