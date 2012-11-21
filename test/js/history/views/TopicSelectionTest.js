@@ -4,10 +4,14 @@ TestCase('TopicSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.templateDiv = $('<div data-template-id="imageSelectionImageDiv"></div>');
-    this.templateDiv.append('<img data-id="image" data-attr="src" class="imageClass">');
-    this.templateDiv.append('<div data-id="text" data-attr="text"></div>');
-    this.templateDiv.append('<img data-id="overlay" data-attr="src" class="overlay">');
+    this.lockedTemplateDiv = $('<div data-template-id="lockedTopicImageSelectionDiv"></div>');
+    this.lockedTemplateDiv.append('<img data-id="image" data-attr="src" class="imageClass">');
+    this.lockedTemplateDiv.append('<div data-id="text" data-attr="text"></div>');
+    this.lockedTemplateDiv.append('<img data-id="overlay" data-attr="src" class="overlay">');
+
+    this.unlockedTemplateDiv = $('<div data-template-id="unlockedTopicImageSelectionDiv"></div>');
+    this.unlockedTemplateDiv.append('<img data-id="image" data-attr="src" class="imageClass">');
+    this.unlockedTemplateDiv.append('<div data-id="text" data-attr="text"></div>');
 
     this.topicSelectionDiv = $('<div id="topicSelection"></div>');
     this.topicsDiv = $('<div id="topics"></div>');
@@ -17,7 +21,8 @@ TestCase('TopicSelectionTest', {
     this.okButton = $('<div class="okButton"></div>');
     this.backButton = $('<div class="backButton"></div>');
 
-    $('body').append(this.templateDiv);
+    $('body').append(this.lockedTemplateDiv);
+    $('body').append(this.unlockedTemplateDiv);
     $('body').append(this.topicSelectionDiv);
     this.topicSelectionDiv.append(this.topicsDiv);
     this.topicSelectionDiv.append(this.questionMarksTop);

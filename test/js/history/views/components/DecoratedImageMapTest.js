@@ -63,8 +63,8 @@ TestCase('DecoratedImageMapTest', {
     assertTrue(Position.create(21.875, 56.25, Position.Unit.PERCENT).equals(this.createdImages[1].imgPos));
     assertTrue(Position.create(12.5, 6.25, Position.Unit.PERCENT).equals(this.createdImages[0].imgSize));
     assertTrue(Position.create(25, 50, Position.Unit.PERCENT).equals(this.createdImages[1].imgSize));
-    assertEquals('quizRegion', this.createdImages[0].lastImageClass);
-    assertEquals('quizRegion', this.createdImages[1].lastImageClass);
+    assertEquals('transparent', this.createdImages[0].lastImageClass);
+    assertEquals('transparent', this.createdImages[1].lastImageClass);
     assertEquals('quizRegionUNCLAIMED', this.createdImages[0].lastMaskClass);
     assertEquals('quizRegionUNCLAIMED', this.createdImages[1].lastMaskClass);
     var difficultyMarkers = container.find('.quizDifficultyMarker');

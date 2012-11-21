@@ -72,8 +72,6 @@
 
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionImageDiv.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionMultipleImageDiv.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageMap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/QuizPlayers.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/RegionState.js"></script>
@@ -139,15 +137,40 @@
   <div id="quizView" class="view">
     <div class="quizMap"></div>
   </div>
-  
+
   <div class="templates">
-    <div data-template-id="imageSelectionImageDiv" class="imageSelectionOption">
-	  <div class="imageSelectionImageFrame">
-	    <img data-id="image" data-attr="src" class="imageSelectionOptionImage" src="">
-		<div data-id="text" data-attr="text" class="imageSelectionOptionText"><p>name</p></div>
-		<img data-id="overlay" data-attr="src" class="imageSelectionOptionOverlay" src="">
-	  </div>
-	</div>
+    <div data-template-id="avatarImageSelectionDiv" class="imageSelectionOption">
+      <div class="imageSelectionImageFrame">
+        <img data-id="image" data-attr="src" class="imageSelectionOptionImage" src="">
+      </div>
+    </div>
+
+    <div data-template-id="unlockedTopicImageSelectionDiv" class="imageSelectionOption">
+      <div class="imageSelectionImageFrame">
+        <img data-id="image" data-attr="src" class="imageSelectionOptionImage" src="">
+        <div class="imageSelectionOptionText"><p data-id="text" data-attr="text">Name</p></div>
+      </div>
+    </div>
+
+    <div data-template-id="lockedTopicImageSelectionDiv" class="imageSelectionOption">
+      <div class="imageSelectionImageFrame">
+        <img data-id="image" data-attr="src" class="imageSelectionOptionImage transparent" src="">
+        <div class="imageSelectionOptionText"><p data-id="text" data-attr="text">Name</p></div>
+        <img data-id="overlay" data-attr="src" class="imageSelectionOptionOverlay" src="">
+      </div>
+  	</div>
+
+    <div data-template-id="opponentImageSelectionDiv" class="imageSelectionOption imageSelectionWideOption">
+      <div data-id="background" data-attr="class" class="imageSelectionBackgroundGlow"></div>
+      <div class="imageSelectionImage0">
+        <img data-id="image0" data-attr="src" class="imageSelectionOptionImage" src="" />
+        <div class="imageSelectionOptionText"><p data-id="name0" data-attr="text" >Name</p></div>
+      </div>
+      <div class="imageSelectionImage1">
+        <img data-id="image1" data-attr="src" class="imageSelectionOptionImage" src="" />
+        <div class="imageSelectionOptionText"><p data-id="name1" data-attr="text">Name</p></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

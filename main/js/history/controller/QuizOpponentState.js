@@ -7,6 +7,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ViewState = net.riemschneider.structures.ViewState;
   var Difficulty = net.riemschneider.history.model.Difficulty;
+  var AvatarImages = net.riemschneider.history.data.AvatarImages;
 
   var backgroundClasses = {};
   backgroundClasses[Difficulty.EASY.key] = 'imageSelectionBackgroundGlowGreen';
@@ -48,11 +49,11 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
       function convertPairing(pairing, difficulty) {
         return {
-          backgroundClass: backgroundClasses[difficulty.key],
-          imageInfos: [
-            { avatarImageIdx: pairing.first.getAvatarImageIdx(), name: pairing.first.getName() },
-            { avatarImageIdx: pairing.second.getAvatarImageIdx(), name: pairing.second.getName() }
-          ],
+          background: backgroundClasses[difficulty.key],
+          image0: AvatarImages.getImage(pairing.first.getAvatarImageIdx()),
+          name0: pairing.first.getName(),
+          image1: AvatarImages.getImage(pairing.second.getAvatarImageIdx()),
+          name1: pairing.second.getName(),
           callback: function onPairingSelected() {
             quizGenerator.setCurrentOpponents(pairing);
             quizGenerator.setCurrentDifficulty(difficulty);

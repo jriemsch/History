@@ -5,12 +5,14 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
-  var ImageSelectionMultipleImagesDiv = net.riemschneider.history.views.components.ImageSelectionMultipleImagesDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
+  var Template = net.riemschneider.ui.Template;
+  var ClosureUtils = net.riemschneider.utils.ClosureUtils;
 
   net.riemschneider.history.views.OpponentSelection = {
     create: function create() {
+      var template = Template.create('opponentImageSelectionDiv');
       var questionMarksDivTop = $('#opponentQuestionMarksTop');
       var questionMarksDivBottom = $('#opponentQuestionMarksBottom');
       var opponentsDiv = $('#opponents');
@@ -57,10 +59,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function createOpponentOption(opponentInfo) {
-        var backgroundClass = opponentInfo.backgroundClass;
-        var imageInfos = opponentInfo.imageInfos;
-        var optionDiv = ImageSelectionMultipleImagesDiv.create(imageInfos, backgroundClass);
-        return { div: optionDiv, callback: function () { opponentInfo.callback(); } };
+        return {
+          div: template.clone(opponentInfo).getClone(),
+          callback: function () { opponentInfo.callback(); }
+        };
       }
 
       return {
@@ -80,9 +82,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         onBack: function onBack(callback) { onBackCallback = callback; },
         setOpponentInfos: function setOpponentInfos(newOpponentInfos) {
           ArgumentUtils.assertArray(newOpponentInfos, function (elem) {
-            ArgumentUtils.assertString(elem.backgroundClass);
+            ArgumentUtils.assertString(elem.background);
             ArgumentUtils.assertFunction(elem.callback);
-            ArgumentUtils.assertArray(elem.imageInfos);
           });
           opponentInfos = newOpponentInfos;
         }

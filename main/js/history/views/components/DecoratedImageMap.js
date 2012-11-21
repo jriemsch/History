@@ -45,7 +45,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
           var imgPos = abs(imgData.getImgPos());
           var imgSize = rel(imgData.getImgSize());
           var mapElement = imageMap.addImage(imgSrc, imgPos, imgSize, function () { onTapped(); });
-          mapElement.addImageClass('quizRegion');
+          mapElement.addImageClass('transparent');
           mapElement.addMaskClass('quizMaskRegion');
           mapElement.addMaskClass('quizRegionUNCLAIMED');
           mapElements[imageId] = mapElement;

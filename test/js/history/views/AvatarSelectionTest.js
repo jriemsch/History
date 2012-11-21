@@ -5,7 +5,7 @@ TestCase('AvatarSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.templateDiv = $('<div data-template-id="imageSelectionImageDiv"><img data-id="image" data-attr="src" class="imageClass"></div>');
+    this.lockedTemplateDiv = $('<div data-template-id="avatarImageSelectionDiv"><img data-id="image" data-attr="src" class="imageClass"></div>');
 
     this.avatarSelectionDiv = $('<div id="avatarSelection"></div>');
     this.avatarsDiv = $('<div id="avatars"></div>');
@@ -17,7 +17,7 @@ TestCase('AvatarSelectionTest', {
     this.buttonBarDiv = $('<div class="footer"></div>');
     this.okButton = $('<div class="okButton"></div>');
 
-    $('body').append(this.templateDiv);
+    $('body').append(this.lockedTemplateDiv);
     $('body').append(this.avatarSelectionDiv);
     this.avatarSelectionDiv.append(this.avatarsDiv);
     this.avatarSelectionDiv.append(this.questionMarksTop);

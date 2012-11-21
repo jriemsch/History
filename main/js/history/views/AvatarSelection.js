@@ -5,7 +5,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   var AvatarImages = net.riemschneider.history.data.AvatarImages;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
-  var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var TouchUtils = net.riemschneider.utils.TouchUtils;
   var Tap = net.riemschneider.gestures.Tap;
@@ -13,7 +12,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   net.riemschneider.history.views.AvatarSelection = {
     create: function () {
-      var template = Template.create('imageSelectionImageDiv');
+      var template = Template.create('avatarImageSelectionDiv');
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
@@ -63,9 +62,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       function createAvatarOptions() {
         var options = [];
         for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
-          options[idx] = {
-            div: ImageSelectionImageDiv.create(template, { image: AvatarImages.getImage(idx) })
-          };
+          options[idx] = { div: template.clone({ image: AvatarImages.getImage(idx) }).getClone() };
         }
         return options;
       }

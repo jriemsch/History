@@ -111,25 +111,22 @@ TestCase('QuizOpponentStateTest', {
     this.stateMachine.transitionTo('quizOpponent');
     assertEquals(3, this.opponentSelection.opponentInfos.length);
 
-    assertEquals('imageSelectionBackgroundGlowGreen', this.opponentSelection.opponentInfos[0].backgroundClass);
-    assertEquals(2, this.opponentSelection.opponentInfos[0].imageInfos.length);
-    assertEquals(0, this.opponentSelection.opponentInfos[0].imageInfos[0].avatarImageIdx);
-    assertEquals('Hans', this.opponentSelection.opponentInfos[0].imageInfos[0].name);
-    assertEquals(1, this.opponentSelection.opponentInfos[0].imageInfos[1].avatarImageIdx);
-    assertEquals('Günther', this.opponentSelection.opponentInfos[0].imageInfos[1].name);
+    assertEquals('imageSelectionBackgroundGlowGreen', this.opponentSelection.opponentInfos[0].background);
+    assertEquals('images/avatars/avatar000.png', this.opponentSelection.opponentInfos[0].image0);
+    assertEquals('Hans', this.opponentSelection.opponentInfos[0].name0);
+    assertEquals('images/avatars/avatar001.png', this.opponentSelection.opponentInfos[0].image1);
+    assertEquals('Günther', this.opponentSelection.opponentInfos[0].name1);
 
-    assertEquals('imageSelectionBackgroundGlowGreen', this.opponentSelection.opponentInfos[1].backgroundClass);
-    assertEquals(2, this.opponentSelection.opponentInfos[1].imageInfos.length);
-    assertEquals(2, this.opponentSelection.opponentInfos[1].imageInfos[0].avatarImageIdx);
-    assertEquals('Martin', this.opponentSelection.opponentInfos[1].imageInfos[0].name);
-    assertEquals(3, this.opponentSelection.opponentInfos[1].imageInfos[1].avatarImageIdx);
-    assertEquals('Siegfried', this.opponentSelection.opponentInfos[1].imageInfos[1].name);
+    assertEquals('imageSelectionBackgroundGlowGreen', this.opponentSelection.opponentInfos[1].background);
+    assertEquals('images/avatars/avatar002.png', this.opponentSelection.opponentInfos[1].image0);
+    assertEquals('Martin', this.opponentSelection.opponentInfos[1].name0);
+    assertEquals('images/avatars/avatar003.png', this.opponentSelection.opponentInfos[1].image1);
+    assertEquals('Siegfried', this.opponentSelection.opponentInfos[1].name1);
 
-    assertEquals('imageSelectionBackgroundGlowYellow', this.opponentSelection.opponentInfos[2].backgroundClass);
-    assertEquals(2, this.opponentSelection.opponentInfos[2].imageInfos.length);
-    assertEquals(4, this.opponentSelection.opponentInfos[2].imageInfos[0].avatarImageIdx);
-    assertEquals('Sebastian', this.opponentSelection.opponentInfos[2].imageInfos[0].name);
-    assertEquals(5, this.opponentSelection.opponentInfos[2].imageInfos[1].avatarImageIdx);
-    assertEquals('Tom', this.opponentSelection.opponentInfos[2].imageInfos[1].name);
+    assertEquals('imageSelectionBackgroundGlowYellow', this.opponentSelection.opponentInfos[2].background);
+    assertEquals('images/avatars/avatar004.png', this.opponentSelection.opponentInfos[2].image0);
+    assertEquals('Sebastian', this.opponentSelection.opponentInfos[2].name0);
+    assertEquals('images/avatars/avatar005.png', this.opponentSelection.opponentInfos[2].image1);
+    assertEquals('Tom', this.opponentSelection.opponentInfos[2].name1);
   }
 });

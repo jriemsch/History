@@ -5,14 +5,14 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
-  var ImageSelectionImageDiv = net.riemschneider.history.views.components.ImageSelectionImageDiv;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
   var Template = net.riemschneider.ui.Template;
 
   net.riemschneider.history.views.TopicSelection = {
     create: function create() {
-      var template = Template.create('imageSelectionImageDiv');
+      var lockedTemplate = Template.create('lockedTopicImageSelectionDiv');
+      var unlockedTemplate = Template.create('unlockedTopicImageSelectionDiv');
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
       var topicsDiv = $('#topics');
@@ -48,13 +48,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function createTopicOption(topicInfo) {
-        var optionDiv = topicInfo.showLockOverlay ?
-            ImageSelectionImageDiv.create(template, { image: topicInfo.image, text: topicInfo.name, overlay: 'images/lock.png' }, 0.4) :
-            ImageSelectionImageDiv.create(template, { image: topicInfo.image, text: topicInfo.name });
-        return {
-          div: optionDiv,
-          callback: function () { topicInfo.callback(); }
-        };
+        var template = topicInfo.showLockOverlay ? lockedTemplate : unlockedTemplate;
+        var data = { image: topicInfo.image, text: topicInfo.name, overlay: 'images/lock.png' };
+        return { div: template.clone(data).getClone(), callback: function () { topicInfo.callback(); } };
       }
 
       function createTopicOptions(topicInfos) {
