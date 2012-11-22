@@ -11,8 +11,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.AvatarSelection = {
-    create: function (template) {
-      ArgumentUtils.assertType(template, net.riemschneider.ui.Template);
+    create: function (avatarTemplate, backgroundTemplate) {
+      ArgumentUtils.assertType(avatarTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
 
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
@@ -63,7 +64,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       function createAvatarOptions() {
         var options = [];
         for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
-          options[idx] = { div: template.clone({ image: AvatarImages.getImage(idx) }) };
+          options[idx] = { div: avatarTemplate.clone({ image: AvatarImages.getImage(idx) }) };
         }
         return options;
       }
@@ -71,8 +72,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       return {
         show: function show() {
           $('#avatarSelection').show();
-          AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
-          AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
+          AnimatedBackground.create(questionMarksDivTop, 3, backgroundTemplate);
+          AnimatedBackground.create(questionMarksDivBottom, 3, backgroundTemplate);
 
           prepareOnResize();
         },

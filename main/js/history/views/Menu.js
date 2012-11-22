@@ -16,7 +16,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       STATS: { key: 'STATS' }
     }),
 
-    create: function () {
+    create: function (backgroundTemplate) {
+      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
+
       var Option = net.riemschneider.history.views.Menu.Option;
 
       var options = {};
@@ -32,7 +34,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function show() {
         $('#menu').show();
-        AnimatedBackground.create(menuBackground, 6, 'images/questionMark.png');
+        AnimatedBackground.create(menuBackground, 6, backgroundTemplate);
       }
 
       function hide() {

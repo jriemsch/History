@@ -9,9 +9,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.TopicSelection = {
-    create: function create(lockedTemplate, unlockedTemplate) {
+    create: function create(lockedTemplate, unlockedTemplate, backgroundTemplate) {
       ArgumentUtils.assertType(lockedTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(unlockedTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
 
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
@@ -64,8 +65,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         show: function show() {
           createImageSelection(topicInfos);
           $('#topicSelection').show();
-          AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
-          AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
+          AnimatedBackground.create(questionMarksDivTop, 3, backgroundTemplate);
+          AnimatedBackground.create(questionMarksDivBottom, 3, backgroundTemplate);
           prepareOnResize();
         },
         hide: function hide() {

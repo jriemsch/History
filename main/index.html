@@ -34,6 +34,11 @@
   <script type="text/javascript" charset="utf-8" src="js/graphics/Position.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/graphics/ImageData.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/graphics/ImageUtils.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/AddClassProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/HideImageUntilLoadedProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/SetSrcAttributeProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/SetTextProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/TemplateProcessorRegistry.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/Template.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/model/Player.js"></script>
@@ -71,6 +76,7 @@
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuestionListGenerator.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackgroundTemplate.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageMap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/QuizPlayers.js"></script>
@@ -139,38 +145,41 @@
   </div>
 
   <div class="templates">
-    <div data-template-id="avatarImageSelectionDiv" class="imageSelectionOption">
+    <div data-template-id="avatarImageSelectionTemplate" class="imageSelectionOption">
       <div class="imageSelectionImageFrame">
-        <img data-id="image" data-attr="src" class="imageSelectionOptionImage" src="">
+        <img data-attr-src="image" class="imageSelectionOptionImage" src="">
       </div>
     </div>
 
-    <div data-template-id="unlockedTopicImageSelectionDiv" class="imageSelectionOption">
+    <div data-template-id="lockedTopicImageSelectionTemplate" class="imageSelectionOption">
       <div class="imageSelectionImageFrame">
-        <img data-id="image" data-attr="src" class="imageSelectionOptionImage" src="">
-        <div class="imageSelectionOptionText"><p data-id="text" data-attr="text">Name</p></div>
+        <img data-attr-src="image" class="imageSelectionOptionImage transparent" src="">
+        <div class="imageSelectionOptionText"><p data-text="name">Name</p></div>
+        <img src="images/lock.png" class="imageSelectionOptionOverlay">
       </div>
     </div>
 
-    <div data-template-id="lockedTopicImageSelectionDiv" class="imageSelectionOption">
+    <div data-template-id="unlockedTopicImageSelectionTemplate" class="imageSelectionOption">
       <div class="imageSelectionImageFrame">
-        <img data-id="image" data-attr="src" class="imageSelectionOptionImage transparent" src="">
-        <div class="imageSelectionOptionText"><p data-id="text" data-attr="text">Name</p></div>
-        <img data-id="overlay" data-attr="src" class="imageSelectionOptionOverlay" src="">
+        <img data-attr-src="image" class="imageSelectionOptionImage" src="">
+        <div class="imageSelectionOptionText"><p data-text="name">Name</p></div>
       </div>
   	</div>
 
-    <div data-template-id="opponentImageSelectionDiv" class="imageSelectionOption imageSelectionWideOption">
-      <div data-id="background" data-attr="class" class="imageSelectionBackgroundGlow"></div>
+    <div data-template-id="opponentImageSelectionTemplate" class="imageSelectionOption imageSelectionWideOption">
+      <div data-class="background" class="imageSelectionBackgroundGlow"></div>
       <div class="imageSelectionImage0">
-        <img data-id="image0" data-attr="src" class="imageSelectionOptionImage" src="" />
-        <div class="imageSelectionOptionText"><p data-id="name0" data-attr="text" >Name</p></div>
+        <img data-attr-src="image0" class="imageSelectionOptionImage" src="" />
+        <div class="imageSelectionOptionText"><p data-text="name0" >Name</p></div>
       </div>
       <div class="imageSelectionImage1">
-        <img data-id="image1" data-attr="src" class="imageSelectionOptionImage" src="" />
-        <div class="imageSelectionOptionText"><p data-id="name1" data-attr="text">Name</p></div>
+        <img data-attr-src="image1" class="imageSelectionOptionImage" src="" />
+        <div class="imageSelectionOptionText"><p data-text="name1">Name</p></div>
       </div>
     </div>
+
+    <img data-template-id="animatedBackgroundTemplate" class="animatedBackgroundImage" src="images/questionMark.png">
+
   </div>
 </body>
 </html>

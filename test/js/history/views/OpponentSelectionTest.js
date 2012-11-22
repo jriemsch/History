@@ -11,12 +11,14 @@ TestCase('OpponentSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.templateDiv = $('<div data-template-id="templateId" class="imageSelectionOption"></div>');
-    this.templateDiv.append('<div data-class="background"></div>');
-    this.templateDiv.append('<img data-attr-src="image0" class="imageSelectionOptionImage" src="" />');
-    this.templateDiv.append('<div data-text="name0"></div>');
-    this.templateDiv.append('<img data-attr-src="image1" class="imageSelectionOptionImage" src="" />');
-    this.templateDiv.append('<div data-text="name1"></div>');
+    this.opponentTemplateDiv = $('<div data-template-id="opponent" class="imageSelectionOption"></div>');
+    this.opponentTemplateDiv.append('<div data-class="background"></div>');
+    this.opponentTemplateDiv.append('<img data-attr-src="image0" class="imageSelectionOptionImage" src="" />');
+    this.opponentTemplateDiv.append('<div data-text="name0"></div>');
+    this.opponentTemplateDiv.append('<img data-attr-src="image1" class="imageSelectionOptionImage" src="" />');
+    this.opponentTemplateDiv.append('<div data-text="name1"></div>');
+
+    this.backgroundTemplateDiv = $('<img data-template-id="background">');
 
     this.opponentSelectionDiv = $('<div id="opponentSelection"></div>');
     this.opponentsDiv = $('<div id="opponents"></div>');
@@ -26,7 +28,8 @@ TestCase('OpponentSelectionTest', {
     this.okButton = $('<div class="okButton"></div>');
     this.backButton = $('<div class="backButton"></div>');
 
-    $('body').append(this.templateDiv);
+    $('body').append(this.opponentTemplateDiv);
+    $('body').append(this.backgroundTemplateDiv);
     $('body').append(this.opponentSelectionDiv);
     this.opponentSelectionDiv.append(this.opponentsDiv);
     this.opponentSelectionDiv.append(this.questionMarksTop);
@@ -47,7 +50,8 @@ TestCase('OpponentSelectionTest', {
     this.templateProcessorRegistry.addProcessor(SetSrcAttributeProcessor.create());
     this.templateProcessorRegistry.addProcessor(SetTextProcessor.create());
     this.templateProcessorRegistry.addProcessor(AddClassProcessor.create());
-    this.template = Template.create('templateId', this.templateProcessorRegistry);
+    this.opponentTemplate = Template.create('opponent', this.templateProcessorRegistry);
+    this.backgroundTemplate = Template.create('background', this.templateProcessorRegistry);
   },
 
   tearDown: function () {
@@ -55,13 +59,17 @@ TestCase('OpponentSelectionTest', {
   },
 
   testCreateNullAndTypeSafe: function () {
-    assertException(function () { OpponentSelection.create(null); }, 'TypeError');
+    var template = this.opponentTemplate;
 
-    assertException(function () { OpponentSelection.create({}); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(template, null); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(null, template); }, 'TypeError');
+
+    assertException(function () { OpponentSelection.create(template, {}); }, 'TypeError');
+    assertException(function () { OpponentSelection.create({}, template); }, 'TypeError');
   },
 
   testShowAndHide: function () {
-    var sel = OpponentSelection.create(this.template);
+    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     assertEquals('none', this.opponentSelectionDiv.css('display'));
     sel.show();
@@ -71,7 +79,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testAllOptionsShown: function () {
-    var sel = OpponentSelection.create(this.template);
+    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     var allOptionDivs = this.opponentSelectionDiv.find('.imageSelectionOption');
@@ -79,7 +87,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testCanShowNewInfos: function () {
-    var sel = OpponentSelection.create(this.template);
+    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     sel.hide();
@@ -90,7 +98,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testOpponentSelectionCallsCallback: function () {
-    var sel = OpponentSelection.create(this.template);
+    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     var allImages = this.opponentSelectionDiv.find('.imageSelectionOptionImage');
@@ -102,7 +110,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testBackCallsCallback: function () {
-    var sel = OpponentSelection.create(this.template);
+    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     var called = false;
     sel.onBack(function () { called = true; });

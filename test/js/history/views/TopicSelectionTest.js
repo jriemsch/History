@@ -8,14 +8,16 @@ TestCase('TopicSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.lockedTemplateDiv = $('<div data-template-id="locked"></div>');
-    this.lockedTemplateDiv.append('<img data-attr-src="image" class="imageClass">');
-    this.lockedTemplateDiv.append('<div data-text="name"></div>');
-    this.lockedTemplateDiv.append('<img class="overlay">');
+    this.avatarTemplateDiv = $('<div data-template-id="locked"></div>');
+    this.avatarTemplateDiv.append('<img data-attr-src="image" class="imageClass">');
+    this.avatarTemplateDiv.append('<div data-text="name"></div>');
+    this.avatarTemplateDiv.append('<img class="overlay">');
 
     this.unlockedTemplateDiv = $('<div data-template-id="unlocked"></div>');
     this.unlockedTemplateDiv.append('<img data-attr-src="image" class="imageClass">');
     this.unlockedTemplateDiv.append('<div data-text="name"></div>');
+
+    this.backgroundTemplateDiv = $('<img data-template-id="background">');
 
     this.topicSelectionDiv = $('<div id="topicSelection"></div>');
     this.topicsDiv = $('<div id="topics"></div>');
@@ -25,9 +27,10 @@ TestCase('TopicSelectionTest', {
     this.okButton = $('<div class="okButton"></div>');
     this.backButton = $('<div class="backButton"></div>');
 
-    $('body').append(this.lockedTemplateDiv);
+    $('body').append(this.avatarTemplateDiv);
     $('body').append(this.unlockedTemplateDiv);
     $('body').append(this.topicSelectionDiv);
+    $('body').append(this.backgroundTemplateDiv);
     this.topicSelectionDiv.append(this.topicsDiv);
     this.topicSelectionDiv.append(this.questionMarksTop);
     this.topicSelectionDiv.append(this.questionMarksBottom);
@@ -58,6 +61,7 @@ TestCase('TopicSelectionTest', {
     this.templateProcessorRegistry.addProcessor(SetTextProcessor.create());
     this.lockedTemplate = Template.create('locked', this.templateProcessorRegistry);
     this.unlockedTemplate = Template.create('unlocked', this.templateProcessorRegistry);
+    this.backgroundTemplate = Template.create('background', this.templateProcessorRegistry);
   },
 
   tearDown: function () {
@@ -67,15 +71,17 @@ TestCase('TopicSelectionTest', {
   testCreateNullAndTypeSafe: function () {
     var template = this.lockedTemplate;
 
-    assertException(function () { TopicSelection.create(template, null); }, 'TypeError');
-    assertException(function () { TopicSelection.create(null, template); }, 'TypeError');
+    assertException(function () { TopicSelection.create(template, template, null); }, 'TypeError');
+    assertException(function () { TopicSelection.create(template, null, template); }, 'TypeError');
+    assertException(function () { TopicSelection.create(null, template, template); }, 'TypeError');
 
-    assertException(function () { TopicSelection.create(template, {}); }, 'TypeError');
-    assertException(function () { TopicSelection.create({}, template); }, 'TypeError');
+    assertException(function () { TopicSelection.create(template, template, {}); }, 'TypeError');
+    assertException(function () { TopicSelection.create(template, {}, template); }, 'TypeError');
+    assertException(function () { TopicSelection.create({}, template, template); }, 'TypeError');
   },
 
   testShowAndHide: function () {
-    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate);
+    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
     sel.setTopicInfos(this.topicInfos);
     assertEquals('none', this.topicSelectionDiv.css('display'));
     sel.show();
@@ -85,7 +91,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testAllImagesShown: function () {
-    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate);
+    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
     sel.setTopicInfos(this.topicInfos);
     sel.show();
     assertEquals(2, this.topicSelectionDiv.find('.imageClass').length);
@@ -93,7 +99,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testCanShowNewTopicState: function () {
-    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate);
+    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
     sel.setTopicInfos(this.topicInfos);
     sel.show();
     sel.hide();
@@ -103,7 +109,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testBackCallsCallback: function () {
-    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate);
+    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
     sel.setTopicInfos(this.topicInfos);
     var called = false;
     sel.onBack(function () { called = true; });
@@ -114,7 +120,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testSelectTopicCallsCallback: function () {
-    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate);
+    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
     sel.setTopicInfos(this.topicInfos);
     sel.show();
     var allImages = this.topicSelectionDiv.find('.imageClass');
@@ -124,7 +130,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testSetTopicInfosNullAndTypeSafe: function () {
-    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate);
+    var sel = TopicSelection.create(this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
     var callback = function () {};
 
     assertException(function () { sel.setTopicInfos(null); }, 'TypeError');

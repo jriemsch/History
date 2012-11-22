@@ -65,6 +65,7 @@ load:
   - ../main/js/history/controller/QuizPlayerSelectsRegionState.js
   - ../main/js/history/controller/QuizQuestionState.js
   - ../main/js/history/views/components/ImageSelection.js
+  - ../main/js/history/views/components/AnimatedBackgroundTemplate.js
   - ../main/js/history/views/components/AnimatedBackground.js
   - ../main/js/history/views/components/ImageMap.js
   - ../main/js/history/views/components/QuizPlayers.js
@@ -117,6 +118,7 @@ test:
   - js/history/controller/QuizPlayerSelectsRegionStateTest.js
   - js/history/controller/QuizQuestionStateTest.js
   - js/history/views/components/ImageSelectionTest.js
+  - js/history/views/components/AnimatedBackgroundTemplateTest.js
   - js/history/views/components/AnimatedBackgroundTest.js
   - js/history/views/components/ImageMapTest.js
   - js/history/views/components/QuizPlayersTest.js

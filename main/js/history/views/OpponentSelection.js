@@ -9,8 +9,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.OpponentSelection = {
-    create: function create(template) {
-      ArgumentUtils.assertType(template, net.riemschneider.ui.Template);
+    create: function create(opponentTemplate, backgroundTemplate) {
+      ArgumentUtils.assertType(opponentTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
 
       var questionMarksDivTop = $('#opponentQuestionMarksTop');
       var questionMarksDivBottom = $('#opponentQuestionMarksBottom');
@@ -59,7 +60,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createOpponentOption(opponentInfo) {
         return {
-          div: template.clone(opponentInfo),
+          div: opponentTemplate.clone(opponentInfo),
           callback: function () { opponentInfo.callback(); }
         };
       }
@@ -68,8 +69,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         show: function show() {
           createImageSelection();
           $('#opponentSelection').show();
-          AnimatedBackground.create(questionMarksDivTop, 3, 'images/questionMark.png');
-          AnimatedBackground.create(questionMarksDivBottom, 3, 'images/questionMark.png');
+          AnimatedBackground.create(questionMarksDivTop, 3, backgroundTemplate);
+          AnimatedBackground.create(questionMarksDivBottom, 3, backgroundTemplate);
           prepareOnResize();
         },
         hide: function hide() {
