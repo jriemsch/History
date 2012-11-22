@@ -3,16 +3,17 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 (function () {
   "use strict";
 
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var AvatarImages = net.riemschneider.history.data.AvatarImages;
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var TouchUtils = net.riemschneider.utils.TouchUtils;
   var Tap = net.riemschneider.gestures.Tap;
-  var Template = net.riemschneider.ui.Template;
 
   net.riemschneider.history.views.AvatarSelection = {
-    create: function () {
-      var template = Template.create('avatarImageSelectionDiv');
+    create: function (template) {
+      ArgumentUtils.assertType(template, net.riemschneider.ui.Template);
+
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
@@ -62,7 +63,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       function createAvatarOptions() {
         var options = [];
         for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
-          options[idx] = { div: template.clone({ image: AvatarImages.getImage(idx) }).getClone() };
+          options[idx] = { div: template.clone({ image: AvatarImages.getImage(idx) }) };
         }
         return options;
       }

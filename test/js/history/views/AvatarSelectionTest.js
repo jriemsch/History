@@ -1,11 +1,14 @@
 var AvatarSelection = net.riemschneider.history.views.AvatarSelection;
 var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
+var Template = net.riemschneider.ui.Template;
+var TemplateProcessorRegistry = net.riemschneider.ui.TemplateProcessorRegistry;
+var SetSrcAttributeProcessor = net.riemschneider.ui.SetSrcAttributeProcessor;
 
 TestCase('AvatarSelectionTest', {
   setUp: function () {
     $('body').empty();
 
-    this.lockedTemplateDiv = $('<div data-template-id="avatarImageSelectionDiv"><img data-id="image" data-attr="src" class="imageClass"></div>');
+    this.lockedTemplateDiv = $('<div data-template-id="templateId"><img data-attr-src="image" class="imageClass"></div>');
 
     this.avatarSelectionDiv = $('<div id="avatarSelection"></div>');
     this.avatarsDiv = $('<div id="avatars"></div>');
@@ -29,14 +32,24 @@ TestCase('AvatarSelectionTest', {
     this.buttonBarDiv.append(this.okButton);
 
     this.avatarSelectionDiv.hide();
+
+    this.templateProcessorRegistry = TemplateProcessorRegistry.create();
+    this.templateProcessorRegistry.addProcessor(SetSrcAttributeProcessor.create());
+    this.template = Template.create('templateId', this.templateProcessorRegistry);
   },
 
   tearDown: function () {
     $('body').empty();
   },
 
+  testCreateNullAndTypeSafe: function () {
+    assertException(function () { AvatarSelection.create(null); }, 'TypeError');
+
+    assertException(function () { AvatarSelection.create({}); }, 'TypeError');
+  },
+
   testShowAndHide: function () {
-    var sel = AvatarSelection.create();
+    var sel = AvatarSelection.create(this.template);
     assertEquals('none', this.avatarSelectionDiv.css('display'));
     sel.show();
     assertEquals('block', this.avatarSelectionDiv.css('display'));
@@ -45,27 +58,27 @@ TestCase('AvatarSelectionTest', {
   },
 
   testPreviousNameIsShown: function () {
-    var sel = AvatarSelection.create();
+    var sel = AvatarSelection.create(this.template);
     sel.setName('initial');
     sel.show();
     assertEquals('initial', this.nameInput.val());
   },
 
   testSelectName: function () {
-    var sel = AvatarSelection.create();
+    var sel = AvatarSelection.create(this.template);
     sel.show();
     this.nameInput.val('changed');
     assertEquals('changed', sel.getName());
   },
 
   testAllImagesShown: function () {
-    AvatarSelection.create().show();
+    AvatarSelection.create(this.template).show();
     var allImages = this.avatarSelectionDiv.find('.imageClass');
     assertEquals(31, allImages.length);
   },
 
   testPreviousImageIsSelected: function () {
-    var sel = AvatarSelection.create();
+    var sel = AvatarSelection.create(this.template);
     sel.setAvatarImageIdx(2);
     sel.show();
     var selectedImage = this.avatarSelectionDiv.find('.imageSelectionSelector .imageClass');
@@ -74,7 +87,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testSelectImage: function () {
-    var sel = AvatarSelection.create();
+    var sel = AvatarSelection.create(this.template);
     sel.show();
     var allImages = this.avatarSelectionDiv.find('.imageClass');
     $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
@@ -83,7 +96,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testOkCallsCallback: function () {
-    var sel = AvatarSelection.create();
+    var sel = AvatarSelection.create(this.template);
     var called = false;
     sel.onOk(function () { called = true; });
     sel.show();
@@ -93,7 +106,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testNameInputFocusIsLostWhenPressingReturn: function () {
-    AvatarSelection.create().show();
+    AvatarSelection.create(this.template).show();
     var blurRecorder = JQueryTestUtils.startRecording('blur');
     this.nameInput.trigger(jQuery.Event('keydown', { which: 13 }));
     JQueryTestUtils.stopRecording(blurRecorder);
@@ -103,7 +116,7 @@ TestCase('AvatarSelectionTest', {
   },
 
   testNameInputFocusIsLostWhenClickingSomewhere: function () {
-    AvatarSelection.create().show();
+    AvatarSelection.create(this.template).show();
     var blurRecorder = JQueryTestUtils.startRecording('blur');
     $(document).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     JQueryTestUtils.stopRecording(blurRecorder);

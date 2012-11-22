@@ -7,12 +7,11 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
-  var Template = net.riemschneider.ui.Template;
-  var ClosureUtils = net.riemschneider.utils.ClosureUtils;
 
   net.riemschneider.history.views.OpponentSelection = {
-    create: function create() {
-      var template = Template.create('opponentImageSelectionDiv');
+    create: function create(template) {
+      ArgumentUtils.assertType(template, net.riemschneider.ui.Template);
+
       var questionMarksDivTop = $('#opponentQuestionMarksTop');
       var questionMarksDivBottom = $('#opponentQuestionMarksBottom');
       var opponentsDiv = $('#opponents');
@@ -60,7 +59,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createOpponentOption(opponentInfo) {
         return {
-          div: template.clone(opponentInfo).getClone(),
+          div: template.clone(opponentInfo),
           callback: function () { opponentInfo.callback(); }
         };
       }

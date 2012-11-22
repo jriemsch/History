@@ -44,15 +44,26 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
       function setDistribution(distribution) { inj.questionDistribution = distribution; }
 
       function onDataRead() {
+        inj.templateProcessorRegistry = net.riemschneider.ui.TemplateProcessorRegistry.create();
+        inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.AddClassProcessor.create());
+        inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.HideImageUntilLoadedProcessor.create());
+        inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.SetSrcAttributeProcessor.create());
+        inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.SetTextProcessor.create());
+
+        inj.avatarImageSelectionTemplate = net.riemschneider.ui.Template.create('avatarImageSelectionTemplate', inj.templateProcessorRegistry);
+        inj.lockedTopicImageSelectionTemplate = net.riemschneider.ui.Template.create('lockedTopicImageSelectionTemplate', inj.templateProcessorRegistry);
+        inj.unlockedTopicImageSelectionTemplate = net.riemschneider.ui.Template.create('unlockedTopicImageSelectionTemplate', inj.templateProcessorRegistry);
+        inj.opponentImageSelectionTemplate = net.riemschneider.ui.Template.create('opponentImageSelectionTemplate', inj.templateProcessorRegistry);
+
         inj.opponentController = net.riemschneider.history.controller.OpponentController.create(inj.opponents);
         inj.playerController = net.riemschneider.history.controller.PlayerController.create();
         inj.questionListGenerator = net.riemschneider.history.controller.QuestionListGenerator.create(inj.questionsByTopicAndFact);
         inj.quizGenerator = net.riemschneider.history.controller.QuizGenerator.create(inj.regionsByTopic, inj.questionListGenerator, inj.questionDistribution);
         inj.quizController = net.riemschneider.history.controller.QuizController.create();
 
-        inj.avatarSelection = net.riemschneider.history.views.AvatarSelection.create();
-        inj.topicSelection = net.riemschneider.history.views.TopicSelection.create();
-        inj.opponentSelection = net.riemschneider.history.views.OpponentSelection.create();
+        inj.avatarSelection = net.riemschneider.history.views.AvatarSelection.create(inj.avatarImageSelectionTemplate);
+        inj.topicSelection = net.riemschneider.history.views.TopicSelection.create(inj.lockedTopicImageSelectionTemplate, inj.unlockedTopicImageSelectionTemplate);
+        inj.opponentSelection = net.riemschneider.history.views.OpponentSelection.create(inj.opponentImageSelectionTemplate);
         inj.menu = net.riemschneider.history.views.Menu.create();
         inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
         inj.multipleChoiceComponent = net.riemschneider.history.views.components.MultipleChoiceComponent.create(inj.answerComponentRegistry);

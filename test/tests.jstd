@@ -24,6 +24,11 @@ load:
   - ../../../jslib/main/js/structures/State.js
   - ../../../jslib/main/js/structures/ViewState.js
   - ../../../jslib/main/js/structures/StateMachine.js
+  - ../../../jslib/main/js/ui/AddClassProcessor.js
+  - ../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js
+  - ../../../jslib/main/js/ui/SetSrcAttributeProcessor.js
+  - ../../../jslib/main/js/ui/SetTextProcessor.js
+  - ../../../jslib/main/js/ui/TemplateProcessorRegistry.js
   - ../../../jslib/main/js/ui/Template.js
   - ../main/js/history/model/Player.js
   - ../main/js/history/model/LevelOrderChance.js
