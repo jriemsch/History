@@ -29,9 +29,11 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         containerDiv.setSelection = function setSelection(idx) { selectImage(idx, true); };
 
         function getSpacingFromCss() {
-          $('body').append(data.options[0].div);
-          var width = data.options[0].div.width();
-          data.options[0].div.detach();
+          var firstOption = data.options[0];
+          var optionDiv = firstOption.template.clone(firstOption);
+          $('body').append(optionDiv);
+          var width = optionDiv.width();
+          optionDiv.remove();
           return width;
         }
 
@@ -80,13 +82,14 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
         }
 
         function addOptionToDiv(option, idx) {
-          option.div.css({ left: idx * spacing + 'px' });
+          var optionDiv = option.template.clone(option);
+          optionDiv.css({ left: idx * spacing + 'px' });
 
-          containerDiv.append(option.div);
+          containerDiv.append(optionDiv);
 
-          optionDivs[idx] = option.div;
+          optionDivs[idx] = optionDiv;
 
-          Tap.create(option.div, function () {
+          Tap.create(optionDiv, function () {
             selectImage(idx, false);
             if (option.callback) {
               option.callback();

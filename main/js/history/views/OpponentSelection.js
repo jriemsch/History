@@ -24,7 +24,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var opponentInfos = [];
 
       function createImageSelection() {
-        imageSelectionDiv = imageSelectionTemplate.clone({ options: createOpponentOptions() });
+        for (var idx = 0, len = opponentInfos.length; idx < len; ++idx) {
+          opponentInfos[idx].template = opponentTemplate;
+        }
+        imageSelectionDiv = imageSelectionTemplate.clone({ options: opponentInfos });
         opponentsDiv.append(imageSelectionDiv);
       }
 
@@ -46,23 +49,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         });
 
         setTimeout(function () { $(window).resize(); }, 0);
-      }
-
-      function createOpponentOptions() {
-        var options = [];
-        for (var idx = 0, len = opponentInfos.length; idx < len; ++idx) {
-          var opponentInfo = opponentInfos[idx];
-          options[idx] = createOpponentOption(opponentInfo);
-        }
-
-        return options;
-      }
-
-      function createOpponentOption(opponentInfo) {
-        return {
-          div: opponentTemplate.clone(opponentInfo),
-          callback: function () { opponentInfo.callback(); }
-        };
       }
 
       return {

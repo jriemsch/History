@@ -1,4 +1,5 @@
 var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
+var Template = net.riemschneider.ui.Template;
 var TemplateProcessorRegistry = net.riemschneider.ui.TemplateProcessorRegistry;
 var ImageSelectionTemplate = net.riemschneider.history.views.components.ImageSelectionTemplate;
 
@@ -7,17 +8,17 @@ TestCase('ImageSelectionTemplateTest', {
     $('body').empty();
     $('head').append($('<style type="text/css">.option { position: absolute; width: 150px; }</style>'));
     $('body').append($('<div data-template-id="template" class="container"></div>'));
+    $('body').append($('<div data-template-id="optionTemplate" class="option"></div>'));
 
     this.cssRecorder = JQueryTestUtils.startRecording('css');
     JQueryTestUtils.clearRecording(this.cssRecorder);
     this.imageCountForScrolling = Math.floor(window.innerWidth / 150) + 2;
     this.scrollingOversize = this.imageCountForScrolling * 150 - window.innerWidth;
-    this.options = [
-      { div: $('<div class="option"></div>') },
-      { div: $('<div class="option"></div>') }
-    ];
 
     this.templateProcessorRegistry = TemplateProcessorRegistry.create();
+    this.optionTemplate = Template.create('optionTemplate', this.templateProcessorRegistry);
+
+    this.options = [ { template: this.optionTemplate }, { template: this.optionTemplate } ];
   },
 
   tearDown: function () {
@@ -117,7 +118,7 @@ TestCase('ImageSelectionTemplateTest', {
   createImagesForScrolling: function () {
     var images = [];
     for (var idx = 0; idx < this.imageCountForScrolling; ++idx) {
-      images[idx] = { div: $('<div class="option"></div>') };
+      images[idx] = { template: this.optionTemplate };
     }
     return images;
   }

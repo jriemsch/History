@@ -26,7 +26,12 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var imageSelectionDiv = null;
 
       function createImageSelection(topicInfos) {
-        imageSelectionDiv = imageSelectionTemplate.clone({ options: createTopicOptions(topicInfos) });
+        for (var idx = 0, len = topicInfos.length; idx < len; ++idx) {
+          var topicInfo = topicInfos[idx];
+          topicInfo.template = topicInfo.showLockOverlay ? lockedTemplate : unlockedTemplate;
+        }
+
+        imageSelectionDiv = imageSelectionTemplate.clone({ options: topicInfos });
         topicsDiv.append(imageSelectionDiv);
       }
 
@@ -48,19 +53,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         });
 
         setTimeout(function () { $(window).resize(); }, 0);
-      }
-
-      function createTopicOption(topicInfo) {
-        var template = topicInfo.showLockOverlay ? lockedTemplate : unlockedTemplate;
-        return { div: template.clone(topicInfo), callback: function () { topicInfo.callback(); } };
-      }
-
-      function createTopicOptions(topicInfos) {
-        var options = [];
-        for (var idx = 0, len = topicInfos.length; idx < len; ++idx) {
-          options[idx] = createTopicOption(topicInfos[idx]);
-        }
-        return options;
       }
 
       return {

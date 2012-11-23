@@ -28,7 +28,12 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       var onOkCallback = function () {};
 
       function createImageSelectionDiv() {
-        var imageSelectionDiv = imageSelectionTemplate.clone({ options: createAvatarOptions() });
+        var options = [];
+        for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
+          options[idx] = { template: avatarTemplate, image: AvatarImages.getImage(idx) };
+        }
+
+        var imageSelectionDiv = imageSelectionTemplate.clone({ options: options });
         avatarsDiv.append(imageSelectionDiv);
         return imageSelectionDiv;
       }
@@ -60,14 +65,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         TouchUtils.onTouchStart($(document), function () {
           nameInput.blur();
         });
-      }
-
-      function createAvatarOptions() {
-        var options = [];
-        for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
-          options[idx] = { div: avatarTemplate.clone({ image: AvatarImages.getImage(idx) }) };
-        }
-        return options;
       }
 
       return {
