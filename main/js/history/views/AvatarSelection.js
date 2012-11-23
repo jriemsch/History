@@ -5,20 +5,20 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var AvatarImages = net.riemschneider.history.data.AvatarImages;
-  var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var TouchUtils = net.riemschneider.utils.TouchUtils;
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.AvatarSelection = {
-    create: function (avatarTemplate, backgroundTemplate) {
+    create: function (imageSelectionTemplate, avatarTemplate, backgroundTemplate) {
+      ArgumentUtils.assertType(imageSelectionTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(avatarTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
 
       var questionMarksDivTop = $('#avatarQuestionMarksTop');
       var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
       var avatarsDiv = $('#avatars');
-      var imageSelection = createImageSelection();
+      var imageSelectionDiv = createImageSelectionDiv();
       var nameDiv = $('#nameInput');
       var nameInput = nameDiv.find('div input');
 
@@ -27,9 +27,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       var onOkCallback = function () {};
 
-      function createImageSelection() {
-        var options = createAvatarOptions();
-        return ImageSelection.create(avatarsDiv, options);
+      function createImageSelectionDiv() {
+        var imageSelectionDiv = imageSelectionTemplate.clone({ options: createAvatarOptions() });
+        avatarsDiv.append(imageSelectionDiv);
+        return imageSelectionDiv;
       }
 
       function prepareButtonBar() {
@@ -83,8 +84,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
           $('#avatarSelection').hide();
         },
         onOk: function onOk(callback) { onOkCallback = callback; },
-        setAvatarImageIdx: function setAvatarImageIdx(avatarImageIdx) { imageSelection.setSelection(avatarImageIdx); },
-        getAvatarImageIdx: function getAvatarImageIdx() { return imageSelection.getSelection(); },
+        setAvatarImageIdx: function setAvatarImageIdx(avatarImageIdx) { imageSelectionDiv.setSelection(avatarImageIdx); },
+        getAvatarImageIdx: function getAvatarImageIdx() { return imageSelectionDiv.getSelection(); },
         setName: function setName(name) { nameInput.val(name); },
         getName: function getName() { return nameInput.val(); }
       };

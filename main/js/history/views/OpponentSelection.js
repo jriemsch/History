@@ -4,12 +4,12 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   "use strict";
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
   var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.OpponentSelection = {
-    create: function create(opponentTemplate, backgroundTemplate) {
+    create: function create(imageSelectionTemplate, opponentTemplate, backgroundTemplate) {
+      ArgumentUtils.assertType(imageSelectionTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(opponentTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
 
@@ -20,17 +20,17 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       prepareButtonBar();
 
       var onBackCallback = null;
-      var imageSelection = null;
+      var imageSelectionDiv = null;
       var opponentInfos = [];
 
       function createImageSelection() {
-        var options = createOpponentOptions();
-        imageSelection = ImageSelection.create(opponentsDiv, options);
+        imageSelectionDiv = imageSelectionTemplate.clone({ options: createOpponentOptions() });
+        opponentsDiv.append(imageSelectionDiv);
       }
 
       function destroyImageSelection() {
-        imageSelection.destroy();
-        imageSelection = null;
+        imageSelectionDiv.remove();
+        imageSelectionDiv = null;
       }
 
       function prepareButtonBar() {

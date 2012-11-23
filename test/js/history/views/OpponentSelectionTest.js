@@ -2,6 +2,7 @@ var OpponentSelection = net.riemschneider.history.views.OpponentSelection;
 var Opponent = net.riemschneider.history.model.Opponent;
 var Difficulty = net.riemschneider.history.model.Difficulty;
 var Template = net.riemschneider.ui.Template;
+var ImageSelectionTemplate = net.riemschneider.history.views.components.ImageSelectionTemplate;
 var TemplateProcessorRegistry = net.riemschneider.ui.TemplateProcessorRegistry;
 var SetSrcAttributeProcessor = net.riemschneider.ui.SetSrcAttributeProcessor;
 var SetTextProcessor = net.riemschneider.ui.SetTextProcessor;
@@ -17,8 +18,8 @@ TestCase('OpponentSelectionTest', {
     this.opponentTemplateDiv.append('<div data-text="name0"></div>');
     this.opponentTemplateDiv.append('<img data-attr-src="image1" class="imageSelectionOptionImage" src="" />');
     this.opponentTemplateDiv.append('<div data-text="name1"></div>');
-
     this.backgroundTemplateDiv = $('<img data-template-id="background">');
+    this.imageSelectionTemplateDiv = $('<div data-template-id="imageSelection" class="container"></div>');
 
     this.opponentSelectionDiv = $('<div id="opponentSelection"></div>');
     this.opponentsDiv = $('<div id="opponents"></div>');
@@ -31,6 +32,7 @@ TestCase('OpponentSelectionTest', {
     $('body').append(this.opponentTemplateDiv);
     $('body').append(this.backgroundTemplateDiv);
     $('body').append(this.opponentSelectionDiv);
+    $('body').append(this.imageSelectionTemplateDiv);
     this.opponentSelectionDiv.append(this.opponentsDiv);
     this.opponentSelectionDiv.append(this.questionMarksTop);
     this.opponentSelectionDiv.append(this.questionMarksBottom);
@@ -52,6 +54,7 @@ TestCase('OpponentSelectionTest', {
     this.templateProcessorRegistry.addProcessor(AddClassProcessor.create());
     this.opponentTemplate = Template.create('opponent', this.templateProcessorRegistry);
     this.backgroundTemplate = Template.create('background', this.templateProcessorRegistry);
+    this.imageSelectionTemplate = ImageSelectionTemplate.create('imageSelection', this.templateProcessorRegistry);
   },
 
   tearDown: function () {
@@ -61,15 +64,17 @@ TestCase('OpponentSelectionTest', {
   testCreateNullAndTypeSafe: function () {
     var template = this.opponentTemplate;
 
-    assertException(function () { OpponentSelection.create(template, null); }, 'TypeError');
-    assertException(function () { OpponentSelection.create(null, template); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(template, template, null); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(template, null, template); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(null, template, template); }, 'TypeError');
 
-    assertException(function () { OpponentSelection.create(template, {}); }, 'TypeError');
-    assertException(function () { OpponentSelection.create({}, template); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(template, template, {}); }, 'TypeError');
+    assertException(function () { OpponentSelection.create(template, {}, template); }, 'TypeError');
+    assertException(function () { OpponentSelection.create({}, template, template); }, 'TypeError');
   },
 
   testShowAndHide: function () {
-    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
+    var sel = OpponentSelection.create(this.imageSelectionTemplate, this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     assertEquals('none', this.opponentSelectionDiv.css('display'));
     sel.show();
@@ -79,7 +84,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testAllOptionsShown: function () {
-    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
+    var sel = OpponentSelection.create(this.imageSelectionTemplate, this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     var allOptionDivs = this.opponentSelectionDiv.find('.imageSelectionOption');
@@ -87,7 +92,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testCanShowNewInfos: function () {
-    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
+    var sel = OpponentSelection.create(this.imageSelectionTemplate, this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     sel.hide();
@@ -98,7 +103,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testOpponentSelectionCallsCallback: function () {
-    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
+    var sel = OpponentSelection.create(this.imageSelectionTemplate, this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     sel.show();
     var allImages = this.opponentSelectionDiv.find('.imageSelectionOptionImage');
@@ -110,7 +115,7 @@ TestCase('OpponentSelectionTest', {
   },
 
   testBackCallsCallback: function () {
-    var sel = OpponentSelection.create(this.opponentTemplate, this.backgroundTemplate);
+    var sel = OpponentSelection.create(this.imageSelectionTemplate, this.opponentTemplate, this.backgroundTemplate);
     sel.setOpponentInfos(this.opponentInfos);
     var called = false;
     sel.onBack(function () { called = true; });

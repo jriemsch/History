@@ -9,7 +9,8 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.TopicSelection = {
-    create: function create(lockedTemplate, unlockedTemplate, backgroundTemplate) {
+    create: function create(imageSelectionTemplate, lockedTemplate, unlockedTemplate, backgroundTemplate) {
+      ArgumentUtils.assertType(imageSelectionTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(lockedTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(unlockedTemplate, net.riemschneider.ui.Template);
       ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
@@ -22,15 +23,16 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       var onBackCallback = function () {};
       var topicInfos = [];
-      var imageSelection = null;
+      var imageSelectionDiv = null;
 
       function createImageSelection(topicInfos) {
-        imageSelection = ImageSelection.create(topicsDiv, createTopicOptions(topicInfos));
+        imageSelectionDiv = imageSelectionTemplate.clone({ options: createTopicOptions(topicInfos) });
+        topicsDiv.append(imageSelectionDiv);
       }
 
       function destroyImageSelection() {
-        imageSelection.destroy();
-        imageSelection = null;
+        imageSelectionDiv.remove();
+        imageSelectionDiv = null;
       }
 
       function prepareButtonBar() {
