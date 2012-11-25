@@ -1,67 +1,53 @@
 var AnimatedBackgroundTemplate = net.riemschneider.history.views.components.AnimatedBackgroundTemplate;
 
 var Clock = net.riemschneider.utils.Clock;
-var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
 var Template = net.riemschneider.ui.Template;
 var TemplateProcessorRegistry = net.riemschneider.ui.TemplateProcessorRegistry;
-var TypeUtils = net.riemschneider.utils.TypeUtils;
 
 TestCase('AnimatedBackgroundTemplateTest', {
   setUp: function () {
     Clock.reset();
     $('body').empty();
 
-    this.backgoundTemplateDiv = $('<img src="test.png" data-template-id="templateId" class="background"></div>');
-
-    this.parent = $('<div></div>');
-
-    $('body').append(this.backgoundTemplateDiv);
+    $('body').append('<img src="test.png" data-template-id="imageTemplate" class="backgroundImage">');
+    $('body').append('<div data-template-id="template"></div>');
     $('body').append(this.parent);
 
-    this.cssRecorder = JQueryTestUtils.startRecording('css');
-    JQueryTestUtils.clearRecording(this.cssRecorder);
-
     this.templateProcessorRegistry = TemplateProcessorRegistry.create();
+    this.backgroundImageTemplate = Template.create('imageTemplate', this.templateProcessorRegistry);
   },
 
   tearDown: function () {
     $('body').empty();
-    JQueryTestUtils.stopRecording(this.cssRecorder);
   },
 
   testCreate: function () {
-    var template = AnimatedBackgroundTemplate.create('templateId', this.templateProcessorRegistry);
-    assertTrue(TypeUtils.isOfType(template, Template));
-    assertTrue(TypeUtils.isOfType(template, AnimatedBackgroundTemplate));
+    var template = AnimatedBackgroundTemplate.create('template', this.templateProcessorRegistry);
+    var background = template.clone({ count: 2, imageTemplate: this.backgroundImageTemplate });
+    var images = background.find('.backgroundImage');
+    assertEquals(2, images.length);
+    assertTrue(images[0].src.indexOf('test.png') >= 0);
+    assertTrue(images[1].src.indexOf('test.png') >= 0);
   },
 
   testCreateNullAndTypeSafe: function () {
-    assertException(function () { AnimatedBackgroundTemplate.create('templateId', null); }, 'TypeError');
-    assertException(function () { AnimatedBackgroundTemplate.create(null, this.templateProcessorRegistry); }, 'TypeError');
+    var templateProcessorRegistry = this.templateProcessorRegistry;
 
-    assertException(function () { AnimatedBackgroundTemplate.create({}, this.templateProcessorRegistry); }, 'TypeError');
+    assertException(function () { AnimatedBackgroundTemplate.create('template', null); }, 'TypeError');
+    assertException(function () { AnimatedBackgroundTemplate.create(null, templateProcessorRegistry); }, 'TypeError');
+
+    assertException(function () { AnimatedBackgroundTemplate.create(23, templateProcessorRegistry); }, 'TypeError');
   },
 
-  testClone: function () {
-    var template = AnimatedBackgroundTemplate.create('templateId', this.templateProcessorRegistry);
-    var clone = template.clone({});
-    assertEquals('test.png', clone.attr('src'));
-  },
+  testCloneNullAndTypeSafe: function () {
+    var template = AnimatedBackgroundTemplate.create('template', this.templateProcessorRegistry);
+    var backgroundImageTemplate = this.backgroundImageTemplate;
 
-  testImageLocationsChangeAfterTimeout: function () {
-    var template = AnimatedBackgroundTemplate.create('templateId', this.templateProcessorRegistry);
-    var clone = template.clone({});
-    var leftBefore = this.getLastLeftChange(clone[0]);
-    Clock.setTime(1000);
-    var leftAfter = this.getLastLeftChange(clone[0]);
-    assertTrue(leftBefore !== leftAfter);
-  },
+    assertException(function () { template.clone({ count: 2, imageTemplate: null }); }, 'TypeError');
+    assertException(function () { template.clone({ count: null, imageTemplate: backgroundImageTemplate }); }, 'TypeError');
 
-  getLastLeftChange: function getLastLeftChange(image) {
-    var isLeftChange = function (recording) {
-      return recording.obj[0] === image && recording.args[0].left;
-    };
-    var lastRecording = JQueryTestUtils.getLastRecording(this.cssRecorder, isLeftChange);
-    return lastRecording.args[0].left;
+    assertException(function () { template.clone({ count: 2, imageTemplate: {} }); }, 'TypeError');
+    assertException(function () { template.clone({ count: '2', imageTemplate: backgroundImageTemplate }); }, 'TypeError');
+    assertException(function () { template.clone({ count: 0, imageTemplate: backgroundImageTemplate }); }, 'TypeError');
   }
 });
