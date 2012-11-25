@@ -4,16 +4,15 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   "use strict";
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var ImageSelection = net.riemschneider.history.views.components.ImageSelection;
-  var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.TopicSelection = {
-    create: function create(imageSelectionTemplate, lockedTemplate, unlockedTemplate, backgroundTemplate) {
-      ArgumentUtils.assertType(imageSelectionTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(lockedTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(unlockedTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
+    create: function create(templates) {
+      ArgumentUtils.assertType(templates.imageSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.lockedTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.unlockedTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundImageTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundTemplate, net.riemschneider.ui.Template);
 
       var questionMarksDivTop = $('#topicQuestionMarksTop');
       var questionMarksDivBottom = $('#topicQuestionMarksBottom');
@@ -28,10 +27,10 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       function createImageSelection(topicInfos) {
         for (var idx = 0, len = topicInfos.length; idx < len; ++idx) {
           var topicInfo = topicInfos[idx];
-          topicInfo.template = topicInfo.showLockOverlay ? lockedTemplate : unlockedTemplate;
+          topicInfo.template = topicInfo.showLockOverlay ? templates.lockedTemplate : templates.unlockedTemplate;
         }
 
-        imageSelectionDiv = imageSelectionTemplate.clone({ options: topicInfos });
+        imageSelectionDiv = templates.imageSelectionTemplate.clone({ options: topicInfos });
         topicsDiv.append(imageSelectionDiv);
       }
 
@@ -59,8 +58,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         show: function show() {
           createImageSelection(topicInfos);
           $('#topicSelection').show();
-          AnimatedBackground.create(questionMarksDivTop, 3, backgroundTemplate);
-          AnimatedBackground.create(questionMarksDivBottom, 3, backgroundTemplate);
+          var backgroundData = { count: 3, imageTemplate: templates.backgroundImageTemplate };
+          questionMarksDivTop.append(templates.backgroundTemplate.clone(backgroundData));
+          questionMarksDivBottom.append(templates.backgroundTemplate.clone(backgroundData));
           prepareOnResize();
         },
         hide: function hide() {

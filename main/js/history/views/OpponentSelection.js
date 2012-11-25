@@ -4,14 +4,14 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
   "use strict";
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.OpponentSelection = {
-    create: function create(imageSelectionTemplate, opponentTemplate, backgroundTemplate) {
-      ArgumentUtils.assertType(imageSelectionTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(opponentTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
+    create: function create(templates) {
+      ArgumentUtils.assertType(templates.imageSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.opponentTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundImageTemplate, net.riemschneider.ui.Template);
 
       var questionMarksDivTop = $('#opponentQuestionMarksTop');
       var questionMarksDivBottom = $('#opponentQuestionMarksBottom');
@@ -25,9 +25,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function createImageSelection() {
         for (var idx = 0, len = opponentInfos.length; idx < len; ++idx) {
-          opponentInfos[idx].template = opponentTemplate;
+          opponentInfos[idx].template = templates.opponentTemplate;
         }
-        imageSelectionDiv = imageSelectionTemplate.clone({ options: opponentInfos });
+        imageSelectionDiv = templates.imageSelectionTemplate.clone({ options: opponentInfos });
         opponentsDiv.append(imageSelectionDiv);
       }
 
@@ -55,8 +55,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
         show: function show() {
           createImageSelection();
           $('#opponentSelection').show();
-          AnimatedBackground.create(questionMarksDivTop, 3, backgroundTemplate);
-          AnimatedBackground.create(questionMarksDivBottom, 3, backgroundTemplate);
+          var backgroundData = { count: 3, imageTemplate: templates.backgroundImageTemplate };
+          questionMarksDivTop.append(templates.backgroundTemplate.clone(backgroundData));
+          questionMarksDivBottom.append(templates.backgroundTemplate.clone(backgroundData));
           prepareOnResize();
         },
         hide: function hide() {

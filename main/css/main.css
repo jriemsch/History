@@ -13,9 +13,12 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    display: none;
 
     background-image: -webkit-linear-gradient(bottom, #C9C9C9 0%, #ffffff 58%);
+}
+
+.hiddenView {
+    display: none;
 }
 
 #menu {
@@ -192,7 +195,7 @@ body {
     -webkit-perspective: 1000;
 }
 
-#avatars {
+.avatars {
     position: absolute;
     height: 244px;
     width: 100%;
@@ -204,13 +207,13 @@ body {
 }
 
 @media only screen and (max-width: 640px) {
-    #avatars {
+    .avatars {
         height: 122px;
         margin-top: -44px;
     }
 }
 
-#nameInput {
+.nameInput {
     position: absolute;
     top: 50%;
     margin-top: -148px;
@@ -223,15 +226,7 @@ body {
     background-image: -webkit-linear-gradient(bottom, #C9C9C9 16%, #f0f0f0 58%);
 }
 
-@media only screen and (max-width: 640px) {
-    #nameInput {
-        font-size: medium;
-        margin-top: -94px;
-        padding: 5px;
-    }
-}
-
-#nameInput div {
+.nameInput div {
     display: inline-block;
     border: 8px solid #ffebcd;
     background: white;
@@ -240,14 +235,7 @@ body {
     margin: 10px;
 }
 
-@media only screen and (max-width: 640px) {
-    #nameInput div {
-        border-width: 4px;
-        margin: 5px;
-    }
-}
-
-#nameInput div input {
+.nameInput div input {
     font-size: large;
     text-align: center;
     width: 230px;
@@ -256,7 +244,18 @@ body {
 }
 
 @media only screen and (max-width: 640px) {
-    #nameInput div input {
+    .nameInput {
+        font-size: medium;
+        margin-top: -94px;
+        padding: 5px;
+    }
+
+    .nameInput div {
+        border-width: 4px;
+        margin: 5px;
+    }
+
+    .nameInput div input {
         font-size: medium;
         width: 180px;
     }

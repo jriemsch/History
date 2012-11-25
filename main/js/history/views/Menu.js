@@ -3,7 +3,6 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 (function () {
   "use strict";
 
-  var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
   var Tap = net.riemschneider.gestures.Tap;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
@@ -16,8 +15,9 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       STATS: { key: 'STATS' }
     }),
 
-    create: function (backgroundTemplate) {
-      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
+    create: function create(templates) {
+      ArgumentUtils.assertType(templates.backgroundImageTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundTemplate, net.riemschneider.ui.Template);
 
       var Option = net.riemschneider.history.views.Menu.Option;
 
@@ -34,7 +34,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
       function show() {
         $('#menu').show();
-        AnimatedBackground.create(menuBackground, 6, backgroundTemplate);
+        menuBackground.append(templates.backgroundTemplate.clone({ count: 6, imageTemplate: templates.backgroundImageTemplate }));
       }
 
       function hide() {

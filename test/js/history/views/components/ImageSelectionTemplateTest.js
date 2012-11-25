@@ -47,15 +47,16 @@ TestCase('ImageSelectionTemplateTest', {
 
   testDefaultSelection: function () {
     var template = ImageSelectionTemplate.create('template', this.templateProcessorRegistry);
-    var container = template.clone({ options: this.options });
-    assertNull(container.getSelection());
+    var data = { options: this.options };
+    template.clone(data);
+    assertNull(data.getSelection());
   },
 
-  testSetSelection: function () {
+  testSelectedImageIdx: function () {
     var template = ImageSelectionTemplate.create('template', this.templateProcessorRegistry);
-    var container = template.clone({ options: this.options });
-    container.setSelection(1);
-    assertEquals(1, container.getSelection());
+    var data = { options: this.options, selectedImageIdx: 1 };
+    var container = template.clone(data);
+    assertEquals(1, data.getSelection());
     var optionDivs = container.find('.option');
     assertFalse($(optionDivs[0]).hasClass('imageSelectionSelector'));
     assertTrue($(optionDivs[1]).hasClass('imageSelectionSelector'));
@@ -63,13 +64,13 @@ TestCase('ImageSelectionTemplateTest', {
 
   testTapSelectsImage: function () {
     var template = ImageSelectionTemplate.create('template', this.templateProcessorRegistry);
-    var container = template.clone({ options: this.options });
-    container.setSelection(0);
+    var data = { options: this.options, selectedImageIdx: 0 };
+    var container = template.clone(data);
     var optionDivs = container.find('.option');
     assertEquals(2, optionDivs.length);
     $(optionDivs[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     $(optionDivs[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals(1, container.getSelection());
+    assertEquals(1, data.getSelection());
     assertFalse($(optionDivs[0]).hasClass('imageSelectionSelector'));
     assertTrue($(optionDivs[1]).hasClass('imageSelectionSelector'));
   },
@@ -78,8 +79,7 @@ TestCase('ImageSelectionTemplateTest', {
     var called = false;
     this.options[1].callback = function () { called = true; };
     var template = ImageSelectionTemplate.create('template', this.templateProcessorRegistry);
-    var container = template.clone({ options: this.options });
-    container.setSelection(0);
+    var container = template.clone({ options: this.options, selectedImageIdx: 0 });
     var optionDivs = container.find('.option');
     assertEquals(2, optionDivs.length);
     $(optionDivs[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));

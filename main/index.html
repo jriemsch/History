@@ -36,6 +36,7 @@
   <script type="text/javascript" charset="utf-8" src="js/graphics/ImageUtils.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/AddClassProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/HideImageUntilLoadedProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/ReplaceWithTemplateProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/SetSrcAttributeProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/SetTextProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/TemplateProcessorRegistry.js"></script>
@@ -76,19 +77,22 @@
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuestionListGenerator.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageSelectionTemplate.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackgroundImageTemplate.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackgroundTemplate.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnimatedBackground.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/ImageMap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/QuizPlayers.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/RegionState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/DecoratedImageMap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnswerComponentRegistry.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/MultipleChoiceComponent.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelectionTemplate.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/OpponentSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/QuizView.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarPresenter.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuState.js"></script>
@@ -108,23 +112,14 @@
     <input type="button" id="resetButton" value="Reset" style="display: none">
   </div>
 
-  <div id="menu" class="view">
+  <div id="menu" class="view hiddenView">
     <div id="menuBackground" class="questionMarks"></div>
     <div class="bigTitle">Geschichte im Quiz</div>
     <div id="menuOptions"></div>
     <div class="footer">&copy; 2012 by Jens Riemschneider</div>
   </div>
 
-  <div id="avatarSelection" class="view">
-    <div id="avatars"></div>
-    <div id="avatarQuestionMarksTop" class="questionMarks"></div>
-    <div id="avatarQuestionMarksBottom" class="questionMarks"></div>
-    <div class="bigTitle">Wähle Deinen Avatar</div>
-    <div id="nameInput"><div><input type="text"></div></div>
-    <div class="footer"><div class="okButton"></div></div>
-  </div>
-
-  <div id="topicSelection" class="view">
+  <div id="topicSelection" class="view hiddenView">
     <div id="topics"></div>
     <div id="topicQuestionMarksTop" class="questionMarks"></div>
     <div id="topicQuestionMarksBottom" class="questionMarks"></div>
@@ -132,7 +127,7 @@
     <div class="footer"><div class="backButton"></div></div>
   </div>
 
-  <div id="opponentSelection" class="view">
+  <div id="opponentSelection" class="view hiddenView">
     <div id="opponents"></div>
     <div id="opponentQuestionMarksTop" class="questionMarks"></div>
     <div id="opponentQuestionMarksBottom" class="questionMarks"></div>
@@ -140,7 +135,7 @@
     <div class="footer"><div class="backButton"></div></div>
   </div>
 
-  <div id="quizView" class="view">
+  <div id="quizView" class="view hiddenView">
     <div class="quizMap"></div>
   </div>
 
@@ -178,9 +173,24 @@
       </div>
     </div>
 
-    <img data-template-id="animatedBackgroundTemplate" class="animatedBackgroundImage" src="images/questionMark.png">
+    <img data-template-id="animatedBackgroundImageTemplate" class="animatedBackgroundImage" src="images/questionMark.png">
+
+    <div data-template-id="animatedBackgroundTemplate"></div>
 
     <div data-template-id="imageSelectionTemplate" class="imageSelectionOptionContainer"></div>
+
+    <div data-template-id="avatarSelectionTemplate" class="view">
+      <div class="avatars" data-replace-with-template="imageSelection"></div>
+      <div class="avatarQuestionMarksTop questionMarks">
+        <div data-replace-with-template="background"></div>
+      </div>
+      <div class="avatarQuestionMarksBottom questionMarks">
+        <div data-replace-with-template="background"></div>
+      </div>
+      <div class="bigTitle">Wähle Deinen Avatar</div>
+      <div class="nameInput"><div><input type="text"></div></div>
+      <div class="footer"><div class="okButton"></div></div>
+    </div>
   </div>
 </body>
 </html>

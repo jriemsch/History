@@ -13,13 +13,10 @@ TestCase('TopicSelectionTest', {
     this.avatarTemplateDiv.append('<img data-attr-src="image" class="imageClass">');
     this.avatarTemplateDiv.append('<div data-text="name"></div>');
     this.avatarTemplateDiv.append('<img class="overlay">');
-    this.imageSelectionTemplateDiv = $('<div data-template-id="imageSelection" class="container"></div>');
 
     this.unlockedTemplateDiv = $('<div data-template-id="unlocked"></div>');
     this.unlockedTemplateDiv.append('<img data-attr-src="image" class="imageClass">');
     this.unlockedTemplateDiv.append('<div data-text="name"></div>');
-
-    this.backgroundTemplateDiv = $('<img data-template-id="background">');
 
     this.topicSelectionDiv = $('<div id="topicSelection"></div>');
     this.topicsDiv = $('<div id="topics"></div>');
@@ -31,9 +28,11 @@ TestCase('TopicSelectionTest', {
 
     $('body').append(this.avatarTemplateDiv);
     $('body').append(this.unlockedTemplateDiv);
+    $('body').append('<img data-template-id="backgroundImage">');
+    $('body').append('<div data-template-id="background"></div>');
+    $('body').append('<div data-template-id="imageSelection" class="container"></div>');
+
     $('body').append(this.topicSelectionDiv);
-    $('body').append(this.backgroundTemplateDiv);
-    $('body').append(this.imageSelectionTemplateDiv);
     this.topicSelectionDiv.append(this.topicsDiv);
     this.topicSelectionDiv.append(this.questionMarksTop);
     this.topicSelectionDiv.append(this.questionMarksBottom);
@@ -62,10 +61,14 @@ TestCase('TopicSelectionTest', {
     this.templateProcessorRegistry = TemplateProcessorRegistry.create();
     this.templateProcessorRegistry.addProcessor(SetSrcAttributeProcessor.create());
     this.templateProcessorRegistry.addProcessor(SetTextProcessor.create());
-    this.lockedTemplate = Template.create('locked', this.templateProcessorRegistry);
-    this.unlockedTemplate = Template.create('unlocked', this.templateProcessorRegistry);
-    this.backgroundTemplate = Template.create('background', this.templateProcessorRegistry);
-    this.imageSelectionTemplate = ImageSelectionTemplate.create('imageSelection', this.templateProcessorRegistry);
+
+    this.templates = {
+      lockedTemplate: Template.create('locked', this.templateProcessorRegistry),
+      unlockedTemplate: Template.create('unlocked', this.templateProcessorRegistry),
+      backgroundImageTemplate: Template.create('backgroundImage', this.templateProcessorRegistry),
+      backgroundTemplate: Template.create('background', this.templateProcessorRegistry),
+      imageSelectionTemplate: ImageSelectionTemplate.create('imageSelection', this.templateProcessorRegistry)
+    };
   },
 
   tearDown: function () {
@@ -73,21 +76,13 @@ TestCase('TopicSelectionTest', {
   },
 
   testCreateNullAndTypeSafe: function () {
-    var template = this.lockedTemplate;
+    assertException(function () { TopicSelection.create(null); }, 'TypeError');
 
-    assertException(function () { TopicSelection.create(template, template, template, null); }, 'TypeError');
-    assertException(function () { TopicSelection.create(template, template, null, template); }, 'TypeError');
-    assertException(function () { TopicSelection.create(template, null, template, template); }, 'TypeError');
-    assertException(function () { TopicSelection.create(null, template, template, template); }, 'TypeError');
-
-    assertException(function () { TopicSelection.create(template, template, template, {}); }, 'TypeError');
-    assertException(function () { TopicSelection.create(template, template, {}, template); }, 'TypeError');
-    assertException(function () { TopicSelection.create(template, {}, template, template); }, 'TypeError');
-    assertException(function () { TopicSelection.create({}, template, template, template); }, 'TypeError');
+    assertException(function () { TopicSelection.create({}); }, 'TypeError');
   },
 
   testShowAndHide: function () {
-    var sel = TopicSelection.create(this.imageSelectionTemplate, this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
+    var sel = TopicSelection.create(this.templates);
     sel.setTopicInfos(this.topicInfos);
     assertEquals('none', this.topicSelectionDiv.css('display'));
     sel.show();
@@ -97,7 +92,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testAllImagesShown: function () {
-    var sel = TopicSelection.create(this.imageSelectionTemplate, this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
+    var sel = TopicSelection.create(this.templates);
     sel.setTopicInfos(this.topicInfos);
     sel.show();
     assertEquals(2, this.topicSelectionDiv.find('.imageClass').length);
@@ -105,7 +100,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testCanShowNewTopicState: function () {
-    var sel = TopicSelection.create(this.imageSelectionTemplate, this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
+    var sel = TopicSelection.create(this.templates);
     sel.setTopicInfos(this.topicInfos);
     sel.show();
     sel.hide();
@@ -115,7 +110,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testBackCallsCallback: function () {
-    var sel = TopicSelection.create(this.imageSelectionTemplate, this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
+    var sel = TopicSelection.create(this.templates);
     sel.setTopicInfos(this.topicInfos);
     var called = false;
     sel.onBack(function () { called = true; });
@@ -126,7 +121,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testSelectTopicCallsCallback: function () {
-    var sel = TopicSelection.create(this.imageSelectionTemplate, this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
+    var sel = TopicSelection.create(this.templates);
     sel.setTopicInfos(this.topicInfos);
     sel.show();
     var allImages = this.topicSelectionDiv.find('.imageClass');
@@ -136,7 +131,7 @@ TestCase('TopicSelectionTest', {
   },
 
   testSetTopicInfosNullAndTypeSafe: function () {
-    var sel = TopicSelection.create(this.imageSelectionTemplate, this.lockedTemplate, this.unlockedTemplate, this.backgroundTemplate);
+    var sel = TopicSelection.create(this.templates);
     var callback = function () {};
 
     assertException(function () { sel.setTopicInfos(null); }, 'TypeError');

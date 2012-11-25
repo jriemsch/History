@@ -10,7 +10,7 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
   var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.components.ImageSelectionTemplate = {
-    create: function (templateId, processorRegistry) {
+    create: function create(templateId, processorRegistry) {
       var template = Template.create(templateId, processorRegistry);
 
       template.onCloned = function onCloned(containerDiv, data) {
@@ -22,11 +22,13 @@ net.riemschneider.history.views.components = net.riemschneider.history.views.com
 
         createContainerDiv();
         addOptionsToDiv();
+        if (typeof data.selectedImageIdx !== 'undefined') {
+          selectImage(data.selectedImageIdx, true);
+        }
 
         setScrollPosition(0, 0);
 
-        containerDiv.getSelection = function getSelection() { return selectedIdx; };
-        containerDiv.setSelection = function setSelection(idx) { selectImage(idx, true); };
+        data.getSelection = function getSelection() { return selectedIdx; };
 
         function getSpacingFromCss() {
           var firstOption = data.options[0];

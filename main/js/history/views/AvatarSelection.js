@@ -5,86 +5,58 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var AvatarImages = net.riemschneider.history.data.AvatarImages;
-  var AnimatedBackground = net.riemschneider.history.views.components.AnimatedBackground;
-  var TouchUtils = net.riemschneider.utils.TouchUtils;
-  var Tap = net.riemschneider.gestures.Tap;
 
   net.riemschneider.history.views.AvatarSelection = {
-    create: function (imageSelectionTemplate, avatarTemplate, backgroundTemplate) {
-      ArgumentUtils.assertType(imageSelectionTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(avatarTemplate, net.riemschneider.ui.Template);
-      ArgumentUtils.assertType(backgroundTemplate, net.riemschneider.ui.Template);
+    create: function (parent, templates) {
+      ArgumentUtils.assertNotNull(parent);
 
-      var questionMarksDivTop = $('#avatarQuestionMarksTop');
-      var questionMarksDivBottom = $('#avatarQuestionMarksBottom');
-      var avatarsDiv = $('#avatars');
-      var imageSelectionDiv = createImageSelectionDiv();
-      var nameDiv = $('#nameInput');
-      var nameInput = nameDiv.find('div input');
+      ArgumentUtils.assertType(templates.avatarSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.imageSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.avatarImageSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundImageTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundTemplate, net.riemschneider.ui.Template);
 
-      prepareNameInput();
-      prepareButtonBar();
+      var avatarSelectionDiv = null;
+      var viewData = null;
 
       var onOkCallback = function () {};
-
-      function createImageSelectionDiv() {
-        var options = [];
-        for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
-          options[idx] = { template: avatarTemplate, image: AvatarImages.getImage(idx) };
-        }
-
-        var imageSelectionDiv = imageSelectionTemplate.clone({ options: options });
-        avatarsDiv.append(imageSelectionDiv);
-        return imageSelectionDiv;
-      }
-
-      function prepareButtonBar() {
-        var okButton = $('#avatarSelection').find('.footer .okButton');
-        Tap.create(okButton, function () { onOkCallback(); }, false, 'okPressed');
-      }
-
-      function prepareOnResize() {
-        $(window).resize(function () {
-          var height = nameDiv.offset().top - 1;
-          questionMarksDivTop.css({ top: 0, height: height });
-
-          height = window.innerHeight - avatarsDiv.offset().top - avatarsDiv.outerHeight() - 7;
-          questionMarksDivBottom.css({ bottom: 0, height: height });
-        });
-
-        setTimeout(function () { $(window).resize(); }, 0);
-      }
-
-      function prepareNameInput() {
-        nameInput.keydown(function (event) {
-          if (event.which === 13) {
-            nameInput.blur();
-          }
-        });
-
-        TouchUtils.onTouchStart($(document), function () {
-          nameInput.blur();
-        });
-      }
+      var selectedAvatarImageIdx;
+      var selectedName;
 
       return {
         show: function show() {
-          $('#avatarSelection').show();
-          AnimatedBackground.create(questionMarksDivTop, 3, backgroundTemplate);
-          AnimatedBackground.create(questionMarksDivBottom, 3, backgroundTemplate);
+          viewData = {
+            imageSelection: createImageSelectionData(),
+            background: {
+              template: templates.backgroundTemplate,
+              count: 3,
+              imageTemplate: templates.backgroundImageTemplate
+            },
+            selectedName: selectedName,
+            onOkCallback: onOkCallback
+          };
+          avatarSelectionDiv = templates.avatarSelectionTemplate.clone(viewData);
+          parent.append(avatarSelectionDiv);
 
-          prepareOnResize();
+          function createImageSelectionData() {
+            var options = [];
+            for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
+              options[idx] = { template: templates.avatarImageSelectionTemplate, image: AvatarImages.getImage(idx) };
+            }
+
+            return {
+              options: options,
+              selectedImageIdx: selectedAvatarImageIdx,
+              template: templates.imageSelectionTemplate
+            };
+          }
         },
-        hide: function hide() {
-          questionMarksDivTop.empty();
-          questionMarksDivBottom.empty();
-          $('#avatarSelection').hide();
-        },
+        hide: function hide() { avatarSelectionDiv.remove(); },
         onOk: function onOk(callback) { onOkCallback = callback; },
-        setAvatarImageIdx: function setAvatarImageIdx(avatarImageIdx) { imageSelectionDiv.setSelection(avatarImageIdx); },
-        getAvatarImageIdx: function getAvatarImageIdx() { return imageSelectionDiv.getSelection(); },
-        setName: function setName(name) { nameInput.val(name); },
-        getName: function getName() { return nameInput.val(); }
+        setAvatarImageIdx: function setAvatarImageIdx(avatarImageIdx) { selectedAvatarImageIdx = avatarImageIdx; },
+        getAvatarImageIdx: function getAvatarImageIdx() { return viewData.imageSelection.getSelection(); },
+        setName: function setName(name) { selectedName = name; },
+        getName: function getName() { return viewData.getName(); }
       };
     }
   };

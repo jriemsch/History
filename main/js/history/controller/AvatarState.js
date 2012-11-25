@@ -5,32 +5,22 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var ViewState = net.riemschneider.structures.ViewState;
+  var State = net.riemschneider.structures.State;
   var PlayerController = net.riemschneider.history.controller.PlayerController;
 
   net.riemschneider.history.controller.AvatarState = {
-    create: function create(stateMachine, avatarSelection, playerController) {
-      ArgumentUtils.assertType(playerController, PlayerController);
+    create: function create(stateMachine, presenter) {
+      ArgumentUtils.assertNotNull(presenter);
 
-      var state = ViewState.create(stateMachine, 'avatar', false, avatarSelection);
+      var state = State.create(stateMachine, 'avatar', false);
 
-      state.onConfigureView = function onConfigureView() {
-        avatarSelection.onOk(function () {
-          savePlayer();
-          stateMachine.transitionTo('menu');
-        });
-
-        var player = playerController.getPlayer();
-        avatarSelection.setAvatarImageIdx(player.getAvatarImageIdx());
-        avatarSelection.setName(player.getName());
+      state.onEnter = function onEnter() {
+        presenter.show(function () { stateMachine.transitionTo('menu'); });
       };
 
-      function savePlayer() {
-        var player = playerController.getPlayer();
-        player.setAvatarImageIdx(avatarSelection.getAvatarImageIdx());
-        player.setName(avatarSelection.getName() || 'Mr. X');
-        playerController.savePlayer();
-      }
+      state.onLeave = function onLeave() {
+        presenter.hide();
+      };
 
       return state;
     }

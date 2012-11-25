@@ -9,52 +9,47 @@ TestCase('AvatarStateTest', {
   setUp: function () {
     this.stateMachine = StateMachine.create();
     State.create(this.stateMachine, 'menu', true);
-    this.avatarSelection = {
-      callback: null,
-      avatarImageIdx: null,
-      name: null,
-      show: function () {},
-      hide: function () {},
-      onOk: function (callback) { this.callback = callback; },
-      getAvatarImageIdx: function () { return this.avatarImageIdx; },
-      setAvatarImageIdx: function (idx) { this.avatarImageIdx = idx; },
-      getName: function () { return this.name; },
-      setName: function (name) { this.name = name; }
+    this.presenter = {
+      onDone: null,
+      show: function show(onDone) { this.onDone = onDone; },
+      hide: function hide() { this.onDone = null; }
     };
-    this.playerController = PlayerController.create();
   },
 
   testCreate: function () {
-    var state = AvatarState.create(this.stateMachine, this.avatarSelection, this.playerController);
+    var state = AvatarState.create(this.stateMachine, this.presenter);
     assertTrue(TypeUtils.isOfType(state, AvatarState));
-    assertTrue(TypeUtils.isOfType(state, ViewState));
     assertTrue(TypeUtils.isOfType(state, State));
   },
 
-  testOnConfigureView: function () {
-    var player = this.playerController.getPlayer();
-    player.setAvatarImageIdx(2);
-    player.setName('original');
-    AvatarState.create(this.stateMachine, this.avatarSelection, this.playerController);
+  testCreateNullAndTypeSafe: function () {
+    assertException(function () { AvatarState.create(this.stateMachine, null); }, 'TypeError');
+  },
+
+  testOnEnter: function () {
+    AvatarState.create(this.stateMachine, this.presenter);
     this.stateMachine.start();
     this.stateMachine.transitionTo('avatar');
 
-    assertEquals(2, this.avatarSelection.avatarImageIdx);
-    assertEquals('original', this.avatarSelection.name);
+    assertNotNull(this.presenter.onDone);
+  },
 
-    this.avatarSelection.avatarImageIdx = 1;
-    this.avatarSelection.name = 'changed';
+  testOnDoneCallback: function () {
+    AvatarState.create(this.stateMachine, this.presenter);
+    this.stateMachine.start();
+    this.stateMachine.transitionTo('avatar');
 
-    this.avatarSelection.callback();
+    this.presenter.onDone();
 
-    assertEquals(1, player.getAvatarImageIdx());
-    assertEquals('changed', player.getName());
     assertEquals('menu', this.stateMachine.getCurrentStateId());
   },
 
-  testNullAndTypeSafe: function () {
-    assertException(function () { AvatarState.create(this.stateMachine, this.avatarSelection, null); }, 'TypeError');
+  testOnLeave: function () {
+    AvatarState.create(this.stateMachine, this.presenter);
+    this.stateMachine.start();
+    this.stateMachine.transitionTo('avatar');
 
-    assertException(function () { AvatarState.create(this.stateMachine, this.avatarSelection, {}); }, 'TypeError');
+    this.stateMachine.transitionTo('menu');
+    assertNull(this.presenter.onDone);
   }
 });

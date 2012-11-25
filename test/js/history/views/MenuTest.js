@@ -6,20 +6,25 @@ TestCase('MenuTest', {
   setUp: function () {
     $('body').empty();
 
-    this.backgroundTemplateDiv = $('<img data-template-id="background">');
+    this.backgroundImageTemplateDiv = $();
 
-    this.menu = $('<div id="menu"></div>');
     this.menuBackground = $('<div id="menuBackground"></div>');
     this.menuOptions = $('<div id="menuOptions"></div>');
+    this.menu = $('<div id="menu"></div>');
 
-    $('body').append(this.backgroundTemplateDiv);
+    $('body').append('<img data-template-id="backgroundImage">');
+    $('body').append('<div data-template-id="background">');
     $('body').append(this.menu);
     this.menu.append(this.menuBackground);
     this.menu.append(this.menuOptions);
     this.menu.hide();
 
     this.templateProcessorRegistry = TemplateProcessorRegistry.create();
-    this.backgroundTemplate = Template.create('background', this.templateProcessorRegistry);
+
+    this.templates = {
+      backgroundImageTemplate: Template.create('backgroundImage', this.templateProcessorRegistry),
+      backgroundTemplate: Template.create('background', this.templateProcessorRegistry)
+    };
   },
 
   testCreateNullAndTypeSafe: function () {
@@ -33,7 +38,7 @@ TestCase('MenuTest', {
   },
 
   testShowAndHide: function () {
-    var menu = Menu.create(this.backgroundTemplate);
+    var menu = Menu.create(this.templates);
     assertEquals('none', this.menu.css('display'));
     menu.show();
     assertEquals('block', this.menu.css('display'));
@@ -44,7 +49,7 @@ TestCase('MenuTest', {
   },
 
   testClickOption: function () {
-    var menu = Menu.create(this.backgroundTemplate);
+    var menu = Menu.create(this.templates);
     var called = false;
     menu.onSelect(Menu.Option.AVATAR, function () { called = true; });
     menu.show();
