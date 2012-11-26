@@ -20,6 +20,8 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
       return {
         show: function show(onDone) {
+          ArgumentUtils.assertFunction(onDone);
+
           var player = playerController.getPlayer();
 
           var options = [];

@@ -42,9 +42,9 @@ TestCase('AvatarPresenterTest', {
     assertException(function () { AvatarPresenter.create(playerController, []); }, 'TypeError');
     assertException(function () { AvatarPresenter.create({}, templates); }, 'TypeError');
 
-    templates.avatarImageSelectionTemplate = {};
+    templates.avatarSelectionTemplate = {};
     assertException(function () { AvatarPresenter.create(playerController, templates); }, 'TypeError');
-    templates.avatarImageSelectionTemplate = template;
+    templates.avatarSelectionTemplate = template;
 
     templates.imageSelectionTemplate = {};
     assertException(function () { AvatarPresenter.create(playerController, templates); }, 'TypeError');
@@ -86,6 +86,14 @@ TestCase('AvatarPresenterTest', {
     assertEquals('Anton', cloneData.selectedName);
 
     assertEquals(2, $('body').children().length);
+  },
+
+  testShowNullAndTypeSafe: function () {
+    var presenter = AvatarPresenter.create(this.playerController, this.templates);
+
+    assertException(function () { presenter.show(null); }, 'TypeError');
+
+    assertException(function () { presenter.show(123); }, 'TypeError');
   },
 
   testHide: function () {

@@ -370,7 +370,7 @@ body {
     display: table-cell;
 }
 
-#topics {
+.topics {
     position: absolute;
     height: 244px;
     width: 100%;

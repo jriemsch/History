@@ -86,12 +86,13 @@
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnswerComponentRegistry.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/MultipleChoiceComponent.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelectionTemplate.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelectionTemplate.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/OpponentSelection.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/QuizView.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarPresenter.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizTopicPresenter.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuState.js"></script>
@@ -116,14 +117,6 @@
     <div class="bigTitle">Geschichte im Quiz</div>
     <div id="menuOptions"></div>
     <div class="footer">&copy; 2012 by Jens Riemschneider</div>
-  </div>
-
-  <div id="topicSelection" class="view hiddenView">
-    <div id="topics"></div>
-    <div id="topicQuestionMarksTop" class="questionMarks"></div>
-    <div id="topicQuestionMarksBottom" class="questionMarks"></div>
-    <div class="bigTitle">Wähle Das Thema</div>
-    <div class="footer"><div class="backButton"></div></div>
   </div>
 
   <div id="opponentSelection" class="view hiddenView">
@@ -189,6 +182,18 @@
       <div class="bigTitle">Wähle Deinen Avatar</div>
       <div class="nameInput"><div><input type="text"></div></div>
       <div class="footer"><div class="okButton"></div></div>
+    </div>
+
+    <div data-template-id="topicSelectionTemplate" class="view">
+      <div class="topics" data-replace-with-template="imageSelection"></div>
+      <div class="topicQuestionMarksTop questionMarks">
+        <div data-replace-with-template="background"></div>
+      </div>
+      <div class="topicQuestionMarksBottom questionMarks">
+        <div data-replace-with-template="background"></div>
+      </div>
+      <div class="bigTitle">Wähle Das Thema</div>
+      <div class="footer"><div class="backButton"></div></div>
     </div>
   </div>
 </body>

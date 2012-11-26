@@ -59,7 +59,8 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
           backgroundImageTemplate: net.riemschneider.history.views.components.AnimatedBackgroundImageTemplate.create('animatedBackgroundImageTemplate', inj.templateProcessorRegistry),
           backgroundTemplate: net.riemschneider.history.views.components.AnimatedBackgroundTemplate.create('animatedBackgroundTemplate', inj.templateProcessorRegistry),
           imageSelectionTemplate: net.riemschneider.history.views.components.ImageSelectionTemplate.create('imageSelectionTemplate', inj.templateProcessorRegistry),
-          avatarSelectionTemplate: net.riemschneider.history.views.AvatarSelectionTemplate.create('avatarSelectionTemplate', inj.templateProcessorRegistry)
+          avatarSelectionTemplate: net.riemschneider.history.views.AvatarSelectionTemplate.create('avatarSelectionTemplate', inj.templateProcessorRegistry),
+          topicSelectionTemplate: net.riemschneider.history.views.TopicSelectionTemplate.create('topicSelectionTemplate', inj.templateProcessorRegistry)
         };
 
         inj.opponentController = net.riemschneider.history.controller.OpponentController.create(inj.opponents);
@@ -69,8 +70,8 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.quizController = net.riemschneider.history.controller.QuizController.create();
 
         inj.avatarPresenter = net.riemschneider.history.controller.AvatarPresenter.create(inj.playerController, inj.viewTemplates);
+        inj.quizTopicPresenter = net.riemschneider.history.controller.QuizTopicPresenter.create(inj.quizGenerator, inj.topicsById, inj.addOns, inj.viewTemplates);
 
-        inj.topicSelection = net.riemschneider.history.views.TopicSelection.create(inj.viewTemplates);
         inj.opponentSelection = net.riemschneider.history.views.OpponentSelection.create(inj.viewTemplates);
         inj.menu = net.riemschneider.history.views.Menu.create(inj.viewTemplates);
         inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
@@ -80,7 +81,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.stateMachine = net.riemschneider.structures.StateMachine.create();
         inj.menuState = net.riemschneider.history.controller.MenuState.create(inj.stateMachine, inj.menu);
         inj.avatarState = net.riemschneider.history.controller.AvatarState.create(inj.stateMachine, inj.avatarPresenter);
-        inj.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(inj.stateMachine, inj.topicSelection, inj.quizGenerator, inj.topicsById, inj.addOns);
+        inj.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(inj.stateMachine, inj.quizTopicPresenter);
         inj.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(inj.stateMachine, inj.opponentSelection, inj.opponentController, inj.quizGenerator, inj.quizController);
         inj.quizState = net.riemschneider.history.controller.QuizState.create(inj.stateMachine, inj.quizView);
         inj.quizPlayerSelectsRegionState = net.riemschneider.history.controller.QuizPlayerSelectsRegionState.create(inj.stateMachine, inj.quizController, inj.quizView);

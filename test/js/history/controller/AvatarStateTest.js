@@ -1,6 +1,4 @@
 var AvatarState = net.riemschneider.history.controller.AvatarState;
-var PlayerController = net.riemschneider.history.controller.PlayerController;
-var ViewState = net.riemschneider.structures.ViewState;
 var State = net.riemschneider.structures.State;
 var StateMachine = net.riemschneider.structures.StateMachine;
 var TypeUtils = net.riemschneider.utils.TypeUtils;

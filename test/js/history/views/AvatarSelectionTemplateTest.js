@@ -83,10 +83,10 @@ TestCase('AvatarSelectionTemplateTest', {
     var data = this.data;
 
     data.onOkCallback = null;
-    assertException(function () { template.clone(data); }, 'TypeError');
+    assertException(function () { template.clone(data); }, 'TypeError');
 
     data.onOkCallback = 123;
-    assertException(function () { template.clone(data); }, 'TypeError');
+    assertException(function () { template.clone(data); }, 'TypeError');
   },
 
   testGetName: function () {

@@ -6,7 +6,6 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
   var State = net.riemschneider.structures.State;
-  var PlayerController = net.riemschneider.history.controller.PlayerController;
 
   net.riemschneider.history.controller.AvatarState = {
     create: function create(stateMachine, presenter) {
