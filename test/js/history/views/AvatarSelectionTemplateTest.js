@@ -1,4 +1,3 @@
-var AvatarSelection = net.riemschneider.history.views.AvatarSelection;
 var JQueryTestUtils = net.riemschneider.testutils.JQueryTestUtils;
 var Template = net.riemschneider.ui.Template;
 var ImageSelectionTemplate = net.riemschneider.history.views.components.ImageSelectionTemplate;
@@ -7,7 +6,7 @@ var TemplateProcessorRegistry = net.riemschneider.ui.TemplateProcessorRegistry;
 var SetSrcAttributeProcessor = net.riemschneider.ui.SetSrcAttributeProcessor;
 var ReplaceWithTemplateProcessor = net.riemschneider.ui.ReplaceWithTemplateProcessor;
 
-TestCase('AvatarSelectionTest', {
+TestCase('AvatarSelectionTemplateTest', {
   setUp: function () {
     $('body').empty();
 
@@ -24,9 +23,6 @@ TestCase('AvatarSelectionTest', {
     $('body').append('<div data-template-id="imageSelection" class="container"></div>');
     $('body').append(this.viewTemplateDiv);
 
-    this.parent = $('<div></div>');
-    $('body').append(this.parent);
-
     this.templateProcessorRegistry = TemplateProcessorRegistry.create();
     this.templateProcessorRegistry.addProcessor(ReplaceWithTemplateProcessor.create());
     this.templateProcessorRegistry.addProcessor(SetSrcAttributeProcessor.create());
@@ -35,8 +31,25 @@ TestCase('AvatarSelectionTest', {
       avatarImageSelectionTemplate: Template.create('avatar', this.templateProcessorRegistry),
       backgroundImageTemplate: Template.create('backgroundImage', this.templateProcessorRegistry),
       backgroundTemplate: Template.create('background', this.templateProcessorRegistry),
-      imageSelectionTemplate: ImageSelectionTemplate.create('imageSelection', this.templateProcessorRegistry),
-      avatarSelectionTemplate: AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry)
+      imageSelectionTemplate: ImageSelectionTemplate.create('imageSelection', this.templateProcessorRegistry)
+    };
+
+    this.data = {
+      imageSelection: {
+        template: this.templates.imageSelectionTemplate,
+        selectedImageIdx: 1,
+        options: [ { template: this.templates.avatarImageSelectionTemplate, image: '1.png' }, { template: this.templates.avatarImageSelectionTemplate, image: '2.png' } ]
+      },
+      background: {
+        template: this.templates.backgroundTemplate,
+        imageTemplate: this.templates.backgroundImageTemplate,
+        count: 3
+      },
+      selectedName: 'Anton',
+      okCalled: false,
+      onOkCallback: function onOk() {
+        this.okCalled = true;
+      }
     };
   },
 
@@ -45,78 +58,58 @@ TestCase('AvatarSelectionTest', {
   },
 
   testCreateNullAndTypeSafe: function () {
-    var templates = this.templates;
-    var parent = this.parent;
+    var registry = this.templateProcessorRegistry;
 
-    assertException(function () { AvatarSelection.create(parent, null); }, 'TypeError');
-    assertException(function () { AvatarSelection.create(null, templates); }, 'TypeError');
+    assertException(function () { AvatarSelectionTemplate.create('templateId', null); }, 'TypeError');
+    assertException(function () { AvatarSelectionTemplate.create(null, registry); }, 'TypeError');
 
-    assertException(function () { AvatarSelection.create(parent, {}); }, 'TypeError');
+    assertException(function () { AvatarSelectionTemplate.create(12, registry); }, 'TypeError');
   },
 
-  testShowAndHide: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    assertEquals(0, this.parent.find('.avatarSelection').length);
-    sel.show();
-    assertEquals(1, this.parent.find('.avatarSelection').length);
-    sel.hide();
-    assertEquals(0, this.parent.find('.avatarSelection').length);
-  },
+  testClone: function () {
+    var template = AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry);
+    var clone = template.clone(this.data);
+    assertTrue(clone.hasClass('avatarSelection'));
+    assertEquals('Anton', clone.find('.nameInput div input').val());
+    assertEquals(2, clone.find('.imageClass').length);
 
-  testPreviousNameIsShown: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.setName('initial');
-    sel.show();
-    assertEquals('initial', this.parent.find('.nameInput div input').val());
-  },
-
-  testSelectName: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.show();
-    this.parent.find('.nameInput div input').val('changed');
-    assertEquals('changed', sel.getName());
-  },
-
-  testAllImagesShown: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.show();
-    assertEquals(31, this.parent.find('.imageClass').length);
-  },
-
-  testPreviousImageIsSelected: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.setAvatarImageIdx(2);
-    sel.show();
-    var selectedImage = this.parent.find('.imageSelectionSelector .imageClass');
+    var selectedImage = clone.find('.imageSelectionSelector .imageClass');
     assertEquals(1, selectedImage.length);
-    assertEquals('images/avatars/avatar002.png', selectedImage.attr('src'));
+    assertEquals('2.png', selectedImage.attr('src'));
   },
 
-  testSelectImage: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.show();
-    var allImages = this.parent.find('.imageClass');
-    $(allImages[1]).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
-    $(allImages[1]).trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertEquals(1, sel.getAvatarImageIdx());
+  testCloneNullAndTypeSafe: function () {
+    var template = AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry);
+    var data = this.data;
+
+    data.onOkCallback = null;
+    assertException(function () { template.clone(data); }, 'TypeError');
+
+    data.onOkCallback = 123;
+    assertException(function () { template.clone(data); }, 'TypeError');
+  },
+
+  testGetName: function () {
+    var template = AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry);
+    var clone = template.clone(this.data);
+    clone.find('.nameInput div input').val('changed');
+    assertEquals('changed', this.data.getName());
   },
 
   testOkCallsCallback: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    var called = false;
-    sel.onOk(function () { called = true; });
-    sel.show();
-    var okButton = this.parent.find('.okButton');
+    var template = AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry);
+    var clone = template.clone(this.data);
+    var okButton = clone.find('.okButton');
     okButton.trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     okButton.trigger(jQuery.Event('mouseup', { pageX: 0, pageY: 0 }));
-    assertTrue(called);
+    assertTrue(this.data.okCalled);
   },
 
   testNameInputFocusIsLostWhenPressingReturn: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.show();
+    var template = AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry);
+    var clone = template.clone(this.data);
     var blurRecorder = JQueryTestUtils.startRecording('blur');
-    var nameInput = this.parent.find('.nameInput div input');
+    var nameInput = clone.find('.nameInput div input');
     nameInput.trigger(jQuery.Event('keydown', { which: 13 }));
     JQueryTestUtils.stopRecording(blurRecorder);
     var lastRecording = JQueryTestUtils.getLastRecording(blurRecorder, function () { return true; });
@@ -125,13 +118,13 @@ TestCase('AvatarSelectionTest', {
   },
 
   testNameInputFocusIsLostWhenClickingSomewhere: function () {
-    var sel = AvatarSelection.create(this.parent, this.templates);
-    sel.show();
+    var template = AvatarSelectionTemplate.create('viewTemplate', this.templateProcessorRegistry);
+    var clone = template.clone(this.data);
     var blurRecorder = JQueryTestUtils.startRecording('blur');
     $(document).trigger(jQuery.Event('mousedown', { pageX: 0, pageY: 0 }));
     JQueryTestUtils.stopRecording(blurRecorder);
     var lastRecording = JQueryTestUtils.getLastRecording(blurRecorder, function () { return true; });
-    assertEquals(this.parent.find('.nameInput div input')[0], lastRecording.obj[0]);
+    assertEquals(clone.find('.nameInput div input')[0], lastRecording.obj[0]);
     JQueryTestUtils.clearRecording(blurRecorder);
   }
 });

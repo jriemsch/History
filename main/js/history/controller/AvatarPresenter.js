@@ -4,37 +4,61 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
   "use strict";
 
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var AvatarSelection = net.riemschneider.history.views.AvatarSelection;
+  var AvatarImages = net.riemschneider.history.data.AvatarImages;
 
   net.riemschneider.history.controller.AvatarPresenter = {
-    create: function create(playerController, viewTemplates) {
+    create: function create(playerController, templates) {
       ArgumentUtils.assertType(playerController, net.riemschneider.history.controller.PlayerController);
-      ArgumentUtils.assertMap(viewTemplates, function (key, elem) { ArgumentUtils.assertType(elem, net.riemschneider.ui.Template); });
+      ArgumentUtils.assertMap(templates);
+      ArgumentUtils.assertType(templates.avatarSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.imageSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.avatarImageSelectionTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundImageTemplate, net.riemschneider.ui.Template);
+      ArgumentUtils.assertType(templates.backgroundTemplate, net.riemschneider.ui.Template);
 
-      var view = AvatarSelection.create($('body'), viewTemplates);
+      var avatarSelectionDiv = null;
 
       return {
         show: function show(onDone) {
-          view.onOk(function () {
-            savePlayer();
-            onDone();
-          });
-
           var player = playerController.getPlayer();
-          view.setAvatarImageIdx(player.getAvatarImageIdx());
-          view.setName(player.getName());
-          view.show();
 
-          function savePlayer() {
+          var options = [];
+          for (var idx = 0; idx < AvatarImages.getImageCount(); ++idx) {
+            options[idx] = {
+              template: templates.avatarImageSelectionTemplate,
+              image: AvatarImages.getImage(idx)
+            };
+          }
+
+          var viewData = {
+            imageSelection: {
+              template: templates.imageSelectionTemplate,
+              selectedImageIdx: player.getAvatarImageIdx(),
+              options: options
+            },
+            background: {
+              template: templates.backgroundTemplate,
+              imageTemplate: templates.backgroundImageTemplate,
+              count: 3
+            },
+            selectedName: player.getName(),
+            onOkCallback: onOk
+          };
+
+          avatarSelectionDiv = templates.avatarSelectionTemplate.clone(viewData);
+          $('body').append(avatarSelectionDiv);
+
+          function onOk() {
             var player = playerController.getPlayer();
-            player.setAvatarImageIdx(view.getAvatarImageIdx());
-            player.setName(view.getName() || 'Mr. X');
+            player.setAvatarImageIdx(viewData.imageSelection.getSelection());
+            player.setName(viewData.getName() || 'Mr. X');
             playerController.savePlayer();
+            onDone();
           }
         },
 
         hide: function hide() {
-          view.hide();
+          avatarSelectionDiv.remove();
         }
       };
     }
