@@ -83,7 +83,7 @@ TestCase('AvatarPresenterTest', {
     assertSame(this.templates.backgroundImageTemplate, cloneData.background.imageTemplate);
     assertEquals(3, cloneData.background.count);
 
-    assertEquals('Anton', cloneData.selectedName);
+    assertEquals('Anton', cloneData.name);
 
     assertEquals(2, $('body').children().length);
   },

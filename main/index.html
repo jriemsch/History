@@ -39,6 +39,8 @@
   <script type="text/javascript" charset="utf-8" src="js/ui/ReplaceWithTemplateProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/SetSrcAttributeProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/SetTextProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/TapEventProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/TextInputProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/TemplateProcessorRegistry.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/Template.js"></script>
 
@@ -85,14 +87,13 @@
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/DecoratedImageMap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnswerComponentRegistry.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/MultipleChoiceComponent.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/AvatarSelectionTemplate.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/TopicSelectionTemplate.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/OpponentSelection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/SelectionTemplate.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/QuizView.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarPresenter.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizTopicPresenter.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizOpponentPresenter.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuState.js"></script>
@@ -117,14 +118,6 @@
     <div class="bigTitle">Geschichte im Quiz</div>
     <div id="menuOptions"></div>
     <div class="footer">&copy; 2012 by Jens Riemschneider</div>
-  </div>
-
-  <div id="opponentSelection" class="view hiddenView">
-    <div id="opponents"></div>
-    <div id="opponentQuestionMarksTop" class="questionMarks"></div>
-    <div id="opponentQuestionMarksBottom" class="questionMarks"></div>
-    <div class="bigTitle">Wähle Deine Mitspieler</div>
-    <div class="footer"><div class="backButton"></div></div>
   </div>
 
   <div id="quizView" class="view hiddenView">
@@ -172,28 +165,42 @@
     <div data-template-id="imageSelectionTemplate" class="imageSelectionOptionContainer"></div>
 
     <div data-template-id="avatarSelectionTemplate" class="view">
-      <div class="avatars" data-replace-with-template="imageSelection"></div>
-      <div class="avatarQuestionMarksTop questionMarks">
+      <div class="avatars items">
+        <div class="nameInput"><div><input type="text" data-text-input="name"></div></div>
+        <div data-replace-with-template="imageSelection"></div>
+      </div>
+      <div class="questionMarksTop questionMarks">
         <div data-replace-with-template="background"></div>
       </div>
-      <div class="avatarQuestionMarksBottom questionMarks">
+      <div class="questionMarksBottom questionMarks">
         <div data-replace-with-template="background"></div>
       </div>
       <div class="bigTitle">Wähle Deinen Avatar</div>
-      <div class="nameInput"><div><input type="text"></div></div>
-      <div class="footer"><div class="okButton"></div></div>
+      <div class="footer"><div data-tap-event="onOkCallback" class="okButton"></div></div>
     </div>
 
     <div data-template-id="topicSelectionTemplate" class="view">
-      <div class="topics" data-replace-with-template="imageSelection"></div>
-      <div class="topicQuestionMarksTop questionMarks">
+      <div class="topics items" data-replace-with-template="imageSelection"></div>
+      <div class="questionMarksTop questionMarks">
         <div data-replace-with-template="background"></div>
       </div>
-      <div class="topicQuestionMarksBottom questionMarks">
+      <div class="questionMarksBottom questionMarks">
         <div data-replace-with-template="background"></div>
       </div>
       <div class="bigTitle">Wähle Das Thema</div>
-      <div class="footer"><div class="backButton"></div></div>
+      <div class="footer"><div data-tap-event="onBackCallback" class="backButton"></div></div>
+    </div>
+
+    <div data-template-id="opponentSelectionTemplate" class="view">
+      <div class="opponents items" data-replace-with-template="imageSelection"></div>
+      <div class="questionMarksTop questionMarks">
+        <div data-replace-with-template="background"></div>
+      </div>
+      <div class="questionMarksBottom questionMarks">
+        <div data-replace-with-template="background"></div>
+      </div>
+      <div class="bigTitle">Wähle Deine Mitspieler</div>
+      <div class="footer"><div data-tap-event="onBackCallback" class="backButton"></div></div>
     </div>
   </div>
 </body>

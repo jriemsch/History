@@ -43,7 +43,7 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
               imageTemplate: templates.backgroundImageTemplate,
               count: 3
             },
-            selectedName: player.getName(),
+            name: player.getName(),
             onOkCallback: onOk
           };
 

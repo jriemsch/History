@@ -74,7 +74,7 @@ body {
     }
 }
 
-.menuOptionSelected {
+.menuOptionImage.pressed {
     background: gray;
 }
 
@@ -171,12 +171,20 @@ body {
     height: 35px;
 }
 
-.okPressed {
+.okButton.pressed {
+    display: inline-block;
     background: url('../images/ok-pressed.png') no-repeat;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
 }
 
-.backPressed {
+.backButton.pressed {
+    display: inline-block;
     background: url('../images/cancel-pressed.png') no-repeat;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
 }
 
 .questionMarks {
@@ -197,26 +205,33 @@ body {
 
 .avatars {
     position: absolute;
-    height: 244px;
+    height: 294px;
     width: 100%;
     overflow-x: hidden;
     top: 50%;
-    margin-top: -70px;
+    margin-top: -147px;
     background-image: -webkit-linear-gradient(bottom, #f0f0f0 16%, #C9C9C9 58%);
     -webkit-box-shadow: 0 3px 8px 0 black;
 }
 
+.avatars .imageSelectionOptionContainer {
+    top: 52px;
+}
+
 @media only screen and (max-width: 640px) {
     .avatars {
-        height: 122px;
-        margin-top: -44px;
+        height: 167px;
+        margin-top: -92px;
+    }
+
+    .avatars .imageSelectionOptionContainer {
+        top: 44px;
     }
 }
 
 .nameInput {
     position: absolute;
-    top: 50%;
-    margin-top: -148px;
+    top: 0;
     width: 100%;
     text-align: center;
     font-size: large;
@@ -232,7 +247,6 @@ body {
     background: white;
     -webkit-border-radius: 8px;
     -webkit-box-shadow: 3px 3px 8px 0 black;
-    margin: 10px;
 }
 
 .nameInput div input {
@@ -246,7 +260,6 @@ body {
 @media only screen and (max-width: 640px) {
     .nameInput {
         font-size: medium;
-        margin-top: -94px;
         padding: 5px;
     }
 
@@ -382,13 +395,13 @@ body {
 }
 
 @media only screen and (max-width: 640px) {
-    #topics {
+    .topics {
         height: 122px;
         margin-top: -61px;
     }
 }
 
-#opponents {
+.opponents {
     position: absolute;
     height: 244px;
     width: 100%;
@@ -400,7 +413,7 @@ body {
 }
 
 @media only screen and (max-width: 640px) {
-    #opponents {
+    .opponents {
         height: 122px;
         margin-top: -61px;
     }

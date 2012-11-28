@@ -5,64 +5,24 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 
   var TypeUtils = net.riemschneider.utils.TypeUtils;
   var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
-  var ViewState = net.riemschneider.structures.ViewState;
-  var Difficulty = net.riemschneider.history.model.Difficulty;
-  var AvatarImages = net.riemschneider.history.data.AvatarImages;
-
-  var backgroundClasses = {};
-  backgroundClasses[Difficulty.EASY.key] = 'imageSelectionBackgroundGlowGreen';
-  backgroundClasses[Difficulty.MEDIUM.key] = 'imageSelectionBackgroundGlowYellow';
-  backgroundClasses[Difficulty.HARD.key] = 'imageSelectionBackgroundGlowRed';
+  var State = net.riemschneider.structures.State;
 
   net.riemschneider.history.controller.QuizOpponentState = {
-    create: function create(stateMachine, opponentSelection, opponentController, quizGenerator, quizController) {
-      ArgumentUtils.assertNotNull(opponentController);
-      ArgumentUtils.assertNotNull(quizGenerator);
-      ArgumentUtils.assertNotNull(quizController);
+    create: function create(stateMachine, presenter) {
+      ArgumentUtils.assertNotNull(presenter);
 
-      var state = ViewState.create(stateMachine, 'quizOpponent', false, opponentSelection);
+      var state = State.create(stateMachine, 'quizOpponent', false);
 
-      state.onConfigureView = function onConfigureView() {
-        var pairings = opponentController.getRandomOpponentPairings(2);
-        var opponentInfos = convertPairings(pairings);
-        opponentSelection.setOpponentInfos(opponentInfos);
-        opponentSelection.onBack(function () { stateMachine.transitionTo('quizTopic'); });
+      state.onEnter = function onEnter() {
+        presenter.show(
+            function onBack() { stateMachine.transitionTo('quizTopic'); },
+            function onDone() { stateMachine.transitionTo('quiz'); }
+        );
       };
 
-      function convertPairings(pairings) {
-        var infos = [];
-        for (var idx = 0, len = Difficulty.values.length; idx < len; ++idx) {
-          var difficulty = Difficulty.values[idx];
-          var pairingsOfDifficulty = pairings[difficulty.key];
-          if (pairingsOfDifficulty) {
-            convertPairingsOfDifficulty(infos, pairingsOfDifficulty, difficulty);
-          }
-        }
-        return infos;
-      }
-
-      function convertPairingsOfDifficulty(infos, pairingsOfDifficulty, difficulty) {
-        for (var idx = 0, len = pairingsOfDifficulty.length; idx < len; ++idx) {
-          infos.push(convertPairing(pairingsOfDifficulty[idx], difficulty));
-        }
-      }
-
-      function convertPairing(pairing, difficulty) {
-        return {
-          background: backgroundClasses[difficulty.key],
-          image0: AvatarImages.getImage(pairing.first.getAvatarImageIdx()),
-          name0: pairing.first.getName(),
-          image1: AvatarImages.getImage(pairing.second.getAvatarImageIdx()),
-          name1: pairing.second.getName(),
-          callback: function onPairingSelected() {
-            quizGenerator.setCurrentOpponents(pairing);
-            quizGenerator.setCurrentDifficulty(difficulty);
-            var quiz = quizGenerator.generate();
-            quizController.setCurrentQuiz(quiz);
-            stateMachine.transitionTo('quiz');
-          }
-        };
-      }
+      state.onLeave = function onLeave() {
+        presenter.hide();
+      };
 
       return state;
     }

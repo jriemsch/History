@@ -48,7 +48,7 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       }
 
       function createMenuOptionTap(tappable, option) {
-        Tap.create(tappable, function () { option.onSelect(); }, false, 'menuOptionSelected');
+        Tap.create(tappable, function () { option.onSelect(); }, false);
       }
 
       function createMenuOption(option) {

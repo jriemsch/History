@@ -29,6 +29,8 @@ load:
   - ../../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js
   - ../../../jslib/main/js/ui/SetSrcAttributeProcessor.js
   - ../../../jslib/main/js/ui/SetTextProcessor.js
+  - ../../../jslib/main/js/ui/TapEventProcessor.js
+  - ../../../jslib/main/js/ui/TextInputProcessor.js
   - ../../../jslib/main/js/ui/TemplateProcessorRegistry.js
   - ../../../jslib/main/js/ui/Template.js
   - ../main/js/history/model/Player.js
@@ -73,9 +75,7 @@ load:
   - ../main/js/history/views/components/RegionState.js
   - ../main/js/history/views/components/DecoratedImageMap.js
   - ../main/js/history/views/components/AnswerComponentRegistry.js
-  - ../main/js/history/views/AvatarSelectionTemplate.js
-  - ../main/js/history/views/TopicSelectionTemplate.js
-  - ../main/js/history/views/OpponentSelection.js
+  - ../main/js/history/views/SelectionTemplate.js
   - ../main/js/history/views/Menu.js
   - ../main/js/history/views/QuizView.js
   - ../main/js/history/controller/AvatarState.js
@@ -84,6 +84,7 @@ load:
   - ../main/js/history/controller/QuizTopicState.js
   - ../main/js/history/controller/QuizTopicPresenter.js
   - ../main/js/history/controller/QuizOpponentState.js
+  - ../main/js/history/controller/QuizOpponentPresenter.js
 serve:
   - images/test.png
 test:
@@ -128,9 +129,7 @@ test:
   - js/history/views/components/DecoratedImageMapTest.js
   - js/history/views/components/RegionStateTest.js
   - js/history/views/components/AnswerComponentRegistryTest.js
-  - js/history/views/AvatarSelectionTemplateTest.js
-  - js/history/views/TopicSelectionTemplateTest.js
-  - js/history/views/OpponentSelectionTest.js
+  - js/history/views/SelectionTemplateTest.js
   - js/history/views/MenuTest.js
   - js/history/views/QuizViewTest.js
   - js/history/controller/AvatarStateTest.js
@@ -139,3 +138,4 @@ test:
   - js/history/controller/QuizTopicStateTest.js
   - js/history/controller/QuizTopicPresenterTest.js
   - js/history/controller/QuizOpponentStateTest.js
+  - js/history/controller/QuizOpponentPresenterTest.js
