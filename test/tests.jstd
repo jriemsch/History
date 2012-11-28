@@ -3,34 +3,34 @@ server: http://localhost:9876
 load:
   - ../main/libs/jquery/jquery-1.7.1.js
   - ../main/js/history/History.js
-  - ../../jslib/main/js/utils/ArrayUtils.js
-  - ../../jslib/test/mocks/ClockMock.js
-  - ../../jslib/test/mocks/RandomMock.js
-  - ../../jslib/test/testutils/JQueryTestUtils.js
-  - ../../jslib/main/js/utils/TypeUtils.js
-  - ../../jslib/main/js/utils/ArgumentUtils.js
-  - ../../jslib/main/js/utils/DeviceUtils.js
-  - ../../jslib/main/js/utils/TouchUtils.js
-  - ../../jslib/main/js/utils/ClosureUtils.js
-  - ../../jslib/main/js/utils/Observer.js
-  - ../../jslib/main/js/utils/ObservedProperty.js
-  - ../../jslib/test/utils/WebUtils.js
-  - ../../jslib/main/js/graphics/Position.js
-  - ../../jslib/main/js/graphics/ImageData.js
-  - ../../jslib/main/js/graphics/ImageUtils.js
-  - ../../jslib/main/js/storage/Storage.js
-  - ../../jslib/main/js/gestures/Scroll.js
-  - ../../jslib/main/js/gestures/Tap.js
-  - ../../jslib/main/js/structures/State.js
-  - ../../jslib/main/js/structures/ViewState.js
-  - ../../jslib/main/js/structures/StateMachine.js
-  - ../../jslib/main/js/ui/AddClassProcessor.js
-  - ../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js
-  - ../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js
-  - ../../jslib/main/js/ui/SetSrcAttributeProcessor.js
-  - ../../jslib/main/js/ui/SetTextProcessor.js
-  - ../../jslib/main/js/ui/TemplateProcessorRegistry.js
-  - ../../jslib/main/js/ui/Template.js
+  - ../../../jslib/main/js/utils/ArrayUtils.js
+  - ../../../jslib/test/mocks/ClockMock.js
+  - ../../../jslib/test/mocks/RandomMock.js
+  - ../../../jslib/test/testutils/JQueryTestUtils.js
+  - ../../../jslib/main/js/utils/TypeUtils.js
+  - ../../../jslib/main/js/utils/ArgumentUtils.js
+  - ../../../jslib/main/js/utils/DeviceUtils.js
+  - ../../../jslib/main/js/utils/TouchUtils.js
+  - ../../../jslib/main/js/utils/ClosureUtils.js
+  - ../../../jslib/main/js/utils/Observer.js
+  - ../../../jslib/main/js/utils/ObservedProperty.js
+  - ../../../jslib/test/utils/WebUtils.js
+  - ../../../jslib/main/js/graphics/Position.js
+  - ../../../jslib/main/js/graphics/ImageData.js
+  - ../../../jslib/main/js/graphics/ImageUtils.js
+  - ../../../jslib/main/js/storage/Storage.js
+  - ../../../jslib/main/js/gestures/Scroll.js
+  - ../../../jslib/main/js/gestures/Tap.js
+  - ../../../jslib/main/js/structures/State.js
+  - ../../../jslib/main/js/structures/ViewState.js
+  - ../../../jslib/main/js/structures/StateMachine.js
+  - ../../../jslib/main/js/ui/AddClassProcessor.js
+  - ../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js
+  - ../../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js
+  - ../../../jslib/main/js/ui/SetSrcAttributeProcessor.js
+  - ../../../jslib/main/js/ui/SetTextProcessor.js
+  - ../../../jslib/main/js/ui/TemplateProcessorRegistry.js
+  - ../../../jslib/main/js/ui/Template.js
   - ../main/js/history/model/Player.js
   - ../main/js/history/model/LevelOrderChance.js
   - ../main/js/history/model/Difficulty.js

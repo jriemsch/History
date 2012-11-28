@@ -6,13 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e816981-5cb4-42bc-9e4a-4041ce4a90b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/js/history/controller/AvatarPresenterTest.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/history/views/AvatarSelection.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" afterPath="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTemplateTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../History.xcodeproj/project.xcworkspace/xcuserdata/ky.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/ui/AddClassProcessor.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/ui/AddClassProcessor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/ui/SetSrcAttributeProcessor.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/ui/SetSrcAttributeProcessor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/main/js/ui/SetTextProcessor.js" afterPath="$PROJECT_DIR$/../../../jslib/main/js/ui/SetTextProcessor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/ui/AddClassProcessorTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/ui/AddClassProcessorTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/ui/ReplaceWithTemplateProcessorTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/ui/ReplaceWithTemplateProcessorTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/ui/SetSrcAttributeProcessorTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/ui/SetSrcAttributeProcessorTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../jslib/test/ui/SetTextProcessorTest.js" afterPath="$PROJECT_DIR$/../../../jslib/test/ui/SetTextProcessorTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/history/controller/AvatarPresenter.js" afterPath="$PROJECT_DIR$/js/history/controller/AvatarPresenter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/tests.jstd" afterPath="$PROJECT_DIR$/../test/tests.jstd" />
     </list>
     <ignored path="www.iws" />
@@ -47,90 +51,88 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="0" selection-start="7188" selection-end="7188" vertical-scroll-proportion="-11.083333">
+            <state line="148" column="71" selection-start="10366" selection-end="10366" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.jstd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="40" selection-start="4067" selection-end="4067" vertical-scroll-proportion="0.0">
+            <state line="749" column="8" selection-start="15434" selection-end="15434" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarPresenterTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarPresenterTest.js">
+      <file leaf-file-name="ReplaceWithTemplateProcessorTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/ReplaceWithTemplateProcessorTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="33" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.0">
+            <state line="31" column="0" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/controller/PlayerController.js">
+      <file leaf-file-name="AddClassProcessorTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/AddClassProcessorTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+            <state line="4" column="40" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarStateTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js">
+      <file leaf-file-name="AddClassProcessor.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/AddClassProcessor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="455" selection-end="501" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarPresenter.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarPresenter.js">
+      <file leaf-file-name="HideImageUntilLoadedProcessorTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/HideImageUntilLoadedProcessorTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="13" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.57228917">
+            <state line="13" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarSelectionTemplateTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTemplateTest.js">
+      <file leaf-file-name="HideImageUntilLoadedProcessor.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="1188" selection-end="1297" vertical-scroll-proportion="0.0">
+            <state line="6" column="65" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageSelectionTemplateTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTemplateTest.js">
+      <file leaf-file-name="SetSrcAttributeProcessorTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/SetSrcAttributeProcessorTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="20" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1353833962000" expanded="true" signature="432:469" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Template.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/Template.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+            <state line="4" column="48" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvatarSelectionTemplate.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelectionTemplate.js">
+      <file leaf-file-name="SetSrcAttributeProcessor.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/SetSrcAttributeProcessor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="25" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.0">
+            <state line="6" column="59" selection-start="200" selection-end="200" vertical-scroll-proportion="0.090361446">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetTextProcessorTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/SetTextProcessorTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="160" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,7 +151,7 @@
         <option value="jRiemsch" />
       </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../jslib" />
   </component>
   <component name="GitLogSettings">
     <option name="myStructureFilterPaths" />
@@ -157,22 +159,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/history/controller/AvatarState.js" />
-        <option value="$PROJECT_DIR$/js/history/views/OpponentSelection.js" />
-        <option value="$PROJECT_DIR$/js/history/views/TopicSelection.js" />
-        <option value="$PROJECT_DIR$/js/history/views/AvatarSelection.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/TopicSelectionTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js" />
-        <option value="$PROJECT_DIR$/js/history/views/Menu.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/views/MenuTest.js" />
-        <option value="$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js" />
         <option value="$PROJECT_DIR$/js/history/inject/Injector.js" />
         <option value="$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTemplateTest.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/history/controller/AvatarPresenter.js" />
-        <option value="$PROJECT_DIR$/../test/tests.jstd" />
         <option value="$PROJECT_DIR$/../test/js/history/controller/AvatarPresenterTest.js" />
+        <option value="$PROJECT_DIR$/../test/tests.jstd" />
+        <option value="$PROJECT_DIR$/../../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/main/js/ui/SetTextProcessor.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/test/ui/ReplaceWithTemplateProcessorTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/test/ui/AddClassProcessorTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/test/ui/HideImageUntilLoadedProcessorTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/test/ui/SetSrcAttributeProcessorTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/test/ui/SetTextProcessorTest.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/main/js/ui/AddClassProcessor.js" />
+        <option value="$PROJECT_DIR$/../../../jslib/main/js/ui/SetSrcAttributeProcessor.js" />
       </list>
     </option>
   </component>
@@ -258,140 +260,6 @@
               <option name="myItemId" value="www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -482,84 +350,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -707,16 +497,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -792,7 +572,7 @@
       <recent name="$PROJECT_DIR$/js/history/views" />
     </key>
   </component>
-  <component name="RunManager" selected="JsTestDriver.Tests History">
+  <component name="RunManager" selected="JsTestDriver.Tests JsLib">
     <configuration default="false" name="ReplaceWithTemplateProcessorTest.testCreateAndProcess" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
       <setting name="configLocationType" value="TEST_METHOD" />
       <setting name="configType" value="FILE_PATH" />
@@ -926,14 +706,14 @@
       <method />
     </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.History" />
-      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.Tests History" />
-      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.Tests JsLib" />
-      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.ReplaceWithTemplateProcessorTest.testCreateAndProcess" />
-      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.ImageSelectionTemplateTest.testCreateImagePlacement" />
-      <item index="5" class="java.lang.String" itemvalue="JsTestDriver.ImageSelectionTemplateTest" />
-      <item index="6" class="java.lang.String" itemvalue="JsTestDriver.AvatarSelectionTest.testPreviousNameIsShown" />
-      <item index="7" class="java.lang.String" itemvalue="JsTestDriver.AvatarSelectionTest" />
+      <item index="0" class="java.lang.String" itemvalue="JsTestDriver.ReplaceWithTemplateProcessorTest.testCreateAndProcess" />
+      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.ImageSelectionTemplateTest.testCreateImagePlacement" />
+      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.ImageSelectionTemplateTest" />
+      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.AvatarSelectionTest.testPreviousNameIsShown" />
+      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.AvatarSelectionTest" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.History" />
+      <item index="6" class="java.lang.String" itemvalue="JsTestDriver.Tests History" />
+      <item index="7" class="java.lang.String" itemvalue="JsTestDriver.Tests JsLib" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1226,24 +1006,24 @@
     <frame x="0" y="22" width="2556" height="1418" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.46653387" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19553503" sideWeight="0.48565736" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.4952191" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.4295612" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.49681276" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.804465" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.46494025" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19553503" sideWeight="0.48406374" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2434263" sideWeight="0.21939954" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23266932" sideWeight="0.804465" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26404926" sideWeight="0.45697212" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19168591" sideWeight="0.5306773" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948208" sideWeight="0.4295612" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16932271" sideWeight="0.804465" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26327944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33410317" sideWeight="0.50199205" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26404926" sideWeight="0.45378485" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26404926" sideWeight="0.5434263" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.49681276" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287144" sideWeight="0.4952191" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20159362" sideWeight="0.804465" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995381" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1330,116 +1110,108 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/OpponentSelectionTest.js">
+    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="53" selection-start="5621" selection-end="5621" vertical-scroll-proportion="0.0">
+        <state line="48" column="110" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/model/Topic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/controller/QuizTopicPresenter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="76" selection-start="3198" selection-end="3198" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/history/views/components/ImageSelectionTemplate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="52" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/Menu.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/ReplaceWithTemplateProcessor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
+        <state line="9" column="67" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/MenuTest.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/SetTextProcessor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
+        <state line="11" column="22" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarState.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/ReplaceWithTemplateProcessorTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="46" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
+        <state line="31" column="0" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/inject/Injector.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/HideImageUntilLoadedProcessorTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="24" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/components/AnimatedBackgroundImageTemplate.js">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/views/AvatarSelectionTemplate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="25" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/components/ImageSelectionTemplateTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="20" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1353833962000" expanded="true" signature="432:469" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/Template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+        <state line="749" column="8" selection-start="15434" selection-end="15434" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="7188" selection-end="7188" vertical-scroll-proportion="-11.083333">
+        <state line="148" column="71" selection-start="10366" selection-end="10366" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarStateTest.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/HideImageUntilLoadedProcessor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
+        <state line="6" column="65" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/PlayerController.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/SetTextProcessorTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+        <state line="25" column="160" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/views/AvatarSelectionTemplateTest.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/AddClassProcessorTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="1188" selection-end="1297" vertical-scroll-proportion="0.0">
+        <state line="4" column="40" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/tests.jstd">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/AddClassProcessor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="40" selection-start="4067" selection-end="4067" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="455" selection-end="501" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test/js/history/controller/AvatarPresenterTest.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/test/ui/SetSrcAttributeProcessorTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="33" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.0">
+        <state line="4" column="48" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/history/controller/AvatarPresenter.js">
+    <entry file="file://$PROJECT_DIR$/../../../jslib/main/js/ui/SetSrcAttributeProcessor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="13" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.57228917">
+        <state line="6" column="59" selection-start="200" selection-end="200" vertical-scroll-proportion="0.090361446">
           <folding />
         </state>
       </provider>
