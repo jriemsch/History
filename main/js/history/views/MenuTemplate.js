@@ -14,15 +14,11 @@ net.riemschneider.history.views = net.riemschneider.history.views || {};
       template.onCloned = function onCloned(menuDiv, data) {
         ArgumentUtils.assertArray(data.options, function (elem) { ArgumentUtils.assertType(elem.template, Template); });
 
-        createMenuOptions();
-
-        function createMenuOptions() {
-          var menuOptionsDiv = menuDiv.find('.menuOptions');
-          for (var idx = 0, len = data.options.length; idx < len; ++idx) {
-            var option = data.options[idx];
-            var optionDiv = option.template.clone(option);
-            menuOptionsDiv.append(optionDiv);
-          }
+        var menuOptionsDiv = menuDiv.find('.menuOptions');
+        for (var idx = 0, len = data.options.length; idx < len; ++idx) {
+          var option = data.options[idx];
+          var optionDiv = option.template.clone(option);
+          menuOptionsDiv.append(optionDiv);
         }
       };
 

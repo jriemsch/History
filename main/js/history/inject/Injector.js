@@ -49,6 +49,7 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.HideImageUntilLoadedProcessor.create());
         inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.ReplaceWithTemplateProcessor.create());
         inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.SetSrcAttributeProcessor.create());
+        inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.SetStyleProcessor.create());
         inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.SetTextProcessor.create());
         inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.TapEventProcessor.create());
         inj.templateProcessorRegistry.addProcessor(net.riemschneider.ui.TextInputProcessor.create());
@@ -63,7 +64,9 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
           imageSelectionTemplate: net.riemschneider.history.views.components.ImageSelectionTemplate.create('imageSelectionTemplate', inj.templateProcessorRegistry),
           avatarSelectionTemplate: net.riemschneider.history.views.SelectionTemplate.create('avatarSelectionTemplate', inj.templateProcessorRegistry),
           topicSelectionTemplate: net.riemschneider.history.views.SelectionTemplate.create('topicSelectionTemplate', inj.templateProcessorRegistry),
-          opponentSelectionTemplate: net.riemschneider.history.views.SelectionTemplate.create('opponentSelectionTemplate', inj.templateProcessorRegistry)
+          opponentSelectionTemplate: net.riemschneider.history.views.SelectionTemplate.create('opponentSelectionTemplate', inj.templateProcessorRegistry),
+          menuTemplate: net.riemschneider.history.views.MenuTemplate.create('menuTemplate', inj.templateProcessorRegistry),
+          menuOptionTemplate: net.riemschneider.ui.Template.create('menuOptionTemplate', inj.templateProcessorRegistry)
         };
 
         inj.opponentController = net.riemschneider.history.controller.OpponentController.create(inj.opponents);
@@ -75,14 +78,14 @@ net.riemschneider.history.inject = net.riemschneider.history.inject || {};
         inj.avatarPresenter = net.riemschneider.history.controller.AvatarPresenter.create(inj.playerController, inj.viewTemplates);
         inj.quizTopicPresenter = net.riemschneider.history.controller.QuizTopicPresenter.create(inj.quizGenerator, inj.topicsById, inj.addOns, inj.viewTemplates);
         inj.quizOpponentPresenter = net.riemschneider.history.controller.QuizOpponentPresenter.create(inj.opponentController, inj.quizGenerator, inj.quizController, inj.viewTemplates);
+        inj.menuPresenter = net.riemschneider.history.controller.MenuPresenter.create(inj.viewTemplates);
 
-        inj.menu = net.riemschneider.history.views.Menu.create(inj.viewTemplates);
         inj.answerComponentRegistry = net.riemschneider.history.views.components.AnswerComponentRegistry.create();
         inj.multipleChoiceComponent = net.riemschneider.history.views.components.MultipleChoiceComponent.create(inj.answerComponentRegistry);
         inj.quizView = net.riemschneider.history.views.QuizView.create(inj.playerController, inj.quizController, inj.regionsByTopic, inj.topicsById, inj.answerComponentRegistry);
 
         inj.stateMachine = net.riemschneider.structures.StateMachine.create();
-        inj.menuState = net.riemschneider.history.controller.MenuState.create(inj.stateMachine, inj.menu);
+        inj.menuState = net.riemschneider.history.controller.MenuState.create(inj.stateMachine, inj.menuPresenter);
         inj.avatarState = net.riemschneider.history.controller.AvatarState.create(inj.stateMachine, inj.avatarPresenter);
         inj.quizTopicState = net.riemschneider.history.controller.QuizTopicState.create(inj.stateMachine, inj.quizTopicPresenter);
         inj.quizOpponentState = net.riemschneider.history.controller.QuizOpponentState.create(inj.stateMachine, inj.quizOpponentPresenter);

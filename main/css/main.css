@@ -21,11 +21,11 @@ body {
     display: none;
 }
 
-#menu {
+.menu {
     display: none;
 }
 
-#menuBackground {
+.menuBackground {
     position: absolute;
     left: 0;
     top: 0;
@@ -33,7 +33,7 @@ body {
     height: 100%;
 }
 
-#menuOptions {
+.menuOptions {
     position: absolute;
     left: 0;
     top: 0;

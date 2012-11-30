@@ -76,11 +76,12 @@ load:
   - ../main/js/history/views/components/DecoratedImageMap.js
   - ../main/js/history/views/components/AnswerComponentRegistry.js
   - ../main/js/history/views/SelectionTemplate.js
-  - ../main/js/history/views/Menu.js
+  - ../main/js/history/views/MenuTemplate.js
   - ../main/js/history/views/QuizView.js
   - ../main/js/history/controller/AvatarState.js
   - ../main/js/history/controller/AvatarPresenter.js
   - ../main/js/history/controller/MenuState.js
+  - ../main/js/history/controller/MenuPresenter.js
   - ../main/js/history/controller/QuizTopicState.js
   - ../main/js/history/controller/QuizTopicPresenter.js
   - ../main/js/history/controller/QuizOpponentState.js
@@ -130,11 +131,12 @@ test:
   - js/history/views/components/RegionStateTest.js
   - js/history/views/components/AnswerComponentRegistryTest.js
   - js/history/views/SelectionTemplateTest.js
-  - js/history/views/MenuTest.js
+  - js/history/views/MenuTemplateTest.js
   - js/history/views/QuizViewTest.js
   - js/history/controller/AvatarStateTest.js
   - js/history/controller/AvatarPresenterTest.js
   - js/history/controller/MenuStateTest.js
+  - js/history/controller/MenuPresenterTest.js
   - js/history/controller/QuizTopicStateTest.js
   - js/history/controller/QuizTopicPresenterTest.js
   - js/history/controller/QuizOpponentStateTest.js

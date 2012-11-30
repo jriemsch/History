@@ -38,6 +38,7 @@
   <script type="text/javascript" charset="utf-8" src="js/ui/HideImageUntilLoadedProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/ReplaceWithTemplateProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/SetSrcAttributeProcessor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/ui/SetStyleProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/SetTextProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/TapEventProcessor.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/ui/TextInputProcessor.js"></script>
@@ -88,12 +89,13 @@
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/AnswerComponentRegistry.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/components/MultipleChoiceComponent.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/SelectionTemplate.js"></script>
-  <script type="text/javascript" charset="utf-8" src="js/history/views/Menu.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/views/MenuTemplate.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/views/QuizView.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarPresenter.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizTopicPresenter.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/QuizOpponentPresenter.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuPresenter.js"></script>
 
   <script type="text/javascript" charset="utf-8" src="js/history/controller/AvatarState.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/history/controller/MenuState.js"></script>
@@ -111,13 +113,6 @@
   <div id="startupButtons">
     <input type="button" id="startButton" value="Start" style="display: none">
     <input type="button" id="resetButton" value="Reset" style="display: none">
-  </div>
-
-  <div id="menu" class="view hiddenView">
-    <div id="menuBackground" class="questionMarks"></div>
-    <div class="bigTitle">Geschichte im Quiz</div>
-    <div id="menuOptions"></div>
-    <div class="footer">&copy; 2012 by Jens Riemschneider</div>
   </div>
 
   <div id="quizView" class="view hiddenView">
@@ -203,9 +198,9 @@
       <div class="footer"><div data-tap-event="onBackCallback" class="backButton"></div></div>
     </div>
 
-    <div data-template-id="menuOptionTemplate" class="menuOption">
+    <div data-template-id="menuOptionTemplate" data-style="style" class="menuOption">
       <img data-attr-src="image" data-tap-event="onSelect" class="menuOptionImage" src="">
-      <div data-text="text" class="menuOptionText">Text</div>'
+      <div data-text="text" class="menuOptionText">Text</div>
     </div>
 
     <div data-template-id="menuTemplate" class="view">

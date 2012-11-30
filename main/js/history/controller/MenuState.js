@@ -3,17 +3,27 @@ net.riemschneider.history.controller = net.riemschneider.history.controller || {
 (function () {
   "use strict";
 
-  var Option = net.riemschneider.history.views.Menu.Option;
   var TypeUtils = net.riemschneider.utils.TypeUtils;
-  var ViewState = net.riemschneider.structures.ViewState;
+  var ArgumentUtils = net.riemschneider.utils.ArgumentUtils;
+  var State = net.riemschneider.structures.State;
 
   net.riemschneider.history.controller.MenuState = {
-    create: function create(stateMachine, menu) {
-      var state = ViewState.create(stateMachine, 'menu', true, menu);
+    create: function create(stateMachine, presenter) {
+      ArgumentUtils.assertNotNull(presenter);
 
-      state.onConfigureView = function onConfigureView() {
-        menu.onSelect(Option.AVATAR, function () { stateMachine.transitionTo('avatar'); });
-        menu.onSelect(Option.QUIZ, function () { stateMachine.transitionTo('quizTopic'); });
+      var state = State.create(stateMachine, 'menu', true);
+
+      state.onEnter = function onEnter() {
+        presenter.show(
+            function () { stateMachine.transitionTo('avatar'); },
+            function () { stateMachine.transitionTo('quizTopic'); },
+            function () { stateMachine.transitionTo('learn'); },
+            function () { stateMachine.transitionTo('stats'); }
+        );
+      };
+
+      state.onLeave = function onLeave() {
+        presenter.hide();
       };
 
       return state;
